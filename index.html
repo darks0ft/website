@@ -67,9 +67,51 @@
 
       .songkick-widget-container { margin-top: 20px; }
       .fallback-message { color: #ccc; margin-top: 15px; font-size: 0.95rem; }
+
+      .landing-page {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background: url('https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20profile%20picture%202025%20website%20optimized.JPG') center center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .landing-title {
+      font-family: 'bradley-djr', sans-serif;
+      font-size: 20vh;
+      color: white;
+      transition: color 0.5s ease-out;
+    }
+    .landing-page {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url('https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20profile%20picture%202025%20website%20optimized.JPG') center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing-title {
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 20vh;
+  color: white;
+  transition: color 0.5s ease-out;
+}
+.landing-page::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
     </style>
   </head>
 <body>
+  <div class="landing-page">
+    <div class="landing-title">Darksoft</div>
+  </div>
   <header>
     <span class="rainbow-text" id="rainbow-text"></span>
     <nav>
@@ -193,6 +235,14 @@
       container.appendChild(span);
     });
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script>
+    window.addEventListener('scroll', function() {
+      const scrollTop = window.scrollY;
+      const fadePoint = window.innerHeight * 0.7;
+      const factor = Math.min(scrollTop / fadePoint, 1);
+      document.querySelector('.landing-title').style.color = `rgb(${255 * (1 - factor)}, ${255 * (1 - factor)}, ${255 * (1 - factor)})`;
+    });
   </script>
 </body>
 </html>
