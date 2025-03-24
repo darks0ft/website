@@ -30,7 +30,7 @@
     </script>
     <link rel="stylesheet" href="https://use.typekit.net/elq2dar.css">
     <style>
-      body { font-family: Arial, sans-serif; margin: 0; background: #2f2f2f; color: #fff; overflow-x: hidden; text-align: center; }
+      body { font-family: Arial, sans-serif; margin: 0; background: #2f2f2f; color: #fff; overflow-x: hidden; text-align: center; font-size: 18px;}
       header { text-align: center; padding: 2rem 0.5rem 1rem; background-color: #505050; }
       .rainbow-text { font-family: 'bradley-djr', sans-serif; font-size: 4rem; line-height: 1.2; letter-spacing: 0.05rem; display: inline-block; }
       .rainbow-text span { display: inline-block; animation: fadeColors 10s infinite; }
@@ -48,8 +48,10 @@
       section { padding: 2rem 1rem; max-width: 1000px; margin: 0 auto; text-align: center; }
       section h2 { font-family: 'bradley-djr', sans-serif; font-size: 3rem; letter-spacing: 0.1rem; border-bottom: 1px solid #aaa; padding-bottom: 0.5rem; }
       .social-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem; }
-      .social-icons img { width: 24px; height: 24px; }
+      .social-icons img { width: 25px; height: 25px; }
       #profile-image { display: block; margin: 30px auto; width: 300px; border-radius: 10px; }
+
+      .landing-title img { max-width: 200px; height: auto; }
 
       #mc_embed_signup { background: #1e1e1e; color: #fff; border: 1px solid #333; border-radius: 15px; margin: 40px auto; padding: 20px; width: 100%; max-width: 600px; animation: glowColors 6s infinite alternate; }
       @keyframes glowColors { 0% { box-shadow: 0 0 20px hsl(0, 50%, 75%); } 20% { box-shadow: 0 0 20px hsl(40, 50%, 75%); } 40% { box-shadow: 0 0 20px hsl(80, 50%, 75%); } 60% { box-shadow: 0 0 20px hsl(160, 50%, 75%); } 80% { box-shadow: 0 0 20px hsl(240, 50%, 75%); } 100% { box-shadow: 0 0 20px hsl(320, 50%, 75%); } }
@@ -113,13 +115,15 @@
     <div class="landing-title">Darksoft</div>
   </div>
   <header>
-    <span class="rainbow-text" id="rainbow-text"></span>
+    <div class="landing-title"><img src="https://github.com/darks0ft/website/blob/main/Darksoft-logo-smiley-white.png?raw=true" alt="Darksoft Logo"></div>
     <nav>
       <a href="#about">About</a>
+      <a href="#newsletter">Newsletter</a>
       <a href="#merch">Merch</a>
       <a href="#tour">Tour</a>
       <a href="#biography">Biography</a>
       <a href="#contact">Contact</a>
+      <a href="#press">Press</a>
     </nav>
     <div class="social-icons">
       <a href="https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE?si=bpjJbjmWQLy0vU8VfLC5Tg"><img src="https://cdn.simpleicons.org/spotify/FFFFFF" alt="Spotify"></a>
@@ -140,9 +144,10 @@
 
     <h2>About</h2>
     <p>Darksoft is a multi-instrumentalist songwriter and producer who creates dreamy indie rock sounds. Blending dream pop, shoegaze, and alternative rock with lush melodies and introspective lyrics, Darksoft explores universal truths and existential themes.</p>
-
+  </section>
+  <section id="newsletter">
     <div id="mc_embed_signup">
-      <h3>Subscribe</h3>
+      <h2>Subscribe</h2>
       <p>Keep up to date on new releases, tour dates, merch, collabs, and more.</p>
       <form action="https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&amp;id=d5fbadec4b" method="post" target="_blank">
         <input type="email" name="EMAIL" placeholder="Enter your email" required>
@@ -189,6 +194,7 @@
   </section>
 
   <section id="tour">
+    <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20on%20tour.png" alt="Darksoft Tour Photo">
     <h2>Tour</h2>
     <p>Here's where Darksoft is playing next. You can also follow Darksoft on <a href="https://www.bandsintown.com/a/15379446-darksoft" target="_blank">Bandsintown</a> or <a href="https://www.songkick.com/artists/9755554-darksoft" target="_blank">Songkick</a> for show updates.</p>
     <div class="songkick-widget-container">
@@ -198,6 +204,7 @@
   </section>
 
   <section id="biography">
+    <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20-%20Press%20Photo%202024.jpg" alt="Darksoft Biography Photo">
     <h2>Biography</h2>
     <p>Darksoft is a multi-instrumentalist songwriter and producer who creates dreamy indie rock sounds. Darksoft songs blend dream pop and shoegaze elements, using lush melodic progressions, 80s/90s alternative rock undertones, and deftly executed vocals.</p>
     <p>Lyrically, he weaves through clichés, platitudes, and aphorisms that explore universal truths and philosophical themes, giving his music an introspective and existential edge. Darksoft is a solo recording project often supported by a full band for live shows.</p>
@@ -212,14 +219,66 @@
     <p>For booking inquiries, sync licensing, collaborations, or just to say hello, email <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a>.</p>
   </section>
 
+  <section id="press">
+    <h2>Press</h2>
+    <p>Here are some nice things that music journalists have had to say about Darksoft. I truly appreciate these folks and the time they've taken getting to know my music and sharing it with their readers:</p>
+
+    <p>"chiming goth rock and twee power pop" - <a href="https://vinylmoon.co/collections/shop-all/products/vol-111" target="_blank">Vinyl Moon 111: Facade Arcade</a></p>
+
+    <p>"an enchanting and dreamy slice of ear candy" - <a href="https://eclecticmusiclover.com/2025/02/01/fresh-new-tracks-vol-39-darksoft-frank-joshua-kiffie-koyal/" target="_blank">Eclectic Music Lover</a></p>
+
+    <p>"silvery guitar tones that graze '80s new wave" - <a href="https://www.instagram.com/p/DBwEV3NReg9/?img_index=2" target="_blank">Down East Magazine, November 2024</a></p>
+
+    <p>Top 30 albums of 2023 - <a href="https://janglepophub.home.blog/2023/12/28/janglepophub-oscars-2023-top-30-albums/" target="_blank">JanglePopHub</a></p>
+
+    <p>"chiming guitars, dayglo synths and earworm melodies" - <a href="https://microgenremusic.com/genres/slowcore/the-top-10-shoegaze-albums-of-2023/" target="_blank">The Top 10 Shoegaze Albums of 2023, Micro Genre Music</a></p>
+
+    <p>"a smooth-as-silk mélange of keys and guitars...compulsively alluring" - <a href="https://www.instagram.com/p/CtE51SCRIUi/" target="_blank">The Big Takeover, edition #92</a></p>
+
+    <p>"Everything that catchy indie rock should have" - <a href="https://start-track.com/introducing-darksoft-beigeification-3-questions/" target="_blank">Start-Track</a></p>
+
+    <p>“It Is What It Is.” An Interview With Darksoft - <a href="https://forestpunk.wordpress.com/2023/01/31/it-is-what-it-is-an-interview-with-darksoft/" target="_blank">forestpunk</a></p>
+
+    <p>"sumptuous and pleasing" - <a href="https://eclecticmusiclover.com/2023/01/19/darksoft-album-review-beigeification/" target="_blank">Eclectic Music Lover</a></p>
+
+    <p>"strangely heartening" - <a href="https://janglepophub.home.blog/2023/01/13/album-review-beigeification-by-darksoft-look-up-records-2060-records/" target="_blank">JanglePopHub</a></p>
+
+    <p>"aching guitar chords and hushed, velvety vocals" - <a href="https://twitter.com/DARKS0FT/status/1603751935462588416" target="_blank">The Big Takeover, edition #91</a></p>
+
+    <p>"Only Time Will Tell is a lush and dreamy track" - <a href="http://www.destroyexist.com/2022/12/darksoft-only-time-will-tell.html" target="_blank">Destroy//Exist</a></p>
+
+    <p>"fresh, light and sublime" - <a href="https://www.zonenights.com/2022/11/darksoft-it-is-what-it-is/" target="_blank">Zone Nights</a></p>
+
+    <p>"every time I replayed ‘Only Time Will Tell’ I felt renewed" - <a href="https://www.mp3hugger.com/2022/12/dark-soft-only-time-will-tell/" target="_blank">mp3hugger</a></p>
+
+    <p>"soothing, bittersweet vocals and hypnotic guitar work" - <a href="https://post-punk.com/seattle-shoegaze-act-darksoft-debuts-video-for-looking-backward-from-new-album-cryo/" target="_blank">Post-punk.com</a></p>
+
+    <p>"infectious melodies progressions and ‘90s rock undertones" - <a href="https://v13.net/2020/09/darksoft-previews-his-meltdown-album-with-the-foreshadow-music-video-premiere/" target="_blank">V13</a></p>
+
+    <p>"one motherfucker of an album that grabs hold on first listen and refuses to let go" - <a href="https://vanyaland.com/2020/12/01/darksoft-soundtracks-the-ongoing-meltdown-deep-within-us-all/" target="_blank">Vanyaland</a></p>
+
+    <p>"beautiful melodies, outstanding guitar work, and stunning vocals" - <a href="https://eclecticmusiclover.com/2019/02/15/darksoft-ep-review-brain/" target="_blank">Eclectic Music Lover</a></p>
+
+    <p>"an evocative piece of dream theater with grunge leanings" - <a href="https://www.americanpancake.com/2019/12/darksofts-track-cybersecurity-is.html" target="_blank">American Pancake</a></p>
+
+    <p>"the most beautiful jangle-gaze aesthetic. A real find for me." - <a href="https://janglepophub.home.blog/2019/12/17/beat-the-delete-0036-new-music-recommendations/" target="_blank">JanglePopHub</a></p>
+
+    <p>"slow, straightforward and sad alt rock" - <a href="https://rockthepigeon.com/2018/10/23/darksofts-mydoom-is-slow-straightforward-and-sad-alt-rock/" target="_blank">Rock The Pigeon</a></p>
+
+    <p>"a gauze of shimmering shoegaze" - <a href="https://www.ohestee.com/music/pop/darksoft-laments-over-the-unknown-in-debut-mydoom/" target="_blank">ohestee</a></p>
+
+    <p>Photo story: SWYM, Sealife, Darksoft, Daycones - <a href="https://danstunesseattle.com/2018/12/24/photo-story-swym-sealife-darksoft-daycones/" target="_blank">Dan's Tunes</a></p>
+  </section>
+
   <footer>
-    <div class="footer-title">Darksoft</div>
+    <span class="rainbow-text" id="rainbow-text"></span>
     <div class="footer-links">
       <a href="#about">About</a> | 
       <a href="#biography">Biography</a> | 
       <a href="#merch">Merch</a> | 
       <a href="#tour">Tour</a> | 
       <a href="#contact">Contact</a>
+      <a href="#press">Press</a>
     </div>
     <p>© <span id="year"></span> Darksoft. All rights reserved.</p>
   </footer>
