@@ -51,9 +51,11 @@
       a:visited { color: #cccccc; }
 
       section { padding: 2rem 1rem; max-width: 1000px; margin: 0 auto; text-align: center; }
-      section h2 { font-family: 'bradley-djr', sans-serif; font-size: 3rem; letter-spacing: 0.1rem; border-bottom: 1px solid #aaa; padding-bottom: 0.5rem; }
+      section h2 { font-family: 'bradley-djr', sans-serif; font-size: 3rem; letter-spacing: 0.1rem; border-bottom: 1px solid #aaa; padding-bottom: 0.75rem; margin-bottom: 0.75rem;   }
       .social-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem; }
-      .social-icons img { width: 25px; height: 25px; }
+      .social-icons img { width: 28px; height: 28px; transition: opacity 0.1s ease; cursor: pointer; }
+      .social-icons img:hover {opacity: 0.6;
+}
       #profile-image { display: block; margin: 30px auto; width: 300px; border-radius: 10px; }
 
       .landing-title img { max-width: 200px; height: auto; }
@@ -63,6 +65,7 @@
       #mc_embed_signup input[type="email"] { width: 80%; padding: 10px; border-radius: 5px; border: 1px solid #555; margin-bottom: 10px; background-color: #2a2a2a; color: #fff; }
       #mc_embed_signup .button { background-color: hsl(340, 50%, 70%); color: #fff; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer; font-weight: bold; text-transform: uppercase; }
       #mc_embed_signup .button:hover { filter: brightness(1.2); }
+      #mc_embed_signup .signup-description {margin-bottom: 1.5rem;}
 
       .merch-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; align-items: start; }
       .merch-gallery > div { display: flex; flex-direction: column; align-items: center; max-width: 300px; margin: 0 auto; }
@@ -113,6 +116,104 @@
   background: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
+.sticky-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(47, 47, 47, 0.95);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sticky-nav-bar.show {
+  transform: translateY(0);
+}
+
+.sticky-nav-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  background-color: #3a3a3a;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sticky-nav-bar a:hover {
+  background-color: #2a2a2a;
+}
+
+#releases {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#releases h2 {
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.release-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.release-card {
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px; /* reduce card width for tighter layout */
+}
+
+.release-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+.release-card h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.release-card p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.release-card a {
+  color: #cccccc;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.release-card a:hover {
+  color: #999999;
+}
+
 
     </style>
   </head>
@@ -122,15 +223,6 @@
   </div>
   <header>
     <div class="landing-title"><img src="https://github.com/darks0ft/website/blob/main/Darksoft-logo-smiley-white.png?raw=true" alt="Darksoft Logo"></div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#newsletter">Newsletter</a>
-      <a href="#merch">Merch</a>
-      <a href="#tour">Tour</a>
-      <a href="#biography">Biography</a>
-      <a href="#contact">Contact</a>
-      <a href="#press">Press</a>
-    </nav>
     <div class="social-icons">
       <a href="https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE?si=bpjJbjmWQLy0vU8VfLC5Tg"><img src="https://cdn.simpleicons.org/spotify/FFFFFF" alt="Spotify"></a>
       <a href="https://music.apple.com/us/artist/darksoft/1438263529"><img src="https://cdn.simpleicons.org/apple/FFFFFF" alt="Apple Music"></a>
@@ -143,6 +235,27 @@
       <a href="https://x.com/darks0ft"><img src="https://cdn.simpleicons.org/x/FFFFFF" alt="X"></a>
       <a href="https://bsky.app/profile/darks0ft.bsky.social"><img src="https://cdn.simpleicons.org/bluesky/FFFFFF" alt="Bluesky"></a>
     </div>
+    <div class="nav">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#merch">Merch</a>
+      <a href="#tour">Tour</a>
+      <a href="#biography">Biography</a>
+      <a href="#contact">Contact</a>
+      <a href="#press">Press</a>
+    </nav>
+    </div>
+    <div class="sticky-nav-bar" id="sticky-nav-bar">
+      <a href="#about">About</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#merch">Merch</a>
+      <a href="#tour">Tour</a>
+      <a href="#biography">Biography</a>
+      <a href="#contact">Contact</a>
+      <a href="#press">Press</a>
+    </div>
+    
   </header>
 
   <section id="about">
@@ -154,7 +267,7 @@
   <section id="newsletter">
     <div id="mc_embed_signup">
       <h2>Subscribe</h2>
-      <p>Keep up to date on new releases, tour dates, merch, collabs, and more.</p>
+      <p class="signup-description">Keep up to date on new releases, tour dates, merch, collabs, and more.</p>
       <form action="https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&amp;id=d5fbadec4b" method="post" target="_blank">
         <input type="email" name="EMAIL" placeholder="Enter your email" required>
         <div hidden><input type="hidden" name="tags" value="2757147"></div>
@@ -213,7 +326,7 @@
     <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20-%20Press%20Photo%202024.jpg" alt="Darksoft Biography Photo">
     <h2>Biography</h2>
     <p>Darksoft is a multi-instrumentalist songwriter and producer who creates dreamy indie rock sounds. Darksoft songs blend dream pop and shoegaze elements, using lush melodic progressions, 80s/90s alternative rock undertones, and deftly executed vocals.</p>
-    <p>Lyrically, he weaves through clichés, platitudes, and aphorisms that explore universal truths and philosophical themes, giving his music an introspective and existential edge. Darksoft is a solo recording project often supported by a full band for live shows.</p>
+     <p>Lyrically, he weaves through clichés, platitudes, and aphorisms that explore universal truths and philosophical themes, giving his music an introspective and existential edge. Darksoft is a solo recording project often supported by a full band for live shows.</p>
     <p>To date, Darksoft has released a handful of self-produced conceptual albums. His most recent albums, Rationalism (2025), Relativism (2024), and Grayscale (2023), were released with Spirit Goth Records.</p>
     <p>Beigeification (2023) delivers a postmodern blend of surfy sounds and beigey moods, self-released through Look Up Records with tapes printed by 2060 Records. In recent years, Darksoft has toured the northeast, west coast, and Pacific Northwest.</p>
     <p>Cryo (2022) also gained national radio attention, with the track "Looking Backward" landing on Spotify’s Indie Fresh Finds playlist. His earlier albums, Meltdown (2020) and Brain (2018), explore themes of digital futurism and watery introspection, blending computer-age anxiety with raw human emotion — pure enough to pass the Turing Test.</p>
@@ -225,10 +338,95 @@
     <p>For booking inquiries, sync licensing, collaborations, or just to say hello, email <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a>.</p>
   </section>
 
+<section id="releases">
+  <h2>Releases</h2>
+  <p>All the Darksoft albums I've put out. Average number of days between album releases: <strong id="avg-days">Calculating...</strong>.</p>
+  <div class="release-grid">
+    <!-- Rationalism (2025) -->
+    <div class="release-card">
+      <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Rationalism%20Album%20Artwork.jpeg" alt="Rationalism album cover">
+      <h3>Rationalism (2025)</h3>
+      <p><strong>Label:</strong> Spirit Goth Records</p>
+      <p>
+        <a href="https://darks0ft.bandcamp.com/album/rationalism" target="_blank">Bandcamp</a> |
+        <a href="https://open.spotify.com/album/XYZ" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/album/XYZ" target="_blank">Apple Music</a>
+      </p>
+    </div>
+    <!-- Relativism (2024) -->
+    <div class="release-card">
+      <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Relativism%20Album%20Artwork.jpeg" alt="Relativism album cover">
+      <h3>Relativism (2024)</h3>
+      <p><strong>Label:</strong> Spirit Goth Records</p>
+      <p>
+        <a href="https://darks0ft.bandcamp.com/album/relativism" target="_blank">Bandcamp</a> |
+        <a href="https://open.spotify.com/album/ABC" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/album/ABC" target="_blank">Apple Music</a>
+      </p>
+    </div>
+    <!-- Grayscale (2023) -->
+    <div class="release-card">
+      <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Gracyscale%20Album%20Artwork.jpg" alt="Grayscale album cover">
+      <h3>Grayscale (2023)</h3>
+      <p><strong>Label:</strong> Spirit Goth Records</p>
+      <p>
+        <a href="https://darks0ft.bandcamp.com/album/grayscale" target="_blank">Bandcamp</a> |
+        <a href="https://open.spotify.com/album/DEF" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/album/DEF" target="_blank">Apple Music</a>
+      </p>
+    </div>
+    <!-- Beigeification (2023) -->
+    <div class="release-card">
+      <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Beigeification%20Album%20Artwork.jpg" alt="Beigeification album cover">
+      <h3>Beigeification (2023)</h3>
+      <p><strong>Label:</strong> Look Up Records</p>
+      <p>
+        <a href="https://darks0ft.bandcamp.com/album/beigeification" target="_blank">Bandcamp</a> |
+        <a href="https://open.spotify.com/album/GHI" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/album/GHI" target="_blank">Apple Music</a>
+      </p>
+    </div>
+    <!-- Cryo (2022) -->
+    <div class="release-card">
+      <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Cryo%20Album%20Artwork.jpeg" alt="Cryo album cover">
+      <h3>Cryo (2022)</h3>
+      <p><strong>Label:</strong> Look Up Records</p>
+      <p>
+        <a href="https://darks0ft.bandcamp.com/album/cryo" target="_blank">Bandcamp</a> |
+        <a href="https://open.spotify.com/album/JKL" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/album/JKL" target="_blank">Apple Music</a>
+      </p>
+    </div>
+    <!-- Meltdown (2020) -->
+    <div class="release-card">
+      <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Meltdown%20Album%20Artwork.jpeg" alt="Meltdown album cover">
+      <h3>Meltdown (2020)</h3>
+      <p><strong>Label:</strong> Look Up Records</p>
+      <p>
+        <a href="https://darks0ft.bandcamp.com/album/meltdown" target="_blank">Bandcamp</a> |
+        <a href="https://open.spotify.com/album/MNO" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/album/MNO" target="_blank">Apple Music</a>
+      </p>
+    </div>
+    <!-- Brain (2018) -->
+    <div class="release-card">
+      <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Brain%20Album%20Artwork.jpg" alt="Brain album cover">
+      <h3>Brain (2018)</h3>
+      <p><strong>Label:</strong> Look Up Records</p>
+      <p>
+        <a href="https://darks0ft.bandcamp.com/album/brain" target="_blank">Bandcamp</a> |
+        <a href="https://open.spotify.com/album/PQR" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/album/PQR" target="_blank">Apple Music</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
   <section id="press">
     <h2>Press</h2>
     <p>Here are some nice things that music journalists have had to say about Darksoft. I truly appreciate these folks and the time they've taken getting to know my music and sharing it with their readers:</p>
-
+<br>
     <p>"chiming goth rock and twee power pop" - <a href="https://vinylmoon.co/collections/shop-all/products/vol-111" target="_blank">Vinyl Moon 111: Facade Arcade</a></p>
 
     <p>"an enchanting and dreamy slice of ear candy" - <a href="https://eclecticmusiclover.com/2025/02/01/fresh-new-tracks-vol-39-darksoft-frank-joshua-kiffie-koyal/" target="_blank">Eclectic Music Lover</a></p>
@@ -277,7 +475,9 @@
   </section>
 
   <footer>
+    <div class="footer-title"><a href="#" class="footer-link">
     <span class="rainbow-text" id="rainbow-text"></span>
+      </a></div>
     <div class="footer-links">
       <a href="#about">About</a> | 
       <a href="#biography">Biography</a> | 
@@ -309,5 +509,51 @@
       document.querySelector('.landing-title').style.color = `rgb(${255 * (1 - factor)}, ${255 * (1 - factor)}, ${255 * (1 - factor)})`;
     });
   </script>
+  <script>
+    window.addEventListener('scroll', function() {
+      const mainNav = document.querySelector('nav'); // main nav
+      const stickyNav = document.getElementById('sticky-nav-bar');
+      const mainNavBottom = mainNav.getBoundingClientRect().bottom;
+  
+      if (mainNavBottom < 0) {
+        stickyNav.classList.add('show');
+      } else {
+        stickyNav.classList.remove('show');
+      }
+    });
+  </script>
+  <script>
+  // Add your release dates in YYYY-MM-DD format (most recent first)
+  const releaseDates = [
+    "2025-01-15", // Rationalism
+    "2024-01-20", // Relativism
+    "2023-06-01", // Grayscale
+    "2023-01-10", // Beigeification
+    "2022-12-01", // Cryo
+    "2020-12-01", // Meltdown
+    "2018-10-19"  // Brain
+  ];
+
+  function calculateAverageGap(dates) {
+    const today = new Date();
+    let totalGapDays = 0;
+    for (let i = 0; i < dates.length - 1; i++) {
+      const date1 = new Date(dates[i]);
+      const date2 = new Date(dates[i + 1]);
+      const diffDays = (date1 - date2) / (1000 * 60 * 60 * 24);
+      totalGapDays += diffDays;
+    }
+    // Add gap from most recent release to today:
+    const lastRelease = new Date(dates[0]);
+    const gapToToday = (today - lastRelease) / (1000 * 60 * 60 * 24);
+    totalGapDays += gapToToday;
+
+    const avg = Math.round(totalGapDays / dates.length);
+    return avg;
+  }
+
+  document.getElementById("avg-days").textContent = `${calculateAverageGap(releaseDates)} days`;
+</script>
+
 </body>
 </html>
