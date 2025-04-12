@@ -101,10 +101,12 @@
 .landing-title {
   font-family: 'bradley-djr', sans-serif;
   font-size: 20vh;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
   color: white;
   transition: color 0.5s ease-out;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 .landing-page::after {
   content: "";
@@ -114,6 +116,8 @@
   z-index: 0;
 }
 .sticky-nav-bar {
+  margin: 0;         /* reset default <nav> margin */
+  padding: 0.6rem 0; /* keep your intended padding */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -123,7 +127,6 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.6rem 0;
   box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
   z-index: 10;
   transition: all 0.3s ease;
@@ -133,6 +136,7 @@
   position: fixed;
   top: 0;
   bottom: auto;
+  margin: 0;
 }
 
 
@@ -246,11 +250,12 @@
 
 
     </style>
+  <link rel="canonical" href="https://darksoft.band/">
   </head>
 <body>
   <div class="landing-page">
-    <div class="landing-title">Darksoft</div>
-    <div class="sticky-nav-bar show" id="sticky-nav-bar">
+    <h1 class="landing-title">Darksoft</h1>
+    <nav class="sticky-nav-bar show" id="sticky-nav-bar" aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#newsletter">Newsletter</a>
       <a href="#merch">Merch</a>
@@ -258,8 +263,7 @@
       <a href="#biography">Biography</a>
       <a href="#contact">Contact</a>
       <a href="#press">Press</a>
-    </div>  
-   <!-- <div class="scroll-down-arrow" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">↓</div>-->
+    </nav>  
   </div>
   <header>
     <div class="landing-title"><img src="https://github.com/darks0ft/website/blob/main/Darksoft-logo-smiley-white.png?raw=true" alt="Darksoft Logo"></div>
@@ -275,30 +279,16 @@
       <a href="https://x.com/darks0ft"><img src="https://cdn.simpleicons.org/x/FFFFFF" alt="X"></a>
       <a href="https://bsky.app/profile/darks0ft.bsky.social"><img src="https://cdn.simpleicons.org/bluesky/FFFFFF" alt="Bluesky"></a>
     </div>
-    <!-- <div class="nav">
-    <nav>
-      <a href="#about">About</a>
-      <a href="#newsletter">Newsletter</a>
-      <a href="#merch">Merch</a>
-      <a href="#tour">Tour</a>
-      <a href="#biography">Biography</a>
-      <a href="#contact">Contact</a>
-      <a href="#press">Press</a>
-    </nav>
-    </div>-->
-
-    
   </header>
 
-  <section id="about">
-    <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Day%20by%20Day%20music%20video%20still.png" alt="Darksoft Profile Picture">
-
-    <h2>About</h2>
+  <section id="about" aria-labelledby="about-heading">
+      <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Day%20by%20Day%20music%20video%20still.png" alt="Darksoft Profile Picture">
+      <h2 id="about-heading">About</h2>
     <p>Darksoft is a multi-instrumentalist songwriter and producer who creates dreamy indie rock sounds. Blending dream pop, shoegaze, and alternative rock with lush melodies and introspective lyrics, Darksoft explores universal truths and existential themes.</p>
   </section>
-  <section id="newsletter">
+  <section id="newsletter" aria-labelledby="newsletter-heading">
     <div id="mc_embed_signup">
-      <h2>Subscribe</h2>
+      <h2 id="newsletter-heading">Subscribe</h2>
       <p class="signup-description">Keep up to date on new releases, tour dates, merch, collabs, and more.</p>
       <form action="https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&amp;id=d5fbadec4b" method="post" target="_blank">
         <input type="email" name="EMAIL" placeholder="Enter your email" required>
@@ -308,8 +298,8 @@
     </div>
   </section>
 
-  <section id="merch">
-    <h2>Merch</h2>
+  <section id="merch" aria-labelledby="merch-heading">
+    <h2 id="merch-heading">Merch</h2>  
     <p>Please consider picking up a piece of merch to support my project!</p>
     <div class="merch-gallery">
       <div>
@@ -344,9 +334,9 @@
     </div>
   </section>
 
-  <section id="tour">
+  <section id="tour" aria-labelledby="tour-heading">
     <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20on%20tour.png" alt="Darksoft Tour Photo">
-    <h2>Tour</h2>
+    <h2 id="tour-heading">Tour</h2>
     <p>Here's where Darksoft is playing next. You can also follow Darksoft on <a href="https://www.bandsintown.com/a/15379446-darksoft" target="_blank">Bandsintown</a> or <a href="https://www.songkick.com/artists/9755554-darksoft" target="_blank">Songkick</a> for show updates.</p>
     <div class="songkick-widget-container">
       <a href="https://www.songkick.com/artists/9755554" class="songkick-widget" data-theme="dark" data-track-button="on" data-detect-style="false" data-locale="en">Darksoft tour dates</a>
@@ -354,9 +344,9 @@
     </div>
   </section>
 
-  <section id="biography">
+  <section id="biography" aria-labelledby="biography-heading"> 
     <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20-%20Press%20Photo%202024.jpg" alt="Darksoft Biography Photo">
-    <h2>Biography</h2>
+    <h2 id="biography-heading">Biography</h2> 
     <p>Darksoft is a multi-instrumentalist songwriter and producer who creates dreamy indie rock sounds. Darksoft songs blend dream pop and shoegaze elements, using lush melodic progressions, 80s/90s alternative rock undertones, and deftly executed vocals.</p>
      <p>Lyrically, he weaves through clichés, platitudes, and aphorisms that explore universal truths and philosophical themes, giving his music an introspective and existential edge. Darksoft is a solo recording project often supported by a full band for live shows.</p>
     <p>To date, Darksoft has released a handful of self-produced conceptual albums. His most recent albums, Rationalism (2025), Relativism (2024), and Grayscale (2023), were released with Spirit Goth Records.</p>
@@ -365,151 +355,152 @@
     <p>Darksoft is originally from Seattle, where he participated in the local music scene for years. In 2021, he moved his family to Portland, Maine. Besides producing Darksoft, he has produced music under several other monickers. Darksoft tries to support other musicians, too. He manages Look Up Records, a small independent music label and blog.</p>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
+  <section id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact</h2>  
     <p>For booking inquiries, sync licensing, collaborations, or just to say hello, email <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a>.</p>
   </section>
 
-<section id="releases">
-  <h2>Releases</h2>
+  <section id="releases" aria-labelledby="releases-heading">
+  <h2 id="releases-heading">Releases</h2>
   <p>All the Darksoft albums I've put out. Average number of days between album releases: <strong id="avg-days">Calculating...</strong>.</p>
   <div class="release-grid">
-    <!-- Rationalism (2025) -->
-    <div class="release-card">
+    <article class="release-card">
       <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Rationalism%20Album%20Artwork.jpeg" alt="Rationalism album cover">
       <h3>Rationalism (2025)</h3>
       <p><strong>Label:</strong> Spirit Goth Records</p>
       <p>
         <a href="https://darks0ft.bandcamp.com/album/rationalism" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/XYZ" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/album/XYZ" target="_blank">Apple Music</a>
+        <a href="https://open.spotify.com/album/7eOL2oXXoh2Ib0r3mHjfXb" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/us/album/rationalism/1794374201" target="_blank">Apple Music</a>
       </p>
-    </div>
-    <!-- Relativism (2024) -->
-    <div class="release-card">
+    </article>    
+    
+    <article class="release-card">
       <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Relativism%20Album%20Artwork.jpeg" alt="Relativism album cover">
       <h3>Relativism (2024)</h3>
       <p><strong>Label:</strong> Spirit Goth Records</p>
       <p>
         <a href="https://darks0ft.bandcamp.com/album/relativism" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/ABC" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/album/ABC" target="_blank">Apple Music</a>
+        <a href="https://open.spotify.com/album/5d0jaIaOI0FTHDdc6w8akz" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/th/album/relativism/1747064681" target="_blank">Apple Music</a>
       </p>
-    </div>
-    <!-- Grayscale (2023) -->
-    <div class="release-card">
+    </article>    
+    
+    <article class="release-card">
       <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Gracyscale%20Album%20Artwork.jpg" alt="Grayscale album cover">
       <h3>Grayscale (2023)</h3>
       <p><strong>Label:</strong> Spirit Goth Records</p>
       <p>
         <a href="https://darks0ft.bandcamp.com/album/grayscale" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/DEF" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/album/DEF" target="_blank">Apple Music</a>
+        <a href="https://open.spotify.com/album/3jNJF3swIimEIi25q4Ggtt" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/us/album/grayscale/1734567890" target="_blank">Apple Music</a>
       </p>
-    </div>
-    <!-- Beigeification (2023) -->
-    <div class="release-card">
+    </article>    
+    
+    <article class="release-card">
       <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Beigeification%20Album%20Artwork.jpg" alt="Beigeification album cover">
       <h3>Beigeification (2023)</h3>
       <p><strong>Label:</strong> Look Up Records</p>
       <p>
         <a href="https://darks0ft.bandcamp.com/album/beigeification" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/GHI" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/album/GHI" target="_blank">Apple Music</a>
+        <a href="https://open.spotify.com/album/4FpAHBtHbstQSRVM19txhE" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/us/album/beigeification/1650634812" target="_blank">Apple Music</a>
       </p>
-    </div>
-    <!-- Cryo (2022) -->
-    <div class="release-card">
+    </article>    
+    
+    <article class="release-card">
       <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Cryo%20Album%20Artwork.jpeg" alt="Cryo album cover">
       <h3>Cryo (2022)</h3>
       <p><strong>Label:</strong> Look Up Records</p>
       <p>
         <a href="https://darks0ft.bandcamp.com/album/cryo" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/JKL" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/album/JKL" target="_blank">Apple Music</a>
+        <a href="https://open.spotify.com/album/5Y27T3hgkcXG4cCVIqNyZp" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/us/album/cryo/1592734125" target="_blank">Apple Music</a>
       </p>
-    </div>
-    <!-- Meltdown (2020) -->
-    <div class="release-card">
+    </article>    
+    
+    <article class="release-card">
       <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Meltdown%20Album%20Artwork.jpeg" alt="Meltdown album cover">
       <h3>Meltdown (2020)</h3>
       <p><strong>Label:</strong> Look Up Records</p>
       <p>
         <a href="https://darks0ft.bandcamp.com/album/meltdown" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/MNO" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/album/MNO" target="_blank">Apple Music</a>
+        <a href="https://open.spotify.com/album/4q6Iq8Zj3njIcdlG8eO5p2" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/us/album/meltdown/1523936989" target="_blank">Apple Music</a>
       </p>
-    </div>
-    <!-- Brain (2018) -->
-    <div class="release-card">
+    </article>    
+    
+    <article class="release-card">
       <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Brain%20Album%20Artwork.jpg" alt="Brain album cover">
       <h3>Brain (2018)</h3>
       <p><strong>Label:</strong> Look Up Records</p>
       <p>
         <a href="https://darks0ft.bandcamp.com/album/brain" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/PQR" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/album/PQR" target="_blank">Apple Music</a>
+        <a href="https://open.spotify.com/album/3LeTve4epRmN4677X5mWyW?si=NHVb1B8HRvKU4HZ741-FoA" target="_blank">Spotify</a> |
+        <a href="https://music.apple.com/us/album/brain/1438860120" target="_blank">Apple Music</a>
       </p>
-    </div>
+    </article>    
+    
   </div>
 </section>
 
 
-  <section id="press">
-    <h2>Press</h2>
-    <p>Here are some nice things that music journalists have had to say about Darksoft. I truly appreciate these folks and the time they've taken getting to know my music and sharing it with their readers:</p>
-<br>
+<section id="press" aria-labelledby="press-heading">
+  <h2 id="press-heading">Press</h2>
+  <p>Here are some nice things that music journalists have had to say about Darksoft. I truly appreciate these folks and the time they've taken getting to know my music and sharing it with their readers:</p>
+  <br>
+  <blockquote><p>Darksoft talks influences, creative processes and more [Interview] - <cite><a href="https://iguitar.info/2025/04/10/darksoft-talks-influences-creative-processes-and-more-interview/" target="_blank">iGuitar.com</a></cite></p></blockquote>
 
-    <p>Darksoft talks influences, creative processes and more [Interview] - <a href="https://iguitar.info/2025/04/10/darksoft-talks-influences-creative-processes-and-more-interview/" target="_blank">iGuitar.com</a></p>
+  <blockquote><p>"a full experience" - <cite><a href="https://start-track.com/album-darksoft-rationalism/" target="_blank">start-track.com</a></cite></p></blockquote>
 
-    <p>"a full experience" - <a href="https://start-track.com/album-darksoft-rationalism/" target="_blank">start-track.com</a></p>
+  <blockquote><p>"chiming goth rock and twee power pop" - <cite><a href="https://vinylmoon.co/collections/shop-all/products/vol-111" target="_blank">Vinyl Moon 111: Facade Arcade</a></cite></p></blockquote>
 
-    <p>"chiming goth rock and twee power pop" - <a href="https://vinylmoon.co/collections/shop-all/products/vol-111" target="_blank">Vinyl Moon 111: Facade Arcade</a></p>
+  <blockquote><p>"an enchanting and dreamy slice of ear candy" - <cite><a href="https://eclecticmusiclover.com/2025/02/01/fresh-new-tracks-vol-39-darksoft-frank-joshua-kiffie-koyal/" target="_blank">Eclectic Music Lover</a></cite></p></blockquote>
 
-    <p>"an enchanting and dreamy slice of ear candy" - <a href="https://eclecticmusiclover.com/2025/02/01/fresh-new-tracks-vol-39-darksoft-frank-joshua-kiffie-koyal/" target="_blank">Eclectic Music Lover</a></p>
+  <blockquote><p>"silvery guitar tones that graze '80s new wave" - <cite><a href="https://www.instagram.com/p/DBwEV3NReg9/?img_index=2" target="_blank">Down East Magazine, November 2024</a></cite></p></blockquote>
 
-    <p>"silvery guitar tones that graze '80s new wave" - <a href="https://www.instagram.com/p/DBwEV3NReg9/?img_index=2" target="_blank">Down East Magazine, November 2024</a></p>
+  <blockquote><p>Top 10 albums of 2023 - <cite><a href="https://janglepophub.home.blog/2023/12/28/janglepophub-oscars-2023-top-30-albums/" target="_blank">JanglePopHub</a></cite></p></blockquote>
 
-    <p>Top 30 albums of 2023 - <a href="https://janglepophub.home.blog/2023/12/28/janglepophub-oscars-2023-top-30-albums/" target="_blank">JanglePopHub</a></p>
+  <blockquote><p>"chiming guitars, dayglo synths and earworm melodies" - <cite><a href="https://microgenremusic.com/genres/slowcore/the-top-10-shoegaze-albums-of-2023/" target="_blank">The Top 10 Shoegaze Albums of 2023, Micro Genre Music</a></cite></p></blockquote>
 
-    <p>"chiming guitars, dayglo synths and earworm melodies" - <a href="https://microgenremusic.com/genres/slowcore/the-top-10-shoegaze-albums-of-2023/" target="_blank">The Top 10 Shoegaze Albums of 2023, Micro Genre Music</a></p>
+  <blockquote><p>"a smooth-as-silk mélange of keys and guitars...compulsively alluring" - <cite><a href="https://www.instagram.com/p/CtE51SCRIUi/" target="_blank">The Big Takeover, edition #92</a></cite></p></blockquote>
 
-    <p>"a smooth-as-silk mélange of keys and guitars...compulsively alluring" - <a href="https://www.instagram.com/p/CtE51SCRIUi/" target="_blank">The Big Takeover, edition #92</a></p>
+  <blockquote><p>"Everything that catchy indie rock should have" - <cite><a href="https://start-track.com/introducing-darksoft-beigeification-3-questions/" target="_blank">Start-Track</a></cite></p></blockquote>
 
-    <p>"Everything that catchy indie rock should have" - <a href="https://start-track.com/introducing-darksoft-beigeification-3-questions/" target="_blank">Start-Track</a></p>
+  <blockquote><p>“It Is What It Is.” An Interview With Darksoft - <cite><a href="https://forestpunk.wordpress.com/2023/01/31/it-is-what-it-is-an-interview-with-darksoft/" target="_blank">forestpunk</a></cite></p></blockquote>
 
-    <p>“It Is What It Is.” An Interview With Darksoft - <a href="https://forestpunk.wordpress.com/2023/01/31/it-is-what-it-is-an-interview-with-darksoft/" target="_blank">forestpunk</a></p>
+  <blockquote><p>"sumptuous and pleasing" - <cite><a href="https://eclecticmusiclover.com/2023/01/19/darksoft-album-review-beigeification/" target="_blank">Eclectic Music Lover</a></cite></p></blockquote>
 
-    <p>"sumptuous and pleasing" - <a href="https://eclecticmusiclover.com/2023/01/19/darksoft-album-review-beigeification/" target="_blank">Eclectic Music Lover</a></p>
+  <blockquote><p>"strangely heartening" - <cite><a href="https://janglepophub.home.blog/2023/01/13/album-review-beigeification-by-darksoft-look-up-records-2060-records/" target="_blank">JanglePopHub</a></cite></p></blockquote>
 
-    <p>"strangely heartening" - <a href="https://janglepophub.home.blog/2023/01/13/album-review-beigeification-by-darksoft-look-up-records-2060-records/" target="_blank">JanglePopHub</a></p>
+  <blockquote><p>"aching guitar chords and hushed, velvety vocals" - <cite><a href="https://twitter.com/DARKS0FT/status/1603751935462588416" target="_blank">The Big Takeover, edition #91</a></cite></p></blockquote>
 
-    <p>"aching guitar chords and hushed, velvety vocals" - <a href="https://twitter.com/DARKS0FT/status/1603751935462588416" target="_blank">The Big Takeover, edition #91</a></p>
+  <blockquote><p>"Only Time Will Tell is a lush and dreamy track" - <cite><a href="http://www.destroyexist.com/2022/12/darksoft-only-time-will-tell.html" target="_blank">Destroy//Exist</a></cite></p></blockquote>
 
-    <p>"Only Time Will Tell is a lush and dreamy track" - <a href="http://www.destroyexist.com/2022/12/darksoft-only-time-will-tell.html" target="_blank">Destroy//Exist</a></p>
+  <blockquote><p>"fresh, light and sublime" - <cite><a href="https://www.zonenights.com/2022/11/darksoft-it-is-what-it-is/" target="_blank">Zone Nights</a></cite></p></blockquote>
 
-    <p>"fresh, light and sublime" - <a href="https://www.zonenights.com/2022/11/darksoft-it-is-what-it-is/" target="_blank">Zone Nights</a></p>
+  <blockquote><p>"every time I replayed ‘Only Time Will Tell’ I felt renewed" - <cite><a href="https://www.mp3hugger.com/2022/12/dark-soft-only-time-will-tell/" target="_blank">mp3hugger</a></cite></p></blockquote>
 
-    <p>"every time I replayed ‘Only Time Will Tell’ I felt renewed" - <a href="https://www.mp3hugger.com/2022/12/dark-soft-only-time-will-tell/" target="_blank">mp3hugger</a></p>
+  <blockquote><p>"soothing, bittersweet vocals and hypnotic guitar work" - <cite><a href="https://post-punk.com/seattle-shoegaze-act-darksoft-debuts-video-for-looking-backward-from-new-album-cryo/" target="_blank">Post-punk.com</a></cite></p></blockquote>
 
-    <p>"soothing, bittersweet vocals and hypnotic guitar work" - <a href="https://post-punk.com/seattle-shoegaze-act-darksoft-debuts-video-for-looking-backward-from-new-album-cryo/" target="_blank">Post-punk.com</a></p>
+  <blockquote><p>"infectious melodies progressions and ‘90s rock undertones" - <cite><a href="https://v13.net/2020/09/darksoft-previews-his-meltdown-album-with-the-foreshadow-music-video-premiere/" target="_blank">V13</a></cite></p></blockquote>
 
-    <p>"infectious melodies progressions and ‘90s rock undertones" - <a href="https://v13.net/2020/09/darksoft-previews-his-meltdown-album-with-the-foreshadow-music-video-premiere/" target="_blank">V13</a></p>
+  <blockquote><p>"one motherfucker of an album that grabs hold on first listen and refuses to let go" - <cite><a href="https://vanyaland.com/2020/12/01/darksoft-soundtracks-the-ongoing-meltdown-deep-within-us-all/" target="_blank">Vanyaland</a></cite></p></blockquote>
 
-    <p>"one motherfucker of an album that grabs hold on first listen and refuses to let go" - <a href="https://vanyaland.com/2020/12/01/darksoft-soundtracks-the-ongoing-meltdown-deep-within-us-all/" target="_blank">Vanyaland</a></p>
+  <blockquote><p>"beautiful melodies, outstanding guitar work, and stunning vocals" - <cite><a href="https://eclecticmusiclover.com/2019/02/15/darksoft-ep-review-brain/" target="_blank">Eclectic Music Lover</a></cite></p></blockquote>
 
-    <p>"beautiful melodies, outstanding guitar work, and stunning vocals" - <a href="https://eclecticmusiclover.com/2019/02/15/darksoft-ep-review-brain/" target="_blank">Eclectic Music Lover</a></p>
+  <blockquote><p>"an evocative piece of dream theater with grunge leanings" - <cite><a href="https://www.americanpancake.com/2019/12/darksofts-track-cybersecurity-is.html" target="_blank">American Pancake</a></cite></p></blockquote>
 
-    <p>"an evocative piece of dream theater with grunge leanings" - <a href="https://www.americanpancake.com/2019/12/darksofts-track-cybersecurity-is.html" target="_blank">American Pancake</a></p>
+  <blockquote><p>"the most beautiful jangle-gaze aesthetic. A real find for me." - <cite><a href="https://janglepophub.home.blog/2019/12/17/beat-the-delete-0036-new-music-recommendations/" target="_blank">JanglePopHub</a></cite></p></blockquote>
 
-    <p>"the most beautiful jangle-gaze aesthetic. A real find for me." - <a href="https://janglepophub.home.blog/2019/12/17/beat-the-delete-0036-new-music-recommendations/" target="_blank">JanglePopHub</a></p>
+  <blockquote><p>"slow, straightforward and sad alt rock" - <cite><a href="https://rockthepigeon.com/2018/10/23/darksofts-mydoom-is-slow-straightforward-and-sad-alt-rock/" target="_blank">Rock The Pigeon</a></cite></p></blockquote>
 
-    <p>"slow, straightforward and sad alt rock" - <a href="https://rockthepigeon.com/2018/10/23/darksofts-mydoom-is-slow-straightforward-and-sad-alt-rock/" target="_blank">Rock The Pigeon</a></p>
+  <blockquote><p>"a gauze of shimmering shoegaze" - <cite><a href="https://www.ohestee.com/music/pop/darksoft-laments-over-the-unknown-in-debut-mydoom/" target="_blank">ohestee</a></cite></p></blockquote>
 
-    <p>"a gauze of shimmering shoegaze" - <a href="https://www.ohestee.com/music/pop/darksoft-laments-over-the-unknown-in-debut-mydoom/" target="_blank">ohestee</a></p>
+  <blockquote><p>Photo story: SWYM, Sealife, Darksoft, Daycones - <cite><a href="https://danstunesseattle.com/2018/12/24/photo-story-swym-sealife-darksoft-daycones/" target="_blank">Dan's Tunes</a></cite></p></blockquote>
+</section>
 
-    <p>Photo story: SWYM, Sealife, Darksoft, Daycones - <a href="https://danstunesseattle.com/2018/12/24/photo-story-swym-sealife-darksoft-daycones/" target="_blank">Dan's Tunes</a></p>
-  </section>
+
 
   <footer>
     <div class="footer-title"><a href="#" class="footer-link">
@@ -560,20 +551,17 @@
     });
   </script> -->
 <script>
-  window.addEventListener('scroll', function () {
-    const arrow = document.querySelector('.scroll-down-arrow');
-    if (!arrow) return; // safety check
+window.addEventListener('scroll', function () {
+  const nav = document.getElementById('sticky-nav-bar');
+  const navTop = nav.getBoundingClientRect().top;
 
-    const scrollY = window.scrollY || window.pageYOffset;
+  if (navTop <= 0) {
+    nav.classList.add('stuck');
+  } else {
+    nav.classList.remove('stuck');
+  }
+});
 
-    if (scrollY > 100) {
-      arrow.style.opacity = '0';
-      arrow.style.pointerEvents = 'none';
-    } else {
-      arrow.style.opacity = '0.85';
-      arrow.style.pointerEvents = 'auto';
-    }
-  });
 </script>
   
   <script>
