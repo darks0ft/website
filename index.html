@@ -58,7 +58,7 @@
 }
       #profile-image { display: block; margin: 30px auto; width: 300px; border-radius: 10px; }
 
-      .landing-title img { max-width: 200px; height: auto; }
+      .landing-title img { max-width: 200px; height: auto; margin-bottom: 2.5rem;  display: block; margin-left: auto; margin-right: auto;}
 
       #mc_embed_signup { background: #1e1e1e; color: #fff; border: 1px solid #333; border-radius: 15px; margin: 40px auto; padding: 20px; width: 100%; max-width: 600px; animation: glowColors 6s infinite alternate; }
       @keyframes glowColors { 0% { box-shadow: 0 0 20px hsl(0, 50%, 75%); } 20% { box-shadow: 0 0 20px hsl(40, 50%, 75%); } 40% { box-shadow: 0 0 20px hsl(80, 50%, 75%); } 60% { box-shadow: 0 0 20px hsl(160, 50%, 75%); } 80% { box-shadow: 0 0 20px hsl(240, 50%, 75%); } 100% { box-shadow: 0 0 20px hsl(320, 50%, 75%); } }
@@ -88,12 +88,7 @@
   align-items: center;
   overflow: hidden;
 }
-    .landing-title {
-      font-family: 'bradley-djr', sans-serif;
-      font-size: 20vh;
-      color: white;
-      transition: color 0.5s ease-out;
-    }
+    
     .landing-page {
   position: relative;
   height: 100vh;
@@ -108,6 +103,8 @@
   font-size: 20vh;
   color: white;
   transition: color 0.5s ease-out;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .landing-page::after {
   content: "";
@@ -117,8 +114,8 @@
   z-index: 0;
 }
 .sticky-nav-bar {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  bottom: 0;
   left: 0;
   width: 100%;
   background-color: rgba(47, 47, 47, 0.95);
@@ -127,11 +124,18 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.6rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  transform: translateY(-100%);
-  transition: transform 0.3s ease;
-  z-index: 1000;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
+  z-index: 10;
+  transition: all 0.3s ease;
 }
+
+.sticky-nav-bar.stuck {
+  position: fixed;
+  top: 0;
+  bottom: auto;
+}
+
+
 
 .sticky-nav-bar.show {
   transform: translateY(0);
@@ -214,12 +218,48 @@
   color: #999999;
 }
 
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.85);
+  opacity: 0;
+  animation: fadeIn 1s ease-in 0.1s forwards, pulseWiggle 2s ease-in-out infinite 1.1s;
+  transition: opacity 0.5s ease;
+  cursor: pointer;
+
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.85; }
+}
+
+@keyframes pulseWiggle {
+  0% { transform: translateX(-50%) translateY(0); opacity: 0.85; }
+  50% { transform: translateX(-50%) translateY(-8px); opacity: 0.6; }
+  100% { transform: translateX(-50%) translateY(0); opacity: 0.85; }
+}
+
+
 
     </style>
   </head>
 <body>
   <div class="landing-page">
     <div class="landing-title">Darksoft</div>
+    <div class="sticky-nav-bar show" id="sticky-nav-bar">
+      <a href="#about">About</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#merch">Merch</a>
+      <a href="#tour">Tour</a>
+      <a href="#biography">Biography</a>
+      <a href="#contact">Contact</a>
+      <a href="#press">Press</a>
+    </div>  
+   <!-- <div class="scroll-down-arrow" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">↓</div>-->
   </div>
   <header>
     <div class="landing-title"><img src="https://github.com/darks0ft/website/blob/main/Darksoft-logo-smiley-white.png?raw=true" alt="Darksoft Logo"></div>
@@ -235,7 +275,7 @@
       <a href="https://x.com/darks0ft"><img src="https://cdn.simpleicons.org/x/FFFFFF" alt="X"></a>
       <a href="https://bsky.app/profile/darks0ft.bsky.social"><img src="https://cdn.simpleicons.org/bluesky/FFFFFF" alt="Bluesky"></a>
     </div>
-    <div class="nav">
+    <!-- <div class="nav">
     <nav>
       <a href="#about">About</a>
       <a href="#newsletter">Newsletter</a>
@@ -245,16 +285,8 @@
       <a href="#contact">Contact</a>
       <a href="#press">Press</a>
     </nav>
-    </div>
-    <div class="sticky-nav-bar" id="sticky-nav-bar">
-      <a href="#about">About</a>
-      <a href="#newsletter">Newsletter</a>
-      <a href="#merch">Merch</a>
-      <a href="#tour">Tour</a>
-      <a href="#biography">Biography</a>
-      <a href="#contact">Contact</a>
-      <a href="#press">Press</a>
-    </div>
+    </div>-->
+
     
   </header>
 
@@ -428,6 +460,8 @@
     <p>Here are some nice things that music journalists have had to say about Darksoft. I truly appreciate these folks and the time they've taken getting to know my music and sharing it with their readers:</p>
 <br>
 
+    <p>Darksoft talks influences, creative processes and more [Interview] - <a href="https://iguitar.info/2025/04/10/darksoft-talks-influences-creative-processes-and-more-interview/" target="_blank">iGuitar.com</a></p>
+
     <p>"a full experience" - <a href="https://start-track.com/album-darksoft-rationalism/" target="_blank">start-track.com</a></p>
 
     <p>"chiming goth rock and twee power pop" - <a href="https://vinylmoon.co/collections/shop-all/products/vol-111" target="_blank">Vinyl Moon 111: Facade Arcade</a></p>
@@ -512,7 +546,7 @@
       document.querySelector('.landing-title').style.color = `rgb(${255 * (1 - factor)}, ${255 * (1 - factor)}, ${255 * (1 - factor)})`;
     });
   </script>
-  <script>
+ <!-- <script>
     window.addEventListener('scroll', function() {
       const mainNav = document.querySelector('nav'); // main nav
       const stickyNav = document.getElementById('sticky-nav-bar');
@@ -524,7 +558,24 @@
         stickyNav.classList.remove('show');
       }
     });
-  </script>
+  </script> -->
+<script>
+  window.addEventListener('scroll', function () {
+    const arrow = document.querySelector('.scroll-down-arrow');
+    if (!arrow) return; // safety check
+
+    const scrollY = window.scrollY || window.pageYOffset;
+
+    if (scrollY > 100) {
+      arrow.style.opacity = '0';
+      arrow.style.pointerEvents = 'none';
+    } else {
+      arrow.style.opacity = '0.85';
+      arrow.style.pointerEvents = 'auto';
+    }
+  });
+</script>
+  
   <script>
   // Add your release dates in YYYY-MM-DD format (most recent first)
   const releaseDates = [
@@ -557,6 +608,22 @@
 
   document.getElementById("avg-days").textContent = `${calculateAverageGap(releaseDates)} days`;
 </script>
+<script>
+  window.addEventListener('scroll', function () {
+    const nav = document.getElementById('sticky-nav-bar');
+    const landing = document.querySelector('.landing-page');
+    const landingBottom = landing.getBoundingClientRect().bottom;
+
+    if (landingBottom <= 0) {
+      // Scrolled past the landing section — stick to top
+      nav.classList.add('stuck');
+    } else {
+      // In the landing section — stay at bottom
+      nav.classList.remove('stuck');
+    }
+  });
+</script>
+
 
 </body>
 </html>
