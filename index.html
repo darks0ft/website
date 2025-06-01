@@ -466,10 +466,11 @@ p + p {
   font-family: 'bradley-djr', sans-serif;
   font-size: 3rem;
   color: white;
+  text-decoration: none; 
   z-index: 9999;
   opacity: 0;
-  pointer-events: none;
   transition: opacity 0.3s ease;
+  pointer-events: auto;
 }
 
 /* Show it only when .scrolled is applied to <body> */
@@ -811,6 +812,6 @@ body.scrolled .sticky-text-logo {
     body.classList.toggle('menu-open');
   });
 </script>
-<div class="sticky-text-logo">Darksoft</div>
+<a href="#" class="sticky-text-logo">Darksoft</a>
 </body>
 </html>
