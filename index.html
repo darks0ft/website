@@ -181,7 +181,7 @@ footer {
   left: 0;
   right: 0;
   margin: 0;
-  padding: 2rem 60px 2rem; /* top/bottom padding for height */
+  padding: 2rem 60px 6.5rem; /* top/bottom padding for height */
   background: linear-gradient(to bottom,
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0.7) 60%,
@@ -366,6 +366,121 @@ p + p {
   line-height: 1.5; 
 }
 
+@media (max-width: 768px) {
+  .logo-top-left {
+    font-size: 3rem;
+    width: 18px;
+    height: 18px;
+  }
+
+
+  .sticky-nav-bar {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+
+  .top-social-icons {
+    top: 220px;
+    right: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+}
+
+/* Hamburger button - default hidden */
+.hamburger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  color: #6dc15b;
+  border: none;
+  z-index: 40;
+  cursor: pointer;
+  display: none; /* hide on desktop */
+}
+
+/* Mobile rules */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .sticky-nav-bar,
+  .top-social-icons {
+    display: none;
+  }
+
+  .menu-open .sticky-nav-bar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: #000;
+    padding: 1rem;
+    border: 1px solid #6dc15b;
+    z-index: 30;
+  }
+
+  .menu-open .top-social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 1rem;
+  }
+}
+
+
+  .menu-open .sticky-nav-bar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: #000;
+    padding: 1rem;
+    border: 1px solid #6dc15b;
+    z-index: 30;
+  }
+
+  .menu-open .top-social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 1rem;
+  }
+
+.sticky-text-logo {
+  position: fixed;
+  top: 1.0rem;
+  left: 1.5rem;
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 3rem;
+  color: white;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Show it only when .scrolled is applied to <body> */
+body.scrolled .sticky-text-logo {
+  opacity: 1;
+}
+
+
+
+
+
 
 
     </style>
@@ -374,6 +489,10 @@ p + p {
 <body>
   <div class="landing-page">
     <a href="#" class="logo-top-left">Darksoft</a>
+
+    <button id="menu-toggle" class="hamburger" aria-label="Toggle menu">
+      ☰
+    </button>
     <nav class="sticky-nav-bar show" id="sticky-nav-bar" aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#merch">Merch</a>
@@ -668,20 +787,30 @@ p + p {
   </script>
 
 <script>
-window.addEventListener('scroll', function () {
-  const nav = document.getElementById('sticky-nav-bar');
-  const navTop = nav.getBoundingClientRect().top;
-
-  if (navTop <= 0) {
-    nav.classList.add('stuck');
-  } else {
-    nav.classList.remove('stuck');
-  }
-});
-
-</script>
+  window.addEventListener('scroll', function () {
+    const nav = document.getElementById('sticky-nav-bar');
+    const landing = document.querySelector('.landing-page');
+    const landingBottom = landing.getBoundingClientRect().bottom;
   
+    if (landingBottom <= -100) {
+  nav.classList.add('stuck');
+  document.body.classList.add('scrolled');
+} else {
+  nav.classList.remove('stuck');
+  document.body.classList.remove('scrolled');
+}
+  });
+  </script>
+  
+  
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const body = document.body;
 
-
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('menu-open');
+  });
+</script>
+<div class="sticky-text-logo">Darksoft</div>
 </body>
 </html>
