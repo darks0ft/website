@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darksoft — Dream Pop Music</title>
-    <meta name="description" content="Darksoft is a dreamy indie rock artist blending shoegaze, dream pop, and philosophical lyrics. Listen to albums, see tour dates, and buy merch.">
+    <meta name="description" content="Darksoft is an alternative rock artist blending shoegaze, dream pop, and philosophical lyrics. Listen to albums, see tour dates, and buy merch.">
     <meta property="og:title" content="Darksoft — Dream Pop Music">
     <meta property="og:description" content="Dreamy indie rock with shoegaze elements. See new releases, tour dates, and merch.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20profile%20picture%202025%20website%20optimized.JPG">
+    <meta property="og:image" content="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Promo%20Graphic.jpg">
     <meta property="og:url" content="https://darksoft.band">
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
@@ -16,7 +16,7 @@
         "@type": "MusicGroup",
         "name": "Darksoft",
         "url": "https://darksoft.band",
-        "image": "https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20profile%20picture%202025%20website%20optimized.JPG",
+        "image": "https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Promo%20Graphic.jpg",
         "genre": ["Dream Pop", "Indie Rock", "Shoegaze"],
         "sameAs": [
           "https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE",
@@ -35,14 +35,25 @@
   margin: 0;
   padding: 0;
 }
-      body { font-family: Arial, sans-serif; margin: 0; background: #2f2f2f; color: #fff; overflow-x: hidden; width: 100%; text-align: center; font-size: 18px;}
-      header { text-align: center; padding: 2rem 0.5rem 1rem; background-color: #505050; }
+html {
+  scroll-padding-top: 70px; /* or 80px if needed */
+  scroll-behavior: smooth;}
+body {
+  font-family: Menlo, monospace;
+  margin: 0;
+  background: #000;       /* black background */
+  color: #fff;            /* white body text */
+  overflow-x: hidden;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+      header { text-align: center; padding: 2rem 0.5rem 1rem; background-color: #000; }
       .rainbow-text { font-family: 'bradley-djr', sans-serif; font-size: 4rem; line-height: 1.2; letter-spacing: 0.05rem; display: inline-block; }
       .rainbow-text span { display: inline-block; animation: fadeColors 10s infinite; }
       @keyframes fadeColors { 0% { color: hsl(0, 40%, 60%); } 20% { color: hsl(40, 40%, 60%); } 40% { color: hsl(80, 40%, 60%); } 60% { color: hsl(160, 40%, 60%); } 80% { color: hsl(240, 40%, 60%); } 100% { color: hsl(320, 40%, 60%); } }
 
       nav { margin-top: 1rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
-      nav a { color: #fff; text-decoration: none; font-weight: bold; padding: 0.4rem 0.8rem; background-color: #3a3a3a; border-radius: 4px; transition: background-color 0.3s; }
       nav a:hover { background-color: #2a2a2a; text-decoration: none; }
       nav a:visited { color: #fff; }
 
@@ -51,8 +62,29 @@
       a:visited { color: #cccccc; }
 
       section { padding: 2rem 1rem; max-width: 1000px; margin: 0 auto; text-align: center; }
-      section h2 { font-family: 'bradley-djr', sans-serif; font-size: 3rem; letter-spacing: 0.1rem; border-bottom: 1px solid #aaa; padding-bottom: 0.75rem; margin-bottom: 0.75rem;   }
-      .social-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem; }
+      section h2 {
+  position: relative;
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Gradient line under h2 */
+section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right,
+    rgba(109, 193, 91, 0),
+    #6dc15b,
+    rgba(109, 193, 91, 0)
+  );
+}      .social-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem; }
       .social-icons img { width: 28px; height: 28px; transition: opacity 0.1s ease; cursor: pointer; }
       .social-icons img:hover {opacity: 0.6;
 }
@@ -72,28 +104,38 @@
       .merch-gallery img { width: 100%; height: auto; border-radius: 10px; }
       .merch-description { margin-top: 10px; font-size: 1rem; color: #ccc; text-align: center; }
 
-      footer { text-align: center; padding: 1rem; background-color: #505050; color: #ccc; }
-      footer .footer-title { font-family: 'bradley-djr', sans-serif; font-size: 3rem; margin-top: 1rem; }
+      footer .footer-links a {
+  color: #6dc15b;
+  text-decoration: none;
+  font-family: Menlo, monospace;
+  margin: 0 0.5rem;
+}
+
+footer .footer-links a:hover {
+  opacity: 0.6;
+}
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #000;
+  color: #6dc15b;
+  font-family: Menlo, monospace;
+}f      footer .footer-title { font-family: 'bradley-djr', sans-serif; font-size: 3rem; margin-top: 1rem; }
 
       .songkick-widget-container { margin-top: 20px; }
       .fallback-message { color: #ccc; margin-top: 15px; font-size: 0.95rem; }
-
-      .landing-page {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background: url('https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20profile%20picture%202025%20website%20optimized.JPG') center center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+      footer p:last-of-type {
+  color: #fff;
+  font-size: 0.9rem;  /* about half of 18px */
+  opacity: 0.75;      /* optional for softer appearance */
+  margin-top: 1rem;
 }
     
     .landing-page {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url('https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20profile%20picture%202025%20website%20optimized.JPG') center center/cover no-repeat;
+  background: url('https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Promo%20Graphic.jpg') center center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,32 +153,40 @@
 .landing-page::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 0;
-}
-.sticky-nav-bar {
-  margin: 0;         /* reset default <nav> margin */
-  padding: 0.6rem 0; /* keep your intended padding */
-  position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(47, 47, 47, 0.95);
-  backdrop-filter: blur(6px);
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
-  z-index: 10;
-  transition: all 0.3s ease;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* soft dark overlay */
+  z-index: 0; /* keeps it behind logo/nav/icons */
+  pointer-events: none; /* ensures it doesn't block clicks */
+}
+
+.sticky-nav-bar {
+  position: absolute;
+  top: 60px; /* match logo alignment */
+  right: 60px;
+  background: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  padding: 0;
+  gap: 2rem;
+  font-family: Menlo, monospace;
+  z-index: 20;
 }
 
 .sticky-nav-bar.stuck {
   position: fixed;
   top: 0;
-  bottom: auto;
+  left: 0;
+  right: 0;
   margin: 0;
+  padding: 2rem 60px 2rem; /* top/bottom padding for height */
+  background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0) 100%);
+  z-index: 30;
 }
 
 
@@ -146,17 +196,29 @@
 }
 
 .sticky-nav-bar a {
-  color: #fff;
+  color: #6dc15b;
   text-decoration: none;
-  font-weight: bold;
-  padding: 0.4rem 0.8rem;
-  background-color: #3a3a3a;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: Menlo, monospace;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  transition: opacity 0.3s;
+}
+
+.sticky-nav-bar a:hover,
+.sticky-nav-bar a:focus,
+.sticky-nav-bar a:active {
+  background: none;
+  border: none;
+  outline: none;
+  opacity: 0.6;
 }
 
 .sticky-nav-bar a:hover {
-  background-color: #2a2a2a;
+  opacity: 0.6;
 }
 
 #releases {
@@ -167,13 +229,28 @@
 }
 
 #releases h2 {
+  position: relative;
   font-family: 'bradley-djr', sans-serif;
   font-size: 3rem;
   letter-spacing: 0.1rem;
-  border-bottom: 1px solid #aaa;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1.5rem;
   margin-bottom: 2rem;
 }
+
+#releases h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right,
+    rgba(109, 193, 91, 0),
+    #6dc15b,
+    rgba(109, 193, 91, 0)
+  );
+}
+
 
 .release-grid {
   display: flex;
@@ -247,6 +324,48 @@
   100% { transform: translateX(-50%) translateY(0); opacity: 0.85; }
 }
 
+.logo-top-left {
+  position: absolute;
+  top: 40px;      /* 3x original top padding */
+  left: 60px;     /* 2x original left padding */
+  z-index: 20;
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 5rem; /* 2x original font size */
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.logo-top-left:hover {
+  opacity: 0.8;
+}
+
+.top-social-icons {
+  position: absolute;
+  top: 105px;      /* adjust spacing as needed */
+  right: 60px;     /* aligns with nav */
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;       /* spacing between icons */
+  z-index: 20;
+}
+
+.top-social-icons img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.top-social-icons img:hover {
+  opacity: 0.55;
+  cursor: pointer;
+}
+
+p + p {
+  margin-top: 13px;              /* add vertical space between paragraphs */
+  line-height: 1.5; 
+}
+
 
 
     </style>
@@ -254,38 +373,37 @@
   </head>
 <body>
   <div class="landing-page">
-    <h1 class="landing-title">Darksoft</h1>
+    <a href="#" class="logo-top-left">Darksoft</a>
     <nav class="sticky-nav-bar show" id="sticky-nav-bar" aria-label="Main navigation">
       <a href="#about">About</a>
-      <a href="#newsletter">Newsletter</a>
       <a href="#merch">Merch</a>
       <a href="#tour">Tour</a>
-      <a href="#biography">Biography</a>
       <a href="#contact">Contact</a>
-      <a href="#press">Press</a>
     </nav>  
+    <div class="top-social-icons">
+      <a href="https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE?si=bpjJbjmWQLy0vU8VfLC5Tg"><img src="https://cdn.simpleicons.org/spotify/6dc15b" alt="Spotify"></a>
+      <a href="https://music.apple.com/us/artist/darksoft/1438263529"><img src="https://cdn.simpleicons.org/apple/6dc15b" alt="Apple Music"></a>
+      <a href="https://darks0ft.bandcamp.com/"><img src="https://cdn.simpleicons.org/bandcamp/6dc15b" alt="Bandcamp"></a>
+      <a href="https://www.pandora.com/AL:44479553"><img src="https://cdn.simpleicons.org/pandora/6dc15b" alt="Pandora"></a>
+      <a href="https://soundcloud.com/darks0ft/"><img src="https://cdn.simpleicons.org/soundcloud/6dc15b" alt="SoundCloud"></a>
+      <a href="https://www.youtube.com/@Darksoft"><img src="https://cdn.simpleicons.org/youtube/6dc15b" alt="YouTube"></a>
+      <a href="https://www.instagram.com/darks0ft"><img src="https://cdn.simpleicons.org/instagram/6dc15b" alt="Instagram"></a>
+      <a href="https://www.facebook.com/darks0ft"><img src="https://cdn.simpleicons.org/facebook/6dc15b" alt="Facebook"></a>
+      <a href="https://x.com/darks0ft"><img src="https://cdn.simpleicons.org/x/6dc15b" alt="X"></a>
+      <a href="https://bsky.app/profile/darks0ft.bsky.social"><img src="https://cdn.simpleicons.org/bluesky/6dc15b" alt="Bluesky"></a>
+    </div>
   </div>
   <header>
     <div class="landing-title"><img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft-logo-smiley-white.png" alt="Darksoft Logo"></div>
-    <div class="social-icons">
-      <a href="https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE?si=bpjJbjmWQLy0vU8VfLC5Tg"><img src="https://cdn.simpleicons.org/spotify/FFFFFF" alt="Spotify"></a>
-      <a href="https://music.apple.com/us/artist/darksoft/1438263529"><img src="https://cdn.simpleicons.org/apple/FFFFFF" alt="Apple Music"></a>
-      <a href="https://darks0ft.bandcamp.com/"><img src="https://cdn.simpleicons.org/bandcamp/FFFFFF" alt="Bandcamp"></a>
-      <a href="https://www.pandora.com/AL:44479553"><img src="https://cdn.simpleicons.org/pandora/FFFFFF" alt="Pandora"></a>
-      <a href="https://soundcloud.com/darks0ft/"><img src="https://cdn.simpleicons.org/soundcloud/FFFFFF" alt="SoundCloud"></a>
-      <a href="https://www.youtube.com/@Darksoft"><img src="https://cdn.simpleicons.org/youtube/FFFFFF" alt="YouTube"></a>
-      <a href="https://www.instagram.com/darks0ft"><img src="https://cdn.simpleicons.org/instagram/FFFFFF" alt="Instagram"></a>
-      <a href="https://www.facebook.com/darks0ft"><img src="https://cdn.simpleicons.org/facebook/FFFFFF" alt="Facebook"></a>
-      <a href="https://x.com/darks0ft"><img src="https://cdn.simpleicons.org/x/FFFFFF" alt="X"></a>
-      <a href="https://bsky.app/profile/darks0ft.bsky.social"><img src="https://cdn.simpleicons.org/bluesky/FFFFFF" alt="Bluesky"></a>
-    </div>
   </header>
 
-  <section id="about" aria-labelledby="about-heading">
-      <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Day%20by%20Day%20music%20video%20still.png" alt="Darksoft Profile Picture">
-      <h2 id="about-heading">About</h2>
-    <p>Darksoft is a multi-instrumentalist songwriter and producer who creates dreamy indie rock sounds. Blending dream pop, shoegaze, and alternative rock with lush melodies and introspective lyrics, Darksoft explores universal truths and existential themes.</p>
-  </section>
+<section id="about" aria-labelledby="about-heading">
+  <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Day%20by%20Day%20music%20video%20still.png" alt="Darksoft Profile Picture">
+  <h2 id="about-heading">About</h2>
+
+  <p>Darksoft is a multi-instrumentalist songwriter and producer who creates dreamy indie rock sounds. Blending dream pop, shoegaze, and alternative rock with lush melodies and introspective lyrics, Darksoft explores universal truths and existential themes.</p>
+</section>
+
   <section id="newsletter" aria-labelledby="newsletter-heading">
     <div id="mc_embed_signup">
       <h2 id="newsletter-heading">Subscribe</h2>
@@ -347,13 +465,21 @@
   <section id="biography" aria-labelledby="biography-heading"> 
     <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20-%20Press%20Photo%202024.jpg" alt="Darksoft Biography Photo">
     <h2 id="biography-heading">Biography</h2> 
-    <p>Darksoft is a multi-instrumentalist songwriter and producer who creates dreamy indie rock sounds. Darksoft songs blend dream pop and shoegaze elements, using lush melodic progressions, 80s/90s alternative rock undertones, and deftly executed vocals.</p>
-     <p>Lyrically, he weaves through clichés, platitudes, and aphorisms that explore universal truths and philosophical themes, giving his music an introspective and existential edge. Darksoft is a solo recording project often supported by a full band for live shows.</p>
-    <p>To date, Darksoft has released a handful of self-produced conceptual albums. His most recent albums, Rationalism (2025), Relativism (2024), and Grayscale (2023), were released with Spirit Goth Records.</p>
-    <p>Beigeification (2023) delivers a postmodern blend of surfy sounds and beigey moods, self-released through Look Up Records with tapes printed by 2060 Records. In recent years, Darksoft has toured the northeast, west coast, and Pacific Northwest.</p>
-    <p>Cryo (2022) also gained national radio attention, with the track "Looking Backward" landing on Spotify’s Indie Fresh Finds playlist. His earlier albums, Meltdown (2020) and Brain (2018), explore themes of digital futurism and watery introspection, blending computer-age anxiety with raw human emotion — pure enough to pass the Turing Test.</p>
-    <p>Darksoft is originally from Seattle, where he participated in the local music scene for years. In 2021, he moved his family to Portland, Maine. Besides producing Darksoft, he has produced music under several other monickers. Darksoft tries to support other musicians, too. He manages Look Up Records, a small independent music label and blog.</p>
+  
+    <p>Darksoft is a multi-instrumentalist songwriter and producer who creates dreamy indie rock sounds.</p>
+    <p>DIY and self-produced, Darksoft songs blend dream pop and shoegaze elements, using lush melodic progressions, 80s/90s alternative rock undertones, and deftly executed vocals.</p>
+  
+    <p>Lyrically, he weaves through sayings that explore universal truths and philosophical themes, giving his music an introspective and existential edge. Darksoft is a solo recording project often supported by a full band for live shows.</p>
+  
+    <p>To date, Darksoft has released a handful of self-produced conceptual albums. His most recent albums, <em>Rationalism</em> (2025), <em>Relativism</em> (2024), and <em>Grayscale</em> (2023), were released with Spirit Goth Records.</p>
+  
+    <p><em>Beigeification</em> (2023) delivers a postmodern blend of surfy sounds and beigey moods, self-released through Look Up Records with tapes printed by 2060 Records. In recent years, Darksoft has toured the northeast, west coast, and Pacific Northwest.</p>
+  
+    <p><em>Cryo</em> (2022) also gained national radio attention, with the track "Looking Backward" landing on Spotify’s Indie Fresh Finds playlist. His earlier albums, <em>Meltdown</em> (2020) and <em>Brain</em> (2018), explore themes of digital futurism and watery introspection, blending computer-age anxiety with raw human emotion — pure enough to pass the Turing Test.</p>
+  
+    <p>Darksoft is originally from Seattle, where he participated in the local music scene for years. In 2021, he moved his family to Portland, Maine. Besides producing Darksoft, he has produced music under several other monikers. Darksoft tries to support other musicians, too. He manages Look Up Records, a small independent music label and blog.</p>
   </section>
+  
 
   <section id="contact" aria-labelledby="contact-heading">
     <h2 id="contact-heading">Contact</h2>  
@@ -362,7 +488,7 @@
 
   <section id="releases" aria-labelledby="releases-heading">
   <h2 id="releases-heading">Releases</h2>
-  <p>All the Darksoft albums I've put out. Average number of days between album releases: <strong id="avg-days">Calculating...</strong>.</p>
+  <p>All the Darksoft albums I've put out.</p>
   <div class="release-grid">
     <article class="release-card">
       <img src="https://raw.githubusercontent.com/darks0ft/website/main/Darksoft%20Rationalism%20Album%20Artwork.jpeg" alt="Rationalism album cover">
@@ -513,9 +639,10 @@
       <a href="#biography">Biography</a> | 
       <a href="#merch">Merch</a> | 
       <a href="#tour">Tour</a> | 
-      <a href="#contact">Contact</a>
+      <a href="#contact">Contact</a> |
       <a href="#press">Press</a>
     </div>
+    <br>
     <p>© <span id="year"></span> Darksoft. All rights reserved.</p>
   </footer>
 
@@ -539,19 +666,7 @@
       document.querySelector('.landing-title').style.color = `rgb(${255 * (1 - factor)}, ${255 * (1 - factor)}, ${255 * (1 - factor)})`;
     });
   </script>
- <!-- <script>
-    window.addEventListener('scroll', function() {
-      const mainNav = document.querySelector('nav'); // main nav
-      const stickyNav = document.getElementById('sticky-nav-bar');
-      const mainNavBottom = mainNav.getBoundingClientRect().bottom;
-  
-      if (mainNavBottom < 0) {
-        stickyNav.classList.add('show');
-      } else {
-        stickyNav.classList.remove('show');
-      }
-    });
-  </script> -->
+
 <script>
 window.addEventListener('scroll', function () {
   const nav = document.getElementById('sticky-nav-bar');
@@ -566,53 +681,6 @@ window.addEventListener('scroll', function () {
 
 </script>
   
-  <script>
-  // Add your release dates in YYYY-MM-DD format (most recent first)
-  const releaseDates = [
-    "2025-01-15", // Rationalism
-    "2024-01-20", // Relativism
-    "2023-06-01", // Grayscale
-    "2023-01-10", // Beigeification
-    "2022-12-01", // Cryo
-    "2020-12-01", // Meltdown
-    "2018-10-19"  // Brain
-  ];
-
-  function calculateAverageGap(dates) {
-    const today = new Date();
-    let totalGapDays = 0;
-    for (let i = 0; i < dates.length - 1; i++) {
-      const date1 = new Date(dates[i]);
-      const date2 = new Date(dates[i + 1]);
-      const diffDays = (date1 - date2) / (1000 * 60 * 60 * 24);
-      totalGapDays += diffDays;
-    }
-    // Add gap from most recent release to today:
-    const lastRelease = new Date(dates[0]);
-    const gapToToday = (today - lastRelease) / (1000 * 60 * 60 * 24);
-    totalGapDays += gapToToday;
-
-    const avg = Math.round(totalGapDays / dates.length);
-    return avg;
-  }
-
-  document.getElementById("avg-days").textContent = `${calculateAverageGap(releaseDates)} days`;
-</script>
-<script>
-  window.addEventListener('scroll', function () {
-    const nav = document.getElementById('sticky-nav-bar');
-    const landing = document.querySelector('.landing-page');
-    const landingBottom = landing.getBoundingClientRect().bottom;
-
-    if (landingBottom <= 0) {
-      // Scrolled past the landing section — stick to top
-      nav.classList.add('stuck');
-    } else {
-      // In the landing section — stay at bottom
-      nav.classList.remove('stuck');
-    }
-  });
-</script>
 
 
 </body>
