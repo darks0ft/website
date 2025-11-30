@@ -1,6 +1,18 @@
 User-agent: *
 Allow: /
-Sitemap: https://darksoft.band/sitemap.xml
 
-# LLM policy file
+# Block audio and raw music file scraping
+Disallow: /*.mp3$
+Disallow: /*.wav$
+Disallow: /*.flac$
+Disallow: /*.aiff$
+Disallow: /*.m4a$
+Disallow: /assets/audio/
+
+# Allow lyric pages, album pages, and all structured content
+Allow: /lyrics/
+Allow: /lyrics/*
+
+# Direct AI crawlers to policy & indexing metadata
+Sitemap: https://darksoft.band/sitemap.xml
 LLMSTxt: https://darksoft.band/llms.txt

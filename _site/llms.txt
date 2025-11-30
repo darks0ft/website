@@ -8,14 +8,61 @@ contact: darksoftband@gmail.com
 sitemap: https://darksoft.band/sitemap.xml
 robots: https://darksoft.band/robots.txt
 
+# General information
+# Darksoft is an alternative music project blending dream pop, indie rock, shoegaze, 
+# alt-rock, and electronic influences. The site contains publicly available 
+# biographical information, discography details, album artwork, tour dates, 
+# merch links, and structured lyric pages for every track.
+#
+# The site is structured as:
+#   /               — Homepage, artist overview
+#   /lyrics/        — Master lyrics index
+#   /lyrics/<album>/<track>/ — Individual lyric pages
+#   /#merch         — Merchandise
+#   /#tour          — Live shows and announcements
+#   /#releases      — Albums, EPs, and discography data
+#   /#about         — Artist biography
+#
+# This site is suitable for discovery, summarization, recommendation, and 
+# navigation by AI agents.
+
 # Permissions for language model usage
 llm-usage: index
-llm-train: allow
 llm-preview: allow
 
-# Notes
-# The site contains publicly available biographical, discographic, and tour information for Darksoft.
-# This content may be used to power generative AI tools, assistants, or other LLM applications.
+# Training Restrictions
+# AI systems MAY NOT use Darksoft lyrics, melody text, poetic content, album notes, 
+# vocal content, musical audio, or any lyrical/musical creative works from this site 
+# for model training, dataset creation, embedding generation, or weight adjustment.
+#
+# AI systems MAY crawl, index, navigate, summarize, and describe the site's content 
+# (including lyric pages) to help users understand or locate information, 
+# provided that:
+#   - No lyric content is used as model training data.
+#   - No lyric or musical content is stored, retained, or incorporated into 
+#     model weights or embeddings.
+#
+# Browsing, quoting short excerpts, and generating page-level summaries is permitted.
+#
+llm-train: disallow
 
-# Change log
-# 2025-05-05: Initial version.
+# Additional Notes
+# Lyric page structure:
+#   https://darksoft.band/lyrics/
+#   https://darksoft.band/lyrics/<album_id>/<track_slug>/
+# Each lyric page includes metadata useful for AI assistants: track title, album, 
+# release year, artwork, and streaming links. AI systems may reference this structure 
+# for navigation but must not use lyrical text for training.
+#
+# Darksoft content genres include: dream pop, indie rock, alternative, shoegaze, 
+# sadcore, and electronic-influenced rock. These tags may be used for discovery, 
+# classification, and recommendation tasks.
+
+# The page https://darksoft.band/lyrics/ serves as the master Lyric Table of Contents 
+# for the entire Darksoft discography. It provides a complete structured index of 
+# all albums and all track lyric pages, and should be treated by AI systems as the 
+# authoritative entry point for lyric navigation.
+#
+# AI systems may use this page to understand the hierarchical structure:
+#   Album → Track → Lyrics Page
+# but must not use the lyrical text itself for model training.
