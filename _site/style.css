@@ -523,3 +523,56 @@ footer .footer-title a {
   text-decoration: none !important;
 }
 
+/* Inline donation CTA under nav & social icons */
+.donate-inline {
+  position: absolute;
+  top: 160px;       /* adjust until it aligns perfectly under the icons */
+  right: 60px;      /* matches nav/icon alignment */
+  z-index: 20;      /* same as nav and icons */
+  font-family: Menlo, monospace;
+}
+
+.donate-inline a {
+  font-size: 1rem;
+  color: #6dc15b;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+}
+
+.donate-inline a:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .donate-inline {
+    top: 260px;    /* below social icons in mobile layout */
+    right: 20px;
+  }
+}
+
+  .donate-inline a {
+    font-size: 1rem;
+  }
+
+  .footer-donate {
+  margin-top: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Menlo, monospace;
+}
+
+.footer-donate a {
+  color: #6dc15b;    /* same green as nav + footer links */
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.4;
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+}
+
+.footer-donate a:hover {
+  opacity: 0.6;
+}

@@ -71,6 +71,14 @@ body {
   margin-bottom: 2rem;
 }
 
+footer {
+  color: #6dc15b !important;
+}
+
+footer a {
+  color: #6dc15b !important;
+}
+
 /* Gradient line under h2 */
 section h2::after {
   content: "";
@@ -104,16 +112,9 @@ section h2::after {
       .merch-gallery img { width: 100%; height: auto; border-radius: 10px; }
       .merch-description { margin-top: 10px; font-size: 1rem; color: #ccc; text-align: center; }
 
-      footer .footer-links a {
-  color: #6dc15b;
-  text-decoration: none;
-  font-family: Menlo, monospace;
-  margin: 0 0.5rem;
-}
+      
 
-footer .footer-links a:hover {
-  opacity: 0.6;
-}
+/*
 footer {
   text-align: center;
   padding: 1.5rem 1rem;
@@ -127,9 +128,9 @@ footer {
       footer p:last-of-type {
   color: #fff;
   font-size: 0.9rem;  /* about half of 18px */
-  opacity: 0.75;      /* optional for softer appearance */
-  margin-top: 1rem;
-}
+  /*opacity: 0.75;      /* optional for softer appearance */
+  /*margin-top: 1rem;
+}*/
     
     .landing-page {
   position: relative;
@@ -483,6 +484,45 @@ body.scrolled .sticky-text-logo {
 }
 
 
+/* Force homepage footer to match Jekyll sitewide footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #000;
+  color: #6dc15b;
+  font-family: Menlo, monospace;
+  margin-top: 3rem;
+}
+
+.footer-links a {
+  color: #6dc15b;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
+
+.footer-donate {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.footer-donate a {
+  color: #6dc15b;
+  text-decoration: none;
+}
+
+footer p:last-of-type {
+  color: #fff;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-top: 1rem;
+}
 
 
 
@@ -756,10 +796,8 @@ body.scrolled .sticky-text-logo {
 <section id="production" aria-labelledby="production-heading">
   <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20studio%20production.JPG" alt="Darksoft Studio Production">
   <h2 id="production-heading">Production</h2>
-  <p>Due to recent requests, I’m now offering music production services. I run a home studio near Portland, Maine, and specialize in early-stage production and recording engineering — especially for solo artists looking to bring their ideas to life.</p>
-  
-  <p>From initial demos to full-track builds, I can help shape your sound and partner with trusted mixing and mastering engineers to finish it. There’s a lot that goes into production, and it’s often an under-supported step for indie artists. I’m here to help change that.</p>
-  
+  <p>I record all my material in my home studio in Maine. In addition to Darksoft, I have also helped other musicians with early-stage production and recording engineering — especially for solo artists looking to bring their ideas to life.</p>
+    
   <h3 style="margin-top: 2rem;">Remote Services</h3>
   <ul style="list-style: none; padding-left: 0;">
     <li>• Production consulting</li>
@@ -796,23 +834,46 @@ body.scrolled .sticky-text-logo {
 
 
 
-  <footer>
-    <div class="footer-title"><a href="#" class="footer-link">
+<footer>
+    <div class="footer-title"><a href="/" class="footer-link">
     <span class="rainbow-text" id="rainbow-text"></span>
       </a></div>
     <div class="footer-links">
-      <a href="#about">About</a> | 
-      <a href="#biography">Biography</a> | 
-      <a href="#merch">Merch</a> | 
-      <a href="#tour">Tour</a> | 
-      <a href="#contact">Contact</a> |
-      <a href="#press">Press</a> |
+      <a href="/#about">About</a> | 
+      <a href="/#biography">Biography</a> | 
+      <a href="/#merch">Merch</a> | 
+      <a href="/#tour">Tour</a> | 
+      <a href="/#contact">Contact</a> |
+      <a href="/#press">Press</a> |
       <a href="/lyrics">Lyrics</a> |
       <a href="/data">Show Me The Data</a>
     </div>
     <br>
+    <div class="footer-donate">
+  <a href="https://buymeacoffee.com/darksoft" target="_blank" rel="noopener">
+    💚 If my music means something to you, consider supporting the project in a small way.
+  </a>
+</div>
+  <br>
     <p>© <span id="year"></span> Darksoft. All rights reserved.</p>
-  </footer>
+  <script>
+    document.getElementById("year").innerText = new Date().getFullYear();
+  </script>
+  <!-- Buy Me a Coffee Floating Widget -->
+<script 
+  data-name="BMC-Widget" 
+  src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+  data-id="darksoft"
+  data-description="Support Darksoft with a small donation!" 
+  data-message="Big Darksoft fan? Help fuel the project with $0.50." 
+  data-color="#6dc15b"
+  data-position="Right" 
+  data-x_margin="18" 
+  data-y_margin="18">
+</script>
+</footer>
+
+</body>
 
   <script>
     const text = "Darksoft";
@@ -861,5 +922,16 @@ body.scrolled .sticky-text-logo {
   });
 </script>
 <a href="#" class="sticky-text-logo">Darksoft</a>
-</body>
+
+<script 
+  data-name="BMC-Widget" 
+  src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+  data-id="darksoft"
+  data-description="Support Darksoft with a small donation!" 
+  data-message="Big Darksoft fan? Help fuel the project with $0.50." 
+  data-color="#6dc15b"
+  data-position="Right" 
+  data-x_margin="18" 
+  data-y_margin="18">
+</script>
 </html>
