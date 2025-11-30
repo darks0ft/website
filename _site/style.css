@@ -1,0 +1,462 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-padding-top: 70px; scroll-behavior: smooth; }
+body {
+  font-family: Menlo, monospace;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+a { color: #ccc; text-decoration: underline; transition: color 0.3s; }
+a:hover { color: #999 !important; }
+a:visited { color: #ccc; }
+
+/* --- HEADER + LOGO + NAV (original) --- */
+header { text-align: center; padding: 2rem 0.5rem 1rem; background-color: #000; }
+
+.rainbow-text { font-family: 'bradley-djr', sans-serif; font-size: 4rem; letter-spacing: 0.05rem; }
+.rainbow-text span { animation: fadeColors 10s infinite; }
+@keyframes fadeColors {
+  0% { color: hsl(0, 40%, 60%); }
+  20% { color: hsl(40, 40%, 60%); }
+  40% { color: hsl(80, 40%, 60%); }
+  60% { color: hsl(160, 40%, 60%); }
+  80% { color: hsl(240, 40%, 60%); }
+  100% { color: hsl(320, 40%, 60%); }
+}
+
+nav { margin-top: 1rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+
+/* Sticky nav + top social icons */
+.sticky-nav-bar {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  background: none;
+  padding: 0;
+  gap: 2rem;
+  font-family: Menlo, monospace;
+  z-index: 20;
+}
+.sticky-nav-bar a { color: #6dc15b; text-decoration: none; font-size: 1rem; }
+.sticky-nav-bar a:hover { opacity: 0.6; }
+
+.sticky-nav-bar.stuck {
+  position: fixed;
+  top: 0;
+  left: 0; right: 0;
+  padding: 2rem 60px 6.5rem;
+  background: linear-gradient(to bottom,
+    rgba(0,0,0,1),
+    rgba(0,0,0,0.7) 60%,
+    rgba(0,0,0,0) 100%
+  );
+}
+
+.top-social-icons { position: absolute; top: 105px; right: 60px; display: flex; gap: 20px; z-index: 20; }
+.top-social-icons img { width: 20px; height: 20px; opacity: 0.85; transition: opacity 0.2s; }
+.top-social-icons img:hover { opacity: 0.55; cursor: pointer; }
+
+.logo-top-left {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 5rem;
+  color: #fff;
+  text-decoration: none;
+  z-index: 20;
+  transition: opacity 0.3s;
+}
+.logo-top-left:hover { opacity: 0.8; }
+
+.hamburger { display: none; }
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .hamburger { display: block; position: absolute; top: 20px; right: 20px; font-size: 2rem; color: #6dc15b; background: none; border: none; z-index: 40; cursor: pointer; }
+  .sticky-nav-bar, .top-social-icons { display: none; }
+  .menu-open .sticky-nav-bar {
+    display: flex; flex-direction: column;
+    position: absolute; top: 80px; right: 20px;
+    background: #000; padding: 1rem; border: 1px solid #6dc15b; z-index: 30;
+  }
+  .menu-open .top-social-icons {
+    display: flex; gap: 12px; flex-wrap: wrap; margin-top: 1rem;
+  }
+}
+
+/* Sticky mini-logo */
+.sticky-text-logo {
+  position: fixed;
+  top: 1.0rem;
+  left: 1.5rem;
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 3rem;
+  color: white;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+body.scrolled .sticky-text-logo { opacity: 1; }
+
+/* Section headings (original) */
+section { padding: 2rem 1rem; max-width: 1000px; margin: 0 auto; }
+
+section h2 {
+  position: relative;
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 3rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Gradient line */
+section h2::after {
+  content: "";
+  position: absolute; left: 0; bottom: 0;
+  height: 2px; width: 100%;
+  background: linear-gradient(to right,
+    rgba(109, 193, 91, 0),
+    #6dc15b,
+    rgba(109, 193, 91, 0)
+  );
+}
+
+/* --- LYRIC PAGE ADDITIONS (minimal) --- */
+
+.lyric-page-container {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 200px; /* accounts for nav/logo */
+}
+
+.album-art {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.track-title {
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.track-meta {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.lyrics {
+  white-space: pre-line;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.stream-links {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.stream-links a {
+  margin: 0 0.5rem;
+  color: #cccccc;
+  text-decoration: underline;
+}
+
+/* Prev / Next nav */
+.lyric-nav {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.lyric-nav a {
+  margin: 0 1rem;
+}
+
+/* Stream Now box styling (matches release-card style) */
+.stream-now-box {
+  background-color: #3a3a3a;
+  padding: 1.6rem;
+  border-radius: 10px;
+  margin: 4.5rem auto 0;       /* more space between lyrics + this box */
+  max-width: 600px;            /* less wide, cleaner */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.stream-now-box h3 {
+  font-size: 1.6rem;
+  font-family: 'menlo', sans-serif;
+  margin-bottom: 0.8rem;       /* less empty space under heading */
+}
+
+.stream-subtitle {
+  margin-bottom: 1.6rem;
+  color: #ccc;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+}
+
+.stream-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+/* Uses site-wide link styling */
+.stream-links a {
+  color: #cccccc;
+  text-decoration: underline;
+  transition: color 0.3s;
+  font-size: 1rem;
+}
+
+.stream-links a:hover {
+  color: #999999;
+}
+
+
+/* Styling for Video Box in Lyric Pages */
+
+.video-box {
+  background-color: #3a3a3a;
+  padding: 1.6rem;
+  border-radius: 10px;
+  margin: 3rem auto 0;
+  max-width: 700px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.video-title {
+  font-size: 1.4rem;
+  font-family: 'menlo', sans-serif;
+  margin-bottom: 1.4rem;
+  letter-spacing: 0.04rem;
+}
+
+.video-embed-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-embed-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* --- LYRICS PAGE CLEANUP & RESTYLE --- */
+
+.lyric-page-container {
+  max-width: 700px;
+  margin: 3rem auto 4rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Album art consistency */
+.album-art {
+  width: 260px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
+/* Title styling */
+.track-title {
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Metadata */
+.track-meta {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Lyrics block (tighter like original Wannacry page) */
+.lyrics {
+  font-size: 1.15rem;
+  line-height: 1.45;      /* tighter body text */
+  margin: 0 auto 2rem;    /* tighten bottom space */
+  text-align: center;
+  white-space: normal;
+}
+
+.lyrics br {
+  line-height: 2.1;       /* preserves stanza spacing */
+}
+
+/* Stream Now box: more like original site cards */
+.stream-now-box {
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin: 1.8rem auto 2.5rem;
+  max-width: 520px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.35);
+}
+
+.stream-now-box h3 {
+  font-family: 'menlo', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.stream-subtitle {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Stream link vertical stack (kept as-is) */
+.stream-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* Video embed cleanup */
+.video-embed {
+  margin: 2.5rem auto 3rem;
+  max-width: 700px;
+}
+
+.video-embed h3 {
+  font-family: 'menlo', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  margin: 0 auto;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Extra SEO line at bottom (optional styling) */
+.lyrics-footer-seo {
+  color: #999;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.lyrics-body .album-art {
+  margin-top: calc(120px + 3rem);
+}
+
+.lyrics-index {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lyrics-album-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.lyrics-album-card {
+  display: flex;
+  gap: 1.5rem;
+  background: #1e1e1e;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  align-items: flex-start;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.lyrics-album-art {
+  width: 120px;
+  border-radius: 8px;
+}
+
+.lyrics-album-info {
+  flex: 1;
+  text-align: left;
+}
+
+.lyrics-album-info h3 {
+  font-size: 1.8rem;
+  font-family: 'bradley-djr', sans-serif;
+  margin-bottom: 0.6rem;
+}
+
+.lyrics-year {
+  font-size: 1.3rem;
+  opacity: 0.7;
+}
+
+.lyrics-track-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lyrics-track-list li {
+  margin: 4px 0;
+}
+
+.lyrics-track-list a {
+  color: #cccccc;
+  text-decoration: underline;
+}
+
+.lyrics-track-list a:hover {
+  color: #6dc15b;
+}
+
+/* Back button for lyrics pages */
+.lyrics-back-button {
+  display: inline-block;
+  margin: 1rem 0 2rem;
+  padding: 0.4rem 0.8rem;
+  font-family: Menlo, monospace;
+  font-size: 0.95rem;
+  color: #6dc15b;
+  background: #111;
+  border: 1px solid #6dc15b;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.lyrics-back-button:hover {
+  background: #6dc15b;
+  color: #000;
+  border-color: #6dc15b;
+  opacity: 0.85;
+}

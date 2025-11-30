@@ -1,0 +1,56 @@
+---
+layout: none
+title: "Darksoft Lyrics"
+permalink: /lyrics/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  <title>Darksoft Lyrics — Complete Catalogue</title>
+  <meta name="description" content="Complete Darksoft lyrics organized by album. Browse songs from Everydayness, Rationalism, Relativism, Grayscale, Beigeification, Cryo, Meltdown, and Brain.">
+</head>
+
+<body>
+  {% include header.html %}
+
+  <section class="lyrics-index">
+    <h2>Lyrics</h2>
+    <p>Browse lyrics from every Darksoft album.</p>
+
+    <div class="lyrics-album-list">
+
+      {% assign sorted_albums = site.data.albums | sort: "release_year" | reverse %}
+
+      {% for album in sorted_albums %}
+      <div class="lyrics-album-card">
+
+        <img src="/assets/{{ album.artwork }}" alt="{{ album.album_title }} artwork" class="lyrics-album-art">
+
+        <div class="lyrics-album-info">
+          <h3>{{ album.album_title }} <span class="lyrics-year">({{ album.release_year }})</span></h3>
+
+          <ul class="lyrics-track-list">
+            {% assign album_tracks = site.data.tracks | where: "album_id", album.album_id %}
+            {% assign sorted_tracks = album_tracks | sort: "track_number" %}
+            {% for track in sorted_tracks %}
+              <li>
+                <a href="/lyrics/{{ album.album_id }}/{{ track.track_title_slug }}/">
+                  {{ track.track_title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+
+        </div>
+
+      </div>
+      {% endfor %}
+
+    </div>
+  </section>
+
+  {% include footer.html %}
+</body>
+</html>
