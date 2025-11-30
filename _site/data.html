@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!-- Global Head -->
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://use.typekit.net/elq2dar.css">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/site.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <title>Darksoft — Album Data</title>
+
+  <style>
+    .chart-section {
+      padding: 3rem 1rem;
+      margin-top: 180px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    canvas {
+      margin-top: 2rem;
+      max-width: 100%;
+    }
+
+    h2 {
+      font-family: 'bradley-djr', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER INCLUDE -->
+
+<?php include "header.html"; ?>
+
+<section class="chart-section">
+  <h2>Album Trends Over Time</h2>
+
+  <p style="opacity:0.7;margin-bottom:2rem;">
+    Visualizing Darksoft album evolution — tempo, duration, cohesion, and scale.
+  </p>
+
+  <canvas id="tempoChart"></canvas>
+  <canvas id="deviationChart"></canvas>
+  <canvas id="lengthChart"></canvas>
+  <canvas id="tracksChart"></canvas>
+  <canvas id="totalWordsChart"></canvas>
+  <canvas id="avgWordsChart"></canvas>
+</section>
+
+<!-- FOOTER INCLUDE -->
+<?php include "footer.html"; ?>
+
+<script>
+  /* -----------------------
+     ALBUM DATA
+     ----------------------- */
+  const albums = [
+    { title: "Brain", year: 2018, avgTempo: 96.72, dev: 19.42, avgLen: "4:01", tracks: 9, totalWords: 1540, avgWords: 171.1111111 },
+    { title: "Meltdown", year: 2020, avgTempo: 97.4, dev: 22.28, avgLen: "4:05", tracks: 10, totalWords: 1575, avgWords: 157.5 },
+    { title: "Cryo", year: 2022, avgTempo: 111.38, dev: 18.13, avgLen: "3:42", tracks: 8, totalWords: 1133, avgWords: 141.625 },
+    { title: "Beigeification", year: 2023, avgTempo: 131.67, dev: 15.41, avgLen: "3:51", tracks: 9, totalWords: 1043, avgWords: 115.8888889 },
+    { title: "Grayscale", year: 2023, avgTempo: 130.7, dev: 18.16, avgLen: "3:51", tracks: 10, totalWords: 1076, avgWords: 107.6 },
+    { title: "Relativism", year: 2024, avgTempo: 144.3, dev: 11.64, avgLen: "4:02", tracks: 10, totalWords: 731, avgWords: 73.1 },
+    { title: "Rationalism", year: 2025, avgTempo: 137.8, dev: 21.04, avgLen: "3:32", tracks: 10, totalWords: 870, avgWords: 87 },
+    { title: "Everydayness", year: 2026, avgTempo: 160.7, dev: 8.36, avgLen: "3:59", tracks: 10, totalWords: 727, avgWords: 72.7 }
+  ];
+
+  // Convert mm:ss to minutes
+  function toMinutes(str) {
+    const [m, s] = str.split(":").map(Number);
+    return m + s/60;
+  }
+
+  const labels = albums.map(a => `${a.year} — ${a.title}`);
+
+  const tempoData = albums.map(a => a.avgTempo);
+  const devData = albums.map(a => a.dev);
+  const lengthData = albums.map(a => toMinutes(a.avgLen));
+  const trackData = albums.map(a => a.tracks);
+  const totalWordsData = albums.map(a => a.totalWords);
+  const avgWordsData = albums.map(a => a.avgWords);
+
+  /* -----------------------
+     CHART DEFAULT STYLING
+     ----------------------- */
+  Chart.defaults.color = "#eee";
+  Chart.defaults.borderColor = "rgba(255,255,255,0.1)";
+
+  const lineStyle = {
+    fill: false,
+    tension: 0.25,
+    borderWidth: 3,
+    pointRadius: 5,
+    pointHoverRadius: 7
+  };
+
+  /* -----------------------
+     TEMPO CHART
+     ----------------------- */
+  new Chart(document.getElementById("tempoChart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Average Tempo (BPM)",
+        data: tempoData,
+        borderColor: "#6dc15b",
+        backgroundColor: "#6dc15b",
+        ...lineStyle
+      }]
+    }
+  });
+
+  /* -----------------------
+     TEMPO DEVIATION
+     ----------------------- */
+  new Chart(document.getElementById("deviationChart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Average Tempo Deviation",
+        data: devData,
+        borderColor: "#9999ff",
+        backgroundColor: "#9999ff",
+        ...lineStyle
+      }]
+    }
+  });
+
+  /* -----------------------
+     AVERAGE SONG LENGTH
+     ----------------------- */
+  new Chart(document.getElementById("lengthChart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Average Song Length (min)",
+        data: lengthData,
+        borderColor: "#ff66cc",
+        backgroundColor: "#ff66cc",
+        ...lineStyle
+      }]
+    }
+  });
+
+  /* -----------------------
+     TOTAL TRACK COUNT
+     ----------------------- */
+  new Chart(document.getElementById("tracksChart"), {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [{
+        label: "Total Tracks",
+        data: trackData,
+        backgroundColor: "#6dc15b"
+      }]
+    }
+  });
+
+  /* -----------------------
+     NEW — TOTAL WORDS
+     ----------------------- */
+  new Chart(document.getElementById("totalWordsChart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Total Words per Album",
+        data: totalWordsData,
+        borderColor: "#ffaa33",
+        backgroundColor: "#ffaa33",
+        ...lineStyle
+      }]
+    }
+  });
+
+  /* -----------------------
+     NEW — AVG WORDS PER SONG
+     ----------------------- */
+  new Chart(document.getElementById("avgWordsChart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Average Words per Song",
+        data: avgWordsData,
+        borderColor: "#33ddff",
+        backgroundColor: "#33ddff",
+        ...lineStyle
+      }]
+    }
+  });
+</script>
+
+
+</body>
+   <div class="footer-title"><a href="/" class="footer-link">
+    <span class="rainbow-text" id="rainbow-text"></span>
+      </a></div>
+    <br>
+    <p>© <span id="year"></span> Darksoft. All rights reserved.</p>
+  <script>
+    document.getElementById("year").innerText = new Date().getFullYear();
+  </script>
+</html>
