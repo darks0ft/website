@@ -1,0 +1,103 @@
+- album_id: brain
+  album_title: Brain
+  release_year: "2018"
+  label: Look Up Records
+  spotify: https://open.spotify.com/album/3LeTve4epRmN4677X5mWyW?si=NHVb1B8HRvKU4HZ741-FoA
+  apple_music: https://music.apple.com/us/album/brain/1438860120
+  bandcamp: https://darks0ft.bandcamp.com/album/brain
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_lYozNfdjju0mXb2U8dIHvZ5XN26AUBUlQ
+  artwork: Darksoft Brain Album Artwork.jpg
+  artwork_artist: Rachel Bennett
+  total_tracks: 9
+  duration: 35:06
+
+- album_id: meltdown
+  album_title: Meltdown
+  release_year: "2020"
+  label: Look Up Records
+  spotify: https://open.spotify.com/album/4q6Iq8Zj3njIcdlG8eO5p2
+  apple_music: https://music.apple.com/us/album/meltdown/1523936989
+  bandcamp: https://darks0ft.bandcamp.com/album/meltdown
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_l6FUwhiGsrorZRZSiRrztPjQQIcQ9AIqA
+  artwork: Darksoft Meltdown Album Artwork.jpeg
+  artwork_artist: Ian Vormwelt
+  total_tracks: 10
+  duration: 40:32
+
+- album_id: cryo
+  album_title: Cryo
+  release_year: "2022"
+  label: Look Up Records
+  spotify: https://open.spotify.com/album/5Y27T3hgkcXG4cCVIqNyZp
+  apple_music: https://music.apple.com/us/album/cryo/1592734125
+  bandcamp: https://darks0ft.bandcamp.com/album/cryo
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_nDKuUH6km0LARJwatqE3sUeTb-2TA9S0c
+  artwork: Darksoft Cryo Album Artwork.jpeg
+  artwork_artist: Owen Blodgett, Jordan Rundle
+  total_tracks: 8
+  duration: 29:34
+
+- album_id: beigeification
+  album_title: Beigeification
+  release_year: "2023"
+  label: Look Up Records
+  spotify: https://open.spotify.com/album/4FpAHBtHbstQSRVM19txhE
+  apple_music: https://music.apple.com/us/album/beigeification/1650634812
+  bandcamp: https://darks0ft.bandcamp.com/album/beigeification
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_mSH8RVfeUD2d9etqDV16kzl43EOEjN3Gg
+  artwork: Darksoft Beigeification Album Artwork.jpg
+  artwork_artist: Darksoft
+  total_tracks: 9
+  duration: 35:55
+
+- album_id: grayscale
+  album_title: Grayscale
+  release_year: "2023"
+  label: Spirit Goth Records
+  spotify: https://open.spotify.com/album/3jNJF3swIimEIi25q4Ggtt
+  apple_music: https://music.apple.com/us/album/grayscale/1734567890
+  bandcamp: https://darks0ft.bandcamp.com/album/grayscale
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_k0U-_v1MPD5wkvocfDRJSG0pK5yeVVt_o
+  artwork: Darksoft Gracyscale Album Artwork.jpg
+  artwork_artist: Darksoft
+  total_tracks: 10
+  duration: 39:48
+
+- album_id: relativism
+  album_title: Relativism
+  release_year: "2024"
+  label: Spirit Goth Records
+  spotify: https://open.spotify.com/album/5d0jaIaOI0FTHDdc6w8akz
+  apple_music: https://music.apple.com/th/album/relativism/1747064681
+  bandcamp: https://darks0ft.bandcamp.com/album/relativism
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_kKLAvhxv1bGmUNU7Odx-XeX4XmXcT6rw8
+  artwork: Darksoft Relativism Album Artwork.jpeg
+  artwork_artist: Erica Miller
+  total_tracks: 10
+  duration: 40:17
+
+- album_id: rationalism
+  album_title: Rationalism
+  release_year: "2025"
+  label: Spirit Goth Records
+  spotify: https://open.spotify.com/album/7eOL2oXXoh2Ib0r3mHjfXb
+  apple_music: https://music.apple.com/us/album/rationalism/1794374201
+  bandcamp: https://darks0ft.bandcamp.com/album/rationalism
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_lTfPqlU2GQEa5KfqxEG7lxJTti6PnbPQ0
+  artwork: Darksoft Rationalism Album Artwork.jpeg
+  artwork_artist: Erica Miller
+  total_tracks: 10
+  duration: 36:35
+
+- album_id: everydayness
+  album_title: Everydayness
+  release_year: "2026"
+  label: Look Up Records
+  spotify: https://open.spotify.com/album/2pMLGf3Lwa1LxdPL8xsMK3
+  apple_music: https://music.apple.com/us/album/everydayness/1234567890
+  bandcamp: https://darks0ft.bandcamp.com/album/everydayness
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_kf0RANDOMPLACEHOLDER
+  artwork: Darksoft Album Artwork Everydayness.jpg
+  artwork_artist: Jameson Martin
+  total_tracks: 10
+  duration: 39:55

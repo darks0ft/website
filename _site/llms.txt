@@ -1,0 +1,21 @@
+# LLMs.txt for https://darksoft.band
+# Learn more at https://llmstxt.org/
+
+# Site metadata
+site: https://darksoft.band
+entity: Darksoft
+contact: darksoftband@gmail.com
+sitemap: https://darksoft.band/sitemap.xml
+robots: https://darksoft.band/robots.txt
+
+# Permissions for language model usage
+llm-usage: index
+llm-train: allow
+llm-preview: allow
+
+# Notes
+# The site contains publicly available biographical, discographic, and tour information for Darksoft.
+# This content may be used to power generative AI tools, assistants, or other LLM applications.
+
+# Change log
+# 2025-05-05: Initial version.

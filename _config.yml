@@ -1,0 +1,42 @@
+# ================================
+#   Darksoft — Jekyll Site Config
+# ================================
+
+title: "Darksoft"
+description: "Dream pop, indie rock, and philosophical lyrics."
+
+url: "https://darksoft.band"
+baseurl: ""   # GitHub Pages root
+
+# Permalinks
+permalink: pretty   # /path/to/page/ instead of .html
+
+# Enable folders Jekyll would normally ignore
+include:
+  - lyrics
+  - assets
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Plugins (GitHub Pages–supported only)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Output folders
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
+
+# Collections (optional future upgrade)
+collections:
+  tracks:
+    output: true
+    permalink: /lyrics/:album/:slug/

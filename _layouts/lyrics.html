@@ -1,0 +1,100 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+
+  {% assign track = site.data.tracks | where: "track_id", page.track_id | first %}
+  {% assign album = site.data.albums | where: "album_id", track.album_id | first %}
+
+  <title>
+    {% if page.title %}
+      {{ page.title }}
+    {% else %}
+      {{ track.track_title }} Lyrics — Darksoft
+    {% endif %}
+  </title>
+
+  <meta name="description" content="{% if page.description %}
+    {{ page.description }}
+  {% else %}
+    Lyrics for “{{ track.track_title }}” by Darksoft from the album {{ album.album_title }} ({{ album.release_year }}).
+  {% endif %}">
+
+  <link rel="canonical" href="https://darksoft.band/lyrics/{{ track.album_id }}/{{ track.track_title_slug }}/">
+
+  <meta property="og:type" content="music.song">
+  <meta property="og:title" content="{{ track.track_title }} Lyrics — Darksoft">
+  <meta property="og:description" content="Lyrics for “{{ track.track_title }}” by Darksoft from the album {{ album.album_title }} ({{ album.release_year }}).">
+  <meta property="og:url" content="https://darksoft.band/lyrics/{{ track.album_id }}/{{ track.track_title_slug }}/">
+  <meta property="og:image" content="https://raw.githubusercontent.com/darks0ft/website/main/assets/{{ album.artwork | replace: ' ', '%20' }}">
+</head>
+
+<body class="lyrics-body">
+
+  {% include header.html %}
+
+  <div class="lyric-page-container">
+
+      <a href="/lyrics/" class="lyrics-back-button">← Back to Lyrics</a>
+
+    <img src="/assets/{{ album.artwork | escape }}" class="album-art" alt="{{ album.album_title }} album artwork">
+
+    <h1 class="track-title">
+      {{ track.track_title }} Lyrics
+    </h1>
+
+    <div class="track-meta">
+      Song by Darksoft from <strong>{{ album.album_title }}</strong> · {{ album.release_year }}
+    </div>
+
+    <section class="lyrics" aria-label="{{ track.track_title }} lyrics">
+      {{ track.lyrics | newline_to_br }}
+    </section>
+
+    <div class="stream-now-box">
+      <h3>Stream Now</h3>
+
+      <p class="stream-subtitle">
+        Listen to <strong>{{ track.track_title }}</strong> here:
+      </p>
+
+      <div class="stream-links">
+        {% if album.spotify %}
+          <a href="{{ album.spotify }}" target="_blank" rel="noopener">Spotify</a>
+        {% endif %}
+        {% if album.apple_music %}
+          <a href="{{ album.apple_music }}" target="_blank" rel="noopener">Apple Music</a>
+        {% endif %}
+        {% if album.bandcamp %}
+          <a href="{{ album.bandcamp }}" target="_blank" rel="noopener">Bandcamp</a>
+        {% endif %}
+        {% if album.youtube_music %}
+          <a href="{{ album.youtube_music }}" target="_blank" rel="noopener">YouTube Music</a>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if track.music_video %}
+      <div class="video-embed">
+        <h3>{{ track.track_title }} Music Video</h3>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/{{ track.music_video | split: 'v=' | last | split: '&' | first }}"
+            title="{{ track.track_title }} music video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    {% endif %}
+
+  </div>
+
+  {% include footer.html %}
+
+</body>
+</html>
