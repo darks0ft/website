@@ -1,637 +1,125 @@
 ---
+layout: none
+title: "Darksoft — Dream Pop Music"
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darksoft — Dream Pop Music</title>
-    <meta name="description" content="Darksoft is an alternative rock artist blending shoegaze, dream pop, and philosophical lyrics. Listen to albums, see tour dates, and buy merch.">
-    <meta property="og:title" content="Darksoft — Dream Pop Music">
-    <meta property="og:description" content="Dreamy indie rock with shoegaze elements. See new releases, tour dates, and merch.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg">
-    <meta property="og:url" content="https://darksoft.band">
-    <meta name="twitter:card" content="summary_large_image">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "MusicGroup",
-        "name": "Darksoft",
-        "url": "https://darksoft.band",
-        "image": "https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg",
-        "genre": ["Dream Pop", "Indie Rock", "Shoegaze"],
-        "sameAs": [
-          "https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE",
-          "https://music.apple.com/us/artist/darksoft/1438263529",
-          "https://darks0ft.bandcamp.com",
-          "https://www.instagram.com/darks0ft",
-          "https://www.facebook.com/darks0ft",
-          "https://www.youtube.com/@Darksoft"
-        ]
-      }
-    </script>
-    <link rel="stylesheet" href="https://use.typekit.net/elq2dar.css">
-    <style>
-      * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html {
-  scroll-padding-top: 70px; /* or 80px if needed */
-  scroll-behavior: smooth;}
-body {
-  font-family: Menlo, monospace;
-  margin: 0;
-  background: #000;       /* black background */
-  color: #fff;            /* white body text */
-  overflow-x: hidden;
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
-}
-      header { text-align: center; padding: 2rem 0.5rem 1rem; background-color: #000; }
-      .rainbow-text { font-family: 'bradley-djr', sans-serif; font-size: 4rem; line-height: 1.2; letter-spacing: 0.05rem; display: inline-block; }
-      .rainbow-text span { display: inline-block; animation: fadeColors 10s infinite; }
-      @keyframes fadeColors { 0% { color: hsl(0, 40%, 60%); } 20% { color: hsl(40, 40%, 60%); } 40% { color: hsl(80, 40%, 60%); } 60% { color: hsl(160, 40%, 60%); } 80% { color: hsl(240, 40%, 60%); } 100% { color: hsl(320, 40%, 60%); } }
-
-      nav { margin-top: 1rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
-      nav a:hover { background-color: #2a2a2a; text-decoration: none; }
-      nav a:visited { color: #fff; }
-
-      a { color: #cccccc; text-decoration: underline; transition: color 0.3s; }
-      a:hover { color: #999999 !important; }
-      a:visited { color: #cccccc; }
-
-      section { padding: 2rem 1rem; max-width: 1000px; margin: 0 auto; text-align: center; }
-      section h2 {
-  position: relative;
-  font-family: 'bradley-djr', sans-serif;
-  font-size: 3rem;
-  letter-spacing: 0.1rem;
-  padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-footer {
-  color: #6dc15b !important;
-}
-
-footer a {
-  color: #6dc15b !important;
-}
-
-/* Gradient line under h2 */
-section h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(to right,
-    rgba(109, 193, 91, 0),
-    #6dc15b,
-    rgba(109, 193, 91, 0)
-  );
-}      .social-icons { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem; }
-      .social-icons img { width: 28px; height: 28px; transition: opacity 0.1s ease; cursor: pointer; }
-      .social-icons img:hover {opacity: 0.6;
-}
-      #profile-image { display: block; margin: 30px auto; width: 300px; border-radius: 10px; }
-
-      .landing-title img { max-width: 200px; height: auto; margin-bottom: 2.5rem;  display: block; margin-left: auto; margin-right: auto;}
-
-      #mc_embed_signup { background: #1e1e1e; color: #fff; border: 1px solid #333; border-radius: 15px; margin: 40px auto; padding: 20px; width: 100%; max-width: 600px; animation: glowColors 6s infinite alternate; }
-      @keyframes glowColors { 0% { box-shadow: 0 0 20px hsl(0, 50%, 75%); } 20% { box-shadow: 0 0 20px hsl(40, 50%, 75%); } 40% { box-shadow: 0 0 20px hsl(80, 50%, 75%); } 60% { box-shadow: 0 0 20px hsl(160, 50%, 75%); } 80% { box-shadow: 0 0 20px hsl(240, 50%, 75%); } 100% { box-shadow: 0 0 20px hsl(320, 50%, 75%); } }
-      #mc_embed_signup input[type="email"] { width: 80%; padding: 10px; border-radius: 5px; border: 1px solid #555; margin-bottom: 10px; background-color: #2a2a2a; color: #fff; }
-      #mc_embed_signup .button { background-color: hsl(340, 50%, 70%); color: #fff; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer; font-weight: bold; text-transform: uppercase; }
-      #mc_embed_signup .button:hover { filter: brightness(1.2); }
-      #mc_embed_signup .signup-description {margin-bottom: 1.5rem;}
-
-      .merch-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; align-items: start; }
-      .merch-gallery > div { display: flex; flex-direction: column; align-items: center; max-width: 300px; margin: 0 auto; }
-      .merch-gallery img { width: 100%; height: auto; border-radius: 10px; }
-      .merch-description { margin-top: 10px; font-size: 1rem; color: #ccc; text-align: center; }
-
-      
-
-/*
-footer {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  background-color: #000;
-  color: #6dc15b;
-  font-family: Menlo, monospace;
-}f      footer .footer-title { font-family: 'bradley-djr', sans-serif; font-size: 3rem; margin-top: 1rem; }
-
-      .songkick-widget-container { margin-top: 20px; }
-      .fallback-message { color: #ccc; margin-top: 15px; font-size: 0.95rem; }
-      footer p:last-of-type {
-  color: #fff;
-  font-size: 0.9rem;  /* about half of 18px */
-  /*opacity: 0.75;      /* optional for softer appearance */
-  /*margin-top: 1rem;
-}*/
-    
-    .landing-page {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background: url('https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg') center center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.landing-title {
-  font-family: 'bradley-djr', sans-serif;
-  font-size: 20vh;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  color: white;
-  transition: color 0.5s ease-out;
-}
-.landing-page::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* soft dark overlay */
-  z-index: 0; /* keeps it behind logo/nav/icons */
-  pointer-events: none; /* ensures it doesn't block clicks */
-}
-
-.sticky-nav-bar {
-  position: absolute;
-  top: 60px; /* match logo alignment */
-  right: 60px;
-  background: none;
-  box-shadow: none;
-  backdrop-filter: none;
-  padding: 0;
-  gap: 2rem;
-  font-family: Menlo, monospace;
-  z-index: 20;
-}
-
-.sticky-nav-bar a:visited {
-  color: #6dc15b;
-}
-
-.sticky-nav-bar.stuck {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 2rem 60px 6.5rem; /* top/bottom padding for height */
-  background: linear-gradient(to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.7) 60%,
-    rgba(0, 0, 0, 0) 100%);
-  z-index: 30;
-}
-
-
-
-.sticky-nav-bar.show {
-  transform: translateY(0);
-}
-
-.sticky-nav-bar a {
-  color: #6dc15b;
-  text-decoration: none;
-  font-weight: normal;
-  font-size: 1rem;
-  font-family: Menlo, monospace;
-  padding: 0;
-  background: none;
-  border: none;
-  outline: none;
-  transition: opacity 0.3s;
-}
-
-.sticky-nav-bar a:hover,
-.sticky-nav-bar a:focus,
-.sticky-nav-bar a:active {
-  background: none;
-  border: none;
-  outline: none;
-  opacity: 0.6;
-}
-
-.sticky-nav-bar a:hover {
-  opacity: 0.6;
-}
-
-#releases {
-  padding: 2rem 1rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#releases h2 {
-  position: relative;
-  font-family: 'bradley-djr', sans-serif;
-  font-size: 3rem;
-  letter-spacing: 0.1rem;
-  padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-#releases h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(to right,
-    rgba(109, 193, 91, 0),
-    #6dc15b,
-    rgba(109, 193, 91, 0)
-  );
-}
-
-
-.release-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.release-card {
-  background-color: #3a3a3a;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 250px; /* reduce card width for tighter layout */
-}
-
-.release-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 0.8rem;
-}
-
-.release-card h3 {
-  margin-bottom: 0.4rem;
-  font-size: 1.2rem;
-}
-
-.release-card p {
-  margin: 0.4rem 0;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.release-card a {
-  color: #cccccc;
-  text-decoration: underline;
-  transition: color 0.3s;
-}
-
-.release-card a:hover {
-  color: #999999;
-}
-
-.scroll-down-arrow {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 4rem;
-  color: rgba(255, 255, 255, 0.85);
-  opacity: 0;
-  animation: fadeIn 1s ease-in 0.1s forwards, pulseWiggle 2s ease-in-out infinite 1.1s;
-  transition: opacity 0.5s ease;
-  cursor: pointer;
-
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 0.85; }
-}
-
-@keyframes pulseWiggle {
-  0% { transform: translateX(-50%) translateY(0); opacity: 0.85; }
-  50% { transform: translateX(-50%) translateY(-8px); opacity: 0.6; }
-  100% { transform: translateX(-50%) translateY(0); opacity: 0.85; }
-}
-
-.logo-top-left {
-  position: absolute;
-  top: 40px;      /* 3x original top padding */
-  left: 60px;     /* 2x original left padding */
-  z-index: 20;
-  font-family: 'bradley-djr', sans-serif;
-  font-size: 5rem; /* 2x original font size */
-  color: white;
-  text-decoration: none;
-  transition: opacity 0.3s;
-}
-.logo-top-left:hover {
-  opacity: 0.8;
-}
-
-.top-social-icons {
-  position: absolute;
-  top: 105px;      /* adjust spacing as needed */
-  right: 60px;     /* aligns with nav */
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;       /* spacing between icons */
-  z-index: 20;
-}
-
-.top-social-icons img {
-  width: 20px;
-  height: 20px;
-  opacity: 0.85;
-  transition: opacity 0.2s ease;
-}
-
-.top-social-icons img:hover {
-  opacity: 0.55;
-  cursor: pointer;
-}
-
-p + p {
-  margin-top: 13px;              /* add vertical space between paragraphs */
-  line-height: 1.5; 
-}
-
-@media (max-width: 768px) {
-  .logo-top-left {
-    font-size: 3rem;
-    width: 18px;
-    height: 18px;
-  }
-
-
-  .sticky-nav-bar {
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.5rem;
-  }
-
-  .top-social-icons {
-    top: 220px;
-    right: 20px;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: flex-end;
-  }
-}
-
-/* Hamburger button - default hidden */
-.hamburger {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 2rem;
-  background: none;
-  color: #6dc15b;
-  border: none;
-  z-index: 40;
-  cursor: pointer;
-  display: none; /* hide on desktop */
-}
-
-/* Mobile rules */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .sticky-nav-bar,
-  .top-social-icons {
-    display: none;
-  }
-
-  .menu-open .sticky-nav-bar {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    background: #000;
-    padding: 1rem;
-    border: 1px solid #6dc15b;
-    z-index: 30;
-  }
-
-  .menu-open .top-social-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 12px;
-    margin-top: 1rem;
-  }
-}
-
-
-  .menu-open .sticky-nav-bar {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    background: #000;
-    padding: 1rem;
-    border: 1px solid #6dc15b;
-    z-index: 30;
-  }
-
-  .menu-open .top-social-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 12px;
-    margin-top: 1rem;
-  }
-
-.sticky-text-logo {
-  position: fixed;
-  top: 1.0rem;
-  left: 1.5rem;
-  font-family: 'bradley-djr', sans-serif;
-  font-size: 3rem;
-  color: white;
-  text-decoration: none; 
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: auto;
-}
-
-/* Show it only when .scrolled is applied to <body> */
-body.scrolled .sticky-text-logo {
-  opacity: 1;
-}
-
-
-/* Force homepage footer to match Jekyll sitewide footer */
-footer {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  background-color: #000;
-  color: #6dc15b;
-  font-family: Menlo, monospace;
-  margin-top: 3rem;
-}
-
-.footer-links a {
-  color: #6dc15b;
-  text-decoration: none;
-  margin: 0 0.5rem;
-  font-size: 1rem;
-}
-
-.footer-links a:hover {
-  opacity: 0.6;
-}
-
-.footer-donate {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-.footer-donate a {
-  color: #6dc15b;
-  text-decoration: none;
-}
-
-footer p:last-of-type {
-  color: #fff;
-  font-size: 0.9rem;
-  opacity: 0.75;
-  margin-top: 1rem;
-}
-
-
-
-
-
-    </style>
-  <link rel="canonical" href="https://darksoft.band/">
-  </head>
-<body>
-  <div class="landing-page">
-    <a href="#" class="logo-top-left">Darksoft</a>
-
-    <button id="menu-toggle" class="hamburger" aria-label="Toggle menu">
-      ☰
-    </button>
-    <nav class="sticky-nav-bar show" id="sticky-nav-bar" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#merch">Merch</a>
-      <a href="#tour">Tour</a>
-      <a href="#contact">Contact</a>
-      <a href="/lyrics ">Lyrics</a>
-    </nav>  
-    <div class="top-social-icons">
-      <a href="https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE?si=bpjJbjmWQLy0vU8VfLC5Tg"><img src="https://cdn.simpleicons.org/spotify/6dc15b" alt="Spotify"></a>
-      <a href="https://music.apple.com/us/artist/darksoft/1438263529"><img src="https://cdn.simpleicons.org/apple/6dc15b" alt="Apple Music"></a>
-      <a href="https://darks0ft.bandcamp.com/"><img src="https://cdn.simpleicons.org/bandcamp/6dc15b" alt="Bandcamp"></a>
-      <a href="https://www.pandora.com/AL:44479553"><img src="https://cdn.simpleicons.org/pandora/6dc15b" alt="Pandora"></a>
-      <a href="https://soundcloud.com/darks0ft/"><img src="https://cdn.simpleicons.org/soundcloud/6dc15b" alt="SoundCloud"></a>
-      <a href="https://www.youtube.com/@Darksoft"><img src="https://cdn.simpleicons.org/youtube/6dc15b" alt="YouTube"></a>
-      <a href="https://www.instagram.com/darks0ft"><img src="https://cdn.simpleicons.org/instagram/6dc15b" alt="Instagram"></a>
-      <a href="https://www.facebook.com/darks0ft"><img src="https://cdn.simpleicons.org/facebook/6dc15b" alt="Facebook"></a>
-      <a href="https://x.com/darks0ft"><img src="https://cdn.simpleicons.org/x/6dc15b" alt="X"></a>
-      <a href="https://bsky.app/profile/darks0ft.bsky.social"><img src="https://cdn.simpleicons.org/bluesky/6dc15b" alt="Bluesky"></a>
-    </div>
-  </div>
-  <header>
-    <div class="landing-title"><img src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft-logo-smiley-white.png" alt="Darksoft Logo"></div>
-  </header>
-
-<section id="about" aria-labelledby="about-heading">
-  <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Day%20by%20Day%20music%20video%20still.png" alt="Darksoft Profile Picture">
-  <h2 id="about-heading">About</h2>
-
-  <p>Darksoft is a multi-instrumentalist songwriter and producer who creates dreamy indie rock sounds. Blending dream pop, shoegaze, and alternative rock with lush melodies and introspective lyrics, Darksoft explores universal truths and existential themes.</p>
+<head>
+  {% include head.html %}
+  <title>Darksoft — Dream Pop Music</title>
+  <meta name="description" content="Darksoft creates dreamy indie rock with shoegaze, dream pop, and alternative influences. Explore albums, lyrics, merch, shows, and more.">
+</head>
+
+<body class="homepage">
+
+  {% include header.html %}
+
+<!-- HERO SECTION -->
+<section class="hero landing-page">
+  <div class="hero-overlay"></div>
 </section>
 
-  <section id="newsletter" aria-labelledby="newsletter-heading">
-    <div id="mc_embed_signup">
-      <h2 id="newsletter-heading">Subscribe</h2>
-      <p class="signup-description">Keep up to date on new releases, tour dates, merch, collabs, and more.</p>
-      <form action="https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&amp;id=d5fbadec4b" method="post" target="_blank">
-        <input type="email" name="EMAIL" placeholder="Enter your email" required>
-        <div hidden><input type="hidden" name="tags" value="2757147"></div>
-        <button type="submit" class="button">Subscribe</button>
-      </form>
-    </div>
+<!-- LOGO BELOW HERO -->
+<div class="hero-logo-wrapper">
+  <img class="hero-logo" src="/assets/Darksoft-logo-smiley-white.png" alt="Darksoft Logo">
+</div>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+    <img class="section-image" src="/assets/Darksoft Day by Day music video still.png" alt="Darksoft Profile">
+    <h2>About</h2>
+    <p>Darksoft is a multi-instrumentalist songwriter and producer who creates dreamy indie rock sounds. Blending dream pop, shoegaze, and alternative rock with lush melodies and introspective lyrics, Darksoft explores universal truths and existential themes.</p>
   </section>
 
-  <section id="merch" aria-labelledby="merch-heading">
-    <h2 id="merch-heading">Merch</h2>  
-    <p>Please consider picking up a piece of merch to support my project!</p>
-    <div class="merch-gallery">
-      <div>
-        <a href="https://darksoft.printful.me/product/darksoft-beige-dad-hat" target="_blank">
-          <picture>
-            <source srcset="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20smiley%20dad%20hat%20front.avif" type="image/avif">
-            <img src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20smiley%20dad%20hat%20front.png" alt="Beige Darksoft Dad Hat">
-          </picture>
-        </a>
-        <div class="merch-description"><a href="https://darksoft.printful.me/product/darksoft-beige-dad-hat" target="_blank">Beige Darksoft Dad Hat</a></div>
-      </div>
+  <!-- NEWSLETTER -->
+ <section id="newsletter">
+  <div id="mc_embed_signup">
 
-      <div>
-        <a href="https://darksoft.printful.me/product/darksoft-t-shirt-smiley" target="_blank">
-          <picture>
-            <source srcset="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20smiley%20t-shirt.avif" type="image/avif">
-            <img src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20smiley%20t-shirt.png" alt="Darksoft Smiley T-Shirt">
-          </picture>
-        </a>
-        <div class="merch-description"><a href="https://darksoft.printful.me/product/darksoft-t-shirt-smiley" target="_blank">Darksoft Smiley T-Shirt</a></div>
-      </div>
+    <h2>Subscribe</h2>
+    <p class="signup-description">
+      Keep up to date on new releases, tour dates, merch, collabs, and more.
+    </p>
 
-      <div>
-        <a href="https://spiritgoth.com/products/darksoft-t-shirt" target="_blank">
-          <picture>
-            <source srcset="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20t-shirt%20merch.avif" type="image/avif">
-            <img src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20t-shirt%20merch.png" alt="Darksoft Logo T-Shirt">
-          </picture>
-        </a>
-        <div class="merch-description"><a href="https://spiritgoth.com/products/darksoft-t-shirt" target="_blank">Darksoft Logo T-Shirt</a></div>
-      </div>
+    <form action="https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&amp;id=d5fbadec4b"
+          method="post" target="_blank">
+      <input type="email" name="EMAIL" placeholder="Enter your email" required>
+      <div hidden><input type="hidden" name="tags" value="2757147"></div>
+      <button type="submit" class="button">Subscribe</button>
+    </form>
+
+  </div>
+</section>
+
+<!-- MERCH -->
+<section id="merch">
+  <h2>Merch</h2>
+  <p>Support Darksoft by picking up some merch.</p>
+
+  <div class="merch-gallery">
+
+    <!-- Hat -->
+    <div>
+      <a href="https://darksoft.printful.me/product/darksoft-beige-dad-hat" target="_blank">
+        <picture>
+          <source srcset="/assets/Darksoft%20smiley%20dad%20hat%20front.avif" type="image/avif">
+          <img src="/assets/Darksoft%20smiley%20dad%20hat%20front%20fallback.png" alt="Beige Darksoft Dad Hat">
+        </picture>
+      </a>
+      <p class="merch-description">
+        <a href="https://darksoft.printful.me/product/darksoft-beige-dad-hat" target="_blank">Beige Darksoft Dad Hat</a>
+      </p>
     </div>
-  </section>
 
-  <section id="tour" aria-labelledby="tour-heading">
-    <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20on%20tour.png" alt="Darksoft Tour Photo">
-    <h2 id="tour-heading">Tour</h2>
-    <p>Here's where Darksoft is playing next. You can also follow Darksoft on <a href="https://www.bandsintown.com/a/15379446-darksoft" target="_blank">Bandsintown</a> or <a href="https://www.songkick.com/artists/9755554-darksoft" target="_blank">Songkick</a> for show updates.</p>
+    <!-- Smiley T-Shirt -->
+    <div>
+      <a href="https://darksoft.printful.me/product/darksoft-t-shirt-smiley" target="_blank">
+        <picture>
+          <source srcset="/assets/Darksoft%20smiley%20t-shirt.avif" type="image/avif">
+          <img src="/assets/Darksoft%20smiley%20t-shirt%20fallback.png" alt="Darksoft Smiley T-Shirt">
+        </picture>
+      </a>
+      <p class="merch-description">
+        <a href="https://darksoft.printful.me/product/darksoft-t-shirt-smiley" target="_blank">Darksoft Smiley T-Shirt</a>
+      </p>
+    </div>
+
+    <!-- Logo T-Shirt -->
+    <div>
+      <a href="https://spiritgoth.com/products/darksoft-t-shirt" target="_blank">
+        <picture>
+          <source srcset="/assets/Darksoft%20t-shirt%20merch.avif" type="image/avif">
+          <img src="/assets/Darksoft%20t-shirt%20merch%20fallback.png" alt="Darksoft Logo T-Shirt">
+        </picture>
+      </a>
+      <p class="merch-description">
+        <a href="https://spiritgoth.com/products/darksoft-t-shirt" target="_blank">Darksoft Logo T-Shirt</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+<br>
+<br>
+  <!-- TOUR -->
+  <section id="tour">
+    <img class="section-image" src="/assets/Darksoft on tour.png" alt="Darksoft on Tour">
+    <h2>Tour</h2>
+    <p>Follow Darksoft on <a href="https://www.bandsintown.com/a/15379446-darksoft" target="_blank">Bandsintown</a> and <a href="https://www.songkick.com/artists/9755554-darksoft" target="_blank">Songkick</a> for show updates.</p>
+
     <div class="songkick-widget-container">
-      <a href="https://www.songkick.com/artists/9755554" class="songkick-widget" data-theme="dark" data-track-button="on" data-detect-style="false" data-locale="en">Darksoft tour dates</a>
+      <a href="https://www.songkick.com/artists/9755554" class="songkick-widget"
+         data-theme="dark" data-track-button="on" data-detect-style="false" data-locale="en">
+         Darksoft tour dates
+      </a>
       <script src="https://widget.songkick.com/9755554/widget.js"></script>
     </div>
   </section>
 
-  <section id="biography" aria-labelledby="biography-heading"> 
-    <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20-%20Press%20Photo%202024.jpg" alt="Darksoft Biography Photo">
+  <!-- BIOGRAPHY (FULL VERSION FROM INDEX.HTML) -->
+  <section id="biography">
+    <img class="section-image" src="/assets/Darksoft - Press Photo 2024.jpg" alt="Darksoft Biography Photo">
     <h2 id="biography-heading">Biography</h2> 
   
     <p>Darksoft is a multi-instrumentalist songwriter and producer who creates dreamy indie rock sounds.</p>
@@ -647,100 +135,34 @@ footer p:last-of-type {
   
     <p>Darksoft is originally from Seattle, where he participated in the local music scene for years. In 2021, he moved his family to Portland, Maine. Besides producing Darksoft, he has produced music under several other monikers. Darksoft tries to support other musicians, too. He manages Look Up Records, a small independent music label and blog.</p>
   </section>
-  
 
-  <section id="contact" aria-labelledby="contact-heading">
-    <h2 id="contact-heading">Contact</h2>  
-    <p>For booking inquiries, sync licensing, collaborations, or just to say hello, email <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a>.</p>
+  <!-- RELEASES -->
+  <section id="releases">
+    <h2>Releases</h2>
+    <p>All the Darksoft albums I've put out.</p>
+
+    <div class="release-grid">
+      {% assign sorted_albums = site.data.albums | sort: "release_year" | reverse %}
+      {% for album in sorted_albums %}
+      <article class="release-card">
+        <img src="/assets/{{ album.artwork }}" alt="{{ album.album_title }} cover">
+
+        <h3>{{ album.album_title }} ({{ album.release_year }})</h3>
+        <p><strong>Label:</strong> {{ album.label }}</p>
+
+        <p>
+          <a href="{{ album.bandcamp }}" target="_blank">Bandcamp</a> |
+          <a href="{{ album.spotify }}" target="_blank">Spotify</a> |
+          <a href="{{ album.apple_music }}" target="_blank">Apple Music</a>
+        </p>
+      </article>
+      {% endfor %}
+    </div>
   </section>
 
-  <section id="releases" aria-labelledby="releases-heading">
-  <h2 id="releases-heading">Releases</h2>
-  <p>All the Darksoft albums I've put out.</p>
-  <div class="release-grid">
-    <article class="release-card">
-      <img src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Rationalism%20Album%20Artwork.jpeg" alt="Rationalism album cover">
-      <h3>Rationalism (2025)</h3>
-      <p><strong>Label:</strong> Spirit Goth Records</p>
-      <p>
-        <a href="https://darks0ft.bandcamp.com/album/rationalism" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/7eOL2oXXoh2Ib0r3mHjfXb" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/us/album/rationalism/1794374201" target="_blank">Apple Music</a>
-      </p>
-    </article>    
-    
-    <article class="release-card">
-      <img src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Relativism%20Album%20Artwork.jpeg" alt="Relativism album cover">
-      <h3>Relativism (2024)</h3>
-      <p><strong>Label:</strong> Spirit Goth Records</p>
-      <p>
-        <a href="https://darks0ft.bandcamp.com/album/relativism" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/5d0jaIaOI0FTHDdc6w8akz" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/th/album/relativism/1747064681" target="_blank">Apple Music</a>
-      </p>
-    </article>    
-    
-    <article class="release-card">
-      <img src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Gracyscale%20Album%20Artwork.jpg" alt="Grayscale album cover">
-      <h3>Grayscale (2023)</h3>
-      <p><strong>Label:</strong> Spirit Goth Records</p>
-      <p>
-        <a href="https://darks0ft.bandcamp.com/album/grayscale" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/3jNJF3swIimEIi25q4Ggtt" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/us/album/grayscale/1734567890" target="_blank">Apple Music</a>
-      </p>
-    </article>    
-    
-    <article class="release-card">
-      <img src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Beigeification%20Album%20Artwork.jpg" alt="Beigeification album cover">
-      <h3>Beigeification (2023)</h3>
-      <p><strong>Label:</strong> Look Up Records</p>
-      <p>
-        <a href="https://darks0ft.bandcamp.com/album/beigeification" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/4FpAHBtHbstQSRVM19txhE" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/us/album/beigeification/1650634812" target="_blank">Apple Music</a>
-      </p>
-    </article>    
-    
-    <article class="release-card">
-      <img src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Cryo%20Album%20Artwork.jpeg" alt="Cryo album cover">
-      <h3>Cryo (2022)</h3>
-      <p><strong>Label:</strong> Look Up Records</p>
-      <p>
-        <a href="https://darks0ft.bandcamp.com/album/cryo" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/5Y27T3hgkcXG4cCVIqNyZp" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/us/album/cryo/1592734125" target="_blank">Apple Music</a>
-      </p>
-    </article>    
-    
-    <article class="release-card">
-      <img src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Meltdown%20Album%20Artwork.jpeg" alt="Meltdown album cover">
-      <h3>Meltdown (2020)</h3>
-      <p><strong>Label:</strong> Look Up Records</p>
-      <p>
-        <a href="https://darks0ft.bandcamp.com/album/meltdown" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/4q6Iq8Zj3njIcdlG8eO5p2" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/us/album/meltdown/1523936989" target="_blank">Apple Music</a>
-      </p>
-    </article>    
-    
-    <article class="release-card">
-      <img src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Brain%20Album%20Artwork.jpg" alt="Brain album cover">
-      <h3>Brain (2018)</h3>
-      <p><strong>Label:</strong> Look Up Records</p>
-      <p>
-        <a href="https://darks0ft.bandcamp.com/album/brain" target="_blank">Bandcamp</a> |
-        <a href="https://open.spotify.com/album/3LeTve4epRmN4677X5mWyW?si=NHVb1B8HRvKU4HZ741-FoA" target="_blank">Spotify</a> |
-        <a href="https://music.apple.com/us/album/brain/1438860120" target="_blank">Apple Music</a>
-      </p>
-    </article>    
-    
-  </div>
-</section>
-
-
-<section id="press" aria-labelledby="press-heading">
-  <h2 id="press-heading">Press</h2>
+  <!-- PRESS -->
+  <section id="press">
+    <h2>Press</h2>
   <p>Here are some quotes from music journalists and features on Darksoft. I truly appreciate these folks and the time they've taken getting to know my music and sharing it with their readers:</p>
   <br>
   <blockquote><p>ifitbeyourwill S05E16 • Darksoft [Podcast] - <cite><a href="https://www.ifitbeyourwill.ca/2025/05/ifitbeyourwill-s05e16-darksoft.html" target="_blank">ifitbeyourwill</a></cite></p></blockquote>
@@ -796,10 +218,11 @@ footer p:last-of-type {
   <blockquote><p>Photo story: SWYM, Sealife, Darksoft, Daycones - <cite><a href="https://danstunesseattle.com/2018/12/24/photo-story-swym-sealife-darksoft-daycones/" target="_blank">Dan's Tunes</a></cite></p></blockquote>
 </section>
 
-<section id="production" aria-labelledby="production-heading">
-  <img id="profile-image" src="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20studio%20production.JPG" alt="Darksoft Studio Production">
-  <h2 id="production-heading">Production</h2>
-  <p>I record all my material in my home studio in Maine. In addition to Darksoft, I have also helped other musicians with early-stage production and recording engineering — especially for solo artists looking to bring their ideas to life.</p>
+  <!-- PRODUCTION  -->
+  <section id="production">
+    <img class="section-image" src="/assets/Darksoft studio production.JPG" alt="Darksoft Studio Production">
+    <h2>Production</h2>
+  <p>I record all my material using real instruments in my home studio in Maine. In addition to Darksoft, I have also helped other musicians with early-stage production and recording engineering — especially for solo artists looking to bring their ideas to life.</p>
     
   <h3 style="margin-top: 2rem;">Remote Services</h3>
   <ul style="list-style: none; padding-left: 0;">
@@ -815,7 +238,7 @@ footer p:last-of-type {
   </ul>
 
   <p style="margin-top: 1.5rem;">
-    Contact me to learn more, hop on a call, or book a session:<br>
+    Contact me to learn more, hop on a call, book a session, or just talk shop:<br>
     <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a>
   </p>
 
@@ -835,69 +258,15 @@ footer p:last-of-type {
   </ul>
 </section>
 
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>For booking, sync licensing, collaborations, or general inquiries:  
+       <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a>
+    </p>
+  </section>
 
-
-{% include footer.html %}
+  {% include footer.html %}
 
 </body>
-
-  <script>
-    const text = "Darksoft";
-    const container = document.getElementById("rainbow-text");
-    text.split("").forEach((char) => {
-      const span = document.createElement("span");
-      span.textContent = char;
-      span.style.color = `hsl(${Math.floor(Math.random() * 360)}, 50%, 60%)`;
-      span.style.animation = `fadeColors 10s infinite ${Math.random() * 5}s`;
-      container.appendChild(span);
-    });
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-  <script>
-    window.addEventListener('scroll', function() {
-      const scrollTop = window.scrollY;
-      const fadePoint = window.innerHeight * 0.7;
-      const factor = Math.min(scrollTop / fadePoint, 1);
-      document.querySelector('.landing-title').style.color = `rgb(${255 * (1 - factor)}, ${255 * (1 - factor)}, ${255 * (1 - factor)})`;
-    });
-  </script>
-
-<script>
-  window.addEventListener('scroll', function () {
-    const nav = document.getElementById('sticky-nav-bar');
-    const landing = document.querySelector('.landing-page');
-    const landingBottom = landing.getBoundingClientRect().bottom;
-  
-    if (landingBottom <= -100) {
-  nav.classList.add('stuck');
-  document.body.classList.add('scrolled');
-} else {
-  nav.classList.remove('stuck');
-  document.body.classList.remove('scrolled');
-}
-  });
-  </script>
-  
-  
-<script>
-  const toggle = document.getElementById('menu-toggle');
-  const body = document.body;
-
-  toggle.addEventListener('click', () => {
-    body.classList.toggle('menu-open');
-  });
-</script>
-<a href="#" class="sticky-text-logo">Darksoft</a>
-
-<script 
-  data-name="BMC-Widget" 
-  src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
-  data-id="darksoft"
-  data-description="Support Darksoft with a small donation!" 
-  data-message="Big Darksoft fan? Help fuel the project with $0.50." 
-  data-color="#6dc15b"
-  data-position="Right" 
-  data-x_margin="18" 
-  data-y_margin="18">
-</script>
 </html>
