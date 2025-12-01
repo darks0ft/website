@@ -1,14 +1,47 @@
-<!-- Global HEAD include -->
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Adobe Fonts -->
+<!-- Default SEO Title -->
+<title>{{ page.title | default: "Darksoft — Dream Pop Music" }}</title>
+
+<!-- Default Meta Description -->
+<meta name="description" content="{{ page.description | default: "Darksoft is a dream pop / indie rock artist blending shoegaze textures, analog warmth, and philosophical lyrics. Explore albums, lyrics, merch, and tour dates." }}">
+
+<!-- Open Graph (Facebook, Instagram) -->
+<meta property="og:title" content="{{ page.og_title | default: page.title | default: "Darksoft — Dream Pop Music" }}">
+<meta property="og:description" content="{{ page.og_description | default: page.description | default: "Dreamy indie rock with shoegaze elements. Explore Darksoft albums, lyrics, merch, and tour dates." }}">
+<meta property="og:image" content="{{ page.og_image | default: "https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg" }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- JSON-LD Structured Data (Search Engines) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Darksoft",
+  "url": "https://darksoft.band",
+  "image": "https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg",
+  "genre": ["Dream Pop", "Indie Rock", "Shoegaze"],
+  "sameAs": [
+    "https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE",
+    "https://music.apple.com/us/artist/darksoft/1438263529",
+    "https://darks0ft.bandcamp.com",
+    "https://www.instagram.com/darks0ft",
+    "https://www.facebook.com/darks0ft",
+    "https://www.youtube.com/@Darksoft"
+  ]
+}
+</script>
+
+<!-- Fonts -->
 <link rel="stylesheet" href="https://use.typekit.net/elq2dar.css">
 
 <!-- Global Stylesheet -->
 <link rel="stylesheet" href="/style.css">
 
-<!-- Global Scripts -->
-<script src="/site.js" defer></script>
-
-<!-- Viewport -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ page.url | absolute_url }}">

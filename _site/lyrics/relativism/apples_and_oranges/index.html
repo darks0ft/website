@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Global HEAD include -->
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Adobe Fonts -->
+<!-- Default SEO Title -->
+<title>Apples And Oranges Lyrics — Darksoft</title>
+
+<!-- Default Meta Description -->
+<meta name="description" content="Official lyrics for “Apples And Oranges” by Darksoft.">
+
+<!-- Open Graph (Facebook, Instagram) -->
+<meta property="og:title" content="Apples And Oranges Lyrics — Darksoft">
+<meta property="og:description" content="Official lyrics for “Apples And Oranges” by Darksoft.">
+<meta property="og:image" content="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg">
+<meta property="og:url" content="http://localhost:4000/lyrics/relativism/apples_and_oranges/">
+<meta property="og:type" content="website">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- JSON-LD Structured Data (Search Engines) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Darksoft",
+  "url": "https://darksoft.band",
+  "image": "https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg",
+  "genre": ["Dream Pop", "Indie Rock", "Shoegaze"],
+  "sameAs": [
+    "https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE",
+    "https://music.apple.com/us/artist/darksoft/1438263529",
+    "https://darks0ft.bandcamp.com",
+    "https://www.instagram.com/darks0ft",
+    "https://www.facebook.com/darks0ft",
+    "https://www.youtube.com/@Darksoft"
+  ]
+}
+</script>
+
+<!-- Fonts -->
 <link rel="stylesheet" href="https://use.typekit.net/elq2dar.css">
 
 <!-- Global Stylesheet -->
 <link rel="stylesheet" href="/style.css">
 
-<!-- Global Scripts -->
-<script src="/site.js" defer></script>
+<!-- Canonical URL -->
+<link rel="canonical" href="http://localhost:4000/lyrics/relativism/apples_and_oranges/">
 
-<!-- Viewport -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   
   
@@ -60,7 +94,13 @@
   <a href="/#tour">Tour</a>
   <a href="/#contact">Contact</a>
   <a href="/lyrics">Lyrics</a>
+
+  <!-- Mobile-only donation option -->
+  <a class="mobile-donate" href="https://buymeacoffee.com/darksoft" target="_blank" rel="noopener">
+    🎸 Buy me picks →
+  </a>
 </nav>
+
 
 <!-- Social Icons -->
 <div class="top-social-icons">
@@ -163,13 +203,31 @@ Apples and oranges
       <a href="/lyrics">Lyrics</a> |
       <a href="/data">Show Me The Data</a>
     </div>
-    <br>
-    <div class="footer-donate">
+  <div class="footer-social-icons">
+  <a href="https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE?si=bpjJbjmWQLy0vU8VfLC5Tg"><img src="https://cdn.simpleicons.org/spotify/6dc15b" alt="Spotify"></a>
+  <a href="https://music.apple.com/us/artist/darksoft/1438263529"><img src="https://cdn.simpleicons.org/apple/6dc15b" alt="Apple Music"></a>
+  <a href="https://darks0ft.bandcamp.com/"><img src="https://cdn.simpleicons.org/bandcamp/6dc15b" alt="Bandcamp"></a>
+  <a href="https://www.pandora.com/AL:44479553"><img src="https://cdn.simpleicons.org/pandora/6dc15b" alt="Pandora"></a>
+  <a href="https://soundcloud.com/darks0ft/"><img src="https://cdn.simpleicons.org/soundcloud/6dc15b" alt="SoundCloud"></a>
+  <a href="https://www.youtube.com/@Darksoft"><img src="https://cdn.simpleicons.org/youtube/6dc15b" alt="YouTube"></a>
+  <a href="https://www.instagram.com/darks0ft"><img src="https://cdn.simpleicons.org/instagram/6dc15b" alt="Instagram"></a>
+  <a href="https://www.facebook.com/darks0ft"><img src="https://cdn.simpleicons.org/facebook/6dc15b" alt="Facebook"></a>
+  <a href="https://x.com/darks0ft"><img src="https://cdn.simpleicons.org/x/6dc15b" alt="X/Twitter"></a>
+  <a href="https://bsky.app/profile/darks0ft.bsky.social"><img src="https://cdn.simpleicons.org/bluesky/6dc15b" alt="Bluesky"></a>
+</div>
+<br>
+<div class="footer-wave">
   <a href="https://buymeacoffee.com/darksoft" target="_blank" rel="noopener">
-    💚 If my music means something to you, consider supporting the project in a small way.
+    <img src="/assets/Darksoft%20here%20waving.png" alt="Darksoft Waving">
   </a>
 </div>
-  <br>
+
+<div class="footer-donate">
+  <a href="https://buymeacoffee.com/darksoft" target="_blank" rel="noopener">
+    💚 If my music means something to you, buy me a coffee. ☕️
+  </a>
+</div>
+<br>
     <p>© <span id="year"></span> Darksoft. All rights reserved.</p>
   <script>
     document.getElementById("year").innerText = new Date().getFullYear();
@@ -186,6 +244,106 @@ Apples and oranges
   data-x_margin="18" 
   data-y_margin="18">
 </script>
+<!-- NEWSLETTER POPUP MODAL -->
+<div id="newsletter-modal" class="newsletter-modal hidden">
+
+  <div class="newsletter-overlay"></div>
+
+  <div class="newsletter-content">
+    <button class="newsletter-close">✕</button>
+
+    <img src="/assets/Darksoft here waving.png" 
+         alt="Darksoft waving"
+         class="newsletter-image">
+
+    <h2 class="newsletter-title">Join the Newsletter!</h2>
+
+    <p class="newsletter-body">
+      Darksoft here — thanks for checking out the site!  
+      If you want updates on new albums, upcoming shows, and happenings
+      from the Darksoft multiverse, sign up below.
+    </p>
+
+    <!-- Mailchimp form -->
+    <form action="https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&amp;id=d5fbadec4b"
+          method="post"
+          target="_blank"
+          class="newsletter-form">
+
+      <input type="email" name="EMAIL" placeholder="Enter your email" required>
+
+      <div hidden><input type="hidden" name="tags" value="2757147"></div>
+
+      <button type="submit" class="newsletter-button">Subscribe</button>
+    </form>
+
+    <p class="newsletter-small">
+      Lists like these *really* help indie musicians like me keep things going.
+      Thanks for considering it 💚
+    </p>
+  </div>
+
+</div>
+
+ <!-- Script for Newsletter signup pop-up -->
+<script>
+(function() {
+  const modal = document.getElementById("newsletter-modal");
+  const closeBtn = document.querySelector(".newsletter-close");
+
+  // Prevent showing again if dismissed or signed up recently
+  const lastShown = localStorage.getItem("newsletter-popup");
+  const THIRTY_DAYS = 1000 * 60 * 60 * 24 * 30;
+
+  if (!lastShown || (Date.now() - lastShown) > THIRTY_DAYS) {
+    setTimeout(() => {
+      modal.classList.remove("hidden");
+    }, 5000); // 5 seconds delay
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    localStorage.setItem("newsletter-popup", Date.now());
+  }
+
+  // Close events
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+})();
+</script>
+
+<script>
+  (function() {
+    const text = "Darksoft";
+    const container = document.getElementById("rainbow-text");
+    if (!container) return;
+
+    container.innerHTML = ""; // clear previous content for safety
+
+    text.split("").forEach((char) => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      span.style.color = `hsl(${Math.floor(Math.random() * 360)}, 50%, 60%)`;
+      span.style.animation = `fadeColors 10s infinite ${Math.random() * 5}s`;
+      container.appendChild(span);
+    });
+  })();
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById('menu-toggle');
+    const body = document.body;
+
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        body.classList.toggle('menu-open');
+      });
+    }
+  });
+</script>
+
 </footer>
 
 </body>
