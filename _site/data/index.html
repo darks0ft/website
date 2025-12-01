@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Default SEO Title -->
+<title>Darksoft — Dream Pop Music</title>
+
+<!-- Default Meta Description -->
+<meta name="description" content="Darksoft is a dream pop / indie rock artist blending shoegaze textures, analog warmth, and philosophical lyrics. Explore albums, lyrics, merch, and tour dates.">
+
+<!-- Open Graph (Facebook, Instagram) -->
+<meta property="og:title" content="Darksoft — Dream Pop Music">
+<meta property="og:description" content="Dreamy indie rock with shoegaze elements. Explore Darksoft albums, lyrics, merch, and tour dates.">
+<meta property="og:image" content="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg">
+<meta property="og:url" content="http://localhost:4000/data/">
+<meta property="og:type" content="website">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- JSON-LD Structured Data (Search Engines) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Darksoft",
+  "url": "https://darksoft.band",
+  "image": "https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg",
+  "genre": ["Dream Pop", "Indie Rock", "Shoegaze"],
+  "sameAs": [
+    "https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE",
+    "https://music.apple.com/us/artist/darksoft/1438263529",
+    "https://darks0ft.bandcamp.com",
+    "https://www.instagram.com/darks0ft",
+    "https://www.facebook.com/darks0ft",
+    "https://www.youtube.com/@Darksoft"
+  ]
+}
+</script>
+
+<!-- Fonts -->
+<link rel="stylesheet" href="https://use.typekit.net/elq2dar.css">
+
+<!-- Global Stylesheet -->
+<link rel="stylesheet" href="/style.css">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="http://localhost:4000/data/">
+
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <title>Darksoft — Album Data</title>
+
+  <style>
+    .chart-section {
+      padding: 3rem 1rem;
+      margin-top: 180px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    canvas {
+      margin-top: 2rem;
+      max-width: 100%;
+    }
+
+    h2 {
+      font-family: 'bradley-djr', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER INCLUDE -->
+
+ <!-- Header Include (shared across all pages except homepage hero) -->
+
+<!-- Sticky mini-logo -->
+<a href="/" class="sticky-text-logo">Darksoft</a>
+
+<!-- Top-left logo -->
+<a href="/" class="logo-top-left">Darksoft</a>
+
+<!-- Hamburger menu -->
+<button id="menu-toggle" class="hamburger" aria-label="Toggle menu">
+  ☰
+</button>
+
+<!-- Sticky Nav Bar -->
+<nav class="sticky-nav-bar show" id="sticky-nav-bar" aria-label="Main navigation">
+  <a href="/#about">About</a>
+  <a href="/#merch">Merch</a>
+  <a href="/#tour">Tour</a>
+  <a href="/#contact">Contact</a>
+  <a href="/lyrics">Lyrics</a>
+
+  <!-- Mobile-only donation option -->
+  <a class="mobile-donate" href="https://buymeacoffee.com/darksoft" target="_blank" rel="noopener">
+    🎸 Buy me picks →
+  </a>
+</nav>
+
+
+<!-- Social Icons -->
+<div class="top-social-icons">
+  <a href="https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE?si=bpjJbjmWQLy0vU8VfLC5Tg"><img src="https://cdn.simpleicons.org/spotify/6dc15b" alt="Spotify"></a>
+  <a href="https://music.apple.com/us/artist/darksoft/1438263529"><img src="https://cdn.simpleicons.org/apple/6dc15b" alt="Apple Music"></a>
+  <a href="https://darks0ft.bandcamp.com/"><img src="https://cdn.simpleicons.org/bandcamp/6dc15b" alt="Bandcamp"></a>
+  <a href="https://www.pandora.com/AL:44479553"><img src="https://cdn.simpleicons.org/pandora/6dc15b" alt="Pandora"></a>
+  <a href="https://soundcloud.com/darks0ft/"><img src="https://cdn.simpleicons.org/soundcloud/6dc15b" alt="SoundCloud"></a>
+  <a href="https://www.youtube.com/@Darksoft"><img src="https://cdn.simpleicons.org/youtube/6dc15b" alt="YouTube"></a>
+  <a href="https://www.instagram.com/darks0ft"><img src="https://cdn.simpleicons.org/instagram/6dc15b" alt="Instagram"></a>
+  <a href="https://www.facebook.com/darks0ft"><img src="https://cdn.simpleicons.org/facebook/6dc15b" alt="Facebook"></a>
+  <a href="https://x.com/darks0ft"><img src="https://cdn.simpleicons.org/x/6dc15b" alt="X"></a>
+  <a href="https://bsky.app/profile/darks0ft.bsky.social"><img src="https://cdn.simpleicons.org/bluesky/6dc15b" alt="Bluesky"></a>
+</div>
+
+<!-- >>> Donation CTA for navigation <<<< -->
+<div class="donate-inline">
+  <a href="https://buymeacoffee.com/darksoft" target="_blank" rel="noopener">
+    🎸 Buy me picks →
+  </a>
+</div>
+
+<section class="chart-section">
+  <h2>Album Trends Over Time</h2>
+
+  <p style="opacity:0.7;margin-bottom:2rem;">
+    Visualizing Darksoft album evolution — tempo, duration, cohesion, and scale.
+  </p>
+
+  <canvas id="tempoChart"></canvas>
+  <canvas id="deviationChart"></canvas>
+  <canvas id="lengthChart"></canvas>
+  <canvas id="tracksChart"></canvas>
+  <canvas id="totalWordsChart"></canvas>
+  <canvas id="avgWordsChart"></canvas>
+</section>
+
+<!-- FOOTER INCLUDE -->
+  <footer>
+    <div class="footer-title"><a href="/" class="footer-link">
+    <span class="rainbow-text" id="rainbow-text"></span>
+      </a></div>
+    <div class="footer-links">
+      <a href="/#about">About</a> | 
+      <a href="/#biography">Biography</a> | 
+      <a href="/#merch">Merch</a> | 
+      <a href="/#tour">Tour</a> | 
+      <a href="/#contact">Contact</a> |
+      <a href="/#press">Press</a> |
+      <a href="/lyrics">Lyrics</a> |
+      <a href="/data">Show Me The Data</a>
+    </div>
+  <div class="footer-social-icons">
+  <a href="https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE?si=bpjJbjmWQLy0vU8VfLC5Tg"><img src="https://cdn.simpleicons.org/spotify/6dc15b" alt="Spotify"></a>
+  <a href="https://music.apple.com/us/artist/darksoft/1438263529"><img src="https://cdn.simpleicons.org/apple/6dc15b" alt="Apple Music"></a>
+  <a href="https://darks0ft.bandcamp.com/"><img src="https://cdn.simpleicons.org/bandcamp/6dc15b" alt="Bandcamp"></a>
+  <a href="https://www.pandora.com/AL:44479553"><img src="https://cdn.simpleicons.org/pandora/6dc15b" alt="Pandora"></a>
+  <a href="https://soundcloud.com/darks0ft/"><img src="https://cdn.simpleicons.org/soundcloud/6dc15b" alt="SoundCloud"></a>
+  <a href="https://www.youtube.com/@Darksoft"><img src="https://cdn.simpleicons.org/youtube/6dc15b" alt="YouTube"></a>
+  <a href="https://www.instagram.com/darks0ft"><img src="https://cdn.simpleicons.org/instagram/6dc15b" alt="Instagram"></a>
+  <a href="https://www.facebook.com/darks0ft"><img src="https://cdn.simpleicons.org/facebook/6dc15b" alt="Facebook"></a>
+  <a href="https://x.com/darks0ft"><img src="https://cdn.simpleicons.org/x/6dc15b" alt="X/Twitter"></a>
+  <a href="https://bsky.app/profile/darks0ft.bsky.social"><img src="https://cdn.simpleicons.org/bluesky/6dc15b" alt="Bluesky"></a>
+</div>
+<br>
+<div class="footer-wave">
+  <a href="https://buymeacoffee.com/darksoft" target="_blank" rel="noopener">
+    <img src="/assets/Darksoft%20here%20waving.png" alt="Darksoft Waving">
+  </a>
+</div>
+
+<div class="footer-donate">
+  <a href="https://buymeacoffee.com/darksoft" target="_blank" rel="noopener">
+    💚 If my music means something to you, buy me a coffee. ☕️
+  </a>
+</div>
+<br>
+    <p>© <span id="year"></span> Darksoft. All rights reserved.</p>
+  <script>
+    document.getElementById("year").innerText = new Date().getFullYear();
+  </script>
+  <!-- Buy Me a Coffee Floating Widget -->
+<script 
+  data-name="BMC-Widget" 
+  src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+  data-id="darksoft"
+  data-description="Support Darksoft with a small donation!" 
+  data-message="Big Darksoft fan? Help fuel the project with $0.50." 
+  data-color="#6dc15b"
+  data-position="Right" 
+  data-x_margin="18" 
+  data-y_margin="18">
+</script>
+<!-- NEWSLETTER POPUP MODAL -->
+<div id="newsletter-modal" class="newsletter-modal hidden">
+
+  <div class="newsletter-overlay"></div>
+
+  <div class="newsletter-content">
+    <button class="newsletter-close">✕</button>
+
+    <img src="/assets/Darksoft here waving.png" 
+         alt="Darksoft waving"
+         class="newsletter-image">
+
+    <h2 class="newsletter-title">Join the Newsletter!</h2>
+
+    <p class="newsletter-body">
+      Darksoft here — thanks for checking out the site!  
+      If you want updates on new albums, upcoming shows, and happenings
+      from the Darksoft multiverse, sign up below.
+    </p>
+
+    <!-- Mailchimp form -->
+    <form action="https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&amp;id=d5fbadec4b"
+          method="post"
+          target="_blank"
+          class="newsletter-form">
+
+      <input type="email" name="EMAIL" placeholder="Enter your email" required>
+
+      <div hidden><input type="hidden" name="tags" value="2757147"></div>
+
+      <button type="submit" class="newsletter-button">Subscribe</button>
+    </form>
+
+    <p class="newsletter-small">
+      Lists like these *really* help indie musicians like me keep things going.
+      Thanks for considering it 💚
+    </p>
+  </div>
+
+</div>
+
+ <!-- Script for Newsletter signup pop-up -->
+<script>
+(function() {
+  const modal = document.getElementById("newsletter-modal");
+  const closeBtn = document.querySelector(".newsletter-close");
+
+  // Prevent showing again if dismissed or signed up recently
+  const lastShown = localStorage.getItem("newsletter-popup");
+  const THIRTY_DAYS = 1000 * 60 * 60 * 24 * 30;
+
+  if (!lastShown || (Date.now() - lastShown) > THIRTY_DAYS) {
+    setTimeout(() => {
+      modal.classList.remove("hidden");
+    }, 5000); // 5 seconds delay
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    localStorage.setItem("newsletter-popup", Date.now());
+  }
+
+  // Close events
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+})();
+</script>
+
+<script>
+  (function() {
+    const text = "Darksoft";
+    const container = document.getElementById("rainbow-text");
+    if (!container) return;
+
+    container.innerHTML = ""; // clear previous content for safety
+
+    text.split("").forEach((char) => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      span.style.color = `hsl(${Math.floor(Math.random() * 360)}, 50%, 60%)`;
+      span.style.animation = `fadeColors 10s infinite ${Math.random() * 5}s`;
+      container.appendChild(span);
+    });
+  })();
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById('menu-toggle');
+    const body = document.body;
+
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        body.classList.toggle('menu-open');
+      });
+    }
+  });
+</script>
+
+</footer>
+
+<script>
+  /* -----------------------
+     ALBUM DATA
+     ----------------------- */
+  const albums = [
+    { title: "Brain", year: 2018, avgTempo: 96.72, dev: 19.42, avgLen: "4:01", tracks: 9, totalWords: 1540, avgWords: 171.1111111 },
+    { title: "Meltdown", year: 2020, avgTempo: 97.4, dev: 22.28, avgLen: "4:05", tracks: 10, totalWords: 1575, avgWords: 157.5 },
+    { title: "Cryo", year: 2022, avgTempo: 111.38, dev: 18.13, avgLen: "3:42", tracks: 8, totalWords: 1133, avgWords: 141.625 },
+    { title: "Beigeification", year: 2023, avgTempo: 131.67, dev: 15.41, avgLen: "3:51", tracks: 9, totalWords: 1043, avgWords: 115.8888889 },
+    { title: "Grayscale", year: 2023, avgTempo: 130.7, dev: 18.16, avgLen: "3:51", tracks: 10, totalWords: 1076, avgWords: 107.6 },
+    { title: "Relativism", year: 2024, avgTempo: 144.3, dev: 11.64, avgLen: "4:02", tracks: 10, totalWords: 731, avgWords: 73.1 },
+    { title: "Rationalism", year: 2025, avgTempo: 137.8, dev: 21.04, avgLen: "3:32", tracks: 10, totalWords: 870, avgWords: 87 },
+    { title: "Everydayness", year: 2026, avgTempo: 160.7, dev: 8.36, avgLen: "3:59", tracks: 10, totalWords: 727, avgWords: 72.7 }
+  ];
+
+  // Convert mm:ss to minutes
+  function toMinutes(str) {
+    const [m, s] = str.split(":").map(Number);
+    return m + s/60;
+  }
+
+  const labels = albums.map(a => `${a.year} — ${a.title}`);
+
+  const tempoData = albums.map(a => a.avgTempo);
+  const devData = albums.map(a => a.dev);
+  const lengthData = albums.map(a => toMinutes(a.avgLen));
+  const trackData = albums.map(a => a.tracks);
+  const totalWordsData = albums.map(a => a.totalWords);
+  const avgWordsData = albums.map(a => a.avgWords);
+
+  /* -----------------------
+     CHART DEFAULT STYLING
+     ----------------------- */
+  Chart.defaults.color = "#eee";
+  Chart.defaults.borderColor = "rgba(255,255,255,0.1)";
+
+  const lineStyle = {
+    fill: false,
+    tension: 0.25,
+    borderWidth: 3,
+    pointRadius: 5,
+    pointHoverRadius: 7
+  };
+
+  /* -----------------------
+     TEMPO CHART
+     ----------------------- */
+  new Chart(document.getElementById("tempoChart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Average Tempo (BPM)",
+        data: tempoData,
+        borderColor: "#6dc15b",
+        backgroundColor: "#6dc15b",
+        ...lineStyle
+      }]
+    }
+  });
+
+  /* -----------------------
+     TEMPO DEVIATION
+     ----------------------- */
+  new Chart(document.getElementById("deviationChart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Average Tempo Deviation",
+        data: devData,
+        borderColor: "#9999ff",
+        backgroundColor: "#9999ff",
+        ...lineStyle
+      }]
+    }
+  });
+
+  /* -----------------------
+     AVERAGE SONG LENGTH
+     ----------------------- */
+  new Chart(document.getElementById("lengthChart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Average Song Length (min)",
+        data: lengthData,
+        borderColor: "#ff66cc",
+        backgroundColor: "#ff66cc",
+        ...lineStyle
+      }]
+    }
+  });
+
+  /* -----------------------
+     TOTAL TRACK COUNT
+     ----------------------- */
+  new Chart(document.getElementById("tracksChart"), {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [{
+        label: "Total Tracks",
+        data: trackData,
+        backgroundColor: "#6dc15b"
+      }]
+    }
+  });
+
+  /* -----------------------
+     NEW — TOTAL WORDS
+     ----------------------- */
+  new Chart(document.getElementById("totalWordsChart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Total Words per Album",
+        data: totalWordsData,
+        borderColor: "#ffaa33",
+        backgroundColor: "#ffaa33",
+        ...lineStyle
+      }]
+    }
+  });
+
+  /* -----------------------
+     NEW — AVG WORDS PER SONG
+     ----------------------- */
+  new Chart(document.getElementById("avgWordsChart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Average Words per Song",
+        data: avgWordsData,
+        borderColor: "#33ddff",
+        backgroundColor: "#33ddff",
+        ...lineStyle
+      }]
+    }
+  });
+</script>
+
+
+</body>
+
+</html>
