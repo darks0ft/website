@@ -1,13 +1,11 @@
+---
+layout: none
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <!-- Global Head -->
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://use.typekit.net/elq2dar.css">
-  <link rel="stylesheet" href="/style.css">
-  <script src="/site.js" defer></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% include head.html %}
 
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -40,7 +38,7 @@
 
 <!-- HEADER INCLUDE -->
 
-<?php include "header.html"; ?>
+ {% include header.html %}
 
 <section class="chart-section">
   <h2>Album Trends Over Time</h2>
@@ -58,7 +56,7 @@
 </section>
 
 <!-- FOOTER INCLUDE -->
-<?php include "footer.html"; ?>
+  {% include footer.html %}
 
 <script>
   /* -----------------------
@@ -207,12 +205,5 @@
 
 
 </body>
-   <div class="footer-title"><a href="/" class="footer-link">
-    <span class="rainbow-text" id="rainbow-text"></span>
-      </a></div>
-    <br>
-    <p>© <span id="year"></span> Darksoft. All rights reserved.</p>
-  <script>
-    document.getElementById("year").innerText = new Date().getFullYear();
-  </script>
+
 </html>
