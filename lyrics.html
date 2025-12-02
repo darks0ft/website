@@ -8,16 +8,63 @@ permalink: /lyrics/
 <html lang="en">
 <head>
   {% include head.html %}
-  <title>Darksoft Lyrics — Complete Catalogue</title>
-  <meta name="description" content="Complete Darksoft lyrics organized by album. Browse songs from Everydayness, Rationalism, Relativism, Grayscale, Beigeification, Cryo, Meltdown, and Brain.">
+
+  <title>Darksoft Lyrics — Complete Discography & Songs</title>
+
+  <meta name="description" content="
+    Explore the complete Darksoft lyrics catalogue organized by album and release year. 
+    Includes tracks from {% assign sorted_albums = site.data.albums | sort: 'release_year' | reverse %}
+    {% for album in sorted_albums %}{{ album.album_title }}{% unless forloop.last %}, {% endunless %}{% endfor %}, 
+    plus fan favorites like Endless Day, Live and Let Live, So It Goes, Some Things You Just Know, and Day By Day.
+  ">
+
+  <link rel="canonical" href="https://darksoft.band/lyrics/">
+
+  <!-- SEO Keywords -->
+  <meta name="keywords" content="Darksoft lyrics, Darksoft song lyrics, Darksoft discography, Darksoft albums, dream pop lyrics, indie rock lyrics, shoegaze lyrics">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Darksoft Lyrics — Complete Discography">
+  <meta property="og:description" content="Browse official Darksoft lyrics from every album. View the full discography organized by release year and album.">
+  <meta property="og:url" content="https://darksoft.band/lyrics/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Darksoft Lyrics — Complete Discography & Songs">
+  <meta name="twitter:description" content="Find official Darksoft lyrics for every album and song in the full Darksoft discography.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg">
+
+  <!-- Schema.org: MusicGroup + CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Darksoft Lyrics",
+    "url": "https://darksoft.band/lyrics/",
+    "description": "A complete, organized catalogue of Darksoft lyrics across the full discography.",
+    "about": {
+      "@type": "MusicGroup",
+      "name": "Darksoft",
+      "genre": ["Dream Pop", "Indie Rock", "Shoegaze"],
+      "url": "https://darksoft.band"
+    }
+  }
+  </script>
 </head>
+
 
 <body>
   {% include header.html %}
 
   <section class="lyrics-index">
-    <h2>Lyrics</h2>
-    <p>Browse lyrics from every Darksoft album.</p>
+    <h2>Darksoft Lyrics</h2>
+    <p><p>
+  Explore the complete Darksoft lyrics catalogue, organized by album and release year. 
+  This page includes official lyrics for every Darksoft song across the full discography, 
+  from fan favorites to deep cuts throughout the life of the project.
+</p></p>
 
     <div class="lyrics-album-list">
 
@@ -53,4 +100,5 @@ permalink: /lyrics/
 
   {% include footer.html %}
 </body>
+
 </html>

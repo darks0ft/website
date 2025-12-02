@@ -45,6 +45,15 @@ section {
   text-align: center;
 }
 
+/* Generic page wrapper */
+.page-wrapper {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 220px auto 0; /* consistent page spacing under nav/logo */
+  text-align: center;
+}
+
+
 /* Paragraph spacing */
 p + p {
   margin-top: 13px;
