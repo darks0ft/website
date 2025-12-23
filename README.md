@@ -39,6 +39,7 @@ Live site:
 
 ## 🧱 Site Structure
 
+```
 /
 ├── index.html            # Homepage (hero, bio, merch, tour, releases)
 ├── /lyrics/              # Master lyrics index
@@ -51,7 +52,7 @@ Live site:
 ├── robots.txt            # Crawler rules
 ├── llms.txt              # AI usage & training policy
 └── README.md
-
+```
 
 Key principles:
 - **Lyrics are first-class content**, not PDFs or embeds
