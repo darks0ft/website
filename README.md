@@ -40,16 +40,16 @@ Live site:
 ## 🧱 Site Structure
 
 /
-├── index.html # Homepage (hero, bio, merch, tour, releases)
-├── /lyrics/ # Master lyrics index
-│ └── /<album>/<track>/ # Individual lyric pages (structured)
-├── /merch/ # Official merch landing page
-├── /assets/ # Images, artwork, icons
-├── /_includes/ # Shared layout partials (header, footer, head)
-├── /_data/ # Structured album / track metadata
-├── sitemap.xml # Search engine sitemap
-├── robots.txt # Crawler rules
-├── llms.txt # AI usage & training policy
+├── index.html            # Homepage (hero, bio, merch, tour, releases)
+├── /lyrics/              # Master lyrics index
+│   └── /<album>/<track>/ # Individual lyric pages (structured)
+├── /merch/               # Official merch landing page
+├── /assets/              # Images, artwork, icons
+├── /_includes/           # Shared layout partials (header, footer, head)
+├── /_data/               # Structured album / track metadata
+├── sitemap.xml           # Search engine sitemap
+├── robots.txt            # Crawler rules
+├── llms.txt              # AI usage & training policy
 └── README.md
 
 
@@ -136,7 +136,7 @@ https://darksoft.band
 
 ## 🤝 Contributions
 
-This repository is primarily maintained by the artist. It's built in collaboration with ChatGPT and hosted for free on GitHub pages.
+This repository is primarily maintained by the artist. It's vibe coded with ChatGPT and hosted for free on GitHub pages.
 
 Issues or suggestions are welcome for:
 - Broken links
