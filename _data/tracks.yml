@@ -1037,7 +1037,7 @@
     notes: 
 -
     track_id: everydayness_too_little_too_late
-    track_number: 1
+    track_number: 2
     track_title: Too Little Too Late
     album_id: everydayness
     track_title_slug: too_little_too_late
@@ -1051,7 +1051,7 @@
     notes: 
 -
     track_id: everydayness_stop_and_go
-    track_number: 2
+    track_number: 10
     track_title: Stop And Go
     album_id: everydayness
     track_title_slug: stop_and_go
@@ -1065,7 +1065,7 @@
     notes: 
 -
     track_id: everydayness_spend_your_days
-    track_number: 3
+    track_number: 1
     track_title: Spend Your Days
     album_id: everydayness
     track_title_slug: spend_your_days
@@ -1079,7 +1079,7 @@
     notes: 
 -
     track_id: everydayness_constant_change
-    track_number: 4
+    track_number: 3
     track_title: Constant Change
     album_id: everydayness
     track_title_slug: constant_change
@@ -1093,7 +1093,7 @@
     notes: 
 -
     track_id: everydayness_irons_in_the_fire
-    track_number: 5
+    track_number: 7
     track_title: Irons In The Fire
     album_id: everydayness
     track_title_slug: irons_in_the_fire
@@ -1107,7 +1107,7 @@
     notes: 
 -
     track_id: everydayness_rinse_and_repeat
-    track_number: 6
+    track_number: 4
     track_title: Rinse And Repeat
     album_id: everydayness
     track_title_slug: rinse_and_repeat
@@ -1121,7 +1121,7 @@
     notes: 
 -
     track_id: everydayness_as_above_so_below
-    track_number: 7
+    track_number: 5
     track_title: As Above So Below
     album_id: everydayness
     track_title_slug: as_above_so_below
@@ -1149,7 +1149,7 @@
     notes: 
 -
     track_id: everydayness_same_ol_same_ol
-    track_number: 9
+    track_number: 6
     track_title: Same Ol Same Ol
     album_id: everydayness
     track_title_slug: same_ol_same_ol
@@ -1163,7 +1163,7 @@
     notes: 
 -
     track_id: everydayness_no_news_is_good_news
-    track_number: 10
+    track_number: 9
     track_title: No News Is Good News
     album_id: everydayness
     track_title_slug: no_news_is_good_news
@@ -1175,3 +1175,4 @@
     bpm: 166
     music_video: 
     notes: 
+
