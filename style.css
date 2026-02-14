@@ -1,4 +1,68 @@
 /* ========================================
+   PROMO BANNER (site-wide)
+======================================== */
+.promo-banner {
+  position: sticky;
+  top: 0;
+  z-index: 10050;
+  background: linear-gradient(90deg, rgba(70, 130, 180, 0.95), rgba(80, 140, 200, 0.95));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.promo-banner__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 14px;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.promo-banner__link:hover {
+  opacity: 0.92;
+}
+
+.promo-banner__icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex: 0 0 auto;
+}
+
+.promo-banner__text {
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+.promo-banner__cta {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  margin-left: 6px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .promo-banner__link {
+    gap: 8px;
+    padding: 10px 10px;
+  }
+
+  .promo-banner__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .promo-banner__text {
+    font-size: 12px;
+  }
+}
+
+
+/* ========================================
    RESET & GLOBAL ELEMENTS
 ======================================== */
 * {
