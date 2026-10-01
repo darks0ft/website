@@ -6,6 +6,7 @@
       <a href="/#about">About</a> | 
       <a href="/#biography">Biography</a> | 
       <a href="/merch">Merch</a> | 
+      <a href="/sync/">Sync Licensing</a> | 
       <a href="/#tour">Tour</a> | 
       <a href="/#contact">Contact</a> |
       <a href="/#press">Press</a> |
@@ -99,6 +100,9 @@
 (function() {
   const modal = document.getElementById("newsletter-modal");
   const closeBtn = document.querySelector(".newsletter-close");
+
+  // Don't interrupt industry visitors (music supervisors) on the sync page
+  if (document.body.classList.contains("sync-page")) return;
 
   // Prevent showing again if dismissed or signed up recently
   const lastShown = localStorage.getItem("newsletter-popup");
