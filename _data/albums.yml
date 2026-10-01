@@ -1,103 +1,170 @@
 - album_id: brain
   album_title: Brain
   release_year: "2018"
+  release_date: 2018-10-26
   label: Look Up Records
   spotify: https://open.spotify.com/album/3LeTve4epRmN4677X5mWyW?si=NHVb1B8HRvKU4HZ741-FoA
   apple_music: https://music.apple.com/us/album/brain/1438860120
   bandcamp: https://darks0ft.bandcamp.com/album/brain
-  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_lYozNfdjju0mXb2U8dIHvZ5XN26AUBUlQ
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_k8RuaknEM_p4jz7xh6GHSbpRYDDdyRNxY
+  deezer: https://www.deezer.com/album/75415692
   artwork: Darksoft Brain Album Artwork.jpg
   artwork_artist: Rachel Bennett
   total_tracks: 9
-  duration: 35:06
+  duration: "35:06"
+  blurb: "Darksoft's debut album, named after the first PC computer virus. Most songs take their titles from infamous computer viruses and security flaws (Mydoom, Code Red, ILOVEYOU, Heartbleed), using the language of viruses and algorithms to sing about very human feelings. It's '90s-indebted sadcore from the Pacific Northwest: crunchy guitars and crystalline vocal melodies that cut through the fog."
+  credits:
+    - "Written and produced by Darksoft"
+    - "Mixed and mastered by Mathieu Riede"
+    - "Photos by Rachel Bennett"
 
 - album_id: meltdown
   album_title: Meltdown
   release_year: "2020"
+  release_date: 2020-10-02
   label: Look Up Records
   spotify: https://open.spotify.com/album/4q6Iq8Zj3njIcdlG8eO5p2
   apple_music: https://music.apple.com/us/album/meltdown/1523936989
   bandcamp: https://darks0ft.bandcamp.com/album/meltdown
   youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_l6FUwhiGsrorZRZSiRrztPjQQIcQ9AIqA
+  deezer: https://www.deezer.com/album/161571392
   artwork: Darksoft Meltdown Album Artwork.jpeg
   artwork_artist: Ian Vormwelt
   total_tracks: 10
-  duration: 40:32
+  duration: "40:32"
+  blurb: "The follow-up to Brain continues the computer-age concept, naming songs after ransomware, exploits, and security flaws like WannaCry, EternalBlue, and Bad Rabbit (Meltdown itself was a 2018 processor vulnerability). Psych-synth textures, infectious melodies, and '90s alternative rock undertones blend computer-age anxiety with raw human emotion."
+  credits:
+    - "Written and recorded by Darksoft"
+    - "Mixed and mastered by Mathieu Riede"
+    - "Cello on “Dark Mode” by Valdorf"
+    - "Artwork by Ian Vormwelt"
 
 - album_id: cryo
   album_title: Cryo
   release_year: "2022"
+  release_date: 2022-01-14
   label: Look Up Records
   spotify: https://open.spotify.com/album/5Y27T3hgkcXG4cCVIqNyZp
   apple_music: https://music.apple.com/us/album/cryo/1592734125
   bandcamp: https://darks0ft.bandcamp.com/album/cryo
-  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_nDKuUH6km0LARJwatqE3sUeTb-2TA9S0c
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_kiZMH7fQ1Hnmjve1Q5IPzEVCoMTz0Tbik
+  deezer: https://www.deezer.com/album/269329372
   artwork: Darksoft Cryo Album Artwork.jpeg
   artwork_artist: Owen Blodgett, Jordan Rundle
   total_tracks: 8
-  duration: 29:34
+  duration: "29:34"
+  blurb: "Darksoft's third album leans into dreamy alt-rock with a nostalgic, garage-pop edge. Cryo earned national college radio attention, charting on the NACC and Sub-Modern charts, and its single “Looking Backward” was featured on Spotify's Indie Fresh Finds playlist."
+  credits:
+    - "Written and recorded by Darksoft"
+    - "Mixed by Zak Van Zeumeren"
+    - "Mastered by Mike Vernon Davis"
+    - "Front cover by Owen Blodgett, back cover by Jordan Rundle"
 
 - album_id: beigeification
   album_title: Beigeification
   release_year: "2023"
+  release_date: 2023-01-13
   label: Look Up Records
   spotify: https://open.spotify.com/album/4FpAHBtHbstQSRVM19txhE
   apple_music: https://music.apple.com/us/album/beigeification/1650634812
   bandcamp: https://darks0ft.bandcamp.com/album/beigeification
-  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_mSH8RVfeUD2d9etqDV16kzl43EOEjN3Gg
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_k2w8GeZ73Umy4WNSp8WpzfmsC-Tjl67V8
+  deezer: https://www.deezer.com/album/368301467
   artwork: Darksoft Beigeification Album Artwork.jpg
   artwork_artist: Darksoft
   total_tracks: 9
-  duration: 35:55
+  duration: "35:55"
+  blurb: "A postmodern dose of surfy sounds, beige moods, and pastel phrases to match the disillusionment of the age. Beigeification builds its songs around everyday sayings (“It Is What It Is,” “Such Is Life,” “Win Some Lose Some”), blending dream pop, shoegaze, and alternative rock with velvety vocals. It reached #1 in NACC college radio adds and peaked at #9 on the chart, with cassettes printed by Olympia's 2060 Records."
+  credits:
+    - "Written and recorded by Darksoft"
+    - "Mixed by Brian Fisher"
+    - "Mastered by Stefan Mac"
+    - "Artwork by Darksoft"
 
 - album_id: grayscale
   album_title: Grayscale
   release_year: "2023"
+  release_date: 2023-12-01
   label: Spirit Goth Records
+  catalog: SG63
   spotify: https://open.spotify.com/album/3jNJF3swIimEIi25q4Ggtt
-  apple_music: https://music.apple.com/us/album/grayscale/1734567890
+  apple_music: https://music.apple.com/us/album/grayscale/1716573535
   bandcamp: https://darks0ft.bandcamp.com/album/grayscale
-  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_k0U-_v1MPD5wkvocfDRJSG0pK5yeVVt_o
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_lLxHN1HKLfVMaaJ2EpTVhv6f4CNlf1xO0
+  deezer: https://www.deezer.com/album/512520311
   artwork: Darksoft Gracyscale Album Artwork.jpg
   artwork_artist: Darksoft
   total_tracks: 10
-  duration: 39:48
+  duration: "39:48"
+  blurb: "A direct follow-up to Beigeification, Grayscale looks at a world that seems to be getting less colorful, from clothing and objects to public spaces. The songs swing between questioning that drift toward blandness and making peace with it, landing in a gray area: enjoy the moment, and keep your own color. Neutral in tone but varied in arrangement, it was Darksoft's first album with Spirit Goth Records."
+  credits:
+    - "Written and recorded by Darksoft"
+    - "Mixed by Brian Fisher"
+    - "Mastered by Stefan Mac"
+    - "Artwork by Darksoft"
 
 - album_id: relativism
   album_title: Relativism
   release_year: "2024"
+  release_date: 2024-05-31
   label: Spirit Goth Records
+  catalog: SG66
   spotify: https://open.spotify.com/album/5d0jaIaOI0FTHDdc6w8akz
-  apple_music: https://music.apple.com/th/album/relativism/1747064681
+  apple_music: https://music.apple.com/us/album/relativism/1747064681
   bandcamp: https://darks0ft.bandcamp.com/album/relativism
-  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_kKLAvhxv1bGmUNU7Odx-XeX4XmXcT6rw8
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_lGa9PEooRb6w-qF8vg-TuGmiMPlxzqX-Y
+  deezer: https://www.deezer.com/album/588064912
   artwork: Darksoft Relativism Album Artwork.jpeg
   artwork_artist: Erica Miller
   total_tracks: 10
-  duration: 40:17
+  duration: "40:17"
+  blurb: "Relativism explores two kinds of relativity. One is personal: taste is subjective and views differ, so live and let live. The other is temporal: time moves differently depending on where you stand, and the days seem to go by faster and faster. The result is whimsical, slightly prophetic dream pop, darkened at the corners like a vignette, about holding on to everyday moments because they don't last."
+  credits:
+    - "Written and recorded by Darksoft"
+    - "Mixed and mastered by Brian Fisher"
+    - "Vocals by Kara Auclair on tracks 2, 6, and 9"
+    - "Artwork by Erica Miller"
 
 - album_id: rationalism
   album_title: Rationalism
   release_year: "2025"
+  release_date: 2025-02-21
   label: Spirit Goth Records
+  catalog: SG76
   spotify: https://open.spotify.com/album/7eOL2oXXoh2Ib0r3mHjfXb
   apple_music: https://music.apple.com/us/album/rationalism/1794374201
   bandcamp: https://darks0ft.bandcamp.com/album/rationalism
-  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_lTfPqlU2GQEa5KfqxEG7lxJTti6PnbPQ0
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_nS-tmXX4H_ZMaBlhk8qyjEI3KNhsooYYU
+  deezer: https://www.deezer.com/album/707997821
   artwork: Darksoft Rationalism Album Artwork.jpeg
   artwork_artist: Erica Miller
   total_tracks: 10
-  duration: 36:35
+  duration: "36:35"
+  blurb: "A sister album to Relativism. Where that record dwelt on the subjective and fluid, Rationalism answers with clarity and groundedness: how we come to know things, rationalize them, and process them. The lyrics trace the passage of time, life's unpredictability, and the closeness and distance between people, with a recurring urge to strip away the noise and focus on what matters. Calmer and earnest, it balances color with darkness and energy with ease."
+  credits:
+    - "Written and recorded by Darksoft"
+    - "Mixed and mastered by Brian Fisher"
+    - "Vocals by Emily Irving on “Day By Day” and Dutch Experts on “No One Knows”"
+    - "Artwork by Erica Miller"
 
 - album_id: everydayness
   album_title: Everydayness
   release_year: "2026"
+  release_date: 2026-03-06
   label: Look Up Records
+  catalog: LUR-022
   spotify: https://open.spotify.com/album/6uvgARCNYEHRkFtgNoGHnN
-  apple_music: https://music.apple.com/us/artist/darksoft/1438263529
+  apple_music: https://music.apple.com/us/album/everydayness/1867053873
   bandcamp: https://darks0ft.bandcamp.com/album/everydayness
-  youtube_music: https://www.youtube.com/@Darksoft
+  youtube_music: https://music.youtube.com/playlist?list=OLAK5uy_kV-RWjZyiETbQYmN3Y37dKZBtxZCvp-08
+  deezer: https://www.deezer.com/album/892981732
   artwork: Darksoft Album Artwork Everydayness.jpg
   artwork_artist: Jameson Martin
   total_tracks: 10
-  duration: 39:55
+  duration: "39:55"
+  blurb: "A concept album about cycles, repetition, and finding beauty in the mundane, recorded over the course of a year in Darksoft's home studio in Maine. Shimmering, jangly guitars and driving drums meet introspective lyrics about daily routines. The analemma on the cover, made by photographing the sun from the same spot across a year, mirrors the theme. In Darksoft's words: jangly dream pop for the day-to-day. Nothing more, nothing less."
+  credits:
+    - "Written and recorded by Darksoft"
+    - "Mixed and mastered by Brian Fisher"
+    - "Vocals by Sandy on “As Above So Below” and Lauren Lakis on “Irons In The Fire”"
+    - "Artwork by Jameson Martin"

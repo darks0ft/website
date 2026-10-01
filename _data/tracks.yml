@@ -19,7 +19,7 @@
     track_title: Mydoom
     album_id: brain
     track_title_slug: mydoom
-    duration: 3:31
+    duration: "3:31"
     isrc: ushm91864078
     release_date: 10/26/2018
     year: 2018
@@ -33,7 +33,7 @@
     track_title: Elk Cloner
     album_id: brain
     track_title_slug: elk_cloner
-    duration: 3:40
+    duration: "3:40"
     isrc: ushm91864079
     release_date: 10/26/2018
     year: 2018
@@ -47,7 +47,7 @@
     track_title: Conficker
     album_id: brain
     track_title_slug: conficker
-    duration: 4:07
+    duration: "4:07"
     isrc: ushm91864080
     release_date: 10/26/2018
     year: 2018
@@ -61,7 +61,7 @@
     track_title: Lamex
     album_id: brain
     track_title_slug: lamex
-    duration: 4:17
+    duration: "4:17"
     isrc: ushm91864081
     release_date: 10/26/2018
     year: 2018
@@ -75,7 +75,7 @@
     track_title: Heartbleed
     album_id: brain
     track_title_slug: heartbleed
-    duration: 3:50
+    duration: "3:50"
     isrc: ushm91864082
     release_date: 10/26/2018
     year: 2018
@@ -89,7 +89,7 @@
     track_title: CryptoLocker
     album_id: brain
     track_title_slug: cryptolocker
-    duration: 2:51
+    duration: "2:51"
     isrc: ushm91864083
     release_date: 10/26/2018
     year: 2018
@@ -103,7 +103,7 @@
     track_title: ILOVEYOU
     album_id: brain
     track_title_slug: iloveyou
-    duration: 4:22
+    duration: "4:22"
     isrc: ushm91864084
     release_date: 10/26/2018
     year: 2018
@@ -117,7 +117,7 @@
     track_title: Code Red
     album_id: brain
     track_title_slug: code_red
-    duration: 4:54
+    duration: "4:54"
     isrc: ushm91864085
     release_date: 10/26/2018
     year: 2018
@@ -131,7 +131,7 @@
     track_title: NightShade
     album_id: brain
     track_title_slug: nightshade
-    duration: 4:34
+    duration: "4:34"
     isrc: ushm91864086
     release_date: 10/26/2018
     year: 2018
@@ -159,7 +159,7 @@
     track_title: Jelly
     album_id: meltdown
     track_title_slug: jelly
-    duration: 3:47
+    duration: "3:47"
     isrc: ushm82088611
     release_date: 10/02/2020
     year: 2020
@@ -173,7 +173,7 @@
     track_title: Wannacry
     album_id: meltdown
     track_title_slug: wannacry
-    duration: 4:00
+    duration: "4:00"
     isrc: USHM21977281
     release_date: 10/02/2020
     year: 2020
@@ -187,7 +187,7 @@
     track_title: Eternal Blue
     album_id: meltdown
     track_title_slug: eternal_blue
-    duration: 4:13
+    duration: "4:13"
     isrc: USHM91955801
     release_date: 10/02/2020
     year: 2020
@@ -201,7 +201,7 @@
     track_title: Cybersecurity
     album_id: meltdown
     track_title_slug: cybersecurity
-    duration: 4:05
+    duration: "4:05"
     isrc: USL4Q1976120
     release_date: 10/02/2020
     year: 2020
@@ -215,7 +215,7 @@
     track_title: White Rose
     album_id: meltdown
     track_title_slug: white_rose
-    duration: 3:24
+    duration: "3:24"
     isrc: ushm82088612
     release_date: 10/02/2020
     year: 2020
@@ -229,7 +229,7 @@
     track_title: Foreshadow
     album_id: meltdown
     track_title_slug: foreshadow
-    duration: 4:22
+    duration: "4:22"
     isrc: ushm82088613
     release_date: 10/02/2020
     year: 2020
@@ -243,7 +243,7 @@
     track_title: Gh0st
     album_id: meltdown
     track_title_slug: gh0st
-    duration: 3:30
+    duration: "3:30"
     isrc: ushm82088614
     release_date: 10/02/2020
     year: 2020
@@ -257,7 +257,7 @@
     track_title: Bad Rabbit
     album_id: meltdown
     track_title_slug: bad_rabbit
-    duration: 3:24
+    duration: "3:24"
     isrc: ushm82088615
     release_date: 10/02/2020
     year: 2020
@@ -271,7 +271,7 @@
     track_title: Dark Mode
     album_id: meltdown
     track_title_slug: dark_mode
-    duration: 5:47
+    duration: "5:47"
     isrc: ushm82088616
     release_date: 10/02/2020
     year: 2020
@@ -285,7 +285,7 @@
     track_title: Lights Out
     album_id: meltdown
     track_title_slug: lights_out
-    duration: 4:17
+    duration: "4:17"
     isrc: ushm82088617
     release_date: 10/02/2020
     year: 2020
@@ -313,7 +313,7 @@
     track_title: Icebreaker
     album_id: cryo
     track_title_slug: icebreaker
-    duration: 3:29
+    duration: "3:29"
     isrc: usl4q2159268
     release_date: 1/14/22
     year: 2022
@@ -327,7 +327,7 @@
     track_title: Looking Backward
     album_id: cryo
     track_title_slug: looking_backward
-    duration: 3:30
+    duration: "3:30"
     isrc: usl4q2159269
     release_date: 1/14/22
     year: 2022
@@ -341,7 +341,7 @@
     track_title: Fear of Missing Out
     album_id: cryo
     track_title_slug: fear_of_missing_out
-    duration: 3:10
+    duration: "3:10"
     isrc: usl4q2159270
     release_date: 1/14/22
     year: 2022
@@ -355,7 +355,7 @@
     track_title: Deep Space
     album_id: cryo
     track_title_slug: deep_space
-    duration: 4:22
+    duration: "4:22"
     isrc: usl4q2159271
     release_date: 1/14/22
     year: 2022
@@ -369,7 +369,7 @@
     track_title: Something From Nothing
     album_id: cryo
     track_title_slug: something_from_nothing
-    duration: 4:16
+    duration: "4:16"
     isrc: usl4q2159272
     release_date: 1/14/22
     year: 2022
@@ -383,7 +383,7 @@
     track_title: Arctic Archive
     album_id: cryo
     track_title_slug: arctic_archive
-    duration: 3:56
+    duration: "3:56"
     isrc: usl4q2159273
     release_date: 1/14/22
     year: 2022
@@ -397,7 +397,7 @@
     track_title: Shad0w
     album_id: cryo
     track_title_slug: shad0w
-    duration: 3:30
+    duration: "3:30"
     isrc: usl4q2159274
     release_date: 1/14/22
     year: 2022
@@ -411,7 +411,7 @@
     track_title: Slip Away
     album_id: cryo
     track_title_slug: slip_away
-    duration: 3:21
+    duration: "3:21"
     isrc: usl4q2159275
     release_date: 1/14/22
     year: 2022
@@ -439,7 +439,7 @@
     track_title: It Is What It Is
     album_id: beigeification
     track_title_slug: it_is_what_it_is
-    duration: 3:41
+    duration: "3:41"
     isrc: ushm92281905
     release_date: 1/13/23
     year: 2023
@@ -453,7 +453,7 @@
     track_title: Only Time Will Tell
     album_id: beigeification
     track_title_slug: only_time_will_tell
-    duration: 3:24
+    duration: "3:24"
     isrc: ushm92281906
     release_date: 1/13/23
     year: 2023
@@ -467,7 +467,7 @@
     track_title: You Gotta Do What You Gotta Do
     album_id: beigeification
     track_title_slug: you_gotta_do_what_you_gotta_do
-    duration: 3:45
+    duration: "3:45"
     isrc: ushm92281907
     release_date: 1/13/23
     year: 2023
@@ -481,7 +481,7 @@
     track_title: Win Some Lose Some
     album_id: beigeification
     track_title_slug: win_some_lose_some
-    duration: 3:35
+    duration: "3:35"
     isrc: ushm92281908
     release_date: 1/13/23
     year: 2023
@@ -495,7 +495,7 @@
     track_title: Whatever It Takes
     album_id: beigeification
     track_title_slug: whatever_it_takes
-    duration: 4:06
+    duration: "4:06"
     isrc: ushm92281909
     release_date: 1/13/23
     year: 2023
@@ -509,7 +509,7 @@
     track_title: Stones Unturned
     album_id: beigeification
     track_title_slug: stones_unturned
-    duration: 4:16
+    duration: "4:16"
     isrc: ushm92281910
     release_date: 1/13/23
     year: 2023
@@ -523,7 +523,7 @@
     track_title: 'There''s Always Something Going On'
     album_id: beigeification
     track_title_slug: theres_always_something_going_on
-    duration: 3:03
+    duration: "3:03"
     isrc: ushm92281911
     release_date: 1/13/23
     year: 2023
@@ -537,7 +537,7 @@
     track_title: Fast Lane
     album_id: beigeification
     track_title_slug: fast_lane
-    duration: 4:51
+    duration: "4:51"
     isrc: ushm92281912
     release_date: 1/13/23
     year: 2023
@@ -551,7 +551,7 @@
     track_title: Such Is Life
     album_id: beigeification
     track_title_slug: such_is_life
-    duration: 3:58
+    duration: "3:58"
     isrc: ushm92281913
     release_date: 1/13/23
     year: 2023
@@ -579,7 +579,7 @@
     track_title: Yesteryear
     album_id: grayscale
     track_title_slug: yesteryear
-    duration: 2:52
+    duration: "2:52"
     isrc: GX5MX2335164
     release_date: 12/1/2023
     year: 2023
@@ -593,7 +593,7 @@
     track_title: Less Is More
     album_id: grayscale
     track_title_slug: less_is_more
-    duration: 3:33
+    duration: "3:33"
     isrc: GXBDS2372418
     release_date: 12/1/2023
     year: 2023
@@ -607,7 +607,7 @@
     track_title: So It Goes
     album_id: grayscale
     track_title_slug: so_it_goes
-    duration: 3:50
+    duration: "3:50"
     isrc: GX5MY2381059
     release_date: 12/1/2023
     year: 2023
@@ -621,7 +621,7 @@
     track_title: Only Human
     album_id: grayscale
     track_title_slug: only_human
-    duration: 4:11
+    duration: "4:11"
     isrc: GX5MY2346818
     release_date: 12/1/2023
     year: 2023
@@ -635,7 +635,7 @@
     track_title: Whatever Happens
     album_id: grayscale
     track_title_slug: whatever_happens
-    duration: 4:29
+    duration: "4:29"
     isrc: GX5MY2305840
     release_date: 12/1/2023
     year: 2023
@@ -649,7 +649,7 @@
     track_title: Bubblegum
     album_id: grayscale
     track_title_slug: bubblegum
-    duration: 4:32
+    duration: "4:32"
     isrc: GX5MY2333569
     release_date: 12/1/2023
     year: 2023
@@ -663,7 +663,7 @@
     track_title: All Your Little Cares
     album_id: grayscale
     track_title_slug: all_your_little_cares
-    duration: 3:18
+    duration: "3:18"
     isrc: GX5MY2345016
     release_date: 12/1/2023
     year: 2023
@@ -677,7 +677,7 @@
     track_title: Staycation
     album_id: grayscale
     track_title_slug: staycation
-    duration: 3:46
+    duration: "3:46"
     isrc: GX5MY2392590
     release_date: 12/1/2023
     year: 2023
@@ -691,7 +691,7 @@
     track_title: Utopia
     album_id: grayscale
     track_title_slug: utopia
-    duration: 4:01
+    duration: "4:01"
     isrc: GX5MY2388497
     release_date: 12/1/2023
     year: 2023
@@ -705,7 +705,7 @@
     track_title: You Never Know
     album_id: grayscale
     track_title_slug: you_never_know
-    duration: 3:57
+    duration: "3:57"
     isrc: GX5MY2303933
     release_date: 12/1/2023
     year: 2023
@@ -733,7 +733,7 @@
     track_title: Endless Day
     album_id: relativism
     track_title_slug: endless_day
-    duration: 3:46
+    duration: "3:46"
     isrc: GX8LD2427544
     release_date: 5/31/2024
     year: 2024
@@ -747,7 +747,7 @@
     track_title: Then And Now
     album_id: relativism
     track_title_slug: then_and_now
-    duration: 4:25
+    duration: "4:25"
     isrc: GX8LE2457796
     release_date: 5/31/2024
     year: 2024
@@ -761,7 +761,7 @@
     track_title: Day In The Life
     album_id: relativism
     track_title_slug: day_in_the_life
-    duration: 4:54
+    duration: "4:54"
     isrc: GX38U2425542
     release_date: 5/31/2024
     year: 2024
@@ -775,7 +775,7 @@
     track_title: Live And Let Live
     album_id: relativism
     track_title_slug: live_and_let_live
-    duration: 3:30
+    duration: "3:30"
     isrc: GX38U2455815
     release_date: 5/31/2024
     year: 2024
@@ -789,7 +789,7 @@
     track_title: Nothing’s Gonna Change
     album_id: relativism
     track_title_slug: nothings_gonna_change
-    duration: 4:35
+    duration: "4:35"
     isrc: GX38U2400784
     release_date: 5/31/2024
     year: 2024
@@ -803,7 +803,7 @@
     track_title: Apples And Oranges
     album_id: relativism
     track_title_slug: apples_and_oranges
-    duration: 3:40
+    duration: "3:40"
     isrc: GX38U2465625
     release_date: 5/31/2024
     year: 2024
@@ -817,7 +817,7 @@
     track_title: Somewhere Nowhere
     album_id: relativism
     track_title_slug: somewhere_nowhere
-    duration: 3:42
+    duration: "3:42"
     isrc: GX38U2457021
     release_date: 5/31/2024
     year: 2024
@@ -831,7 +831,7 @@
     track_title: Tomorrow Is Another Day
     album_id: relativism
     track_title_slug: tomorrow_is_another_day
-    duration: 4:05
+    duration: "4:05"
     isrc: GX38U2436480
     release_date: 5/31/2024
     year: 2024
@@ -845,7 +845,7 @@
     track_title: Til The End Of Time
     album_id: relativism
     track_title_slug: til_the_end_of_time
-    duration: 3:15
+    duration: "3:15"
     isrc: GX38U2468920
     release_date: 5/31/2024
     year: 2024
@@ -859,7 +859,7 @@
     track_title: You Know It When You See It
     album_id: relativism
     track_title_slug: you_know_it_when_you_see_it
-    duration: 4:30
+    duration: "4:30"
     isrc: GX38U2472287
     release_date: 5/31/2024
     year: 2024
@@ -887,7 +887,7 @@
     track_title: 'Devil''s In The Details'
     album_id: rationalism
     track_title_slug: devils_in_the_details
-    duration: 4:08
+    duration: "4:08"
     isrc: GXF972463102
     release_date: 2/21/2025
     year: 2025
@@ -901,7 +901,7 @@
     track_title: After All
     album_id: rationalism
     track_title_slug: after_all
-    duration: 4:03
+    duration: "4:03"
     isrc: GX89G2516219
     release_date: 2/21/2025
     year: 2025
@@ -915,7 +915,7 @@
     track_title: Day By Day
     album_id: rationalism
     track_title_slug: day_by_day
-    duration: 3:30
+    duration: "3:30"
     isrc: GX8KD2583817
     release_date: 2/21/2025
     year: 2025
@@ -929,7 +929,7 @@
     track_title: Some Things You Just Know
     album_id: rationalism
     track_title_slug: some_things_you_just_know
-    duration: 4:07
+    duration: "4:07"
     isrc: GX8KD2514055
     release_date: 2/21/2025
     year: 2025
@@ -943,7 +943,7 @@
     track_title: Everything Else
     album_id: rationalism
     track_title_slug: everything_else
-    duration: 3:29
+    duration: "3:29"
     isrc: GX8KD2571033
     release_date: 2/21/2025
     year: 2025
@@ -957,7 +957,7 @@
     track_title: Finders Keepers
     album_id: rationalism
     track_title_slug: finders_keepers
-    duration: 3:35
+    duration: "3:35"
     isrc: GX8KD2500913
     release_date: 2/21/2025
     year: 2025
@@ -971,7 +971,7 @@
     track_title: Late Bloom
     album_id: rationalism
     track_title_slug: late_bloom
-    duration: 2:48
+    duration: "2:48"
     isrc: GX8KD2593193
     release_date: 2/21/2025
     year: 2025
@@ -985,7 +985,7 @@
     track_title: Better Late Than Never
     album_id: rationalism
     track_title_slug: better_late_than_never
-    duration: 2:53
+    duration: "2:53"
     isrc: GX8KD2510746
     release_date: 2/21/2025
     year: 2025
@@ -999,7 +999,7 @@
     track_title: No One Knows
     album_id: rationalism
     track_title_slug: no_one_knows
-    duration: 3:47
+    duration: "3:47"
     isrc: GX8KD2536159
     release_date: 2/21/2025
     year: 2025
@@ -1013,7 +1013,7 @@
     track_title: Out Of Sight Out Of Mind
     album_id: rationalism
     track_title_slug: out_of_sight_out_of_mind
-    duration: 3:02
+    duration: "3:02"
     isrc: GX8KD2515666
     release_date: 2/21/2025
     year: 2025
@@ -1041,7 +1041,7 @@
     track_title: Too Little Too Late
     album_id: everydayness
     track_title_slug: too_little_too_late
-    duration: 3:42
+    duration: "3:42"
     isrc: 
     release_date: 
     year: 2026
@@ -1055,7 +1055,7 @@
     track_title: Stop And Go
     album_id: everydayness
     track_title_slug: stop_and_go
-    duration: 5:49
+    duration: "5:49"
     isrc: 
     release_date: 
     year: 2026
@@ -1069,7 +1069,7 @@
     track_title: Spend Your Days
     album_id: everydayness
     track_title_slug: spend_your_days
-    duration: 3:49
+    duration: "3:49"
     isrc: 
     release_date: 
     year: 2026
@@ -1083,7 +1083,7 @@
     track_title: Constant Change
     album_id: everydayness
     track_title_slug: constant_change
-    duration: 3:39
+    duration: "3:39"
     isrc: 
     release_date: 
     year: 2026
@@ -1097,7 +1097,7 @@
     track_title: Irons In The Fire
     album_id: everydayness
     track_title_slug: irons_in_the_fire
-    duration: 3:46
+    duration: "3:46"
     isrc: 
     release_date: 
     year: 2026
@@ -1111,7 +1111,7 @@
     track_title: Rinse And Repeat
     album_id: everydayness
     track_title_slug: rinse_and_repeat
-    duration: 4:22
+    duration: "4:22"
     isrc: 
     release_date: 
     year: 2026
@@ -1125,7 +1125,7 @@
     track_title: As Above So Below
     album_id: everydayness
     track_title_slug: as_above_so_below
-    duration: 3:47
+    duration: "3:47"
     isrc: 
     release_date: 
     year: 2026
@@ -1139,7 +1139,7 @@
     track_title: Grain Of Salt
     album_id: everydayness
     track_title_slug: grain_of_salt
-    duration: 3:41
+    duration: "3:41"
     isrc: 
     release_date: 
     year: 2026
@@ -1153,7 +1153,7 @@
     track_title: Same Ol Same Ol
     album_id: everydayness
     track_title_slug: same_ol_same_ol
-    duration: 3:55
+    duration: "3:55"
     isrc: 
     release_date: 
     year: 2026
@@ -1167,7 +1167,7 @@
     track_title: No News Is Good News
     album_id: everydayness
     track_title_slug: no_news_is_good_news
-    duration: 3:21
+    duration: "3:21"
     isrc: 
     release_date: 
     year: 2026
