@@ -32,17 +32,40 @@
 {
   "@context": "https://schema.org",
   "@type": "MusicGroup",
+  "@id": "{{ site.url }}/#darksoft",
   "name": "Darksoft",
   "url": "{{ site.url }}/",
   "image": "{{ '/assets/Darksoft%20Promo%20Graphic.jpg' | absolute_url }}",
-  "genre": ["Dream Pop", "Indie Rock", "Shoegaze"],
+  "logo": "{{ '/assets/Darksoft-logo-smiley-white.png' | absolute_url }}",
+  "description": "Darksoft is a dream pop and shoegaze project from Portland, Maine, making jangly, reflective indie rock recorded on real instruments in a home studio since 2018.",
+  "genre": ["Dream Pop", "Shoegaze", "Jangle Pop", "Indie Rock", "Alternative Rock"],
+  "foundingDate": "2018",
+  "foundingLocation": { "@type": "Place", "name": "Seattle, Washington" },
+  "location": { "@type": "Place", "name": "Portland, Maine" },
+  "email": "darksoftband@gmail.com",
+  "album": [
+    {%- assign ld_albums = site.data.albums | sort: "release_date" | reverse -%}
+    {%- for a in ld_albums %}
+    { "@type": "MusicAlbum", "name": {{ a.album_title | jsonify }}, "datePublished": {{ a.release_date | date: "%Y-%m-%d" | jsonify }}, "url": {{ "/discography/" | append: a.album_id | append: "/" | absolute_url | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ],
   "sameAs": [
     "https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE",
     "https://music.apple.com/us/artist/darksoft/1438263529",
     "https://darks0ft.bandcamp.com",
+    "https://www.youtube.com/@Darksoft",
+    "https://www.youtube.com/channel/UCYGODf2pvnV88yuoNnDFWfw",
+    "https://www.deezer.com/artist/52389072",
+    "https://soundcloud.com/darks0ft",
     "https://www.instagram.com/darks0ft",
     "https://www.facebook.com/darks0ft",
-    "https://www.youtube.com/@Darksoft"
+    "https://x.com/darks0ft",
+    "https://bsky.app/profile/darks0ft.bsky.social",
+    "https://www.bandsintown.com/a/15379446-darksoft",
+    "https://www.songkick.com/artists/9755554-darksoft",
+    "https://www.look-up-records.com/darksoft",
+    "https://www.albumoftheyear.org/artist/158629-darksoft/",
+    "https://rateyourmusic.com/artist/darksoft"
   ]
 }
 </script>
