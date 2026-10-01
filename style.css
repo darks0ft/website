@@ -1426,3 +1426,14 @@ body.homepage .donate-inline {
 .sync-video:hover .sync-play {
   background: #6dc15b;
 }
+
+.sync-tba {
+  background: #2a2a2a;
+  border: 1px dashed #6dc15b;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.sync-tba h3 {
+  margin-top: 0.2rem;
+}
