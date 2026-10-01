@@ -1437,3 +1437,23 @@ body.homepage .donate-inline {
 .sync-tba h3 {
   margin-top: 0.2rem;
 }
+
+.sync-email {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0.5rem 0 1rem;
+  user-select: all;
+}
+
+.sync-email-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+button.sync-button {
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}

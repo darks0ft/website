@@ -17,8 +17,7 @@ permalink: /sync/
 
   {% include header.html %}
 
-  {%- comment -%} Pre-filled inquiry email (subject + body are URL-encoded) {%- endcomment -%}
-  {%- assign inquiry_link = "mailto:darksoftband@gmail.com?subject=Sync%20licensing%20inquiry&body=Hi%20Darksoft%2C%0D%0A%0D%0AProject%20/%20brief%3A%0D%0ASong%28s%29%3A%0D%0AMedia%20and%20usage%20%28film%2C%20TV%2C%20ad%2C%20social%2C%20trailer...%29%3A%0D%0ATerritory%20and%20term%3A%0D%0ABudget%3A%0D%0ADeadline%3A%0D%0A" -%}
+  {%- assign inquiry_link = "mailto:darksoftband@gmail.com?subject=Sync%20licensing%20inquiry" -%}
 
   <section class="page-wrapper sync-intro">
     <h2>Sync Licensing</h2>
@@ -27,7 +26,7 @@ permalink: /sync/
       and recorded on real instruments by Darksoft in a home studio in Portland, Maine,
       and licensing can be handled directly with the artist.
     </p>
-    <p><a class="sync-button" href="{{ inquiry_link }}">Request a license →</a></p>
+    <p><a class="sync-button" href="#request">Request a license →</a></p>
 
     <ul class="sync-stats" aria-label="Sync highlights">
       <li><strong>Film &amp; TV</strong><span>placements, including an upcoming TV mini-series</span></li>
@@ -133,7 +132,7 @@ permalink: /sync/
   <!-- REQUEST -->
   <section id="request">
     <h2>Request a License</h2>
-    <p>Email <a href="{{ inquiry_link }}">darksoftband@gmail.com</a> with:</p>
+    <p>Email me with:</p>
     <ul class="sync-checklist">
       <li>Project and a short brief</li>
       <li>Song(s) you're interested in</li>
@@ -142,13 +141,40 @@ permalink: /sync/
       <li>Budget</li>
       <li>Deadline</li>
     </ul>
-    <p><a class="sync-button" href="{{ inquiry_link }}">Request a license →</a></p>
+    <p class="sync-email">darksoftband@gmail.com</p>
+    <p class="sync-email-actions">
+      <a class="sync-button" href="{{ inquiry_link }}">Email me →</a>
+      <button type="button" class="sync-button" id="copy-email" data-email="darksoftband@gmail.com">Copy email</button>
+    </p>
     <p class="sync-note">
       Browse the catalog on
       <a href="https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE" target="_blank" rel="noopener">Spotify</a> or
       <a href="https://darks0ft.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>.
     </p>
   </section>
+
+  <script>
+    (function () {
+      const btn = document.getElementById("copy-email");
+      if (!btn) return;
+      btn.addEventListener("click", async () => {
+        const email = btn.dataset.email;
+        try {
+          await navigator.clipboard.writeText(email);
+        } catch (e) {
+          // Fallback for browsers without the async clipboard API
+          const tmp = document.createElement("textarea");
+          tmp.value = email;
+          document.body.appendChild(tmp);
+          tmp.select();
+          document.execCommand("copy");
+          tmp.remove();
+        }
+        btn.textContent = "Copied!";
+        setTimeout(() => { btn.textContent = "Copy email"; }, 2000);
+      });
+    })();
+  </script>
 
   {% include footer.html %}
 
