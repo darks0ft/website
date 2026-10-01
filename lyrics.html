@@ -57,10 +57,10 @@ permalink: /lyrics/
       {% for album in sorted_albums %}
       <div class="lyrics-album-card">
 
-        <a href="/lyrics/{{ album.album_id }}/"><img src="/assets/{{ album.artwork }}" alt="{{ album.album_title }} artwork" class="lyrics-album-art"></a>
+        <a href="/discography/{{ album.album_id }}/"><img src="/assets/{{ album.artwork }}" alt="{{ album.album_title }} artwork" class="lyrics-album-art"></a>
 
         <div class="lyrics-album-info">
-          <h3><a href="/lyrics/{{ album.album_id }}/">{{ album.album_title }}</a> <span class="lyrics-year">({{ album.release_year }})</span></h3>
+          <h3><a href="/discography/{{ album.album_id }}/">{{ album.album_title }}</a> <span class="lyrics-year">({{ album.release_year }})</span></h3>
 
           <ul class="lyrics-track-list">
             {% assign album_tracks = site.data.tracks | where: "album_id", album.album_id %}

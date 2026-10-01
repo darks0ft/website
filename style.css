@@ -1666,3 +1666,24 @@ body.homepage .donate-inline {
     align-items: center;
   }
 }
+
+/* ========================================
+   DISCOGRAPHY HUB + LYRIC BREADCRUMBS
+======================================== */
+
+.discography-note {
+  margin-top: 2.5rem;
+  color: #ccc;
+}
+
+.lyrics-breadcrumb {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Keep breadcrumb + back button clear of the desktop header nav */
+@media (min-width: 769px) {
+  .lyrics-body .lyric-page-container {
+    margin-top: 130px;
+  }
+}

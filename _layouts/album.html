@@ -53,6 +53,17 @@
     }
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Discography", "item": {{ "/discography/" | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 2, "name": {{ album.album_title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+    ]
+  }
+  </script>
 </head>
 
 <body class="album-page">
@@ -62,7 +73,7 @@
   <section class="page-wrapper album-wrapper">
 
     <nav class="album-breadcrumb" aria-label="Breadcrumb">
-      <a href="/lyrics/">Lyrics</a> / <span>{{ album.album_title }}</span>
+      <a href="/discography/">Discography</a> / <span>{{ album.album_title }}</span>
     </nav>
 
     <div class="album-hero">
@@ -151,9 +162,9 @@
     {%- for a in albums_by_date %}{% if a.album_id == album.album_id %}{% assign idx = forloop.index0 %}{% endif %}{% endfor -%}
     {%- assign prev_idx = idx | minus: 1 -%}{%- assign next_idx = idx | plus: 1 -%}
     <nav class="album-pager" aria-label="More albums">
-      {% if idx > 0 %}{% assign p = albums_by_date[prev_idx] %}<a href="/lyrics/{{ p.album_id }}/">← {{ p.album_title }} ({{ p.release_year }})</a>{% else %}<span></span>{% endif %}
-      <a href="/lyrics/">All albums</a>
-      {% if albums_by_date[next_idx] %}{% assign n = albums_by_date[next_idx] %}<a href="/lyrics/{{ n.album_id }}/">{{ n.album_title }} ({{ n.release_year }}) →</a>{% else %}<span></span>{% endif %}
+      {% if idx > 0 %}{% assign p = albums_by_date[prev_idx] %}<a href="/discography/{{ p.album_id }}/">← {{ p.album_title }} ({{ p.release_year }})</a>{% else %}<span></span>{% endif %}
+      <a href="/discography/">All albums</a>
+      {% if albums_by_date[next_idx] %}{% assign n = albums_by_date[next_idx] %}<a href="/discography/{{ n.album_id }}/">{{ n.album_title }} ({{ n.release_year }}) →</a>{% else %}<span></span>{% endif %}
     </nav>
 
   </section>
