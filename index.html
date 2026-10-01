@@ -168,12 +168,12 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
     <p>All the Darksoft albums I've put out.</p>
 
     <div class="release-grid">
-      {% assign sorted_albums = site.data.albums | sort: "release_year" | reverse %}
+      {% assign sorted_albums = site.data.albums | sort: "release_date" | reverse %}
       {% for album in sorted_albums %}
       <article class="release-card">
-        <img src="/assets/{{ album.artwork }}" alt="{{ album.album_title }} cover">
+        <a href="/discography/{{ album.album_id }}/"><img src="/assets/{{ album.artwork }}" alt="{{ album.album_title }} cover"></a>
 
-        <h3>{{ album.album_title }} ({{ album.release_year }})</h3>
+        <h3><a href="/discography/{{ album.album_id }}/">{{ album.album_title }}</a> ({{ album.release_year }})</h3>
         <p><strong>Label:</strong> {{ album.label }}</p>
 
         <p>
