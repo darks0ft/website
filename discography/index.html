@@ -1,0 +1,62 @@
+---
+layout: none
+title: "Darksoft Discography — Albums, Tracklists & Lyrics"
+description: "Every Darksoft album, from Brain (2018) to Everydayness (2026): dream pop, shoegaze, and indie rock with tracklists, lyrics, credits, and links to stream or buy."
+permalink: /discography/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+
+  {% assign sorted_albums = site.data.albums | sort: "release_date" | reverse %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Darksoft Discography",
+    "url": {{ page.url | absolute_url | jsonify }},
+    "about": { "@type": "MusicGroup", "name": "Darksoft", "url": {{ "/" | absolute_url | jsonify }} },
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": {{ sorted_albums | size }},
+      "itemListElement": [
+        {%- for album in sorted_albums %}
+        { "@type": "ListItem", "position": {{ forloop.index }}, "url": {{ "/discography/" | append: album.album_id | append: "/" | absolute_url | jsonify }}, "name": {{ album.album_title | jsonify }} }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ]
+    }
+  }
+  </script>
+</head>
+
+<body class="discography-page">
+
+  {% include header.html %}
+
+  <section class="page-wrapper" id="discography">
+    <h2>Discography</h2>
+    <p>
+      Every Darksoft album, newest first. Each one is written, played, and recorded on real instruments
+      in a home studio in Maine. Pick a record for its story, tracklist, lyrics, and where to listen.
+    </p>
+
+    <div class="release-grid">
+      {% for album in sorted_albums %}
+      <article class="release-card">
+        <a href="/discography/{{ album.album_id }}/"><img src="/assets/{{ album.artwork }}" alt="{{ album.album_title }} cover"></a>
+        <h3><a href="/discography/{{ album.album_id }}/">{{ album.album_title }}</a> ({{ album.release_year }})</h3>
+        <p><strong>Label:</strong> {{ album.label }}</p>
+        <p>{{ album.duration }} · {{ site.data.tracks | where: "album_id", album.album_id | size }} tracks</p>
+      </article>
+      {% endfor %}
+    </div>
+
+    <p class="discography-note">Here for the words? <a href="/lyrics/">Browse all lyrics →</a></p>
+  </section>
+
+  {% include footer.html %}
+
+</body>
+</html>
