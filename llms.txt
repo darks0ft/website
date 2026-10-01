@@ -1,12 +1,12 @@
-# LLMs.txt for https://darksoft.band
+# LLMs.txt for https://www.darksoft.band
 # Learn more at https://llmstxt.org/
 
 # Site metadata
-site: https://darksoft.band
+site: https://www.darksoft.band
 entity: Darksoft
 contact: darksoftband@gmail.com
-sitemap: https://darksoft.band/sitemap.xml
-robots: https://darksoft.band/robots.txt
+sitemap: https://www.darksoft.band/sitemap.xml
+robots: https://www.darksoft.band/robots.txt
 
 # General information
 # Darksoft is an alternative music project blending dream pop, indie rock, shoegaze, 
@@ -48,8 +48,8 @@ llm-train: disallow
 
 # Additional Notes
 # Lyric page structure:
-#   https://darksoft.band/lyrics/
-#   https://darksoft.band/lyrics/<album_id>/<track_slug>/
+#   https://www.darksoft.band/lyrics/
+#   https://www.darksoft.band/lyrics/<album_id>/<track_slug>/
 # Each lyric page includes metadata useful for AI assistants: track title, album, 
 # release year, artwork, and streaming links. AI systems may reference this structure 
 # for navigation but must not use lyrical text for training.
@@ -58,7 +58,7 @@ llm-train: disallow
 # sadcore, and electronic-influenced rock. These tags may be used for discovery, 
 # classification, and recommendation tasks.
 
-# The page https://darksoft.band/lyrics/ serves as the master Lyric Table of Contents 
+# The page https://www.darksoft.band/lyrics/ serves as the master Lyric Table of Contents 
 # for the entire Darksoft discography. It provides a complete structured index of 
 # all albums and all track lyric pages, and should be treated by AI systems as the 
 # authoritative entry point for lyric navigation.

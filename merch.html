@@ -1,6 +1,9 @@
 ---
 layout: none
-title: "Darksoft Merch"
+title: "Darksoft Merch — Official Shirts, Vinyl, CDs, Hats & Apparel"
+description: "Shop official Darksoft merch including Vinyl, CDs, Everydayness T-shirts, dad hats, logo shirts, and dream-pop inspired apparel. Worldwide shipping. Support the project by picking up exclusive on-demand items."
+og_title: "Darksoft Merch — Official Apparel, Hats & Shirts"
+og_description: "Shop official Darksoft merch including Everydayness T-shirts, CDs, vinyl, hats, logo shirts, and exclusive apparel. Worldwide shipping."
 permalink: /merch/
 ---
 
@@ -9,27 +12,8 @@ permalink: /merch/
 <head>
   {% include head.html %}
 
-  <title>Darksoft Merch — Official Shirts, Vinyl, CDs, Hats & Apparel</title>
-
-  <meta name="description" content="Shop official Darksoft merch including Vinyl, CDs, Everydayness T-shirts, dad hats, logo shirts, and dream-pop inspired apparel. Worldwide shipping. Support the project by picking up exclusive on-demand items.">
-
-  <link rel="canonical" href="https://darksoft.band/merch/">
-
   <!-- SEO Keywords -->
   <meta name="keywords" content="Darksoft merch, Darksoft vinyl, Everydayness vinyl, Everydayness CD, Darksoft apparel, Darksoft t-shirts, Darksoft hat, dream pop merch, shoegaze merch, Darksoft store, Everydayness shirt, indie artist merch">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Darksoft Merch — Official Apparel, Hats & Shirts">
-  <meta property="og:description" content="Shop official Darksoft merch including Everydayness T-shirts, CDs, vinyl, hats, logo shirts, and exclusive apparel. Worldwide shipping.">
-  <meta property="og:url" content="https://darksoft.band/merch/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Darksoft Merch — Official Apparel, Hats & Shirts">
-  <meta name="twitter:description" content="Shop official Darksoft merch including Everydayness T-shirts, hats, and apparel. Support the project.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg">
 
   <!-- Schema.org: Product Store Listing -->
   <script type="application/ld+json">
@@ -37,8 +21,8 @@ permalink: /merch/
     "@context": "https://schema.org",
     "@type": "Store",
     "name": "Darksoft Merch Store",
-    "url": "https://darksoft.band/merch/",
-    "image": "https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg",
+    "url": "{{ '/merch/' | absolute_url }}",
+    "image": "{{ '/assets/Darksoft%20Promo%20Graphic.jpg' | absolute_url }}",
     "description": "Official Darksoft merch including Everydayness shirts, dad hats, logo shirts, and more. Worldwide shipping via Printful and Spirit Goth.",
     "sameAs": [
       "https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE",
