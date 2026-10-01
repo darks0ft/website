@@ -1709,65 +1709,10 @@ body.homepage .donate-inline {
   border-radius: 12px;
 }
 
-.lyrics-signup {
-  max-width: 520px;
-  margin: 2.5rem auto 0;
-  padding: 1.5rem 1.25rem;
-  background: #2a2a2a;
-  border: 1px solid #6dc15b;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
-}
-
-.lyrics-signup h3 {
-  font-family: 'bradley-djr', sans-serif;
-  font-size: 1.8rem;
-  font-weight: normal;
-  margin-bottom: 0.6rem;
-}
-
-.lyrics-signup p {
-  color: #ccc;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.lyrics-signup form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  margin: 1rem 0 0.8rem;
-}
-
-.lyrics-signup input[type="email"] {
-  flex: 1 1 220px;
-  padding: 0.65rem 0.8rem;
-  border-radius: 8px;
-  border: 1px solid #444;
-  background: #111;
-  color: #fff;
-  font: inherit;
-}
-
-.lyrics-signup button {
-  padding: 0.65rem 1.2rem;
-  border: 0;
-  border-radius: 8px;
-  background: #6dc15b;
-  color: #000;
-  font: inherit;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.lyrics-signup button:hover {
-  background: #fff;
-}
-
-.lyrics-signup .lyrics-signup-small {
-  font-size: 0.8rem;
-  color: #999;
+/* Lyric-page newsletter reuses the homepage #mc_embed_signup styles */
+.lyrics-newsletter {
+  padding: 0;
+  margin-top: 1.5rem;
 }
 
 /* Phones: start lyric content below the oversized top-left logo */

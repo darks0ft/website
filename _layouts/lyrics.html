@@ -65,20 +65,22 @@
       {{ track.lyrics | newline_to_br }}
     </section>
 
-    <div class="lyrics-signup">
-      <h3>Join the Newsletter</h3>
-      <p>
-        Darksoft here — thanks for reading! If you want updates on new albums, upcoming shows,
-        and happenings from the Darksoft multiverse, sign up below.
-      </p>
-      <form action="https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&amp;id=d5fbadec4b"
-            method="post" target="_blank">
-        <input type="email" name="EMAIL" placeholder="Enter your email" aria-label="Email address" required>
-        <div hidden><input type="hidden" name="tags" value="2757147"></div>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="lyrics-signup-small">Lists like these *really* help indie musicians like me keep things going. Thanks for considering it 💚</p>
-    </div>
+    <!-- Newsletter: same markup/styles as the homepage signup (#mc_embed_signup) -->
+    <section class="lyrics-newsletter">
+      <div id="mc_embed_signup">
+        <h2>Subscribe</h2>
+        <p class="signup-description">
+          Darksoft here — thanks for reading! If you want updates on new albums, upcoming shows,
+          and happenings from the Darksoft multiverse, sign up below.
+        </p>
+        <form action="https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&amp;id=d5fbadec4b"
+              method="post" target="_blank">
+          <input type="email" name="EMAIL" placeholder="Enter your email" aria-label="Email address" required>
+          <div hidden><input type="hidden" name="tags" value="2757147"></div>
+          <button type="submit" class="button">Subscribe</button>
+        </form>
+      </div>
+    </section>
 
     <div class="stream-now-box">
       <h3>Stream Now</h3>
