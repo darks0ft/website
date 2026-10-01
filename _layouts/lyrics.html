@@ -49,9 +49,36 @@
       Song by Darksoft from <strong><a href="/discography/{{ album.album_id }}/">{{ album.album_title }}</a></strong> · {{ album.release_year }}
     </div>
 
+    {% if track.spotify_track %}
+    <div class="lyrics-player">
+      <p class="lyrics-player-label">Listen while you read</p>
+      <iframe
+        src="https://open.spotify.com/embed/track/{{ track.spotify_track | split: '/track/' | last }}?theme=0"
+        title="Play {{ track.track_title }} by Darksoft on Spotify"
+        width="100%" height="80" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+    {% endif %}
+
     <section class="lyrics" aria-label="{{ track.track_title }} lyrics">
       {{ track.lyrics | newline_to_br }}
     </section>
+
+    <div class="lyrics-signup">
+      <h3>Join the Newsletter</h3>
+      <p>
+        Darksoft here — thanks for reading! If you want updates on new albums, upcoming shows,
+        and happenings from the Darksoft multiverse, sign up below.
+      </p>
+      <form action="https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&amp;id=d5fbadec4b"
+            method="post" target="_blank">
+        <input type="email" name="EMAIL" placeholder="Enter your email" aria-label="Email address" required>
+        <div hidden><input type="hidden" name="tags" value="2757147"></div>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="lyrics-signup-small">Lists like these *really* help indie musicians like me keep things going. Thanks for considering it 💚</p>
+    </div>
 
     <div class="stream-now-box">
       <h3>Stream Now</h3>
@@ -61,18 +88,15 @@
       </p>
 
       <div class="stream-links">
-        {% if album.spotify %}
-          <a href="{{ album.spotify }}" target="_blank" rel="noopener">Spotify</a>
-        {% endif %}
-        {% if album.apple_music %}
-          <a href="{{ album.apple_music }}" target="_blank" rel="noopener">Apple Music</a>
-        {% endif %}
-        {% if album.bandcamp %}
-          <a href="{{ album.bandcamp }}" target="_blank" rel="noopener">Bandcamp</a>
-        {% endif %}
-        {% if album.youtube_music %}
-          <a href="{{ album.youtube_music }}" target="_blank" rel="noopener">YouTube Music</a>
-        {% endif %}
+        {% assign sp = track.spotify_track | default: album.spotify %}
+        {% assign am = track.apple_music_track | default: album.apple_music %}
+        {% assign dz = track.deezer_track | default: album.deezer %}
+        {% assign bc = track.bandcamp_track | default: album.bandcamp %}
+        {% if sp %}<a href="{{ sp }}" target="_blank" rel="noopener">Spotify</a>{% endif %}
+        {% if am %}<a href="{{ am }}" target="_blank" rel="noopener">Apple Music</a>{% endif %}
+        {% if album.youtube_music %}<a href="{{ album.youtube_music }}" target="_blank" rel="noopener">YouTube Music</a>{% endif %}
+        {% if dz %}<a href="{{ dz }}" target="_blank" rel="noopener">Deezer</a>{% endif %}
+        {% if bc %}<a href="{{ bc }}" target="_blank" rel="noopener">Bandcamp</a>{% endif %}
       </div>
     </div>
 
