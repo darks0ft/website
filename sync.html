@@ -1,0 +1,156 @@
+---
+layout: none
+title: "Sync Licensing — Darksoft"
+description: "License Darksoft's dream pop and jangly indie rock for film, TV, ads, and social. Featured in short films for Tulpa Club and Doom Squad, an upcoming TV mini-series, and 20,000+ Instagram Reels. Licensing can be handled directly with the artist."
+og_title: "Sync Licensing — Darksoft"
+og_image: "/assets/sync/tulpa-club-season-3-still.jpg"
+permalink: /sync/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+
+<body class="sync-page">
+
+  {% include header.html %}
+
+  {%- comment -%} Pre-filled inquiry email (subject + body are URL-encoded) {%- endcomment -%}
+  {%- assign inquiry_link = "mailto:darksoftband@gmail.com?subject=Sync%20licensing%20inquiry&body=Hi%20Darksoft%2C%0D%0A%0D%0AProject%20/%20brief%3A%0D%0ASong%28s%29%3A%0D%0AMedia%20and%20usage%20%28film%2C%20TV%2C%20ad%2C%20social%2C%20trailer...%29%3A%0D%0ATerritory%20and%20term%3A%0D%0ABudget%3A%0D%0ADeadline%3A%0D%0A" -%}
+
+  <section class="page-wrapper sync-intro">
+    <h2>Sync Licensing</h2>
+    <p class="sync-lead">
+      Dreamy, jangly indie rock and dream pop for film, TV, ads, and social. Every song is written, played,
+      and recorded on real instruments by Darksoft in a home studio in Portland, Maine,
+      and licensing can be handled directly with the artist.
+    </p>
+    <p><a class="sync-button" href="{{ inquiry_link }}">Request a license →</a></p>
+
+    <ul class="sync-stats" aria-label="Sync highlights">
+      <li><strong>Film &amp; TV</strong><span>placements, including an upcoming TV mini-series</span></li>
+      <li><strong>20,000+</strong><span>Instagram Reels using “Live And Let Live”</span></li>
+      <li><strong>Millions</strong><span>of views across those Reels</span></li>
+      <li><strong>Direct</strong><span>licensing available with the artist</span></li>
+    </ul>
+  </section>
+
+  <!-- PLACEMENTS -->
+  <section id="placements">
+    <h2>Placements</h2>
+
+    <article class="sync-placement sync-tba">
+      <p class="sync-card-tag">Coming soon</p>
+      <h3>Australian TV mini-series (TBA)</h3>
+      <p class="sync-meta">Television · details to be announced</p>
+      <p>A Darksoft song has been licensed for an upcoming Australian TV mini-series. More soon.</p>
+    </article>
+
+    <article class="sync-placement">
+      <a class="sync-video" href="https://youtu.be/qAd3ifeJkrM" target="_blank" rel="noopener" aria-label="Watch Tulpa Club — Season 3: A Short Film on YouTube">
+        <img src="/assets/sync/tulpa-club-season-3-still.jpg"
+             alt="Still from Tulpa Club's Season 3 short film: a car driving through a seaside town at night"
+             loading="lazy" width="1600" height="601">
+        <span class="sync-play" aria-hidden="true">▶</span>
+      </a>
+      <h3>Tulpa Club — <em>Season 3: A Short Film</em> (2026)</h3>
+      <p class="sync-meta">Fragrance house short film · featuring “Out of Sight Out of Mind” from <em>Rationalism</em></p>
+      <p>
+        <a href="https://tulpaclub.com/film/" target="_blank" rel="noopener">View the film at Tulpa Club</a>
+        &nbsp;•&nbsp;
+        <a href="https://youtu.be/qAd3ifeJkrM" target="_blank" rel="noopener">Watch on YouTube</a>
+      </p>
+    </article>
+
+    <article class="sync-placement">
+      <img src="/assets/sync/doom-squad-still.jpg"
+           alt="Still from the indie short film Doom Squad"
+           loading="lazy" width="1600" height="895">
+      <h3><em>Doom Squad</em> (2026)</h3>
+      <p class="sync-meta">Indie short film · featuring “After All” from <em>Rationalism</em></p>
+    </article>
+  </section>
+
+  <!-- FEATURED: SOCIAL -->
+  <section id="reels">
+    <h2>On Social</h2>
+    <div class="sync-feature">
+      <a href="https://www.instagram.com/reels/audio/999822731741752/" target="_blank" rel="noopener">
+        <img src="/assets/sync/live-and-let-live-instagram-reels.jpg"
+             alt="Instagram audio page for “Live And Let Live” by Darksoft showing 20K reels"
+             loading="lazy" width="1000" height="959">
+      </a>
+      <div class="sync-feature-text">
+        <h3>“Live And Let Live”</h3>
+        <p class="sync-meta">From <em>Relativism</em> (2024)</p>
+        <p>
+          Creators have used “Live And Let Live” in more than 20,000 Instagram Reels, and the number keeps climbing:
+          room makeovers, travel diaries, studio sessions, table settings, morning routines. Individual Reels have
+          reached tens of thousands of views each, adding up to millions of plays for the song across Instagram.
+        </p>
+        <p><a href="https://www.instagram.com/reels/audio/999822731741752/" target="_blank" rel="noopener">See the Reels on Instagram →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLEARANCE -->
+  <section id="clearance">
+    <h2>Clearance</h2>
+    <p>You can reach out to me directly about any Darksoft release. Here's how each part of the catalog clears:</p>
+
+    {% assign sorted_albums = site.data.albums | sort: "release_year" | reverse %}
+    <div class="sync-clearance">
+      <div class="sync-card">
+        <h3>Look Up Records releases</h3>
+        <p class="sync-card-tag">Fastest clearance</p>
+        <p>I own 100% of the masters and negotiate and sign the deal myself, with no label or intermediary.</p>
+        <ul>
+          {% for album in sorted_albums %}{% if album.label == "Look Up Records" %}
+          <li><a href="{{ album.bandcamp }}" target="_blank" rel="noopener"><em>{{ album.album_title }}</em></a> ({{ album.release_year }})</li>
+          {% endif %}{% endfor %}
+        </ul>
+      </div>
+
+      <div class="sync-card">
+        <h3>Spirit Goth Records releases</h3>
+        <p class="sync-card-tag">Artist + label</p>
+        <p>I can be your point of contact, then loop the label into the conversation to approve the deal and prepare the contract.</p>
+        <ul>
+          {% for album in sorted_albums %}{% if album.label == "Spirit Goth Records" %}
+          <li><a href="{{ album.bandcamp }}" target="_blank" rel="noopener"><em>{{ album.album_title }}</em></a> ({{ album.release_year }})</li>
+          {% endif %}{% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <p class="sync-note">
+      Need something original? I also compose for film and television.
+    </p>
+  </section>
+
+  <!-- REQUEST -->
+  <section id="request">
+    <h2>Request a License</h2>
+    <p>Email <a href="{{ inquiry_link }}">darksoftband@gmail.com</a> with:</p>
+    <ul class="sync-checklist">
+      <li>Project and a short brief</li>
+      <li>Song(s) you're interested in</li>
+      <li>Media and usage (film, TV, ad, social, trailer…)</li>
+      <li>Territory and term</li>
+      <li>Budget</li>
+      <li>Deadline</li>
+    </ul>
+    <p><a class="sync-button" href="{{ inquiry_link }}">Request a license →</a></p>
+    <p class="sync-note">
+      Browse the catalog on
+      <a href="https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE" target="_blank" rel="noopener">Spotify</a> or
+      <a href="https://darks0ft.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>.
+    </p>
+  </section>
+
+  {% include footer.html %}
+
+</body>
+</html>
