@@ -1,0 +1,164 @@
+---
+---
+{%- comment -%}
+  Album page. Each album has a stub at lyrics/<album_id>/index.html that sets
+  `album_id`; everything else comes from _data/albums.yml and _data/tracks.yml.
+{%- endcomment -%}
+{%- assign album = site.data.albums | where: "album_id", page.album_id | first -%}
+{%- assign tracks = site.data.tracks | where: "album_id", album.album_id | sort: "track_number" -%}
+{%- assign albums_by_date = site.data.albums | sort: "release_date" -%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%- capture seo_title %}{{ album.album_title }} — Darksoft ({{ album.release_year }} Album): Tracklist, Lyrics & Streaming{% endcapture %}
+  {%- capture seo_description %}{{ album.album_title }} is a {{ album.release_year }} album by Darksoft, released on {{ album.label }}. {{ album.blurb | truncatewords: 22 }}{% endcapture %}
+  {%- capture seo_image %}/assets/{{ album.artwork | replace: ' ', '%20' }}{% endcapture %}
+  {%- assign seo_og_type = "music.album" %}
+  {% include head.html %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicAlbum",
+    "name": {{ album.album_title | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "image": {{ seo_image | absolute_url | jsonify }},
+    "datePublished": {{ album.release_date | date: "%Y-%m-%d" | jsonify }},
+    "description": {{ album.blurb | jsonify }},
+    "numTracks": {{ tracks | size }},
+    "albumProductionType": "https://schema.org/StudioAlbum",
+    "albumReleaseType": "https://schema.org/AlbumRelease",
+    "byArtist": { "@type": "MusicGroup", "name": "Darksoft", "url": {{ "/" | absolute_url | jsonify }} },
+    "recordLabel": { "@type": "Organization", "name": {{ album.label | jsonify }} },
+    "sameAs": [{{ album.spotify | split: "?" | first | jsonify }}, {{ album.apple_music | jsonify }}, {{ album.bandcamp | jsonify }}, {{ album.deezer | jsonify }}],
+    "track": {
+      "@type": "ItemList",
+      "numberOfItems": {{ tracks | size }},
+      "itemListElement": [
+        {%- for track in tracks %}
+        {%- assign dur = track.duration | split: ":" %}
+        {
+          "@type": "ListItem",
+          "position": {{ track.track_number }},
+          "item": {
+            "@type": "MusicRecording",
+            "name": {{ track.track_title | jsonify }},
+            "duration": "PT{{ dur[0] | plus: 0 }}M{{ dur[1] | plus: 0 }}S",
+            "url": {{ "/lyrics/" | append: album.album_id | append: "/" | append: track.track_title_slug | append: "/" | absolute_url | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ]
+    }
+  }
+  </script>
+</head>
+
+<body class="album-page">
+
+  {% include header.html %}
+
+  <section class="page-wrapper album-wrapper">
+
+    <nav class="album-breadcrumb" aria-label="Breadcrumb">
+      <a href="/lyrics/">Lyrics</a> / <span>{{ album.album_title }}</span>
+    </nav>
+
+    <div class="album-hero">
+      <img class="album-cover" src="/assets/{{ album.artwork | escape }}"
+           alt="{{ album.album_title }} album artwork by {{ album.artwork_artist }}" width="600" height="600">
+
+      <div class="album-info">
+        <h1>{{ album.album_title }}</h1>
+        <p class="album-byline">Album by Darksoft · {{ album.release_year }}</p>
+
+        <dl class="album-facts">
+          <div><dt>Released</dt><dd>{{ album.release_date | date: "%B %-d, %Y" }}</dd></div>
+          <div><dt>Label</dt><dd>{{ album.label }}{% if album.catalog %} ({{ album.catalog }}){% endif %}</dd></div>
+          <div><dt>Length</dt><dd>{{ album.duration }} · {{ tracks | size }} tracks</dd></div>
+        </dl>
+
+        <p><a class="album-buy" href="{{ album.bandcamp }}" target="_blank" rel="noopener">Buy on Bandcamp →</a></p>
+
+        <p class="album-stream-label">Stream</p>
+        <ul class="album-stream">
+          {% if album.spotify %}<li><a href="{{ album.spotify | split: '?' | first }}" target="_blank" rel="noopener">Spotify</a></li>{% endif %}
+          {% if album.apple_music %}<li><a href="{{ album.apple_music }}" target="_blank" rel="noopener">Apple Music</a></li>{% endif %}
+          {% if album.youtube_music %}<li><a href="{{ album.youtube_music }}" target="_blank" rel="noopener">YouTube Music</a></li>{% endif %}
+          {% if album.deezer %}<li><a href="{{ album.deezer }}" target="_blank" rel="noopener">Deezer</a></li>{% endif %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="album-about">
+      <h2>About the Album</h2>
+      <p>{{ album.blurb }}</p>
+    </div>
+
+    <div class="album-tracks">
+      <h2>Tracklist</h2>
+      <ol class="album-tracklist">
+        {% for track in tracks %}
+        <li>
+          <span class="album-track-num">{{ track.track_number }}</span>
+          <a class="album-track-title" href="/lyrics/{{ album.album_id }}/{{ track.track_title_slug }}/">{{ track.track_title }}</a>
+          {% if track.lyrics == nil or track.lyrics == "" %}<span class="album-track-tag">instrumental</span>{% endif %}
+          {% if track.music_video %}<a class="album-track-tag" href="{{ track.music_video }}" target="_blank" rel="noopener">video</a>{% endif %}
+          <span class="album-track-time">{{ track.duration }}</span>
+        </li>
+        {% endfor %}
+      </ol>
+      <p class="album-note">Click a song for its lyrics.</p>
+    </div>
+
+    {%- comment -%} ---------- By the numbers (computed from lyrics + track data) ---------- {%- endcomment -%}
+    {%- capture all_lyrics %}{% for track in tracks %} {{ track.lyrics }}{% endfor %}{% endcapture -%}
+    {%- assign cleaned = all_lyrics | downcase | replace: "’", "'" | replace: "‘", "'" | replace: "`", "'"
+        | replace: ",", " " | replace: ".", " " | replace: "!", " " | replace: "?", " " | replace: ";", " "
+        | replace: ":", " " | replace: "(", " " | replace: ")", " " | replace: '"', " " | replace: "“", " "
+        | replace: "”", " " | replace: "—", " " | replace: "–", " " | replace: "…", " " | replace: "-", " " -%}
+    {%- assign words = cleaned | split: " " -%}
+    {%- assign unique_words = words | uniq -%}
+    {%- assign stopwords = "a an the and or but if then so to of in on at by for with from up down out over into onto off as is are was were be been being am do does did done have has had i i'm i've i'll i'd me my mine myself you you're you've you'll you'd your yours we we're we've our us he she it it's its they they're them their this that that's these those there there's here what what's when where why how who all any some no not don't can't won't didn't doesn't isn't wasn't aren't ain't can could would should will just like get got gonna wanna let let's oh ooh yeah ah la na hey mm uh too very much more than one 's" | split: " " -%}
+    {%- capture kept %}{% for w in words %}{% assign wlen = w | size %}{% unless stopwords contains w or wlen < 2 %}{{ w }} {% endunless %}{% endfor %}{% endcapture -%}
+    {%- assign top_word = kept | split: " " | group_by_exp: "w", "w" | sort: "size" | last -%}
+    {%- assign bpm_total = 0 -%}{%- for t in tracks %}{% assign bpm_total = bpm_total | plus: t.bpm %}{% endfor -%}
+    {%- assign track_count = tracks | size -%}
+    {%- assign fastest = tracks | sort: "bpm" | last -%}
+    {%- assign longest = nil -%}{%- assign longest_secs = 0 -%}
+    {%- for t in tracks %}{% assign d = t.duration | split: ":" %}{% assign secs = d[0] | times: 60 | plus: d[1] %}{% if secs > longest_secs %}{% assign longest_secs = secs %}{% assign longest = t %}{% endif %}{% endfor -%}
+
+    <aside class="album-numbers" aria-label="{{ album.album_title }} by the numbers">
+      <h3>By the numbers</h3>
+      <ul>
+        <li><strong>{{ words | size }}</strong> words sung ({{ unique_words | size }} unique)</li>
+        {% if top_word %}<li>Most-used word: <strong>“{{ top_word.name }}”</strong> ({{ top_word.size }} times)</li>{% endif %}
+        <li>Average tempo: <strong>{{ bpm_total | times: 1.0 | divided_by: track_count | round }} BPM</strong></li>
+        <li>Fastest song: <strong>{{ fastest.track_title }}</strong> ({{ fastest.bpm | round }} BPM)</li>
+        <li>Longest song: <strong>{{ longest.track_title }}</strong> ({{ longest.duration }})</li>
+      </ul>
+    </aside>
+
+    <div class="album-credits">
+      <h3>Credits</h3>
+      <ul>
+        {% for line in album.credits %}<li>{{ line }}</li>{% endfor %}
+      </ul>
+    </div>
+
+    {%- comment -%} Previous / next album by release date {%- endcomment -%}
+    {%- for a in albums_by_date %}{% if a.album_id == album.album_id %}{% assign idx = forloop.index0 %}{% endif %}{% endfor -%}
+    {%- assign prev_idx = idx | minus: 1 -%}{%- assign next_idx = idx | plus: 1 -%}
+    <nav class="album-pager" aria-label="More albums">
+      {% if idx > 0 %}{% assign p = albums_by_date[prev_idx] %}<a href="/lyrics/{{ p.album_id }}/">← {{ p.album_title }} ({{ p.release_year }})</a>{% else %}<span></span>{% endif %}
+      <a href="/lyrics/">All albums</a>
+      {% if albums_by_date[next_idx] %}{% assign n = albums_by_date[next_idx] %}<a href="/lyrics/{{ n.album_id }}/">{{ n.album_title }} ({{ n.release_year }}) →</a>{% else %}<span></span>{% endif %}
+    </nav>
+
+  </section>
+
+  {% include footer.html %}
+
+</body>
+</html>
