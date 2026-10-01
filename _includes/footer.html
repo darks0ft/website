@@ -101,8 +101,9 @@
   const modal = document.getElementById("newsletter-modal");
   const closeBtn = document.querySelector(".newsletter-close");
 
-  // Don't interrupt industry visitors (music supervisors) on the sync page
-  if (document.body.classList.contains("sync-page")) return;
+  // Don't interrupt industry visitors (music supervisors) on the sync page,
+  // or readers on lyric pages (they get an inline signup after the lyrics)
+  if (document.body.classList.contains("sync-page") || document.body.classList.contains("lyrics-body")) return;
 
   // Prevent showing again if dismissed or signed up recently
   const lastShown = localStorage.getItem("newsletter-popup");
