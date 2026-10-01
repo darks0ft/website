@@ -5,7 +5,7 @@
 title: "Darksoft"
 description: "Dream pop, indie rock, and philosophical lyrics."
 
-url: "https://darksoft.band"
+url: "https://www.darksoft.band"   # must match CNAME (www is the live host)
 baseurl: ""   # GitHub Pages root
 
 # Permalinks

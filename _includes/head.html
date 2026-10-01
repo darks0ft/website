@@ -1,20 +1,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Default SEO Title -->
-<title>{{ page.title | default: "Darksoft — Dream Pop Music" }}</title>
-
-<!-- Default Meta Description -->
-<meta name="description" content="{{ page.description | default: "Darksoft is a dream pop / indie rock artist blending shoegaze textures, analog warmth, and philosophical lyrics. Explore albums, lyrics, merch, and tour dates." }}">
+<!--
+  SEO tags: this file is the ONLY place that outputs title, description,
+  canonical, Open Graph and Twitter tags. Pages set them via front matter
+  (title, description, og_title, og_description, og_image, og_type), or a
+  layout can assign seo_title / seo_description / seo_image / seo_og_type
+  before including this file. Don't add these tags anywhere else.
+-->
+{%- assign seo_title = seo_title | default: page.title | default: "Darksoft — Dream Pop Music" -%}
+{%- assign seo_description = seo_description | default: page.description | default: "Darksoft is a dream pop / indie rock artist blending shoegaze textures, analog warmth, and philosophical lyrics. Explore albums, lyrics, merch, and tour dates." | normalize_whitespace | strip -%}
+{%- assign seo_image = seo_image | default: page.og_image | default: "/assets/Darksoft%20Promo%20Graphic.jpg" | absolute_url -%}
+{%- assign seo_og_type = seo_og_type | default: page.og_type | default: "website" %}
+<title>{{ seo_title }}</title>
+<meta name="description" content="{{ seo_description | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
 
 <!-- Open Graph (Facebook, Instagram) -->
-<meta property="og:title" content="{{ page.og_title | default: page.title | default: "Darksoft — Dream Pop Music" }}">
-<meta property="og:description" content="{{ page.og_description | default: page.description | default: "Dreamy indie rock with shoegaze elements. Explore Darksoft albums, lyrics, merch, and tour dates." }}">
-<meta property="og:image" content="{{ page.og_image | default: "https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg" }}">
+<meta property="og:site_name" content="Darksoft">
+<meta property="og:title" content="{{ page.og_title | default: seo_title | escape }}">
+<meta property="og:description" content="{{ page.og_description | default: seo_description | escape }}">
+<meta property="og:image" content="{{ seo_image }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{{ seo_og_type }}">
 
-<!-- Twitter Cards -->
+<!-- Twitter Cards (falls back to Open Graph for title/description/image) -->
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- JSON-LD Structured Data (Search Engines) -->
@@ -23,8 +33,8 @@
   "@context": "https://schema.org",
   "@type": "MusicGroup",
   "name": "Darksoft",
-  "url": "https://darksoft.band",
-  "image": "https://raw.githubusercontent.com/darks0ft/website/main/assets/Darksoft%20Promo%20Graphic.jpg",
+  "url": "{{ site.url }}/",
+  "image": "{{ '/assets/Darksoft%20Promo%20Graphic.jpg' | absolute_url }}",
   "genre": ["Dream Pop", "Indie Rock", "Shoegaze"],
   "sameAs": [
     "https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE",
@@ -42,9 +52,6 @@
 
 <!-- Global Stylesheet -->
 <link rel="stylesheet" href="/style.css">
-
-<!-- Canonical URL -->
-<link rel="canonical" href="{{ page.url | absolute_url }}">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5JC54HJC7"></script>

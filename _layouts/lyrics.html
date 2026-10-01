@@ -4,32 +4,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% include head.html %}
-
   {% assign track = site.data.tracks | where: "track_id", page.track_id | first %}
   {% assign album = site.data.albums | where: "album_id", track.album_id | first %}
 
-  <title>
-    {% if page.title %}
-      {{ page.title }}
-    {% else %}
-      {{ track.track_title }} Lyrics — Darksoft
-    {% endif %}
-  </title>
-
-  <meta name="description" content="{% if page.description %}
-    {{ page.description }}
-  {% else %}
-    Lyrics for “{{ track.track_title }}” by Darksoft from the album {{ album.album_title }} ({{ album.release_year }}).
-  {% endif %}">
-
-  <link rel="canonical" href="https://darksoft.band/lyrics/{{ track.album_id }}/{{ track.track_title_slug }}/">
-
-  <meta property="og:type" content="music.song">
-  <meta property="og:title" content="{{ track.track_title }} Lyrics — Darksoft">
-  <meta property="og:description" content="Lyrics for “{{ track.track_title }}” by Darksoft from the album {{ album.album_title }} ({{ album.release_year }}).">
-  <meta property="og:url" content="https://darksoft.band/lyrics/{{ track.album_id }}/{{ track.track_title_slug }}/">
-  <meta property="og:image" content="https://raw.githubusercontent.com/darks0ft/website/main/assets/{{ album.artwork | replace: ' ', '%20' }}">
+  {%- comment -%} SEO values for head.html (it outputs the actual tags) {%- endcomment -%}
+  {% capture seo_title %}{% if page.title %}{{ page.title }}{% else %}{{ track.track_title }} Lyrics — Darksoft{% endif %}{% endcapture %}
+  {% capture seo_description %}Official lyrics for “{{ track.track_title }}” by Darksoft, from the album {{ album.album_title }} ({{ album.release_year }}).{% endcapture %}
+  {% capture seo_image %}/assets/{{ album.artwork | replace: ' ', '%20' }}{% endcapture %}
+  {% assign seo_og_type = "music.song" %}
+  {% include head.html %}
 </head>
 
 <body class="lyrics-body">
