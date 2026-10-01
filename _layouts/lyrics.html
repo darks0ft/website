@@ -13,6 +13,18 @@
   {% capture seo_image %}/assets/{{ album.artwork | replace: ' ', '%20' }}{% endcapture %}
   {% assign seo_og_type = "music.song" %}
   {% include head.html %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Discography", "item": {{ "/discography/" | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 2, "name": {{ album.album_title | jsonify }}, "item": {{ "/discography/" | append: album.album_id | append: "/" | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 3, "name": {{ track.track_title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+    ]
+  }
+  </script>
 </head>
 
 <body class="lyrics-body">
@@ -20,6 +32,10 @@
   {% include header.html %}
 
   <div class="lyric-page-container">
+
+      <nav class="album-breadcrumb lyrics-breadcrumb" aria-label="Breadcrumb">
+        <a href="/discography/">Discography</a> / <a href="/discography/{{ album.album_id }}/">{{ album.album_title }}</a> / <span>{{ track.track_title }}</span>
+      </nav>
 
       <a href="/lyrics/" class="lyrics-back-button">← Back to Lyrics</a>
 
@@ -30,7 +46,7 @@
     </h1>
 
     <div class="track-meta">
-      Song by Darksoft from <strong>{{ album.album_title }}</strong> · {{ album.release_year }}
+      Song by Darksoft from <strong><a href="/discography/{{ album.album_id }}/">{{ album.album_title }}</a></strong> · {{ album.release_year }}
     </div>
 
     <section class="lyrics" aria-label="{{ track.track_title }} lyrics">
