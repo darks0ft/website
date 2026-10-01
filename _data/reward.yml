@@ -1,0 +1,8 @@
+# Newsletter signup reward. After a successful signup, visitors are sent to
+# `thanks_url`, which offers `pdf`. Both paths are unguessable and unlisted
+# (noindex, not in the sitemap). To rotate the link, rename the PDF and the
+# thank-you page permalink, then update these two values.
+title: "Everydayness booklet"
+thanks_url: /welcome/jg28w3qbzs/
+pdf: /assets/downloads/everydayness-booklet-jg28w3qbzs.pdf
+pages: 54

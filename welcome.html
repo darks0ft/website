@@ -1,0 +1,48 @@
+---
+layout: none
+title: "Your Everydayness Booklet — Darksoft"
+description: "Thanks for joining the Darksoft newsletter. Download your free Everydayness booklet."
+permalink: /welcome/jg28w3qbzs/
+noindex: true
+sitemap: false
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+
+<body class="welcome-page">
+
+  {% include header.html %}
+
+  {% assign album = site.data.albums | where: "album_id", "everydayness" | first %}
+  <section class="page-wrapper welcome">
+    <h2>You're In!</h2>
+    <p class="welcome-lead">
+      Thanks for joining the Darksoft newsletter. Here's your free {{ site.data.reward.pages }}-page
+      <em>Everydayness</em> booklet: full lyrics, the artist statement, behind-the-scenes photos,
+      gear and recording notes, and more.
+    </p>
+
+    <img class="welcome-cover" src="/assets/{{ album.artwork | escape }}" alt="Everydayness album artwork" width="320" height="320">
+
+    <p><a class="welcome-download" href="{{ site.data.reward.pdf }}" download>Download the booklet (PDF) ↓</a></p>
+
+    <p class="welcome-note">
+      New subscriber? Keep an eye on your inbox. You may need to confirm your email to finish signing up.
+    </p>
+
+    <p class="welcome-next">
+      Listen to <em>Everydayness</em> on
+      <a href="{{ album.spotify }}" target="_blank" rel="noopener">Spotify</a> or
+      <a href="{{ album.bandcamp }}" target="_blank" rel="noopener">buy it on Bandcamp</a>,
+      or <a href="/discography/everydayness/">read about the album</a>.
+    </p>
+  </section>
+
+  {% include footer.html %}
+
+</body>
+</html>

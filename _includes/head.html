@@ -15,6 +15,7 @@
 <title>{{ seo_title }}</title>
 <meta name="description" content="{{ seo_description | escape }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+{% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
 
 <!-- Open Graph (Facebook, Instagram) -->
 <meta property="og:site_name" content="Darksoft">

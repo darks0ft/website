@@ -40,3 +40,10 @@ collections:
   tracks:
     output: true
     permalink: /lyrics/:album/:slug/
+
+# Keep unlisted downloads (newsletter reward) out of the sitemap
+defaults:
+  - scope:
+      path: "assets/downloads"
+    values:
+      sitemap: false
