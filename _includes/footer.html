@@ -74,6 +74,7 @@
       If you want updates on new albums, upcoming shows, and happenings
       from the Darksoft multiverse, sign up below.
     </p>
+    <p class="newsletter-body newsletter-bonus"><strong>Bonus:</strong> sign up and instantly download the free {{ site.data.reward.pages }}-page <em>Everydayness</em> booklet.</p>
 
     <!-- Mailchimp form -->
     <form action="https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&amp;id=d5fbadec4b"
@@ -95,6 +96,68 @@
   </div>
 
 </div>
+
+ <!-- Newsletter forms: submit to Mailchimp in the background (JSONP), then send
+      successful signups to the booklet download page (_data/reward.yml).
+      Without JavaScript, forms still post to Mailchimp as before. -->
+<script>
+(function() {
+  const THANKS_URL = {{ site.data.reward.thanks_url | jsonify }};
+  const forms = document.querySelectorAll('form[action*="list-manage.com/subscribe/post"]');
+
+  forms.forEach((form) => {
+    const status = document.createElement("p");
+    status.className = "newsletter-status";
+    status.setAttribute("role", "status");
+    form.after(status);
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const button = form.querySelector('[type="submit"]');
+      const label = button ? button.textContent : "";
+      if (button) { button.disabled = true; button.textContent = "Sending…"; }
+      status.textContent = "";
+      status.classList.remove("is-error");
+
+      const cb = "mcCallback" + Date.now();
+      const params = new URLSearchParams(new FormData(form));
+      params.set("c", cb);
+      const url = form.action.replace("/subscribe/post?", "/subscribe/post-json?") + "&" + params.toString();
+      const script = document.createElement("script");
+
+      const done = () => {
+        delete window[cb];
+        script.remove();
+        if (button) { button.disabled = false; button.textContent = label; }
+      };
+
+      window[cb] = (data) => {
+        done();
+        const msg = (data && data.msg) ? String(data.msg) : "";
+        // Existing subscribers get the reward too
+        if (data && (data.result === "success" || /already subscribed/i.test(msg))) {
+          try { localStorage.setItem("newsletter-popup", Date.now()); } catch (err) {}
+          window.location.href = THANKS_URL;
+          return;
+        }
+        // Mailchimp prefixes some errors with "0 - "; show plain text only
+        const tmp = document.createElement("div");
+        tmp.innerHTML = msg.replace(/^\d+\s*-\s*/, "");
+        status.textContent = tmp.textContent || "Something went wrong. Please try again.";
+        status.classList.add("is-error");
+      };
+
+      script.onerror = () => {
+        done();
+        status.textContent = "Couldn't reach the signup service. Please try again in a moment.";
+        status.classList.add("is-error");
+      };
+      script.src = url;
+      document.body.appendChild(script);
+    });
+  });
+})();
+</script>
 
  <!-- Script for Newsletter signup pop-up -->
 <script>
