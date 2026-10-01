@@ -137,7 +137,7 @@ https://darksoft.band
 
 ## 🤝 Contributions
 
-This repository is primarily maintained by the artist. It's vibe coded with ChatGPT and hosted for free on GitHub pages.
+This repository is maintained by the artist and hosted on GitHub Pages.
 
 Issues or suggestions are welcome for:
 - Broken links
