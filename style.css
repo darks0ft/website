@@ -1687,3 +1687,37 @@ body.homepage .donate-inline {
     margin-top: 130px;
   }
 }
+
+/* ========================================
+   LYRIC PAGES: PLAYER + INLINE SIGNUP
+======================================== */
+
+.lyrics-player {
+  max-width: 520px;
+  margin: 1.5rem auto 2rem;
+}
+
+.lyrics-player-label {
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 0.4rem;
+}
+
+.lyrics-player iframe {
+  display: block;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* Lyric-page newsletter reuses the homepage #mc_embed_signup styles */
+.lyrics-newsletter {
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+/* Phones: start lyric content below the oversized top-left logo */
+@media (max-width: 768px) {
+  .lyrics-body .lyric-page-container {
+    margin-top: 96px;
+  }
+}
