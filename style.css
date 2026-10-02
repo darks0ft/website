@@ -1737,3 +1737,84 @@ body.homepage .donate-inline {
     margin-top: 96px;
   }
 }
+
+/* ========================================
+   NEWSLETTER: BONUS LINE, STATUS, WELCOME PAGE
+======================================== */
+
+.signup-bonus,
+.newsletter-bonus {
+  color: #6dc15b;
+  margin-top: -0.6rem;
+}
+
+.newsletter-status {
+  min-height: 1.2em;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.newsletter-status.is-error {
+  color: hsl(340, 70%, 75%);
+}
+
+.welcome-lead {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.welcome-cover {
+  width: 260px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-download,
+.welcome-download:visited {
+  display: inline-block;
+  margin: 1.8rem 0 1rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  background: #6dc15b;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.welcome-download:hover {
+  background: #fff;
+  color: #000 !important;
+}
+
+.welcome-note,
+.welcome-next {
+  max-width: 560px;
+  margin: 1rem auto 0;
+  font-size: 0.9rem;
+  color: #999;
+  line-height: 1.5;
+}
+
+/* Welcome page: read / download buttons */
+.welcome-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 1.8rem 0 1rem;
+}
+
+.welcome-actions .welcome-download {
+  margin: 0;
+}
+
+.welcome-download-secondary,
+.welcome-download-secondary:visited {
+  background: transparent;
+  border: 2px solid #6dc15b;
+  color: #fff;
+}
