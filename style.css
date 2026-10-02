@@ -1798,3 +1798,67 @@ body.homepage .donate-inline {
   color: #999;
   line-height: 1.5;
 }
+
+/* Welcome page: in-browser booklet viewer */
+.welcome-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 1.8rem 0 1rem;
+}
+
+.welcome-actions .welcome-download {
+  margin: 0;
+}
+
+button.welcome-download {
+  border: 0;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.welcome-download-secondary,
+.welcome-download-secondary:visited {
+  background: transparent;
+  border: 2px solid #6dc15b;
+  color: #fff;
+}
+
+.booklet-viewer {
+  max-width: 760px;
+  margin: 2.5rem auto 0;
+  scroll-margin-top: 1rem;
+}
+
+.booklet-status {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 0.8rem;
+}
+
+.booklet-pages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.booklet-page {
+  width: 100%;
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.booklet-page canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.booklet-footer {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+}

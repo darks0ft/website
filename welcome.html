@@ -28,7 +28,22 @@ sitemap: false
 
     <img class="welcome-cover" src="/assets/{{ album.artwork | escape }}" alt="Everydayness album artwork" width="320" height="320">
 
-    <p><a class="welcome-download" href="{{ site.data.reward.pdf }}" download>Download the booklet (PDF) ↓</a></p>
+    <p class="welcome-actions">
+      <button type="button" class="welcome-download welcome-read" id="read-booklet">Read it here</button>
+      <a class="welcome-download welcome-download-secondary" href="{{ site.data.reward.pdf }}" download>Download PDF ↓</a>
+    </p>
+
+    <!-- In-browser booklet viewer (PDF.js). Loads only when "Read it here" is
+         clicked, then renders each page as it scrolls into view. -->
+    <div class="booklet-viewer" id="booklet-viewer" hidden>
+      <p class="booklet-status" id="booklet-status" role="status">Loading booklet…</p>
+      <div class="booklet-pages" id="booklet-pages"></div>
+      <p class="booklet-footer">
+        <a href="{{ site.data.reward.pdf }}" target="_blank" rel="noopener">Open full screen</a>
+        &nbsp;•&nbsp;
+        <a href="{{ site.data.reward.pdf }}" download>Download PDF</a>
+      </p>
+    </div>
 
     <p class="welcome-note">
       New subscriber? Keep an eye on your inbox. You may need to confirm your email to finish signing up.
@@ -41,6 +56,66 @@ sitemap: false
       or <a href="/discography/everydayness/">read about the album</a>.
     </p>
   </section>
+
+  <script type="module">
+    const PDFJS = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38";
+    const PDF_URL = {{ site.data.reward.pdf | jsonify }};
+    const button = document.getElementById("read-booklet");
+    const viewer = document.getElementById("booklet-viewer");
+    const pagesEl = document.getElementById("booklet-pages");
+    const statusEl = document.getElementById("booklet-status");
+    let started = false;
+
+    button.addEventListener("click", async () => {
+      viewer.hidden = false;
+      viewer.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (started) return;
+      started = true;
+      button.textContent = "Reading below ↓";
+      try {
+        const pdfjs = await import(`${PDFJS}/pdf.min.mjs`);
+        pdfjs.GlobalWorkerOptions.workerSrc = `${PDFJS}/pdf.worker.min.mjs`;
+        // Range requests: only fetch the bytes needed for pages being viewed
+        const pdf = await pdfjs.getDocument({ url: PDF_URL, disableAutoFetch: true, rangeChunkSize: 524288 }).promise;
+        const first = await pdf.getPage(1);
+        const base = first.getViewport({ scale: 1 });
+        statusEl.textContent = `${pdf.numPages} pages`;
+
+        // One placeholder per page, sized to the page's aspect ratio
+        const slots = [];
+        for (let n = 1; n <= pdf.numPages; n++) {
+          const slot = document.createElement("div");
+          slot.className = "booklet-page";
+          slot.style.aspectRatio = `${base.width} / ${base.height}`;
+          slot.dataset.page = n;
+          slot.setAttribute("aria-label", `Page ${n} of ${pdf.numPages}`);
+          pagesEl.appendChild(slot);
+          slots.push(slot);
+        }
+
+        const render = async (slot) => {
+          if (slot.dataset.rendered) return;
+          slot.dataset.rendered = "1";
+          const page = await pdf.getPage(Number(slot.dataset.page));
+          const ratio = Math.min(window.devicePixelRatio || 1, 2);
+          const viewport = page.getViewport({ scale: (slot.clientWidth / page.getViewport({ scale: 1 }).width) * ratio });
+          const canvas = document.createElement("canvas");
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+          slot.appendChild(canvas);
+          await page.render({ canvasContext: canvas.getContext("2d"), viewport }).promise;
+        };
+
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) { render(e.target); io.unobserve(e.target); } });
+        }, { rootMargin: "800px 0px" });
+        slots.forEach((s) => io.observe(s));
+      } catch (err) {
+        statusEl.innerHTML = `Couldn't open the booklet here. <a href="${PDF_URL}" target="_blank" rel="noopener">Open the PDF</a> instead.`;
+        console.error(err);
+      }
+    });
+  </script>
 
   {% include footer.html %}
 
