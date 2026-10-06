@@ -102,9 +102,10 @@ nav {
 
 /* Sticky nav + top social icons */
 .sticky-nav-bar {
-  position: absolute;
+  position: fixed;
   top: 60px;
   right: 60px;
+  transition: top 0.25s ease;
   background: none;
   padding: 0;
   gap: 2rem;
@@ -121,20 +122,6 @@ nav {
 
 .sticky-nav-bar a:hover {
   opacity: 0.6;
-}
-
-.sticky-nav-bar.stuck {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 2rem 60px 6.5rem;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0.7) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
 }
 
 /* Top social icons (header area) */
@@ -186,10 +173,12 @@ nav {
 /* Sticky mini-logo (shows when scrolled) */
 .sticky-text-logo {
   position: fixed;
-  top: 1rem;
-  left: 1.5rem;
+  top: 12px;
+  left: 60px;
   font-family: 'bradley-djr', sans-serif;
-  font-size: 3rem;
+  font-size: 2.2rem;
+  line-height: 1;
+  pointer-events: none;
   letter-spacing: 0.03125em; /* same tracking as album titles (0.1rem at 3.2rem) */
   font-weight: normal; /* Bradley only ships a regular weight; bold is faked and crowds the letters */
   color: #fff;
@@ -201,6 +190,7 @@ nav {
 
 body.scrolled .sticky-text-logo {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* Inline donation CTA (header area) */
@@ -1817,4 +1807,62 @@ body.homepage .donate-inline {
   background: transparent;
   border: 2px solid #6dc15b;
   color: #fff;
+}
+
+/* ========================================
+   PERSISTENT HEADER BAR
+   body.scrolled is set by a small script in footer.html
+======================================== */
+
+.site-header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.92);
+  border-bottom: 1px solid #1e1e1e;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 19;
+}
+
+body.scrolled .site-header-bar {
+  opacity: 1;
+}
+
+/* Desktop: menu slides up into the bar (nav also has a 1rem top margin) */
+body.scrolled .sticky-nav-bar {
+  top: 3px;
+}
+
+/* Section jumps (e.g. /#about) land below the bar */
+html {
+  scroll-padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .site-header-bar {
+    height: 60px;
+  }
+
+  .sticky-text-logo {
+    top: 12px;
+    left: 20px;
+    font-size: 2rem;
+  }
+
+  /* Menu button and its dropdown stay reachable while scrolling */
+  .hamburger {
+    position: fixed !important;
+    top: 12px !important;
+  }
+
+  .menu-open .sticky-nav-bar {
+    position: fixed !important;
+    top: 64px !important;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
 }
