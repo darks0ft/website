@@ -14,6 +14,16 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
 
   {% include header.html %}
 
+  <!-- Old homepage section links (e.g. /#biography) forward to the new pages -->
+  <script>
+    (function() {
+      var moved = { about: "/about/", biography: "/about/#biography", production: "/about/#production",
+                    press: "/press/", tour: "/shows/", shows: "/shows/", contact: "/contact/", releases: "/discography/" };
+      var key = location.hash.replace("#", "");
+      if (moved[key]) location.replace(moved[key]);
+    })();
+  </script>
+
 <!-- HERO SECTION -->
 <section class="hero landing-page">
   <div class="hero-overlay"></div>
@@ -41,6 +51,7 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
     &nbsp;•&nbsp;
     <a href="https://elasticstage.com/darksoft/releases/everydayness-album" target="_blank" rel="noopener noreferrer">Vinyl / CD</a>
   </p>
+  <p><a href="/discography/">Browse the full discography →</a></p>
 </section>
 
   <!-- ABOUT -->
@@ -48,6 +59,7 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
     <img class="section-image" src="/assets/Darksoft Day by Day music video still.png" alt="Darksoft Profile">
     <h2>About</h2>
     <p>Darksoft is a one-man dream pop and shoegaze project, often backed by a live band for shows. Blending lush melodies, alternative rock textures, and introspective lyrics, the project has released conceptual albums exploring universal truths and existential themes since 2018.</p>
+    <p><a href="/about/">Read the full bio →</a></p>
   </section>
 
   <!-- NEWSLETTER -->
@@ -117,13 +129,13 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
     </div>
 
   </div>
+
+  <p><a href="/merch/">Shop all merch →</a></p>
 </section>
-<br>
-<br>
   <!-- TOUR -->
   <section id="tour">
     <img class="section-image" src="/assets/Darksoft on tour.png" alt="Darksoft on Tour">
-    <h2>Tour</h2>
+    <h2>Shows</h2>
     <p>Follow Darksoft on <a href="https://www.bandsintown.com/a/15379446-darksoft" target="_blank">Bandsintown</a> and <a href="https://www.songkick.com/artists/9755554-darksoft" target="_blank">Songkick</a> for show updates.</p>
 
     <div class="songkick-widget-container">
@@ -133,149 +145,17 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
       </a>
       <script src="https://widget.songkick.com/9755554/widget.js"></script>
     </div>
+    <p><a href="/shows/">All shows →</a></p>
   </section>
 
-<!-- BIOGRAPHY (FULL VERSION FROM INDEX.HTML) -->
-
-<section id="biography">
-  <img class="section-image" src="/assets/Darksoft - Press Photo 2024.jpg" alt="Darksoft Biography Photo">
-  <h2 id="biography-heading">Biography</h2> 
-
-<p>Darksoft is a songwriter and producer who creates dreamy indie rock rooted in dream pop and shoegaze traditions.</p>
-
-<p>DIY and self-produced, Darksoft songs blend lush melodic progressions, 80s/90s alternative rock undertones, and understated vocals. All parts are written and recorded by hand in a home studio in Maine using real instruments — including drums, guitars, bass, percussion, and outboard synthesizers.</p>
-
-<p>Lyrically, Darksoft weaves through sayings that explore universal truths and philosophical themes, giving his music an introspective and existential edge. Darksoft is a solo recording project often supported by a full band for live shows.</p>
-
-<p>The newest album, <strong><em><a href="https://open.spotify.com/album/6uvgARCNYEHRkFtgNoGHnN" target="_blank" rel="noopener">Everydayness</a></em></strong> (2026), continues this approach with jangly guitars, repeating motifs, and reflective songwriting centered on the rhythms of daily life.</p>
-
-<p>Previous releases include <strong><em><a href="https://open.spotify.com/album/7eOL2oXXoh2Ib0r3mHjfXb" target="_blank" rel="noopener">Rationalism</a></em></strong> (2025), <strong><em><a href="https://open.spotify.com/album/5d0jaIaOI0FTHDdc6w8akz" target="_blank" rel="noopener">Relativism</a></em></strong> (2024), and <strong><em><a href="https://open.spotify.com/album/3jNJF3swIimEIi25q4Ggtt" target="_blank" rel="noopener">Grayscale</a></em></strong> (2023), released with <a href="https://spiritgoth.com" target="_blank" rel="noopener">Spirit Goth Records</a>. The album <strong><em><a href="https://open.spotify.com/album/4FpAHBtHbstQSRVM19txhE" target="_blank" rel="noopener">Beigeification</a></em></strong> (2023) delivers a postmodern blend of surfy sounds and muted moods, self-released through <a href="https://look-up-records.com" target="_blank" rel="noopener">Look Up Records</a> with tapes printed by 2060 Records.</p>
-
-<p>Earlier records include <strong><em><a href="https://open.spotify.com/album/5Y27T3hgkcXG4cCVIqNyZp" target="_blank" rel="noopener">Cryo</a></em></strong> (2022), which received national college radio attention and saw the track “Looking Backward” featured on Spotify’s <em>Indie Fresh Finds</em> playlist. The albums <strong><em><a href="https://open.spotify.com/album/4q6Iq8Zj3njIcdlG8eO5p2" target="_blank" rel="noopener">Meltdown</a></em></strong> (2020) and <strong><em><a href="https://open.spotify.com/album/3LeTve4epRmN4677X5mWyW?si=NHVb1B8HRvKU4HZ741-FoA" target="_blank" rel="noopener">Brain</a></em></strong> (2018) explore themes of digital futurism and watery introspection, blending computer-age anxiety with raw human emotion.</p>
-
-<p>In recent years, Darksoft has toured the Northeast, West Coast, and Pacific Northwest, building a growing audience through live shows and streaming platforms.</p>
-
-<p><strong>For fans of:</strong> Castlebeat, The Cure, Wild Nothing, Swiss Portrait, Sea Lemon, Beach Vacation, Cool Heat, Stray Fossa, Hibou, Pale, Slowdive, The Smiths, Real Estate, she's green, Echo &amp; The Bunnymen, Craft Spells, Close Lobsters, The Field Mice, Primal Scream, Babe Rainbow, and Famous Friend.</p>
-
-<p>Over the years, Darksoft has been featured by outlets including <em>The Big Takeover</em> and <em>Down East Magazine</em>.</p>
-
-<p>Darksoft also produces his own music videos using vintage cameras and practical effects, extending the project's DIY aesthetic into a broader multimedia experience. Watch on <a href="https://www.youtube.com/watch?v=1DEuXKneAOY&list=PLbdzXhgu493J7dQ4tjOsjOVwbqlOBQeEr" target="_blank" rel="noopener">YouTube</a>.</p>
-
-<p>Originally from Seattle, Darksoft later relocated to Portland, Maine. In addition to producing music, he runs <a href="https://look-up-records.com" target="_blank" rel="noopener">Look Up Records</a>, a small independent label and blog.</p>
-
-</section>
-
-  <!-- RELEASES -->
-  <section id="releases">
-    <h2>Releases</h2>
-    <p>All the Darksoft albums I've put out.</p>
-
-    <div class="release-grid">
-      {% assign sorted_albums = site.data.albums | sort: "release_date" | reverse %}
-      {% for album in sorted_albums %}
-      <article class="release-card">
-        <a href="/discography/{{ album.album_id }}/"><img src="/assets/{{ album.artwork }}" alt="{{ album.album_title }} cover"></a>
-
-        <h3><a href="/discography/{{ album.album_id }}/">{{ album.album_title }}</a> ({{ album.release_year }})</h3>
-        <p><strong>Label:</strong> {{ album.label }}</p>
-
-        <p>
-          <a href="{{ album.bandcamp }}" target="_blank">Bandcamp</a> |
-          <a href="{{ album.spotify }}" target="_blank">Spotify</a> |
-          <a href="{{ album.apple_music }}" target="_blank">Apple Music</a>
-        </p>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-
-  <!-- PRESS -->
+    <!-- PRESS -->
   <section id="press">
     <h2>Press</h2>
-  <p>Here are some quotes from music journalists and features on Darksoft. I truly appreciate these folks and the time they've taken getting to know my music and sharing it with their readers:</p>
-  <br>
-  <blockquote><p>Darksoft Finds a Way Out of the Everyday - <cite><a href="https://jambaloo.live/front-center/darksoft/" target="_blank">Jambaloo</a></cite></p></blockquote>
-
-  <blockquote><p>Darksoft polishes the mundane through ‘Everydayness’ - <cite><a href="https://vanyaland.com/2026/03/20/darksoft-polishes-the-mundane-through-everydayness/" target="_blank">Vanyaland</a></cite></p></blockquote>
-
-  <blockquote><p>Darksoft Find Beauty in the Ordinary on Everydayness - <cite><a href="https://www.thusblog.com/blog/darksoft-everydayness" target="_blank">Thus Blog</a></cite></p></blockquote>
-
-  <blockquote><p>Q&A with Darksoft on Everydayness (2026) - <cite><a href="https://read.rfb.fm/p/q-and-a-with-darksoft" target="_blank">Radio Free Bucktown</a></cite></p></blockquote>
-
-  <blockquote><p>ifitbeyourwill S05E16 • Darksoft [Podcast] - <cite><a href="https://www.ifitbeyourwill.ca/2025/05/ifitbeyourwill-s05e16-darksoft.html" target="_blank">ifitbeyourwill</a></cite></p></blockquote>
-
-  <blockquote><p>Darksoft talks influences, creative processes and more [Interview] - <cite><a href="https://iguitar.info/2025/04/10/darksoft-talks-influences-creative-processes-and-more-interview/" target="_blank">iGuitar.com</a></cite></p></blockquote>
-
-  <blockquote><p>"a full experience" - <cite><a href="https://start-track.com/album-darksoft-rationalism/" target="_blank">start-track.com</a></cite></p></blockquote>
-
-  <blockquote><p>"chiming goth rock and twee power pop" - <cite><a href="https://vinylmoon.co/collections/shop-all/products/vol-111" target="_blank">Vinyl Moon 111: Facade Arcade</a></cite></p></blockquote>
-
-  <blockquote><p>"an enchanting and dreamy slice of ear candy" - <cite><a href="https://eclecticmusiclover.com/2025/02/01/fresh-new-tracks-vol-39-darksoft-frank-joshua-kiffie-koyal/" target="_blank">Eclectic Music Lover</a></cite></p></blockquote>
-
-  <blockquote><p>"silvery guitar tones that graze '80s new wave" - <cite><a href="https://www.instagram.com/p/DBwEV3NReg9/?img_index=2" target="_blank">Down East Magazine, November 2024</a></cite></p></blockquote>
-
-  <blockquote><p>Top 10 albums of 2023 - <cite><a href="https://janglepophub.home.blog/2023/12/28/janglepophub-oscars-2023-top-30-albums/" target="_blank">JanglePopHub</a></cite></p></blockquote>
-
-  <blockquote><p>"chiming guitars, dayglo synths and earworm melodies" - <cite><a href="https://microgenremusic.com/genres/slowcore/the-top-10-shoegaze-albums-of-2023/" target="_blank">The Top 10 Shoegaze Albums of 2023, Micro Genre Music</a></cite></p></blockquote>
-
-  <blockquote><p>"a smooth-as-silk mélange of keys and guitars...compulsively alluring" - <cite><a href="https://www.instagram.com/p/CtE51SCRIUi/" target="_blank">The Big Takeover, edition #92</a></cite></p></blockquote>
-
-  <blockquote><p>"Everything that catchy indie rock should have" - <cite><a href="https://start-track.com/introducing-darksoft-beigeification-3-questions/" target="_blank">Start-Track</a></cite></p></blockquote>
-
-  <blockquote><p>“It Is What It Is.” An Interview With Darksoft - <cite><a href="https://forestpunk.wordpress.com/2023/01/31/it-is-what-it-is-an-interview-with-darksoft/" target="_blank">forestpunk</a></cite></p></blockquote>
-
-  <blockquote><p>"sumptuous and pleasing" - <cite><a href="https://eclecticmusiclover.com/2023/01/19/darksoft-album-review-beigeification/" target="_blank">Eclectic Music Lover</a></cite></p></blockquote>
-
-  <blockquote><p>"strangely heartening" - <cite><a href="https://janglepophub.home.blog/2023/01/13/album-review-beigeification-by-darksoft-look-up-records-2060-records/" target="_blank">JanglePopHub</a></cite></p></blockquote>
-
-  <blockquote><p>"aching guitar chords and hushed, velvety vocals" - <cite><a href="https://twitter.com/DARKS0FT/status/1603751935462588416" target="_blank">The Big Takeover, edition #91</a></cite></p></blockquote>
-
-  <blockquote><p>"Only Time Will Tell is a lush and dreamy track" - <cite><a href="http://www.destroyexist.com/2022/12/darksoft-only-time-will-tell.html" target="_blank">Destroy//Exist</a></cite></p></blockquote>
-
-  <blockquote><p>"fresh, light and sublime" - <cite><a href="https://www.zonenights.com/2022/11/darksoft-it-is-what-it-is/" target="_blank">Zone Nights</a></cite></p></blockquote>
-
-  <blockquote><p>"every time I replayed ‘Only Time Will Tell’ I felt renewed" - <cite><a href="https://www.mp3hugger.com/2022/12/dark-soft-only-time-will-tell/" target="_blank">mp3hugger</a></cite></p></blockquote>
-
-  <blockquote><p>"soothing, bittersweet vocals and hypnotic guitar work" - <cite><a href="https://post-punk.com/seattle-shoegaze-act-darksoft-debuts-video-for-looking-backward-from-new-album-cryo/" target="_blank">Post-punk.com</a></cite></p></blockquote>
-
-  <blockquote><p>"infectious melodies progressions and ‘90s rock undertones" - <cite><a href="https://v13.net/2020/09/darksoft-previews-his-meltdown-album-with-the-foreshadow-music-video-premiere/" target="_blank">V13</a></cite></p></blockquote>
-
-  <blockquote><p>"one motherfucker of an album that grabs hold on first listen and refuses to let go" - <cite><a href="https://vanyaland.com/2020/12/01/darksoft-soundtracks-the-ongoing-meltdown-deep-within-us-all/" target="_blank">Vanyaland</a></cite></p></blockquote>
-
-  <blockquote><p>"beautiful melodies, outstanding guitar work, and stunning vocals" - <cite><a href="https://eclecticmusiclover.com/2019/02/15/darksoft-ep-review-brain/" target="_blank">Eclectic Music Lover</a></cite></p></blockquote>
-
-  <blockquote><p>"an evocative piece of dream theater with grunge leanings" - <cite><a href="https://www.americanpancake.com/2019/12/darksofts-track-cybersecurity-is.html" target="_blank">American Pancake</a></cite></p></blockquote>
-
-  <blockquote><p>"the most beautiful jangle-gaze aesthetic. A real find for me." - <cite><a href="https://janglepophub.home.blog/2019/12/17/beat-the-delete-0036-new-music-recommendations/" target="_blank">JanglePopHub</a></cite></p></blockquote>
-
-  <blockquote><p>"slow, straightforward and sad alt rock" - <cite><a href="https://rockthepigeon.com/2018/10/23/darksofts-mydoom-is-slow-straightforward-and-sad-alt-rock/" target="_blank">Rock The Pigeon</a></cite></p></blockquote>
-
-  <blockquote><p>"a gauze of shimmering shoegaze" - <cite><a href="https://www.ohestee.com/music/pop/darksoft-laments-over-the-unknown-in-debut-mydoom/" target="_blank">ohestee</a></cite></p></blockquote>
-
-  <blockquote><p>Photo story: SWYM, Sealife, Darksoft, Daycones - <cite><a href="https://danstunesseattle.com/2018/12/24/photo-story-swym-sealife-darksoft-daycones/" target="_blank">Dan's Tunes</a></cite></p></blockquote>
-</section>
-
-<!-- PRODUCTION  -->
-<section id="production">
-  <img class="section-image" src="/assets/Darksoft studio production.JPG" alt="Darksoft Studio Production">
-  <h2>Production</h2>
-
-  <p>I record all Darksoft material using real instruments in my home studio in Maine. Over the years, I have also released under other projects. I've also collaborated with other artists on recording, production, and performance projects across a range of independent releases. Here are some other credits.</p>
-
-  <h3 style="margin-top: 2rem;">Selected Production &amp; Recording Credits</h3>
-  <ul style="list-style: none; padding-left: 0;">
-    <li>• <strong>Darksoft</strong> — All releases (full recording)</li>
-    <li>• <strong>Darker Pepper</strong> — “Tinted” (full album production), released on memorycard, Spirit Goth’s imprint</li>
-    <li>• <strong>Darker Pepper</strong> — “Synthetic” (full album production), released on memorycard</li>
-    <li>• <strong>Eastern Souvenirs</strong> — Single (drum performance + recording)</li>
-    <li>• <strong>State Birds</strong> — Album (full production, recording, engineering)</li>
-    <li>• <strong>Emily Irving</strong> — Single (vocal recording)</li>
-    <li>• <strong>Banadu</strong> — All releases (full production, engineering, performing, mixing)</li>
-    <li>• <strong>Found Space</strong> — Single (bass recording, performance, production)</li>
-    <li>• <strong>Sightings</strong> — Album (engineering, performance, recording)</li>
-    <li>• <strong>Hibou</strong> — Album (drum recording)</li>
-  </ul>
-</section>
+    {% for item in site.data.press limit:3 %}
+      {% include press-quote.html item=item %}
+    {% endfor %}
+    <p><a href="/press/">More press →</a></p>
+  </section>
 
   <!-- SYNC LICENSING -->
 <section id="sync">
@@ -288,16 +168,7 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
   </p>
 </section>
   
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>For booking, collaborations, or general inquiries:  
-       <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a>
-    </p>
-    <p>For sync and licensing, see the <a href="/sync/">Sync page</a>.</p>
-  </section>
-
-<!-- SUPPORT -->
+  <!-- SUPPORT -->
 <section id="support">
   <h2>Support</h2>
   <p>
