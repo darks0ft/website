@@ -9,6 +9,9 @@ Disallow: /*.aiff$
 Disallow: /*.m4a$
 Disallow: /assets/audio/
 
+# Keep unlisted downloads (newsletter reward) out of search results
+Disallow: /assets/downloads/
+
 # Allow lyric pages, album pages, and all structured content
 Allow: /lyrics/
 Allow: /lyrics/*
