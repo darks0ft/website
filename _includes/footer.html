@@ -8,7 +8,7 @@
       <a href="/discography/">Music</a> | 
       <a href="/merch">Merch</a> | 
       <a href="/sync/">Sync Licensing</a> | 
-      <a href="/#tour">Tour</a> | 
+      <a href="/#tour">Shows</a> | 
       <a href="/#contact">Contact</a> |
       <a href="/#press">Press</a> |
       <a href="/lyrics">Lyrics</a> |
@@ -207,6 +207,14 @@
       span.style.animation = `fadeColors 10s infinite ${Math.random() * 5}s`;
       container.appendChild(span);
     });
+  })();
+</script>
+<script>
+  // Persistent header: add body.scrolled once the page is scrolled past the big logo
+  (function() {
+    const update = () => document.body.classList.toggle("scrolled", window.scrollY > 140);
+    window.addEventListener("scroll", update, { passive: true });
+    update();
   })();
 </script>
 <script>
