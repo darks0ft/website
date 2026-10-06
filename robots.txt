@@ -1,6 +1,7 @@
 User-agent: *
-Allow: /
-
+# Everything is crawlable by default; the rules below carve out exceptions.
+# (No blank lines inside this group: some crawlers treat a blank line as the end of the rules.)
+#
 # Block audio and raw music file scraping
 Disallow: /*.mp3$
 Disallow: /*.wav$
@@ -8,10 +9,10 @@ Disallow: /*.flac$
 Disallow: /*.aiff$
 Disallow: /*.m4a$
 Disallow: /assets/audio/
-
+#
 # Keep unlisted downloads (newsletter reward) out of search results
 Disallow: /assets/downloads/
-
+#
 # Allow lyric pages, album pages, and all structured content
 Allow: /lyrics/
 Allow: /lyrics/*
