@@ -45,10 +45,14 @@ Darksoft's music is available for film, TV, advertising, and social media, and l
 
 ## Key pages
 
-- [Home and biography]({{ "/" | absolute_url }}): overview, bio, press, tour, and contact
+- [Home]({{ "/" | absolute_url }}): overview, latest release, newsletter, merch, and upcoming shows
+- [About]({{ "/about/" | absolute_url }}): full biography and production credits
 - [Discography]({{ "/discography/" | absolute_url }}): every album, with a page per album
 - [Lyrics]({{ "/lyrics/" | absolute_url }}): index of lyric pages for every song, at /lyrics/<album>/<song>/
+- [Press]({{ "/press/" | absolute_url }}): reviews, interviews, features, and a press photo
+- [Shows]({{ "/shows/" | absolute_url }}): upcoming concerts and tour dates
 - [Sync licensing]({{ "/sync/" | absolute_url }}): placements and how to license
+- [Contact]({{ "/contact/" | absolute_url }}): booking, press, and licensing contact
 - [Merch]({{ "/merch/" | absolute_url }}): vinyl, CDs, shirts, and hats
 - [Album data]({{ "/data/" | absolute_url }}): charts of tempo, song length, and word counts across albums
 

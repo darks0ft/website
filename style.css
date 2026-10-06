@@ -1866,3 +1866,10 @@ html {
     overflow-y: auto;
   }
 }
+
+/* About / Shows pages: small onward-link rows */
+.about-next p,
+.shows-note {
+  color: #ccc;
+  margin-top: 1.5rem;
+}

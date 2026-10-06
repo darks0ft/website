@@ -1,0 +1,46 @@
+---
+layout: none
+title: "Darksoft Press — Reviews, Interviews & Features"
+description: "Press for Darksoft: reviews, interviews, and features from Vanyaland, The Big Takeover, Down East Magazine, Eclectic Music Lover, JanglePopHub, and more."
+permalink: /press/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+
+<body class="press-page">
+
+  {% include header.html %}
+
+  <section class="page-wrapper" id="press">
+    <h2>Press</h2>
+    <p>Here are some quotes from music journalists and features on Darksoft. I truly appreciate these folks and the time they've taken getting to know my music and sharing it with their readers:</p>
+    <br>
+    {% for item in site.data.press %}
+      {% include press-quote.html item=item %}
+    {% endfor %}
+  </section>
+
+  <section id="press-kit">
+    <h2>Press Kit</h2>
+    <p>
+      Darksoft is a dream pop and shoegaze project from Portland, Maine (originally from Seattle), writing and
+      recording jangly, reflective indie rock on real instruments since 2018, across
+      {{ site.data.albums | size }} albums on Look Up Records and Spirit Goth Records.
+      <a href="/about/">Read the full biography →</a>
+    </p>
+    <p>
+      <a href="/assets/Darksoft%20-%20Press%20Photo%202024.jpg" download>Download press photo</a>
+      &nbsp;•&nbsp;
+      <a href="/discography/">Discography</a>
+    </p>
+    <p>For press and interview requests: <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a></p>
+  </section>
+
+  {% include footer.html %}
+
+</body>
+</html>
