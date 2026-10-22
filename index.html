@@ -53,6 +53,14 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
 <!-- NEWSLETTER -->
 {% include newsletter-block.html section_id="newsletter" %}
 
+<!-- LATEST VIDEO -->
+<section id="latest-video">
+  <h2>Latest Video</h2>
+  {% assign latest_video = site.data.videos | sort: "released" | last %}
+  {% include video-card.html video=latest_video placement="home_latest_video" %}
+  <p><a class="cta-button" href="/videos/">All videos →</a></p>
+</section>
+
 <!-- SHOWS -->
 <section id="shows">
   <a href="/shows/"><img class="section-image" src="/assets/Darksoft Live Band 1.jpg" alt="Darksoft performing live with a full band"></a>
@@ -150,6 +158,8 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
   <p>Darksoft is independent and self-funded. If my music means something to you, here's how you can help keep it going.</p>
   <p><a class="cta-button" href="/support/">Ways to support →</a></p>
 </section>
+
+{% include video-player-script.html %}
 
 <!-- Old links to homepage sections that moved to their own pages -->
 <script>

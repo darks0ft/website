@@ -1,0 +1,17 @@
+{%- comment -%}
+  One music video as a schema.org VideoObject (JSON object only, no <script> tag).
+  Parameters: video (from _data/videos.yml), track, album; context=true adds "@context" (for a standalone block)
+{%- endcomment -%}
+{%- capture video_description %}{% if include.video.how_made %}{{ include.video.how_made }} {% endif %}Official music video for “{{ include.track.track_title }}” by Darksoft, from the album {{ include.album.album_title }} ({{ include.album.release_year }}).{% endcapture -%}
+{
+    {% if include.context %}"@context": "https://schema.org",
+    {% endif %}"@type": "VideoObject",
+    "name": {{ include.track.track_title | append: " (Music Video) — Darksoft" | jsonify }},
+    "description": {{ video_description | strip | jsonify }},
+    "thumbnailUrl": {{ "https://i.ytimg.com/vi/" | append: include.video.youtube_id | append: "/hqdefault.jpg" | jsonify }},
+    "uploadDate": {{ include.video.released | date: "%Y-%m-%d" | jsonify }},
+    "duration": {{ include.video.duration | jsonify }},
+    "embedUrl": {{ "https://www.youtube.com/embed/" | append: include.video.youtube_id | jsonify }},
+    "url": {{ "https://www.youtube.com/watch?v=" | append: include.video.youtube_id | jsonify }},
+    "creator": { "@type": "MusicGroup", "name": "Darksoft", "url": {{ "/" | absolute_url | jsonify }} }
+  }

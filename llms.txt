@@ -48,6 +48,7 @@ Darksoft's music is available for film, TV, advertising, and social media, and l
 - [Home]({{ "/" | absolute_url }}): overview, latest release, and highlights
 - [About]({{ "/about/" | absolute_url }}): full biography, sound, and influences
 - [Press]({{ "/press/" | absolute_url }}): reviews, interviews, features, and a press kit
+- [Videos]({{ "/videos/" | absolute_url }}): every music video, newest first; many are homemade on a VHS camcorder or a vintage digital camera with practical effects
 - [Production]({{ "/production/" | absolute_url }}): the home studio, recording process, gear highlights, and production credits
 - [Shows]({{ "/shows/" | absolute_url }}): upcoming tour dates and live shows
 - [Contact]({{ "/contact/" | absolute_url }}): booking, collaborations, and general inquiries

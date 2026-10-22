@@ -40,6 +40,7 @@
     stream_click       Spotify, Apple Music, YouTube / YouTube Music, Deezer, Pandora, SoundCloud
     merch_click        Printful, Spirit Goth, elasticstage
     donate_click       Buy Me a Coffee, Unstream
+    video_play         a click-to-play music video thumbnail (sent from video-player-script.html)
   Each click event carries: platform, link_url, and placement (where on the page it was).
 -->
 <script>
@@ -95,6 +96,7 @@
   document.addEventListener("click", (e) => {
     const link = e.target.closest("a[href]");
     if (!link) return;
+    if (link.hasAttribute("data-video-id")) return; // click-to-play thumbnails send video_play instead
     let url;
     try { url = new URL(link.href, location.href); } catch (err) { return; }
     if (url.origin === location.origin) return;

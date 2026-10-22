@@ -74,7 +74,7 @@
 <!-- Fonts -->
 <link rel="stylesheet" href="https://use.typekit.net/elq2dar.css">
 
-<!-- Global Stylesheet -->
-<link rel="stylesheet" href="/style.css">
+<!-- Global Stylesheet (build-time stamp makes browsers fetch the new file after each deploy) -->
+<link rel="stylesheet" href="/style.css?v={{ site.time | date: '%s' }}">
 
 {% include analytics.html %}

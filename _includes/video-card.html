@@ -1,0 +1,28 @@
+{%- comment -%}
+  One music video: click-to-play thumbnail (loads YouTube only when clicked),
+  song title, album, release date, and the optional "how it was made" note.
+  Parameters: video (from _data/videos.yml), placement (for analytics, e.g. "videos_page")
+  Needs _includes/video-player-script.html on the page.
+{%- endcomment -%}
+{%- assign card_track = site.data.tracks | where: "track_id", include.video.track_id | first -%}
+{%- assign card_album = site.data.albums | where: "album_id", card_track.album_id | first -%}
+<article class="video-card" id="video-{{ card_track.track_title_slug }}">
+  <a class="video-frame" href="https://www.youtube.com/watch?v={{ include.video.youtube_id }}"
+     target="_blank" rel="noopener"
+     data-video-id="{{ include.video.youtube_id }}"
+     data-video-title="{{ card_track.track_title | escape }}"
+     data-placement="{{ include.placement | default: 'videos_page' }}"
+     aria-label="Play the {{ card_track.track_title | escape }} music video">
+    <img src="https://i.ytimg.com/vi/{{ include.video.youtube_id }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+    <span class="video-rec" aria-hidden="true">● REC</span>
+    <span class="video-play" aria-hidden="true">▶</span>
+  </a>
+  <h3 class="video-title"><a href="/lyrics/{{ card_album.album_id }}/{{ card_track.track_title_slug }}/">{{ card_track.track_title }}</a></h3>
+  <p class="video-meta">
+    From <a href="/discography/{{ card_album.album_id }}/"><em>{{ card_album.album_title }}</em></a> ({{ card_album.release_year }})
+    · Released {{ include.video.released | date: "%b %-d, %Y" }}
+  </p>
+  {%- if include.video.how_made %}
+  <p class="video-note"><span>How it was made:</span> {{ include.video.how_made }}</p>
+  {%- endif %}
+</article>
