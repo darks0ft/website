@@ -39,7 +39,7 @@
     bandcamp_click     any link to bandcamp.com
     stream_click       Spotify, Apple Music, YouTube / YouTube Music, Deezer, Pandora, SoundCloud
     merch_click        Printful, Spirit Goth, elasticstage
-    donate_click       Buy Me a Coffee (links and floating button), Unstream
+    donate_click       Buy Me a Coffee, Unstream
   Each click event carries: platform, link_url, and placement (where on the page it was).
 -->
 <script>
@@ -93,13 +93,6 @@
   }
 
   document.addEventListener("click", (e) => {
-    // Buy Me a Coffee floating button is a script-built div, not a link
-    const bmc = e.target.closest("#bmc-wbtn");
-    if (bmc) {
-      gtag("event", "donate_click", { platform: "Buy Me a Coffee", link_url: "https://buymeacoffee.com/darksoft", placement: "floating_button" });
-      return;
-    }
-
     const link = e.target.closest("a[href]");
     if (!link) return;
     let url;

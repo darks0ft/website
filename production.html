@@ -1,0 +1,59 @@
+---
+layout: none
+title: "Darksoft Production — Home Studio, Recording & Credits"
+description: "How Darksoft records: every part played on real instruments and multitracked in a home studio in Maine. Gear highlights, process, music videos, and production credits."
+og_image: "/assets/Darksoft%20studio%20production.JPG"
+permalink: /production/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+
+<body class="production-page">
+
+  {% include header.html %}
+
+  <section class="page-wrapper" id="production">
+    <img class="section-image" src="/assets/Darksoft studio production.JPG" alt="The Darksoft home studio">
+    <h2>Production</h2>
+    <p>I record all Darksoft material using real instruments in my home studio in Maine. Every part is written, performed, and multitracked by hand, one instrument at a time.</p>
+  </section>
+
+  <section id="studio">
+    <h2>The Studio</h2>
+    <ul class="production-list">
+      <li><strong>Guitars:</strong> a Fender Stratocaster (Eric Johnson model), recorded DI and re-amped in the mix, plus a Cort acoustic</li>
+      <li><strong>Bass:</strong> an Ibanez Gio with flatwound strings</li>
+      <li><strong>Drums:</strong> a Premier Artist Maple kit, close-miked with an Audix drum kit and a pair of Shure SM57s on the snare</li>
+      <li><strong>Synths:</strong> an Alesis Micron and a Casio Casiotone MT-40</li>
+      <li><strong>Vocals:</strong> an AKG C414 condenser</li>
+      <li><strong>Recording:</strong> a Universal Audio Apollo Twin into Logic Pro</li>
+    </ul>
+    <p>Plus a pile of found sounds: a theremin, sandpaper, a sword struck with a hammer, and even my basement boiler shutting off.</p>
+  </section>
+
+  <section id="process">
+    <h2>Process</h2>
+    <p>Albums take shape slowly. <a href="/discography/everydayness/"><em>Everydayness</em></a> was recorded over about a year, from November 2024 to December 2025, then mixed and mastered by Brian Fisher.</p>
+    <p>The music videos are made at home too, shot on a VHS camcorder and an old Nikon Coolpix with practical effects like LED lightboxes, backlit cutouts, and close-up reflections. <a href="https://www.youtube.com/@Darksoft" target="_blank" rel="noopener">Watch them on YouTube</a>.</p>
+  </section>
+
+  <section id="credits">
+    <h2>Credits</h2>
+    <p>Over the years, I've also collaborated with other artists on recording, production, and performance across a range of independent releases.</p>
+    <ul class="production-list">
+      {% for item in site.data.production %}
+      {% include production-credit.html item=item %}
+      {% endfor %}
+    </ul>
+  </section>
+
+  {% include newsletter-block.html section_id="newsletter" intro="Want the full gear notes? The complete list, plus behind-the-scenes on how each music video was made, is in the free Everydayness booklet." %}
+
+  {% include footer.html %}
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+---
+layout: none
+title: "Darksoft Press — Reviews, Interviews & Features"
+description: "Press for Darksoft: reviews, interviews, and features from Vanyaland, The Big Takeover, Down East Magazine, Eclectic Music Lover, JanglePopHub, and more. Includes a press kit."
+og_image: "/assets/Darksoft%20-%20Press%20Photo%202024.jpg"
+permalink: /press/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+
+<body class="press-page">
+
+  {% include header.html %}
+
+  {%- assign reviews = site.data.press | where: "type", "quote" -%}
+  {%- assign interviews = site.data.press | where: "type", "interview" -%}
+  {%- assign features = site.data.press | where: "type", "feature" -%}
+
+  <section class="page-wrapper" id="press">
+    <h2>Press</h2>
+    <p>Here are some quotes from music journalists and features on Darksoft. I truly appreciate these folks and the time they've taken getting to know my music and sharing it with their readers.</p>
+
+    <h3 class="press-group">Reviews</h3>
+    {% for item in reviews %}
+      {% include press-quote.html item=item %}
+    {% endfor %}
+
+    <h3 class="press-group">Interviews &amp; Podcasts</h3>
+    {% for item in interviews %}
+      {% include press-quote.html item=item %}
+    {% endfor %}
+
+    <h3 class="press-group">Features</h3>
+    {% for item in features %}
+      {% include press-quote.html item=item %}
+    {% endfor %}
+  </section>
+
+  {%- assign labels = site.data.albums | map: "label" | uniq | join: " and " -%}
+  <section id="press-kit">
+    <h2>Press Kit</h2>
+    <p>
+      Darksoft is a dream pop and shoegaze project from Portland, Maine (originally from Seattle), writing and
+      recording jangly, reflective indie rock on real instruments since 2018, across
+      {{ site.data.albums | size }} albums on {{ labels }}.
+      <a href="/about/">Read the full biography →</a>
+    </p>
+    <p>For press and interview requests: <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a></p>
+  </section>
+
+  {% include footer.html %}
+
+</body>
+</html>
