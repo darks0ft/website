@@ -137,7 +137,20 @@
         // Existing subscribers get the reward too
         if (data && (data.result === "success" || /already subscribed/i.test(msg))) {
           try { localStorage.setItem("newsletter-popup", Date.now()); } catch (err) {}
-          window.location.href = THANKS_URL;
+          // Record the signup, then redirect (fallback timer in case analytics is blocked)
+          let left = false;
+          const go = () => { if (!left) { left = true; window.location.href = THANKS_URL; } };
+          const where = form.closest("#newsletter-modal") ? "newsletter_popup"
+                      : form.closest(".lyrics-newsletter") ? "lyrics_page"
+                      : (form.closest("section[id]") || {}).id || "page";
+          if (typeof gtag === "function") {
+            gtag("event", "newsletter_signup", {
+              placement: where,
+              already_subscribed: data.result !== "success",
+              event_callback: go
+            });
+          }
+          setTimeout(go, 1000);
           return;
         }
         // Mailchimp prefixes some errors with "0 - "; show plain text only
