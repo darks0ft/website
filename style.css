@@ -1866,3 +1866,23 @@ html {
     overflow-y: auto;
   }
 }
+
+/* Shows page: live photo with photographer credit */
+.shows-photo {
+  margin: 0 0 1.5rem;
+}
+
+.shows-photo .section-image {
+  width: 600px;
+  margin-bottom: 0.5rem;
+}
+
+.shows-photo figcaption {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.shows-note {
+  color: #ccc;
+  margin-top: 1.5rem;
+}
