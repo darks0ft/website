@@ -98,21 +98,30 @@ document.getElementById("year").innerText = new Date().getFullYear();
   const lastShown = localStorage.getItem("newsletter-popup");
   const THIRTY_DAYS = 1000 * 60 * 60 * 24 * 30;
 
+  let lastFocus = null;
+
   if (!lastShown || (Date.now() - lastShown) > THIRTY_DAYS) {
     setTimeout(() => {
+      lastFocus = document.activeElement;
       modal.classList.remove("hidden");
+      closeBtn.focus({ preventScroll: true }); // keyboard and screen-reader users land in the popup
     }, 5000); // 5 seconds delay
   }
 
   function closeModal() {
+    if (modal.classList.contains("hidden")) return;
     modal.classList.add("hidden");
     localStorage.setItem("newsletter-popup", Date.now());
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
   }
 
-  // Close events
+  // Close events: the X, a click on the dimmed backdrop, or the Esc key
   closeBtn.addEventListener("click", closeModal);
   modal.addEventListener("click", (e) => {
-    if (e.target === modal) closeModal();
+    if (e.target === modal || e.target.classList.contains("newsletter-overlay")) closeModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
   });
 })();
 
@@ -143,9 +152,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
 
     if (toggle) {
-      toggle.addEventListener('click', () => {
-        const open = body.classList.toggle('menu-open');
+      const setOpen = (open) => {
+        body.classList.toggle('menu-open', open);
         toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      };
+      toggle.addEventListener('click', () => setOpen(!body.classList.contains('menu-open')));
+
+      // Close with Esc (focus back on the button) or a tap outside the header
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && body.classList.contains('menu-open')) { setOpen(false); toggle.focus(); }
+      });
+      document.addEventListener('click', (e) => {
+        if (body.classList.contains('menu-open') && !e.target.closest('.site-header')) setOpen(false);
       });
     }
   });

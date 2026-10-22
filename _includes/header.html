@@ -1,9 +1,13 @@
 <!-- Site header: one static black bar on every page. It stays at the top while
      scrolling and looks the same throughout. On phones the links, icons and
      donate link move into a panel opened by the menu button. -->
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="site-header-inner">
+    {%- if page.url == "/" %}<h1 class="site-logo-heading">{% endif %}
     <a href="/" class="site-logo" aria-label="Darksoft home">Darksoft</a>
+    {%- if page.url == "/" %}</h1>{% endif %}
 
     <button id="menu-toggle" class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
       ☰
@@ -11,12 +15,14 @@
 
     <div class="site-menu" id="site-menu">
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="/discography/">Music</a>
-        <a href="/lyrics/">Lyrics</a>
-        <a href="/shows/">Shows</a>
-        <a href="/merch/">Merch</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
+        {%- comment -%} Highlight the section you're in: exact page = "page", anything under it = "true" {%- endcomment -%}
+        {%- assign nav_links = "/discography/|Music,/lyrics/|Lyrics,/shows/|Shows,/merch/|Merch,/about/|About,/contact/|Contact" | split: "," %}
+        {%- for item in nav_links %}
+        {%- assign parts = item | split: "|" %}
+        {%- assign href = parts[0] %}
+        {%- assign here = page.url | slice: 0, href.size %}
+        <a href="{{ href }}"{% if page.url == href %} class="is-current" aria-current="page"{% elsif here == href %} class="is-current" aria-current="true"{% endif %}>{{ parts[1] }}</a>
+        {%- endfor %}
       </nav>
 
       <div class="site-header-extras">

@@ -37,6 +37,8 @@
 
   {% include header.html %}
 
+  <main id="main">
+
   <div class="lyric-page-container">
 
       <nav class="album-breadcrumb lyrics-breadcrumb" aria-label="Breadcrumb">
@@ -97,19 +99,21 @@
     {% if video %}
       <div class="video-embed">
         <h3>{{ track.track_title }} Music Video</h3>
-        <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/{{ video.youtube_id }}"
-            title="{{ track.track_title }} music video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
+        <a class="video-frame" href="https://www.youtube.com/watch?v={{ video.youtube_id }}"
+           target="_blank" rel="noopener"
+           data-video-id="{{ video.youtube_id }}"
+           data-video-title="{{ track.track_title | escape }}"
+           data-placement="lyrics_video"
+           aria-label="Play the {{ track.track_title | escape }} music video">
+          <img src="https://i.ytimg.com/vi/{{ video.youtube_id }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="video-rec" aria-hidden="true">● REC</span>
+          <span class="video-play" aria-hidden="true">▶</span>
+        </a>
       </div>
     {% endif %}
 
   </div>
+  </main>
 
   {% include footer.html %}
 

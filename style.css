@@ -80,8 +80,9 @@ p + p {
   line-height: 1.5;
 }
 
-/* --- Section headings --- */
-section h2 {
+/* --- Section headings (and each page's h1 title, styled the same) --- */
+section h2,
+section h1.page-title {
   position: relative;
   font-family: 'bradley-djr', sans-serif;
   font-size: 3rem;
@@ -92,7 +93,8 @@ section h2 {
 }
 
 /* Gradient underline on section headings */
-section h2::after {
+section h2::after,
+section h1.page-title::after {
   content: "";
   position: absolute;
   left: 0;
@@ -110,6 +112,7 @@ section h2::after {
 /* Shared section images desktop+ */
 .section-image {
   width: 300px;
+  height: auto;
   max-width: 90%;
   border-radius: 12px;
   margin: 0 auto 1.5rem;
@@ -167,6 +170,25 @@ section h2::after {
    3. HEADER: LOGO, NAVIGATION, SOCIAL ICONS, MOBILE MENU
    ============================================================ */
 
+/* --- "Skip to content": off screen until a keyboard user tabs to it --- */
+a.skip-link,
+a.skip-link:visited {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 8px 0;
+  background: #6dc15b;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a.skip-link:focus {
+  left: 0;
+}
+
 /* --- Site header: one static black bar, sticky at the top --- */
 :root {
   --header-h: 96px; /* header bar height; pages and anchor jumps use it */
@@ -209,6 +231,18 @@ a.site-logo:hover {
   opacity: 0.8;
 }
 
+/* Homepage only: the logo doubles as the page's h1 (no visual change) */
+.site-logo-heading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1;
+}
+
+.site-logo-heading a.site-logo {
+  display: block; /* same box as when the logo sits directly in the bar */
+}
+
 /* Links, then social icons + donate link underneath */
 .site-menu {
   display: flex;
@@ -235,6 +269,16 @@ a.site-logo:hover {
 
 .site-nav a:hover {
   opacity: 0.6;
+}
+
+/* The section you're in */
+.site-nav a.is-current,
+.site-nav a.is-current:visited {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #6dc15b;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
 }
 
 .site-header-extras {
@@ -761,7 +805,7 @@ footer p:last-of-type {
   position: relative;
   height: calc(100vh - var(--header-h));
   width: 100%;
-  background: url('/assets/Darksoft%20Promo%20Graphic.jpg')
+  background: url('/assets/web/promo-hero.jpg')
     center center / cover no-repeat;
   display: flex;
   justify-content: center;
@@ -785,7 +829,6 @@ footer p:last-of-type {
 
 /* Prevent any parent from limiting width */
 body.homepage,
-.homepage main,
 .homepage section.hero,
 .homepage .hero {
   width: 100vw !important;
@@ -809,7 +852,7 @@ body.homepage,
   position: relative;
   width: 100%;
   height: 90vh;
-  background: url('/assets/Darksoft Promo Graphic.jpg') center center / cover no-repeat;
+  background: url('/assets/web/promo-hero.jpg') center center / cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1293,22 +1336,6 @@ body.homepage,
   font-family: 'menlo', sans-serif;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-}
-
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  margin: 0 auto;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
 }
 
 /* If needed to nudge album art down under header */
@@ -2134,6 +2161,12 @@ a.listen-button:hover {
 .data-intro {
   opacity: 0.7;
   margin-bottom: 2rem;
+}
+
+/* 404 page */
+.not-found-links {
+  margin-top: 1.5rem;
+  color: #ccc;
 }
 
 @media (max-width: 768px) {
