@@ -271,14 +271,26 @@ a.site-logo:hover {
   opacity: 0.6;
 }
 
-/* The section you're in */
+/* The section you're in: white, with the same fading green line as section headings */
 .site-nav a.is-current,
 .site-nav a.is-current:visited {
+  position: relative;
   color: #fff;
-  text-decoration: underline;
-  text-decoration-color: #6dc15b;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
+}
+
+.site-nav a.is-current::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  bottom: -5px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(109, 193, 91, 0),
+    #6dc15b,
+    rgba(109, 193, 91, 0)
+  );
 }
 
 .site-header-extras {
@@ -389,6 +401,10 @@ nav {
     display: block;
     padding: 0.8rem 0;
     font-size: 1.2rem;
+  }
+
+  .site-nav a.is-current::after {
+    bottom: 0.35rem;
   }
 
   .site-header-extras {
