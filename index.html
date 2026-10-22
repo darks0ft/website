@@ -15,8 +15,15 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
   {% include header.html %}
 
 <!-- HERO SECTION -->
-<section class="hero landing-page">
+<section class="hero landing-page" id="hero">
   <div class="hero-overlay"></div>
+  <div class="hero-cta">
+    <p class="hero-tagline">Dream pop and jangly indie rock from Portland, Maine.</p>
+    <p class="hero-buttons">
+      <a class="cta-button" href="https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE" target="_blank" rel="noopener">Listen</a>
+      <a class="cta-button cta-button-outline" href="#newsletter">Join the list</a>
+    </p>
+  </div>
 </section>
 
 <!-- LOGO BELOW HERO -->
@@ -24,9 +31,9 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
   <img class="hero-logo" src="/assets/Darksoft-logo-smiley-white.png" alt="Darksoft Logo">
 </div>
 
-  <!-- EVERYDAYNESS (TEMP SECTION) -->
+<!-- LATEST RELEASE -->
 <section id="everydayness">
-  <a href="/discography/everydayness/"><img class="section-image" src="assets/Darksoft Album Artwork Everydayness.jpg" alt="Everydayness album artwork"></a>
+  <a href="/discography/everydayness/"><img class="section-image" src="/assets/Darksoft Album Artwork Everydayness.jpg" alt="Everydayness album artwork"></a>
   <h2>Everydayness</h2>
 
   <p>
@@ -43,15 +50,16 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
   </p>
 </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <img class="section-image" src="/assets/Darksoft Day by Day music video still.png" alt="Darksoft Profile">
-    <h2>About</h2>
-    <p>Darksoft is a one-man dream pop and shoegaze project, often backed by a live band for shows. Blending lush melodies, alternative rock textures, and introspective lyrics, the project has released conceptual albums exploring universal truths and existential themes since 2018.</p>
-  </section>
-
-  <!-- NEWSLETTER -->
+<!-- NEWSLETTER -->
 {% include newsletter-block.html section_id="newsletter" %}
+
+<!-- SHOWS -->
+<section id="shows">
+  <a href="/shows/"><img class="section-image" src="/assets/Darksoft Live Band 1.jpg" alt="Darksoft performing live with a full band"></a>
+  <h2>Shows</h2>
+  <p>Darksoft plays live with a full band. See where we're headed next.</p>
+  <p><a class="cta-button" href="/shows/">See upcoming shows →</a></p>
+</section>
 
 <!-- MERCH -->
 <section id="merch">
@@ -100,93 +108,62 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
     </div>
 
   </div>
-</section>
-<br>
-<br>
-<!-- BIOGRAPHY (FULL VERSION FROM INDEX.HTML) -->
 
-<section id="biography">
-  <img class="section-image" src="/assets/Darksoft - Press Photo 2024.jpg" alt="Darksoft Biography Photo">
-  <h2 id="biography-heading">Biography</h2> 
-
-{% include biography.html %}
+  <p><a class="cta-button" href="/merch/">Shop all merch →</a></p>
 </section>
 
-  <!-- RELEASES -->
-  <section id="releases">
-    <h2>Releases</h2>
-    <p>All the Darksoft albums I've put out.</p>
+<!-- ABOUT -->
+<section id="about">
+  <img class="section-image" src="/assets/Darksoft Day by Day music video still.png" alt="Darksoft in the Day By Day music video">
+  <h2>About</h2>
+  <p>Darksoft is a one-man dream pop and shoegaze project, often backed by a live band for shows. Blending lush melodies, alternative rock textures, and introspective lyrics, the project has released conceptual albums exploring universal truths and existential themes since 2018.</p>
+  <p><a class="cta-button" href="/about/">Read the full bio →</a></p>
+</section>
 
-    <div class="release-grid">
-      {% assign sorted_albums = site.data.albums | sort: "release_date" | reverse %}
-      {% for album in sorted_albums %}
-      <article class="release-card">
-        <a href="/discography/{{ album.album_id }}/"><img src="/assets/{{ album.artwork }}" alt="{{ album.album_title }} cover"></a>
-
-        <h3><a href="/discography/{{ album.album_id }}/">{{ album.album_title }}</a> ({{ album.release_year }})</h3>
-        <p><strong>Label:</strong> {{ album.label }}</p>
-
-        <p>
-          <a href="{{ album.bandcamp }}" target="_blank">Bandcamp</a> |
-          <a href="{{ album.spotify }}" target="_blank">Spotify</a> |
-          <a href="{{ album.apple_music }}" target="_blank">Apple Music</a>
-        </p>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-
-  <!-- PRESS -->
-  <section id="press">
-    <h2>Press</h2>
-  <p>Here are some quotes from music journalists and features on Darksoft. I truly appreciate these folks and the time they've taken getting to know my music and sharing it with their readers:</p>
-  <br>
-  {% for item in site.data.press %}
+<!-- PRESS (featured entries; the full list is on /press/) -->
+<section id="press">
+  <h2>Press</h2>
+  {% assign featured_press = site.data.press | where: "featured", true %}
+  {% for item in featured_press %}
   {% include press-quote.html item=item %}
   {% endfor %}
+  <p><a class="cta-button" href="/press/">More press →</a></p>
 </section>
 
-<!-- PRODUCTION  -->
-<section id="production">
-  <img class="section-image" src="/assets/Darksoft studio production.JPG" alt="Darksoft Studio Production">
-  <h2>Production</h2>
-
-  <p>I record all Darksoft material using real instruments in my home studio in Maine. Over the years, I have also released under other projects. I've also collaborated with other artists on recording, production, and performance projects across a range of independent releases. Here are some other credits.</p>
-
-  <h3 style="margin-top: 2rem;">Selected Production &amp; Recording Credits</h3>
-  <ul style="list-style: none; padding-left: 0;">
-    {% for item in site.data.production %}
-    {% include production-credit.html item=item %}
+<!-- MUSIC -->
+<section id="releases">
+  <h2>Music</h2>
+  <div class="cover-row">
+    {% assign sorted_albums = site.data.albums | sort: "release_date" | reverse %}
+    {% for album in sorted_albums %}
+    <a href="/discography/{{ album.album_id }}/" title="{{ album.album_title }} ({{ album.release_year }})">
+      <img src="/assets/{{ album.artwork }}" alt="{{ album.album_title }} cover" loading="lazy">
+    </a>
     {% endfor %}
-  </ul>
-</section>
-
-  <!-- SYNC LICENSING -->
-<section id="sync">
-  <h2>Sync Licensing</h2>
-
-  <p>My music is available for sync licensing in film, TV, ads, and social, and I can compose for film or television. My songs have been featured in short films for fragrance house Tulpa Club and the indie film <em>Doom Squad</em>, with an Australian TV mini-series coming soon, and “Live And Let Live” has been used in more than 20,000 Instagram Reels.</p>
-
-  <p style="margin-top: 1.5rem;">
-    <a href="/sync/">See placements and licensing details →</a>
-  </p>
+  </div>
+  <p><a class="cta-button" href="/discography/">Full discography →</a></p>
 </section>
 
 <!-- SUPPORT -->
 <section id="support">
   <h2>Support</h2>
-  <p>
-    Streaming is amazing for awareness, but I really could use help to make the project sustainable! 
-    Check out alternative ways to support Darksoft here via 
-    <a href="https://unstream.stream/a/darksoft">Unstream</a>:
-  </p>
-
-  <div style="display: flex; justify-content: center; margin-top: 2rem;">
-    <div class="unstream-widget" data-artist="DarkSoft" data-theme="dark" data-max-links="6" style="max-width: 500px; width: 100%;"></div>
-  </div>
-
-  <script src="https://unstream.stream/widget.js" async></script>
+  <p>Darksoft is independent and self-funded. If my music means something to you, here's how you can help keep it going.</p>
+  <p><a class="cta-button" href="/support/">Ways to support →</a></p>
 </section>
+
+<!-- Old links to homepage sections that moved to their own pages -->
+<script>
+  (function () {
+    var moved = {
+      "#biography": "/about/",
+      "#production": "/production/",
+      "#sync": "/sync/",
+      "#tour": "/shows/",
+      "#contact": "/contact/"
+    };
+    if (moved[location.hash]) location.replace(moved[location.hash]);
+  })();
+</script>
 
   {% include footer.html %}
 

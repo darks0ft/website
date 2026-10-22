@@ -1,0 +1,29 @@
+# Press kit photos on /press/. Each shows a small preview (assets/press-kit/)
+# and downloads the full-size original from assets/.
+#   file:    full-size original in assets/
+#   preview: small preview in assets/press-kit/ (about 700px; make with `sips -Z 700`)
+#   caption: short description, used as the image's alt text (not shown)
+
+- file: "Darksoft - Press Photo 2024.jpg"
+  preview: "press-photo-2024.jpg"
+  caption: "Press photo, 2024"
+
+- file: "Darksoft profile picture 2025 website optimized.JPG"
+  preview: "portrait-2025.jpg"
+  caption: "Portrait, 2025"
+
+- file: "Darksoft Live Band 1.jpg"
+  preview: "live-band-1.jpg"
+  caption: "Live with the full band, 2025"
+
+- file: "Darksoft live band 2.jpg"
+  preview: "live-band-2.jpg"
+  caption: "Live with the full band, 2025"
+
+- file: "Darksoft live solo.jpg"
+  preview: "live-solo.jpg"
+  caption: "Live, 2025"
+
+- file: "Darksoft Promo Graphic.jpg"
+  preview: "promo.jpg"
+  caption: "Promo photo"

@@ -1020,6 +1020,25 @@ footer .footer-title {
   font-weight: normal; /* Bradley only ships a regular weight; bold is faked and crowds the letters */
   font-size: 3rem;
   margin-top: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Footer links wrap onto several rows on narrower screens, so they're
+   spaced evenly instead of using "|" separators that could start a row */
+footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 1.1rem;
+  line-height: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  footer .footer-links {
+    column-gap: 0.4rem;
+  }
 }
 
 /* Footer navigation links */
@@ -1068,6 +1087,7 @@ footer p:last-of-type {
 /* Footer social icons */
 .footer-social-icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 18px;
   margin: 1.4rem 0 1rem;
@@ -1504,7 +1524,9 @@ body.homepage .donate-inline {
 .album-buy,
 .album-buy:visited,
 .support-button,
-.support-button:visited {
+.support-button:visited,
+.cta-button,
+.cta-button:visited {
   display: inline-block;
   margin-top: 1.4rem;
   padding: 0.7rem 1.3rem;
@@ -1516,7 +1538,8 @@ body.homepage .donate-inline {
 }
 
 .album-buy:hover,
-.support-button:hover {
+.support-button:hover,
+.cta-button:hover {
   background: #fff;
   color: #000 !important;
 }
@@ -1914,4 +1937,167 @@ html {
 
 .section-image.support-wave {
   width: 170px;
+}
+
+/* Homepage hub: hero call to action, buttons, album cover row */
+.hero-cta {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-tagline {
+  color: #fff;
+  font-size: 1.3rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  margin-bottom: 1.2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-buttons .cta-button {
+  margin-top: 0;
+}
+
+.cta-button {
+  margin-top: 0.5rem;
+}
+
+.cta-button.cta-button-outline,
+.cta-button.cta-button-outline:visited {
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  box-shadow: inset 0 0 0 2px #6dc15b;
+}
+
+.cta-button.cta-button-outline:hover {
+  background: #6dc15b;
+  color: #000 !important;
+}
+
+.cover-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 1.5rem auto;
+  max-width: 620px; /* four covers per row */
+}
+
+.cover-row img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.cover-row a:hover img {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero-tagline {
+    font-size: 1.05rem;
+  }
+
+  .cover-row img {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+/* Keep the header menu clear of the logo on narrower desktop windows */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .logo-top-left {
+    font-size: 3.6rem;
+    left: 40px;
+  }
+
+  .sticky-nav-bar {
+    right: 40px;
+    gap: 1.2rem;
+  }
+
+  .sticky-nav-bar a {
+    font-size: 1rem;
+  }
+
+  .top-social-icons {
+    right: 40px;
+    gap: 14px;
+  }
+}
+
+/* Press kit photo gallery */
+.press-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem auto 2rem;
+  max-width: 900px;
+}
+
+.press-photos figure {
+  margin: 0;
+}
+
+.press-photos img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: opacity 0.2s;
+}
+
+.press-photos a:hover img {
+  opacity: 0.8;
+}
+
+.press-photos-note {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .press-photos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Space between a grid and the button under it */
+.merch-gallery + p,
+.cover-row + p {
+  margin-top: 2rem;
+}
+
+/* Lyrics index on very small phones: smaller art so album titles fit */
+@media (max-width: 360px) {
+  .lyrics-album-card {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .lyrics-album-art {
+    width: 80px;
+  }
+
+  .lyrics-album-info {
+    min-width: 0;
+  }
+
+  .lyrics-album-info h3 {
+    font-size: 1.8rem;
+    overflow-wrap: anywhere;
+  }
 }

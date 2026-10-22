@@ -3,6 +3,7 @@
 #   text:  a quote (in quotation marks) or a headline / feature title, shown as written
 #   type:  quote | interview | feature   (used to group the Press page)
 #   year:  publication year; years marked `# inferred` come from the entry's place in the list
+#   featured: true  shows the entry on the homepage (keep it to three)
 
 - text: "Darksoft Finds a Way Out of the Everyday"
   outlet: "Jambaloo"
@@ -15,6 +16,7 @@
   url: https://vanyaland.com/2026/03/20/darksoft-polishes-the-mundane-through-everydayness/
   type: feature
   year: 2026
+  featured: true
 
 - text: "Darksoft Find Beauty in the Ordinary on Everydayness"
   outlet: "Thus Blog"
@@ -63,6 +65,7 @@
   url: https://www.instagram.com/p/DBwEV3NReg9/?img_index=2
   type: quote
   year: 2024
+  featured: true
 
 - text: "Top 10 albums of 2023"
   outlet: "JanglePopHub"
@@ -81,6 +84,7 @@
   url: https://www.instagram.com/p/CtE51SCRIUi/
   type: quote
   year: 2023  # inferred
+  featured: true
 
 - text: "\"Everything that catchy indie rock should have\""
   outlet: "Start-Track"

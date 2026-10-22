@@ -40,15 +40,25 @@ permalink: /press/
     {% endfor %}
   </section>
 
-  {%- assign labels = site.data.albums | map: "label" | uniq | join: " and " -%}
   <section id="press-kit">
     <h2>Press Kit</h2>
     <p>
       Darksoft is a dream pop and shoegaze project from Portland, Maine (originally from Seattle), writing and
-      recording jangly, reflective indie rock on real instruments since 2018, across
-      {{ site.data.albums | size }} albums on {{ labels }}.
+      recording jangly, reflective indie rock on real instruments since 2018.
       <a href="/about/">Read the full biography →</a>
     </p>
+    <h3 class="press-group">Photos</h3>
+    <p class="press-photos-note">Free to use for press and promotion. Click a photo to download the full-size file.</p>
+    <div class="press-photos">
+      {% for photo in site.data.press_photos %}
+      <figure>
+        <a href="/assets/{{ photo.file | uri_escape }}" download>
+          <img src="/assets/press-kit/{{ photo.preview }}" alt="Darksoft: {{ photo.caption }}" loading="lazy">
+        </a>
+      </figure>
+      {% endfor %}
+    </div>
+
     <p>For press and interview requests: <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a></p>
   </section>
 
