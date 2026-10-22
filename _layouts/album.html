@@ -115,7 +115,8 @@
           <span class="album-track-num">{{ track.track_number }}</span>
           <a class="album-track-title" href="/lyrics/{{ album.album_id }}/{{ track.track_title_slug }}/">{{ track.track_title }}</a>
           {% if track.lyrics == nil or track.lyrics == "" %}<span class="album-track-tag">instrumental</span>{% endif %}
-          {% if track.music_video %}<a class="album-track-tag" href="{{ track.music_video }}" target="_blank" rel="noopener">video</a>{% endif %}
+          {% assign video = site.data.videos | where: "track_id", track.track_id | first %}
+          {% if video %}<a class="album-track-tag" href="https://www.youtube.com/watch?v={{ video.youtube_id }}" target="_blank" rel="noopener">video</a>{% endif %}
           <span class="album-track-time">{{ track.duration }}</span>
         </li>
         {% endfor %}

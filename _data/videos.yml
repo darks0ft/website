@@ -1,0 +1,150 @@
+# Music videos, newest first. Used by the lyrics pages, album pages, and (soon) /videos/.
+# Song title, album, and links come from the track (track_id in _data/tracks.yml).
+#   youtube_id: the part after watch?v= in the YouTube link
+#   track_id:   the song this is the video for
+#   released:   date the video was published on YouTube (YYYY-MM-DD)
+#   duration:   length as ISO 8601 (PT3M43S = 3:43), used by search engines
+#   channel:    YouTube channel it's published on
+#   how_made:   optional short behind-the-scenes note
+
+- youtube_id: "I185EXXrECQ"
+  track_id: relativism_somewhere_nowhere
+  released: 2026-08-06
+  duration: PT3M43S
+  channel: "Darksoft"
+
+- youtube_id: "U0S2jkrXBbg"
+  track_id: everydayness_grain_of_salt
+  released: 2026-04-13
+  duration: PT3M40S
+  channel: "Darksoft"
+
+- youtube_id: "TB0kzUPwpTw"
+  track_id: everydayness_constant_change
+  released: 2026-03-12
+  duration: PT3M40S
+  channel: "Darksoft"
+  how_made: "The album cover's analemma, brought to life: traced onto an old poster, cut out, backlit, and retraced with a flashlight in the dark."
+
+- youtube_id: "NXChUeSIxYo"
+  track_id: everydayness_as_above_so_below
+  released: 2026-03-05
+  duration: PT3M49S
+  channel: "Darksoft"
+  how_made: "Extreme close-ups of reflections in a sphere, layered with psychedelic visuals from a display that runs in the studio."
+
+- youtube_id: "1DEuXKneAOY"
+  track_id: everydayness_too_little_too_late
+  released: 2026-02-19
+  duration: PT3M44S
+  channel: "Darksoft"
+  how_made: "One continuous walk across the frame, repeated through everyday routines, with the cuts overlaid so one version of me enters as another leaves."
+
+- youtube_id: "FQCBqHfKDHg"
+  track_id: everydayness_spend_your_days
+  released: 2026-01-15
+  duration: PT3M52S
+  channel: "Darksoft"
+  how_made: "The glowing sun is a homemade lightbox: concentric rings cut from board with color-fading LEDs between them, filmed out of focus."
+
+- youtube_id: "kng4ZsDuIXc"
+  track_id: rationalism_some_things_you_just_know
+  released: 2025-04-09
+  duration: PT4M8S
+  channel: "Spirit Goth"
+
+- youtube_id: "yXnAlFydTAk"
+  track_id: rationalism_day_by_day
+  released: 2025-02-27
+  duration: PT3M32S
+  channel: "Spirit Goth"
+
+- youtube_id: "0s5fnKxrPus"
+  track_id: rationalism_after_all
+  released: 2025-01-29
+  duration: PT4M10S
+  channel: "Spirit Goth"
+
+- youtube_id: "QEfcYQIF2AQ"
+  track_id: rationalism_devils_in_the_details
+  released: 2025-01-03
+  duration: PT4M9S
+  channel: "Spirit Goth"
+
+- youtube_id: "2_kc-KY3yeo"
+  track_id: relativism_then_and_now
+  released: 2024-05-01
+  duration: PT4M27S
+  channel: "Spirit Goth"
+
+- youtube_id: "pQFVHTi4XoM"
+  track_id: relativism_endless_day
+  released: 2024-04-05
+  duration: PT3M45S
+  channel: "Spirit Goth"
+
+- youtube_id: "OTPsk0ktfio"
+  track_id: grayscale_less_is_more
+  released: 2023-11-08
+  duration: PT3M34S
+  channel: "Spirit Goth"
+
+- youtube_id: "gXELvmbaMgI"
+  track_id: grayscale_yesteryear
+  released: 2023-10-20
+  duration: PT2M54S
+  channel: "Spirit Goth"
+
+- youtube_id: "43NBIQ4IiqE"
+  track_id: beigeification_theres_always_something
+  released: 2023-09-21
+  duration: PT3M43S
+  channel: "Darksoft"
+
+- youtube_id: "U5NQMLpZvjA"
+  track_id: beigeification_you_gotta_do
+  released: 2023-01-25
+  duration: PT3M42S
+  channel: "Darksoft"
+
+- youtube_id: "mJ4VmLzdeCA"
+  track_id: beigeification_only_time_will_tell
+  released: 2022-12-07
+  duration: PT3M23S
+  channel: "Darksoft"
+
+- youtube_id: "GPUPpEbHBK4"
+  track_id: beigeification_it_is_what_it_is
+  released: 2022-11-09
+  duration: PT3M31S
+  channel: "Darksoft"
+
+- youtube_id: "vCc4XzNZLoY"
+  track_id: cryo_looking_backward
+  released: 2022-01-07
+  duration: PT3M30S
+  channel: "Darksoft"
+
+- youtube_id: "lqGolF8mbKk"
+  track_id: meltdown_dark_mode
+  released: 2021-07-08
+  duration: PT5M43S
+  channel: "Darksoft"
+
+- youtube_id: "HtLHN8mhWG0"
+  track_id: meltdown_bad_rabbit
+  released: 2020-12-06
+  duration: PT3M26S
+  channel: "Darksoft"
+
+- youtube_id: "pTzoGJ6mlvs"
+  track_id: meltdown_foreshadow
+  released: 2020-09-13
+  duration: PT4M54S
+  channel: "Darksoft"
+
+- youtube_id: "LiEdi0L9kRA"
+  track_id: meltdown_wannacry
+  released: 2019-12-23
+  duration: PT4M19S
+  channel: "Darksoft"

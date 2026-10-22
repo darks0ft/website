@@ -6,6 +6,7 @@
 <head>
   {% assign track = site.data.tracks | where: "track_id", page.track_id | first %}
   {% assign album = site.data.albums | where: "album_id", track.album_id | first %}
+  {% assign video = site.data.videos | where: "track_id", track.track_id | first %}
 
   {%- comment -%} SEO values for head.html (it outputs the actual tags) {%- endcomment -%}
   {% capture seo_title %}{% if page.title %}{{ page.title }}{% else %}{{ track.track_title }} Lyrics — Darksoft{% endif %}{% endcapture %}
@@ -25,6 +26,23 @@
     ]
   }
   </script>
+  {%- if video %}
+  {%- capture video_description %}{% if video.how_made %}{{ video.how_made }} {% endif %}Official music video for “{{ track.track_title }}” by Darksoft, from the album {{ album.album_title }} ({{ album.release_year }}).{% endcapture %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": {{ track.track_title | append: " (Music Video) — Darksoft" | jsonify }},
+    "description": {{ video_description | strip | jsonify }},
+    "thumbnailUrl": {{ "https://i.ytimg.com/vi/" | append: video.youtube_id | append: "/hqdefault.jpg" | jsonify }},
+    "uploadDate": {{ video.released | date: "%Y-%m-%d" | jsonify }},
+    "duration": {{ video.duration | jsonify }},
+    "embedUrl": {{ "https://www.youtube.com/embed/" | append: video.youtube_id | jsonify }},
+    "url": {{ "https://www.youtube.com/watch?v=" | append: video.youtube_id | jsonify }},
+    "creator": { "@type": "MusicGroup", "name": "Darksoft", "url": {{ "/" | absolute_url | jsonify }} }
+  }
+  </script>
+  {%- endif %}
 </head>
 
 <body class="lyrics-body">
@@ -88,12 +106,12 @@
       </div>
     </div>
 
-    {% if track.music_video %}
+    {% if video %}
       <div class="video-embed">
         <h3>{{ track.track_title }} Music Video</h3>
         <div class="video-wrapper">
           <iframe
-            src="https://www.youtube.com/embed/{{ track.music_video | split: 'v=' | last | split: '&' | first }}"
+            src="https://www.youtube.com/embed/{{ video.youtube_id }}"
             title="{{ track.track_title }} music video"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
