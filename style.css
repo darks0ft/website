@@ -912,6 +912,7 @@ body.homepage,
 .hero-tagline {
   color: #fff;
   font-size: 1.3rem;
+  text-wrap: balance; /* even line lengths when it wraps on phones */
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
   margin-bottom: 1.2rem;
 }
