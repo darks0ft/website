@@ -3,7 +3,7 @@
 
    1. Base: reset, page, links, sections, headings, images
    2. Buttons (shared pill buttons)
-   3. Header: logo, navigation, social icons, mobile menu, persistent bar
+   3. Header: logo, navigation, social icons, mobile menu
    4. Footer
    5. Newsletter: signup box, popup, status messages
    6. Homepage: hero, latest video, album covers
@@ -27,9 +27,9 @@
   padding: 0;
 }
 
-/* Section jumps (e.g. /#about) land below the persistent header bar */
+/* Section jumps (e.g. /#about) land below the sticky header bar */
 html {
-  scroll-padding-top: 80px;
+  scroll-padding-top: calc(var(--header-h) + 16px);
   scroll-behavior: smooth;
 }
 
@@ -70,7 +70,7 @@ section {
 .page-wrapper {
   padding: 2rem 1rem;
   max-width: 1000px;
-  margin: 220px auto 0; /* consistent page spacing under nav/logo */
+  margin: 3rem auto 0; /* space under the header bar */
   text-align: center;
 }
 
@@ -164,17 +164,122 @@ section h2::after {
 }
 
 /* ============================================================
-   3. HEADER: LOGO, NAVIGATION, SOCIAL ICONS, MOBILE MENU, PERSISTENT BAR
+   3. HEADER: LOGO, NAVIGATION, SOCIAL ICONS, MOBILE MENU
    ============================================================ */
 
-/* --- Header, logo, nav --- */
-header {
-  text-align: center;
-  padding: 2rem 0.5rem 1rem;
-  background-color: #000;
+/* --- Site header: one static black bar, sticky at the top --- */
+:root {
+  --header-h: 96px; /* header bar height; pages and anchor jumps use it */
 }
 
-/* Simple nav (if ever used) */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #000;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.site-header-inner {
+  position: relative;
+  max-width: 1400px;
+  height: var(--header-h);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+a.site-logo,
+a.site-logo:visited {
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 3.4rem;
+  line-height: 1;
+  letter-spacing: 0.03125em; /* same tracking as album titles */
+  font-weight: normal; /* Bradley only ships a regular weight; bold is faked and crowds the letters */
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.3s;
+}
+
+a.site-logo:hover {
+  opacity: 0.8;
+}
+
+/* Links, then social icons + donate link underneath */
+.site-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.7rem;
+}
+
+.site-nav {
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  gap: 1.8rem;
+}
+
+.site-nav a,
+.site-nav a:visited {
+  color: #6dc15b;
+  text-decoration: none;
+  font-size: 1.15rem;
+  letter-spacing: 0.03rem;
+}
+
+.site-nav a:hover {
+  opacity: 0.6;
+}
+
+.site-header-extras {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.top-social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.top-social-icons img {
+  display: block;
+  width: 18px;
+  height: 18px;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.top-social-icons img:hover {
+  opacity: 0.55;
+}
+
+a.donate-inline,
+a.donate-inline:visited {
+  font-size: 0.95rem;
+  color: #6dc15b;
+  text-decoration: none;
+  white-space: nowrap;
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+}
+
+a.donate-inline:hover {
+  opacity: 0.6;
+}
+
+/* Menu button: phones only */
+.hamburger {
+  display: none;
+}
+
+/* --- Other navs: breadcrumbs and the album pager --- */
 nav {
   margin-top: 1rem;
   display: flex;
@@ -183,285 +288,115 @@ nav {
   gap: 0.5rem;
 }
 
-/* Sticky nav + top social icons */
-.sticky-nav-bar {
-  position: fixed;
-  top: 60px;
-  right: 60px;
-  transition: top 0.25s ease;
-  background: none;
-  padding: 0;
-  gap: 2rem;
-  font-family: Menlo, monospace;
-  z-index: 20;
-}
-
-.sticky-nav-bar a {
-  color: #6dc15b;
-  text-decoration: none;
-  font-size: 1.2rem;
-  letter-spacing: 0.03rem;
-}
-
-.sticky-nav-bar a:hover {
-  opacity: 0.6;
-}
-
-/* Top social icons (header area) */
-.top-social-icons {
-  position: absolute;
-  top: 105px;
-  right: 60px;
-  display: flex;
-  gap: 20px;
-  z-index: 20;
-}
-
-.top-social-icons img {
-  width: 20px;
-  height: 20px;
-  opacity: 0.85;
-  transition: opacity 0.2s;
-}
-
-.top-social-icons img:hover {
-  opacity: 0.55;
-  cursor: pointer;
-}
-
-/* Top-left logo */
-.logo-top-left {
-  position: absolute;
-  top: 40px;
-  left: 60px;
-  font-family: 'bradley-djr', sans-serif;
-  font-size: 5rem;
-  letter-spacing: 0.03125em; /* same tracking as album titles (0.1rem at 3.2rem) */
-  font-weight: normal; /* Bradley only ships a regular weight; bold is faked and crowds the letters */
-  color: #fff;
-  text-decoration: none;
-  z-index: 20;
-  transition: opacity 0.3s;
-}
-
-.logo-top-left:hover {
-  opacity: 0.8;
-}
-
-/* Hamburger (mobile) */
-.hamburger {
-  display: none;
-}
-
-/* Sticky mini-logo (shows when scrolled) */
-.sticky-text-logo {
-  position: fixed;
-  top: 12px;
-  left: 60px;
-  font-family: 'bradley-djr', sans-serif;
-  font-size: 2.2rem;
-  line-height: 1;
-  pointer-events: none;
-  letter-spacing: 0.03125em; /* same tracking as album titles (0.1rem at 3.2rem) */
-  font-weight: normal; /* Bradley only ships a regular weight; bold is faked and crowds the letters */
-  color: #fff;
-  text-decoration: none;
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-body.scrolled .sticky-text-logo {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Inline donation CTA (header area) */
-.donate-inline {
-  position: absolute;
-  top: 160px;
-  right: 60px;
-  z-index: 20;
-  font-family: Menlo, monospace;
-}
-
-.donate-inline a {
-  font-size: 1rem;
-  color: #6dc15b;
-  text-decoration: none;
-  opacity: 0.9;
-  transition: opacity 0.25s ease;
-}
-
-.donate-inline a:hover {
-  opacity: 0.6;
-}
-
-/* Default mobile donate link = hidden on desktop */
-.mobile-donate {
-  display: none;
-  color: #6dc15b;
-  font-family: Menlo, monospace;
-  text-decoration: none;
-  opacity: 0.9;
-}
-
-/* Homepage-specific donate placement (desktop) */
-.homepage .donate-inline {
-  position: absolute;
-  top: 140px !important;
-  right: 60px !important;
-  z-index: 25;
-}
-
-/* Hide donate on homepage by default; show on desktop */
-body.homepage .donate-inline {
-  display: none;
-}
-
-/* --- Persistent header bar (body.scrolled is set by assets/js/site.js) --- */
-.site-header-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 64px;
-  background: rgba(0, 0, 0, 0.92);
-  border-bottom: 1px solid #1e1e1e;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease;
-  z-index: 19;
-}
-
-body.scrolled .site-header-bar {
-  opacity: 1;
-}
-
-/* Desktop: menu slides up into the bar (nav also has a 1rem top margin) */
-body.scrolled .sticky-nav-bar {
-  top: 3px;
-}
-
 @media (max-width: 768px) {
-  /* Mobile logo */
-  .logo-top-left {
-    font-size: 3rem;
-    width: 18px;
-    height: 18px;
-    top: 20px;
-    left: 20px;
+  :root {
+    --header-h: 64px;
   }
 
-  /* Menu button: shown on phones, fixed so it stays reachable while scrolling */
+  .site-header-inner {
+    padding: 0 16px;
+  }
+
+  a.site-logo,
+  a.site-logo:visited {
+    font-size: 2.3rem;
+  }
+
   .hamburger {
     display: block;
-    position: fixed;
-    top: 12px;
-    right: 20px;
+    padding: 0.25rem;
     font-size: 2rem;
+    line-height: 1;
     color: #6dc15b;
     background: none;
     border: none;
-    z-index: 40;
     cursor: pointer;
   }
 
-  /* Hide nav + social by default on mobile */
-  .sticky-nav-bar,
-  .top-social-icons {
+  /* The menu becomes a full-width panel under the bar, opened by the button */
+  .site-menu {
     display: none;
-  }
-
-  /* Slide-out nav when menu-open on body */
-  .menu-open .sticky-nav-bar {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 64px;
-    right: 20px;
-    max-height: calc(100vh - 80px);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: calc(100vh - var(--header-h));
     overflow-y: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0.5rem 16px 1.5rem;
     background: #000;
-    padding: 1rem;
-    border: 1px solid #6dc15b;
-    z-index: 30;
+    border-bottom: 1px solid #1e1e1e;
   }
 
-  .menu-open .top-social-icons {
+  .menu-open .site-menu {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 12px;
-    margin-top: 1rem;
   }
 
-  /* Show the mobile donate link */
-  .mobile-donate {
+  .site-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .site-nav a,
+  .site-nav a:visited {
     display: block;
-    margin-top: 1rem;
-    padding: 0.8rem 0;
-  }
-
-  /* Add large tappable areas to menu links */
-  .menu-open .sticky-nav-bar a {
     padding: 0.8rem 0;
     font-size: 1.2rem;
   }
 
-  /* Donation CTA mobile position */
-  /* Hide floating desktop donate CTA on mobile */
-  .donate-inline {
-    display: none !important;
-    top: 260px;
-    right: 20px;
+  .site-header-extras {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.75rem;
   }
 
-  /* Force mobile menu visibility behaviors */
-  body.menu-open .sticky-nav-bar {
-    display: flex !important;
+  .top-social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
   }
 
-  body.menu-open .top-social-icons {
-    display: none !important;
+  .top-social-icons img {
+    width: 22px;
+    height: 22px;
   }
 
-  .site-header-bar {
-    height: 60px;
-  }
-
-  .sticky-text-logo {
-    top: 12px;
-    left: 20px;
-    font-size: 2rem;
+  a.donate-inline,
+  a.donate-inline:visited {
+    padding: 0.4rem 0;
+    font-size: 1.1rem;
   }
 }
 
-@media (min-width: 769px) {
-  body.homepage .donate-inline {
-    display: block;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
-  /* Keep the header menu clear of the logo on narrower desktop windows */
-  .logo-top-left {
-    font-size: 3.6rem;
-    left: 40px;
+@media (min-width: 769px) and (max-width: 1100px) {
+  /* Narrower desktop windows: tighten the bar so links never crowd the logo */
+  :root {
+    --header-h: 88px;
   }
 
-  .sticky-nav-bar {
-    right: 40px;
-    gap: 1.2rem;
+  .site-header-inner {
+    padding: 0 24px;
   }
 
-  .sticky-nav-bar a {
+  a.site-logo,
+  a.site-logo:visited {
+    font-size: 2.8rem;
+  }
+
+  .site-nav {
+    gap: 1.1rem;
+  }
+
+  .site-nav a,
+  .site-nav a:visited {
     font-size: 1rem;
   }
 
   .top-social-icons {
-    right: 40px;
-    gap: 14px;
+    gap: 12px;
   }
 }
 
@@ -824,7 +759,7 @@ footer p:last-of-type {
 /* Homepage hero container */
 .homepage .landing-page {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - var(--header-h));
   width: 100%;
   background: url('/assets/Darksoft%20Promo%20Graphic.jpg')
     center center / cover no-repeat;
@@ -841,7 +776,7 @@ footer p:last-of-type {
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  height: 100vh !important;
+  height: calc(100vh - var(--header-h)) !important;
   width: 100vw !important;
   max-width: 100vw !important;
   padding-bottom: 18vh;
@@ -1407,7 +1342,7 @@ body.homepage,
 .lyrics-index {
   padding: 2rem 1rem;
   max-width: 1000px;
-  margin: 220px auto 0; /* pushed down under nav/logo */
+  margin: 3rem auto 0; /* space under the header bar */
   text-align: center;
 }
 
@@ -1718,18 +1653,6 @@ body.homepage,
   .album-pager {
     flex-direction: column;
     align-items: center;
-  }
-
-  /* Phones: start lyric content below the oversized top-left logo */
-  .lyrics-body .lyric-page-container {
-    margin-top: 96px;
-  }
-}
-
-@media (min-width: 769px) {
-  /* Keep breadcrumb + back button clear of the desktop header nav */
-  .lyrics-body .lyric-page-container {
-    margin-top: 130px;
   }
 }
 

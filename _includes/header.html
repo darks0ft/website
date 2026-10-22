@@ -1,43 +1,30 @@
-<!-- Header Include (shared across all pages except homepage hero) -->
+<!-- Site header: one static black bar on every page. It stays at the top while
+     scrolling and looks the same throughout. On phones the links, icons and
+     donate link move into a panel opened by the menu button. -->
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-logo" aria-label="Darksoft home">Darksoft</a>
 
-<!-- Persistent header bar (fades in once the page is scrolled; see footer script) -->
-<div class="site-header-bar" aria-hidden="true"></div>
+    <button id="menu-toggle" class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+      ☰
+    </button>
 
-<!-- Sticky mini-logo (shown in the header bar when scrolled) -->
-<a href="/" class="sticky-text-logo" aria-label="Darksoft home">Darksoft</a>
+    <div class="site-menu" id="site-menu">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/discography/">Music</a>
+        <a href="/lyrics/">Lyrics</a>
+        <a href="/shows/">Shows</a>
+        <a href="/merch/">Merch</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
 
-<!-- Top-left logo -->
-<a href="/" class="logo-top-left">Darksoft</a>
-
-<!-- Hamburger menu -->
-<button id="menu-toggle" class="hamburger" aria-label="Toggle menu">
-  ☰
-</button>
-
-<!-- Sticky Nav Bar -->
-<nav class="sticky-nav-bar show" id="sticky-nav-bar" aria-label="Main navigation">
-  <a href="/discography/">Music</a>
-  <a href="/lyrics/">Lyrics</a>
-  <a href="/shows/">Shows</a>
-  <a href="/merch/">Merch</a>
-  <a href="/about/">About</a>
-  <a href="/contact/">Contact</a>
-
-  <!-- Mobile-only donation option -->
-  <a class="mobile-donate" href="/support/">
-    🎸 Buy me picks →
-  </a>
-</nav>
-
-
-<!-- Social Icons -->
-<div class="top-social-icons">
+      <div class="site-header-extras">
+        <div class="top-social-icons">
 {% include social-icons.html %}
-</div>
-
-<!-- >>> Donation CTA for navigation <<<< -->
-<div class="donate-inline">
-  <a href="/support/">
-    🎸 Buy me picks →
-  </a>
-</div>
+        </div>
+        <a class="donate-inline" href="/support/">🎸 Buy me picks →</a>
+      </div>
+    </div>
+  </div>
+</header>

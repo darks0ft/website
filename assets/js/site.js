@@ -136,15 +136,6 @@ document.getElementById("year").innerText = new Date().getFullYear();
   })();
 
 // ---------------------------------------------------------------
-// Persistent header: add body.scrolled once the page is scrolled past the big logo
-// ---------------------------------------------------------------
-(function() {
-    const update = () => document.body.classList.toggle("scrolled", window.scrollY > 140);
-    window.addEventListener("scroll", update, { passive: true });
-    update();
-  })();
-
-// ---------------------------------------------------------------
 // Mobile menu toggle
 // ---------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
@@ -153,7 +144,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (toggle) {
       toggle.addEventListener('click', () => {
-        body.classList.toggle('menu-open');
+        const open = body.classList.toggle('menu-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
     }
   });

@@ -84,8 +84,8 @@
     for (const selector in BLOCKS) {
       if (el.closest(selector)) return BLOCKS[selector];
     }
-    if (el.closest("nav, .sticky-nav-bar, .donate-inline")) return "header";
     if (el.closest(".top-social-icons")) return "header_icons";
+    if (el.closest(".site-header")) return "header";
     if (el.closest("footer")) return "footer";
     if (el.closest("#newsletter-modal")) return "newsletter_popup";
     const section = el.closest("section[id]");
