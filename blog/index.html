@@ -1,0 +1,42 @@
+---
+layout: default
+title: "Blog — Darksoft"
+description: "Notes from Darksoft: the stories behind the songs, recording at home, gear, tour diaries and news."
+body_class: "blog-page"
+head_extra: blog.html
+---
+{%- assign featured = site.posts | where: "featured", true -%}
+
+  <section class="page-wrapper" id="blog">
+    <h1 class="page-title">Blog</h1>
+    <p class="blog-intro">The stories behind the songs, recording at home, gear, life on the road, and news.</p>
+
+    {%- if site.posts.size == 0 %}
+    <p class="blog-empty">The first posts are on the way. Subscribe below to get them by email.</p>
+    {%- else %}
+
+    {%- if featured.size > 0 %}
+    <div class="blog-featured">
+      <h2 class="blog-section-title">Featured</h2>
+      <div class="post-grid post-grid-featured">
+        {%- for post in featured limit: 3 %}
+        {% include post-card.html post=post featured=true %}
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endif %}
+
+    <div class="blog-latest">
+      <h2 class="blog-section-title">All posts</h2>
+      <div class="post-grid">
+        {%- for post in site.posts %}
+        {% include post-card.html post=post %}
+        {%- endfor %}
+      </div>
+    </div>
+
+    <p class="blog-links"><a href="/blog/tags/">Browse by tag</a><span aria-hidden="true"> · </span><a href="/feed.xml">RSS feed</a></p>
+    {%- endif %}
+  </section>
+
+  {% include newsletter-block.html section_id="blog-signup" intro="Get new posts, releases and tour dates by email." %}

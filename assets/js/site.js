@@ -54,6 +54,7 @@ document.getElementById("year").innerText = new Date().getFullYear();
           const go = () => { if (!left) { left = true; window.location.href = THANKS_URL; } };
           const where = form.closest("#newsletter-modal") ? "newsletter_popup"
                       : form.closest(".lyrics-newsletter") ? "lyrics_page"
+                      : form.closest(".post-sidebar") ? "blog_sidebar"
                       : (form.closest("section[id]") || {}).id || "page";
           if (typeof gtag === "function") {
             gtag("event", "newsletter_signup", {

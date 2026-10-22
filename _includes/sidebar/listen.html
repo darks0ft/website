@@ -1,0 +1,14 @@
+{%- comment -%} Sidebar: listen on the main platforms (_data/streaming.yml) {%- endcomment -%}
+<div class="sidebar-block sidebar-listen">
+  <h2>Listen</h2>
+  <p>Hear Darksoft wherever you stream.</p>
+  <div class="sidebar-buttons">
+    {%- for s in site.data.streaming.primary %}
+    <a class="listen-button" href="{{ s.url }}" target="_blank" rel="noopener">
+      <img src="https://cdn.simpleicons.org/{{ s.icon }}/000" alt="" width="18" height="18">
+      {{ s.name }}
+    </a>
+    {%- endfor %}
+  </div>
+  <p class="sidebar-more"><a href="/discography/">All albums →</a></p>
+</div>

@@ -25,9 +25,18 @@ kramdown:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
+
+# Blog: RSS/Atom feed at /feed.xml (byline is always "Darksoft")
+author:
+  name: "Darksoft"
+feed:
+  path: feed.xml
+  posts_limit: 20
 
 # Output folders
 exclude:
+  - _blog
   - README.md
   - CLAUDE.local.md
   - Gemfile
@@ -48,3 +57,15 @@ defaults:
       path: "assets/downloads"
     values:
       sitemap: false
+  # Blog posts (_posts/ and _drafts/): see the blog style guide for every field
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      body_class: blog-post-page
+      permalink: /blog/:title/
+      og_type: article
+      head_before: blog-post-before.html
+      head_extra: blog-post.html
+      sidebar: [listen, newsletter, shows]

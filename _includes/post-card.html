@@ -1,0 +1,19 @@
+{%- comment -%}
+  A blog post as a card: header photo, date, title, subtitle.
+  Parameters: post, featured (true for the large featured style)
+{%- endcomment -%}
+{%- assign p = include.post -%}
+<article class="post-card{% if include.featured %} post-card-featured{% endif %}">
+  <a class="post-card-link" href="{{ p.url }}">
+    {%- if p.image %}
+    <img class="post-card-image" src="{{ p.image }}" alt="" loading="lazy">
+    {%- endif %}
+    <div class="post-card-text">
+      <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%B %-d, %Y" }}</time>
+      <h3>{{ p.title }}</h3>
+      {%- if p.subtitle %}
+      <p>{{ p.subtitle }}</p>
+      {%- endif %}
+    </div>
+  </a>
+</article>

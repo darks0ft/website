@@ -10,7 +10,7 @@
 -->
 {%- assign seo_title = seo_title | default: page.title | default: "Darksoft — Dream Pop Music" -%}
 {%- assign seo_description = seo_description | default: page.description | default: "Darksoft is a dream pop / indie rock artist blending shoegaze textures, analog warmth, and philosophical lyrics. Explore albums, lyrics, merch, and tour dates." | normalize_whitespace | strip -%}
-{%- assign seo_image = seo_image | default: page.og_image | default: "/assets/Darksoft%20Promo%20Graphic.jpg" | absolute_url -%}
+{%- assign seo_image = seo_image | default: page.og_image | default: page.image | default: "/assets/Darksoft%20Promo%20Graphic.jpg" | absolute_url -%}
 {%- assign seo_og_type = seo_og_type | default: page.og_type | default: "website" %}
 <title>{{ seo_title }}</title>
 <meta name="description" content="{{ seo_description | escape }}">
@@ -93,6 +93,9 @@
 }
 </script>
 {%- endif %}
+
+<!-- Blog feed (RSS/Atom) -->
+{% feed_meta %}
 
 <!-- Icons: browser tab, search results, phone home screen -->
 <link rel="icon" href="/favicon.ico" sizes="48x48">

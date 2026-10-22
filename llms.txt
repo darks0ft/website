@@ -57,8 +57,17 @@ Darksoft's music is available for film, TV, advertising, and social media, and l
 - [Sync licensing]({{ "/sync/" | absolute_url }}): placements and how to license
 - [Merch]({{ "/merch/" | absolute_url }}): vinyl, CDs, shirts, and hats
 - [Support]({{ "/support/" | absolute_url }}): ways to support the project directly
+- [Blog]({{ "/blog/" | absolute_url }}): posts by Darksoft about the songs, recording, gear, shows, and news (RSS: {{ "/feed.xml" | absolute_url }})
 - [Album data]({{ "/data/" | absolute_url }}): charts of tempo, song length, and word counts across albums
 
+{% if site.posts.size > 0 -%}
+## Blog
+
+Recent posts, newest first (all posts: {{ "/blog/" | absolute_url }}):
+
+{% for post in site.posts limit: 10 %}- [{{ post.title }}]({{ post.url | absolute_url }}) ({{ post.date | date: "%Y-%m-%d" }}){% if post.subtitle %}: {{ post.subtitle }}{% endif %}
+{% endfor %}
+{% endif -%}
 ## Listen
 
 Darksoft's artist pages on streaming platforms (also listed at {{ "/discography/" | absolute_url }}#listen):

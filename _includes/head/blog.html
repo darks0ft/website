@@ -1,0 +1,19 @@
+{%- comment -%}
+  Blog home structured data: the Blog and its posts, newest first.
+{%- endcomment -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": {{ "/blog/" | absolute_url | append: "#blog" | jsonify }},
+    "name": "Darksoft Blog",
+    "url": {{ "/blog/" | absolute_url | jsonify }},
+    "description": {{ page.description | jsonify }},
+    "author": { "@type": "MusicGroup", "@id": {{ site.url | append: "/#darksoft" | jsonify }}, "name": "Darksoft" },
+    "blogPost": [
+      {%- for post in site.posts %}
+      { "@type": "BlogPosting", "@id": {{ post.url | absolute_url | append: "#post" | jsonify }}, "headline": {{ post.title | jsonify }}, "url": {{ post.url | absolute_url | jsonify }}, "datePublished": {{ post.date | date_to_xmlschema | jsonify }} }{% unless forloop.last %},{% endunless %}
+      {%- endfor %}
+    ]
+  }
+  </script>

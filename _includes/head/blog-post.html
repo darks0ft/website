@@ -1,0 +1,45 @@
+{%- comment -%}
+  Blog post structured data: BlogPosting (by the Darksoft MusicGroup) and breadcrumbs.
+{%- endcomment -%}
+{%- assign post_image = page.image | default: "/assets/Darksoft%20Promo%20Graphic.jpg" | absolute_url -%}
+{%- assign post_modified = page.last_modified_at | default: page.date -%}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:modified_time" content="{{ post_modified | date_to_xmlschema }}">
+  {%- for tag in page.tags %}
+  <meta property="article:tag" content="{{ tag | escape }}">
+  {%- endfor %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": {{ page.url | absolute_url | append: "#post" | jsonify }},
+    "headline": {{ page.title | jsonify }},
+    {%- if page.subtitle %}
+    "alternativeHeadline": {{ page.subtitle | jsonify }},
+    {%- endif %}
+    "description": {{ seo_description | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+    "image": {{ post_image | jsonify }},
+    "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+    "dateModified": {{ post_modified | date_to_xmlschema | jsonify }},
+    "author": { "@type": "MusicGroup", "@id": {{ site.url | append: "/#darksoft" | jsonify }}, "name": "Darksoft", "url": {{ "/" | absolute_url | jsonify }} },
+    "publisher": { "@type": "MusicGroup", "@id": {{ site.url | append: "/#darksoft" | jsonify }}, "name": "Darksoft" },
+    {%- if page.tags.size > 0 %}
+    "keywords": {{ page.tags | join: ", " | jsonify }},
+    {%- endif %}
+    "wordCount": {{ page.content | strip_html | number_of_words }},
+    "isPartOf": { "@type": "Blog", "@id": {{ "/blog/" | absolute_url | append: "#blog" | jsonify }}, "name": "Darksoft Blog", "url": {{ "/blog/" | absolute_url | jsonify }} }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ "/" | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": {{ "/blog/" | absolute_url | jsonify }} },
+      { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+    ]
+  }
+  </script>

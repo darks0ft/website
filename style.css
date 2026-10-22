@@ -10,6 +10,7 @@
    7. Shared components: merch gallery, press quotes, Songkick, video cards
    8. Music: discography, album pages, lyrics index, lyrics pages
    9. Pages: Sync, Shows, Press, Production, Support, Data, Welcome
+  10. Blog: blog home, post cards, post pages, sidebar, tags
 
    Each section lists its base rules first, then its phone (max-width: 768px)
    and other screen-size overrides. The order of rules within a section
@@ -2203,5 +2204,475 @@ a.listen-button:hover {
   .booking-options {
     grid-template-columns: 1fr;
     max-width: 480px;
+  }
+}
+
+/* ============================================================
+   10. BLOG: BLOG HOME, POST CARDS, POST PAGES, SIDEBAR, TAGS
+   ============================================================ */
+
+/* --- Blog home (/blog/) and tags page (/blog/tags/) --- */
+.blog-intro {
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.blog-empty {
+  margin: 2rem auto;
+  color: #ccc;
+}
+
+section h2.blog-section-title {
+  font-size: 2rem;
+  padding-bottom: 0.9rem;
+  margin: 3rem 0 1.5rem;
+}
+
+/* The first heading on the page sits right under the intro */
+section .blog-featured h2.blog-section-title,
+section .blog-intro + .blog-latest h2.blog-section-title {
+  margin-top: 0;
+}
+
+.blog-links {
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* --- Post cards --- */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.post-grid-featured {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.post-card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.post-card:hover {
+  border-color: #6dc15b;
+}
+
+a.post-card-link,
+a.post-card-link:visited {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+
+.post-card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #222;
+}
+
+.post-card-text {
+  padding: 1rem 1.1rem 1.25rem;
+}
+
+.post-card time {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.post-card h3 {
+  margin: 0.4rem 0 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.post-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.post-card-featured h3 {
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  letter-spacing: 0.03125em;
+}
+
+/* --- Tags page --- */
+.tag-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.tag-index span {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.tag-posts {
+  list-style: none;
+  line-height: 2;
+}
+
+.tag-posts time {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* --- Post page --- */
+.post {
+  max-width: 1100px;
+  margin: 3rem auto 0; /* space under the header bar */
+  padding: 2rem 1rem 3rem;
+}
+
+.post-header {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.post-kicker {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.post-kicker a,
+.post-kicker a:visited {
+  color: #6dc15b;
+  text-decoration: none;
+}
+
+.post-title {
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 3.2rem;
+  font-weight: normal;
+  letter-spacing: 0.03125em;
+  line-height: 1.15;
+}
+
+.post-subtitle {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.post-meta {
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* Tag pills (post header and tags page) */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin-top: 1.2rem;
+}
+
+.post-tags a,
+.post-tags a:visited,
+.tag-index a,
+.tag-index a:visited {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #6dc15b;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.post-hero {
+  max-width: 1000px;
+  margin: 0 auto 2.5rem;
+}
+
+.post-hero img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #222;
+}
+
+.post-hero figcaption,
+.post-body figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Post text beside the sidebar on wide screens, sidebar after the text below 1000px */
+.post-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* --- Post text (written in Markdown) --- */
+.post-body {
+  max-width: 680px;
+  justify-self: end;
+  width: 100%;
+  text-align: left;
+  line-height: 1.75;
+}
+
+.post-body > * + * {
+  margin-top: 1.25em;
+}
+
+.post-body p + p {
+  margin-top: 1.25em;
+  line-height: inherit;
+}
+
+.post-body h2 {
+  margin-top: 2.2em;
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 2.1rem;
+  font-weight: normal;
+  letter-spacing: 0.03125em;
+  line-height: 1.2;
+}
+
+.post-body h3 {
+  margin-top: 1.8em;
+  font-size: 1.15rem;
+}
+
+.post-body a,
+.post-body a:visited {
+  color: #fff;
+  text-decoration-color: #6dc15b;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.post-body ul,
+.post-body ol {
+  padding-left: 1.4em;
+}
+
+.post-body li + li {
+  margin-top: 0.4em;
+}
+
+.post-body blockquote {
+  padding-left: 1.2rem;
+  border-left: 2px solid #6dc15b;
+  color: #ccc;
+  font-style: italic;
+}
+
+.post-body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.post-body figure {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.post-body hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, rgba(109, 193, 91, 0), #6dc15b, rgba(109, 193, 91, 0));
+  margin: 2.5em 0;
+}
+
+/* --- Post sidebar: calls to action --- */
+.post-sidebar {
+  position: sticky;
+  top: calc(var(--header-h) + 1.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sidebar-block {
+  padding: 1.25rem;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.sidebar-block h2 {
+  font-family: 'bradley-djr', sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  letter-spacing: 0.03125em;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-block p {
+  color: #ccc;
+}
+
+.sidebar-block .cta-button {
+  margin-top: 1rem;
+}
+
+.sidebar-buttons {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.sidebar-buttons a.listen-button,
+.sidebar-buttons a.listen-button:visited {
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+}
+
+.sidebar-more {
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+}
+
+.sidebar-form input[type="email"] {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #2a2a2a;
+  color: #fff;
+  font: inherit;
+}
+
+.sidebar-form .cta-button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+}
+
+/* --- Older / newer posts --- */
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 4rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+  text-align: left;
+}
+
+.post-nav a,
+.post-nav a:visited {
+  max-width: 45%;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.post-nav span {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+  color: #6dc15b;
+}
+
+.post-nav-next {
+  margin-left: auto;
+  text-align: right;
+}
+
+.post-back {
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1000px) {
+  .post-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .post-body {
+    justify-self: center;
+  }
+
+  .post-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .post {
+    margin-top: 1rem;
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .post-title {
+    font-size: 2.4rem;
+  }
+
+  .post-subtitle {
+    font-size: 1rem;
+  }
+
+  .post-body {
+    font-size: 16px;
+  }
+
+  .post-body h2 {
+    font-size: 1.8rem;
+  }
+
+  .post-hero {
+    margin-bottom: 2rem;
+  }
+
+  .post-nav {
+    flex-direction: column;
+  }
+
+  .post-nav a {
+    max-width: none;
+  }
+
+  .post-nav-next {
+    margin-left: 0;
   }
 }

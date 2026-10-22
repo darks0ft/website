@@ -1,0 +1,6 @@
+{%- comment -%}
+  Blog post SEO, set before head.html: "Post title — Darksoft" in the browser tab,
+  and a description from front matter, then the subtitle, then the opening paragraph.
+{%- endcomment -%}
+{%- assign seo_title = page.seo_title | default: page.title | append: " — Darksoft" -%}
+{%- assign seo_description = page.description | default: page.subtitle | default: page.excerpt | strip_html | truncate: 160 -%}

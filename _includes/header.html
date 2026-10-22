@@ -16,7 +16,7 @@
     <div class="site-menu" id="site-menu">
       <nav class="site-nav" aria-label="Main navigation">
         {%- comment -%} Highlight the section you're in: exact page = "page", anything under it = "true" {%- endcomment -%}
-        {%- assign nav_links = "/discography/|Music,/lyrics/|Lyrics,/shows/|Shows,/merch/|Merch,/about/|About,/contact/|Contact" | split: "," %}
+        {%- assign nav_links = "/discography/|Music,/lyrics/|Lyrics,/shows/|Shows,/merch/|Merch,/blog/|Blog,/about/|About,/contact/|Contact" | split: "," %}
         {%- for item in nav_links %}
         {%- assign parts = item | split: "|" %}
         {%- assign href = parts[0] %}
