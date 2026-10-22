@@ -59,14 +59,21 @@ Darksoft's music is available for film, TV, advertising, and social media, and l
 - [Support]({{ "/support/" | absolute_url }}): ways to support the project directly
 - [Album data]({{ "/data/" | absolute_url }}): charts of tempo, song length, and word counts across albums
 
-## Listen and follow
+## Listen
 
-- Spotify: https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE
-- Apple Music: https://music.apple.com/us/artist/darksoft/1438263529
-- Bandcamp: https://darks0ft.bandcamp.com
-- YouTube: https://www.youtube.com/@Darksoft
-- Instagram: https://www.instagram.com/darks0ft
-- Bandsintown: https://www.bandsintown.com/a/15379446-darksoft
+Darksoft's artist pages on streaming platforms (also listed at {{ "/discography/" | absolute_url }}#listen):
+
+{% for s in site.data.streaming.primary %}- {{ s.name }}: {{ s.url }}
+{% endfor %}{% for s in site.data.streaming.more %}- {{ s.name }}: {{ s.url }}
+{% endfor %}{% for s in site.data.streaming.world %}- {{ s.name }}: {{ s.url }}
+{% endfor %}
+Buying on Bandcamp is the most direct way to support the music.
+
+## Follow
+
+{% for s in site.data.social %}{% unless s.icon == "spotify" or s.icon == "apple" or s.icon == "bandcamp" or s.icon == "pandora" or s.icon == "soundcloud" %}- {{ s.name }}: {{ s.url }}
+{% endunless %}{% endfor %}- Bandsintown: https://www.bandsintown.com/a/15379446-darksoft
+- Songkick: https://www.songkick.com/artists/9755554-darksoft
 
 ## Contact
 

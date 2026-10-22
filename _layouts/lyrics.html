@@ -26,6 +26,9 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {% include song-jsonld.html track=track album=album %}
+  </script>
   {%- if video %}
   <script type="application/ld+json">
   {% include video-jsonld.html video=video track=track album=album context=true %}

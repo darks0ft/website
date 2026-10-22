@@ -77,6 +77,23 @@
 }
 </script>
 
+{%- if page.url == "/" %}
+<!-- Homepage: the website itself (helps search engines show "Darksoft" as the site name) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "{{ site.url }}/#website",
+  "name": "Darksoft",
+  "alternateName": "darksoft.band",
+  "url": "{{ site.url }}/",
+  "inLanguage": "en",
+  "publisher": { "@id": "{{ site.url }}/#darksoft" },
+  "about": { "@id": "{{ site.url }}/#darksoft" }
+}
+</script>
+{%- endif %}
+
 <!-- Icons: browser tab, search results, phone home screen -->
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icons/favicon-32.png" type="image/png" sizes="32x32">

@@ -1,0 +1,55 @@
+{%- comment -%}
+  One song as schema.org MusicRecording (with its MusicComposition and lyrics), for
+  search engines and AI tools. Used on lyrics pages. Parameters: track, album.
+  Fields are only included when the track data has them (ISRC, lyrics, release date).
+{%- endcomment -%}
+{%- assign t = include.track -%}
+{%- assign a = include.album -%}
+{%- assign dur = t.duration | split: ":" -%}
+{%- assign dur_min = dur[0] | plus: 0 -%}
+{%- assign dur_sec = dur[1] | plus: 0 -%}
+{%- assign released = t.release_date | default: a.release_date -%}
+{%- capture same_as_lines -%}
+  {%- if t.spotify_track %}{{ t.spotify_track | split: "?" | first | jsonify }}
+{% endif -%}
+  {%- if t.apple_music_track %}{{ t.apple_music_track | jsonify }}
+{% endif -%}
+  {%- if t.deezer_track %}{{ t.deezer_track | jsonify }}
+{% endif -%}
+  {%- if t.bandcamp_track %}{{ t.bandcamp_track | jsonify }}
+{% endif -%}
+{%- endcapture -%}
+{%- assign same_as = same_as_lines | strip | split: "
+" | join: ", " -%}
+{
+    "@context": "https://schema.org",
+    "@type": "MusicRecording",
+    "@id": {{ page.url | absolute_url | append: "#recording" | jsonify }},
+    "name": {{ t.track_title | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "byArtist": { "@type": "MusicGroup", "@id": {{ site.url | append: "/#darksoft" | jsonify }}, "name": "Darksoft" },
+    "inAlbum": {
+      "@type": "MusicAlbum",
+      "name": {{ a.album_title | jsonify }},
+      "url": {{ "/discography/" | append: a.album_id | append: "/" | absolute_url | jsonify }},
+      "datePublished": {{ a.release_date | date: "%Y-%m-%d" | jsonify }}
+    },
+    "position": {{ t.track_number | jsonify }},
+    "duration": "PT{{ dur_min }}M{{ dur_sec }}S",
+    {%- if t.isrc and t.isrc != "" %}
+    "isrcCode": {{ t.isrc | jsonify }},
+    {%- endif %}
+    {%- if released %}
+    "datePublished": {{ released | date: "%Y-%m-%d" | jsonify }},
+    {%- endif %}
+    {%- if same_as != "" %}
+    "sameAs": [{{ same_as }}],
+    {%- endif %}
+    "recordingOf": {
+      "@type": "MusicComposition",
+      "name": {{ t.track_title | jsonify }}
+      {%- if t.lyrics and t.lyrics != "" %},
+      "lyrics": { "@type": "CreativeWork", "text": {{ t.lyrics | jsonify }} }
+      {%- endif %}
+    }
+  }
