@@ -1,0 +1,27 @@
+{%- comment -%}
+  Standard page frame: head, header, page content, footer.
+  Front matter a page can set:
+    body_class   class for <body> (e.g. "about-page")
+    head_before  include from _includes/head/ rendered before head.html (e.g. to set seo_description)
+    head_extra   include from _includes/head/ rendered inside <head> after head.html (structured data, scripts, styles)
+{%- endcomment -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%- if page.head_before %}{% include head/{{ page.head_before }} %}{% endif %}
+  {% include head.html %}
+  {%- if page.head_extra %}
+  {% include head/{{ page.head_extra }} %}
+  {%- endif %}
+</head>
+
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+
+  {% include header.html %}
+
+{{ content }}
+
+  {% include footer.html %}
+
+</body>
+</html>

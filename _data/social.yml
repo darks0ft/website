@@ -1,0 +1,37 @@
+# Social and streaming icons shown in the header and footer, in order.
+#   name:        alt text for the icon
+#   footer_name: optional different alt text in the footer
+#   url:         profile link
+#   icon:        Simple Icons slug (https://simpleicons.org), drawn in the site green
+
+- name: "Spotify"
+  url: "https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE?si=bpjJbjmWQLy0vU8VfLC5Tg"
+  icon: spotify
+- name: "Apple Music"
+  url: "https://music.apple.com/us/artist/darksoft/1438263529"
+  icon: apple
+- name: "Bandcamp"
+  url: "https://darks0ft.bandcamp.com/"
+  icon: bandcamp
+- name: "Pandora"
+  url: "https://www.pandora.com/AL:44479553"
+  icon: pandora
+- name: "SoundCloud"
+  url: "https://soundcloud.com/darks0ft/"
+  icon: soundcloud
+- name: "YouTube"
+  url: "https://www.youtube.com/@Darksoft"
+  icon: youtube
+- name: "Instagram"
+  url: "https://www.instagram.com/darks0ft"
+  icon: instagram
+- name: "Facebook"
+  url: "https://www.facebook.com/darks0ft"
+  icon: facebook
+- name: "X"
+  footer_name: "X/Twitter"
+  url: "https://x.com/darks0ft"
+  icon: x
+- name: "Bluesky"
+  url: "https://bsky.app/profile/darks0ft.bsky.social"
+  icon: bluesky

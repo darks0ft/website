@@ -1,18 +1,9 @@
 ---
-layout: none
+layout: default
 title: "Darksoft — Dream Pop Music"
 description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and alternative influences. Explore albums, lyrics, merch, shows, and more."
+body_class: "homepage"
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {% include head.html %}
-</head>
-
-<body class="homepage">
-
-  {% include header.html %}
 
 <!-- HERO SECTION -->
 <section class="hero landing-page" id="hero">
@@ -159,8 +150,6 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
   <p><a class="cta-button" href="/support/">Ways to support →</a></p>
 </section>
 
-{% include video-player-script.html %}
-
 <!-- Old links to homepage sections that moved to their own pages -->
 <script>
   (function () {
@@ -174,8 +163,3 @@ description: "Darksoft creates dreamy indie rock with shoegaze, dream pop, and a
     if (moved[location.hash]) location.replace(moved[location.hash]);
   })();
 </script>
-
-  {% include footer.html %}
-
-</body>
-</html>

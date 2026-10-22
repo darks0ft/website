@@ -1,21 +1,12 @@
 ---
-layout: none
+layout: default
 title: "Your Everydayness Booklet — Darksoft"
 description: "Thanks for joining the Darksoft newsletter. Download your free Everydayness booklet."
 permalink: /welcome/jg28w3qbzs/
 noindex: true
 sitemap: false
+body_class: "welcome-page"
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {% include head.html %}
-</head>
-
-<body class="welcome-page">
-
-  {% include header.html %}
 
   {% assign album = site.data.albums | where: "album_id", "everydayness" | first %}
   <section class="page-wrapper welcome">
@@ -44,8 +35,3 @@ sitemap: false
       or <a href="/discography/everydayness/">read about the album</a>.
     </p>
   </section>
-
-  {% include footer.html %}
-
-</body>
-</html>

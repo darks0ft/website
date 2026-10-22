@@ -1,20 +1,11 @@
 ---
-layout: none
+layout: default
 title: "Darksoft Press — Reviews, Interviews & Features"
 description: "Press for Darksoft: reviews, interviews, and features from Vanyaland, The Big Takeover, Down East Magazine, Eclectic Music Lover, JanglePopHub, and more. Includes a press kit."
 og_image: "/assets/Darksoft%20-%20Press%20Photo%202024.jpg"
 permalink: /press/
+body_class: "press-page"
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {% include head.html %}
-</head>
-
-<body class="press-page">
-
-  {% include header.html %}
 
   {%- assign reviews = site.data.press | where: "type", "quote" -%}
   {%- assign interviews = site.data.press | where: "type", "interview" -%}
@@ -61,8 +52,3 @@ permalink: /press/
 
     <p>For press and interview requests: <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a></p>
   </section>
-
-  {% include footer.html %}
-
-</body>
-</html>

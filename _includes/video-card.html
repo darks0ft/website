@@ -2,7 +2,7 @@
   One music video: click-to-play thumbnail (loads YouTube only when clicked),
   song title, album, release date, and the optional "how it was made" note.
   Parameters: video (from _data/videos.yml), placement (for analytics, e.g. "videos_page")
-  Needs _includes/video-player-script.html on the page.
+  Click-to-play is handled by assets/js/site.js.
 {%- endcomment -%}
 {%- assign card_track = site.data.tracks | where: "track_id", include.video.track_id | first -%}
 {%- assign card_album = site.data.albums | where: "album_id", card_track.album_id | first -%}

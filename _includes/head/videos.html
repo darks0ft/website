@@ -1,0 +1,20 @@
+{%- assign videos = site.data.videos | sort: "released" | reverse %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Darksoft Music Videos",
+    "url": {{ page.url | absolute_url | jsonify }},
+    "about": { "@type": "MusicGroup", "name": "Darksoft", "url": {{ "/" | absolute_url | jsonify }} },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {%- for video in videos %}
+        {%- assign t = site.data.tracks | where: "track_id", video.track_id | first %}
+        {%- assign a = site.data.albums | where: "album_id", t.album_id | first %}
+        { "@type": "ListItem", "position": {{ forloop.index }}, "item": {% include video-jsonld.html video=video track=t album=a %} }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ]
+    }
+  }
+  </script>

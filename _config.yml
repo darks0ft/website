@@ -29,6 +29,7 @@ plugins:
 # Output folders
 exclude:
   - README.md
+  - CLAUDE.local.md
   - Gemfile
   - Gemfile.lock
   - node_modules

@@ -1,0 +1,6 @@
+{%- capture seo_description %}
+    Explore the complete Darksoft lyrics catalogue organized by album and release year. 
+    Includes tracks from {% assign sorted_albums = site.data.albums | sort: 'release_year' | reverse %}
+    {% for album in sorted_albums %}{{ album.album_title }}{% unless forloop.last %}, {% endunless %}{% endfor %}, 
+    plus fan favorites like Endless Day, Live and Let Live, So It Goes, Some Things You Just Know, and Day By Day.
+  {% endcapture %}

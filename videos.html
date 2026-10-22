@@ -1,42 +1,14 @@
 ---
-layout: none
+layout: default
 title: "Darksoft Music Videos — DIY, Lo-Fi & VHS-Inspired"
 description: "Every Darksoft music video, newest first, many of them homemade with a VHS camcorder, a vintage digital camera, LED lightboxes, and practical effects."
 og_image: "/assets/Darksoft%20Day%20by%20Day%20music%20video%20still.png"
 permalink: /videos/
+body_class: "videos-page"
+head_extra: videos.html
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {% include head.html %}
-
-  {%- assign videos = site.data.videos | sort: "released" | reverse %}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Darksoft Music Videos",
-    "url": {{ page.url | absolute_url | jsonify }},
-    "about": { "@type": "MusicGroup", "name": "Darksoft", "url": {{ "/" | absolute_url | jsonify }} },
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": [
-        {%- for video in videos %}
-        {%- assign t = site.data.tracks | where: "track_id", video.track_id | first %}
-        {%- assign a = site.data.albums | where: "album_id", t.album_id | first %}
-        { "@type": "ListItem", "position": {{ forloop.index }}, "item": {% include video-jsonld.html video=video track=t album=a %} }{% unless forloop.last %},{% endunless %}
-        {%- endfor %}
-      ]
-    }
-  }
-  </script>
-</head>
-
-<body class="videos-page">
-
-  {% include header.html %}
-
+{%- assign videos = site.data.videos | sort: "released" | reverse %}
   <section class="page-wrapper" id="videos-intro">
     <h2>Videos</h2>
     <p>Many Darksoft videos are made at home: shot on a VHS camcorder or an old digital camera, lit with LEDs and homemade lightboxes, and built from practical effects, overlays, and a lot of trial and error. Here they all are, newest first.</p>
@@ -50,10 +22,3 @@ permalink: /videos/
       {% endfor %}
     </div>
   </section>
-
-  {% include video-player-script.html %}
-
-  {% include footer.html %}
-
-</body>
-</html>

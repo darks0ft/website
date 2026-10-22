@@ -17,16 +17,7 @@
       <a href="/data/">Show Me The Data</a>
     </div>
   <div class="footer-social-icons">
-  <a href="https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE?si=bpjJbjmWQLy0vU8VfLC5Tg"><img src="https://cdn.simpleicons.org/spotify/6dc15b" alt="Spotify"></a>
-  <a href="https://music.apple.com/us/artist/darksoft/1438263529"><img src="https://cdn.simpleicons.org/apple/6dc15b" alt="Apple Music"></a>
-  <a href="https://darks0ft.bandcamp.com/"><img src="https://cdn.simpleicons.org/bandcamp/6dc15b" alt="Bandcamp"></a>
-  <a href="https://www.pandora.com/AL:44479553"><img src="https://cdn.simpleicons.org/pandora/6dc15b" alt="Pandora"></a>
-  <a href="https://soundcloud.com/darks0ft/"><img src="https://cdn.simpleicons.org/soundcloud/6dc15b" alt="SoundCloud"></a>
-  <a href="https://www.youtube.com/@Darksoft"><img src="https://cdn.simpleicons.org/youtube/6dc15b" alt="YouTube"></a>
-  <a href="https://www.instagram.com/darks0ft"><img src="https://cdn.simpleicons.org/instagram/6dc15b" alt="Instagram"></a>
-  <a href="https://www.facebook.com/darks0ft"><img src="https://cdn.simpleicons.org/facebook/6dc15b" alt="Facebook"></a>
-  <a href="https://x.com/darks0ft"><img src="https://cdn.simpleicons.org/x/6dc15b" alt="X/Twitter"></a>
-  <a href="https://bsky.app/profile/darks0ft.bsky.social"><img src="https://cdn.simpleicons.org/bluesky/6dc15b" alt="Bluesky"></a>
+{% include social-icons.html footer=true %}
 </div>
 <br>
 <div class="footer-wave">
@@ -42,9 +33,6 @@
 </div>
 <br>
     <p>© <span id="year"></span> Darksoft. All rights reserved.</p>
-  <script>
-    document.getElementById("year").innerText = new Date().getFullYear();
-  </script>
 <!-- NEWSLETTER POPUP MODAL -->
 <div id="newsletter-modal" class="newsletter-modal hidden">
 
@@ -77,150 +65,6 @@
 
 </div>
 
- <!-- Newsletter forms: submit to Mailchimp in the background (JSONP), then send
-      successful signups to the booklet download page (_data/reward.yml).
-      Without JavaScript, forms still post to Mailchimp as before. -->
-<script>
-(function() {
-  const THANKS_URL = {{ site.data.reward.thanks_url | jsonify }};
-  const forms = document.querySelectorAll('form[action*="list-manage.com/subscribe/post"]');
-
-  forms.forEach((form) => {
-    const status = document.createElement("p");
-    status.className = "newsletter-status";
-    status.setAttribute("role", "status");
-    form.after(status);
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const button = form.querySelector('[type="submit"]');
-      const label = button ? button.textContent : "";
-      if (button) { button.disabled = true; button.textContent = "Sending…"; }
-      status.textContent = "";
-      status.classList.remove("is-error");
-
-      const cb = "mcCallback" + Date.now();
-      const params = new URLSearchParams(new FormData(form));
-      params.set("c", cb);
-      const url = form.action.replace("/subscribe/post?", "/subscribe/post-json?") + "&" + params.toString();
-      const script = document.createElement("script");
-
-      const done = () => {
-        delete window[cb];
-        script.remove();
-        if (button) { button.disabled = false; button.textContent = label; }
-      };
-
-      window[cb] = (data) => {
-        done();
-        const msg = (data && data.msg) ? String(data.msg) : "";
-        // Existing subscribers get the reward too
-        if (data && (data.result === "success" || /already subscribed/i.test(msg))) {
-          try { localStorage.setItem("newsletter-popup", Date.now()); } catch (err) {}
-          // Record the signup, then redirect (fallback timer in case analytics is blocked)
-          let left = false;
-          const go = () => { if (!left) { left = true; window.location.href = THANKS_URL; } };
-          const where = form.closest("#newsletter-modal") ? "newsletter_popup"
-                      : form.closest(".lyrics-newsletter") ? "lyrics_page"
-                      : (form.closest("section[id]") || {}).id || "page";
-          if (typeof gtag === "function") {
-            gtag("event", "newsletter_signup", {
-              placement: where,
-              already_subscribed: data.result !== "success",
-              event_callback: go
-            });
-          }
-          setTimeout(go, 1000);
-          return;
-        }
-        // Mailchimp prefixes some errors with "0 - "; show plain text only
-        const tmp = document.createElement("div");
-        tmp.innerHTML = msg.replace(/^\d+\s*-\s*/, "");
-        status.textContent = tmp.textContent || "Something went wrong. Please try again.";
-        status.classList.add("is-error");
-      };
-
-      script.onerror = () => {
-        done();
-        status.textContent = "Couldn't reach the signup service. Please try again in a moment.";
-        status.classList.add("is-error");
-      };
-      script.src = url;
-      document.body.appendChild(script);
-    });
-  });
-})();
-</script>
-
- <!-- Script for Newsletter signup pop-up -->
-<script>
-(function() {
-  const modal = document.getElementById("newsletter-modal");
-  const closeBtn = document.querySelector(".newsletter-close");
-
-  // Don't interrupt industry visitors (music supervisors) on the sync page,
-  // or readers on lyric pages (they get an inline signup after the lyrics)
-  if (document.body.classList.contains("sync-page") || document.body.classList.contains("lyrics-body")) return;
-
-  // Prevent showing again if dismissed or signed up recently
-  const lastShown = localStorage.getItem("newsletter-popup");
-  const THIRTY_DAYS = 1000 * 60 * 60 * 24 * 30;
-
-  if (!lastShown || (Date.now() - lastShown) > THIRTY_DAYS) {
-    setTimeout(() => {
-      modal.classList.remove("hidden");
-    }, 5000); // 5 seconds delay
-  }
-
-  function closeModal() {
-    modal.classList.add("hidden");
-    localStorage.setItem("newsletter-popup", Date.now());
-  }
-
-  // Close events
-  closeBtn.addEventListener("click", closeModal);
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) closeModal();
-  });
-})();
-</script>
-
-<script>
-  (function() {
-    const text = "Darksoft";
-    const container = document.getElementById("rainbow-text");
-    if (!container) return;
-
-    container.innerHTML = ""; // clear previous content for safety
-
-    text.split("").forEach((char) => {
-      const span = document.createElement("span");
-      span.textContent = char;
-      span.style.color = `hsl(${Math.floor(Math.random() * 360)}, 50%, 60%)`;
-      span.style.animation = `fadeColors 10s infinite ${Math.random() * 5}s`;
-      container.appendChild(span);
-    });
-  })();
-</script>
-<script>
-  // Persistent header: add body.scrolled once the page is scrolled past the big logo
-  (function() {
-    const update = () => document.body.classList.toggle("scrolled", window.scrollY > 140);
-    window.addEventListener("scroll", update, { passive: true });
-    update();
-  })();
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById('menu-toggle');
-    const body = document.body;
-
-    if (toggle) {
-      toggle.addEventListener('click', () => {
-        body.classList.toggle('menu-open');
-      });
-    }
-  });
-</script>
+<script src="/assets/js/site.js?v={{ site.time | date: '%s' }}" defer></script>
 
 </footer>
