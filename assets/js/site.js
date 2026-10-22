@@ -182,3 +182,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 })();
+
+// ---------------------------------------------------------------
+// External links always open in a new tab, so visitors keep darksoft.band
+// open. Templates set target="_blank" themselves; this catches anything
+// else (links added by embedded widgets, or new content that forgets it).
+// ---------------------------------------------------------------
+document.addEventListener("click", (e) => {
+  const link = e.target.closest("a[href]");
+  if (!link || link.target) return;
+  let url;
+  try { url = new URL(link.href, location.href); } catch (err) { return; }
+  if (!/^https?:$/.test(url.protocol) || url.hostname === location.hostname) return;
+  link.target = "_blank";
+  link.rel = (link.rel ? link.rel + " " : "") + "noopener";
+}, true);

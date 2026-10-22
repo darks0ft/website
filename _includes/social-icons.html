@@ -1,4 +1,4 @@
 {%- comment -%} Social icon links from _data/social.yml. Parameter: footer=true uses footer_name for alt text. {%- endcomment -%}
 {%- for s in site.data.social %}
-  <a href="{{ s.url }}"><img src="https://cdn.simpleicons.org/{{ s.icon }}/6dc15b" alt="{% if include.footer and s.footer_name %}{{ s.footer_name }}{% else %}{{ s.name }}{% endif %}"></a>
+  <a href="{{ s.url }}" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/{{ s.icon }}/6dc15b" alt="{% if include.footer and s.footer_name %}{{ s.footer_name }}{% else %}{{ s.name }}{% endif %}"></a>
 {%- endfor %}
