@@ -19,4 +19,4 @@ Allow: /lyrics/*
 
 # Direct AI crawlers to policy & indexing metadata
 Sitemap: https://www.darksoft.band/sitemap.xml
-LLMSTxt: https://www.darksoft.band/llms.txt
+# llms.txt: https://www.darksoft.band/llms.txt
