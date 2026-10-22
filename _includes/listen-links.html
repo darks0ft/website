@@ -1,0 +1,30 @@
+{%- comment -%}
+  Where to listen: Darksoft artist pages on every platform (_data/streaming.yml).
+  Big buttons for the main four, then text links, then smaller links to more services.
+{%- endcomment -%}
+<div class="listen-links" id="listen">
+  <h3 class="listen-title">Listen to Darksoft</h3>
+
+  <div class="listen-primary">
+    {%- for s in site.data.streaming.primary %}
+    <a class="listen-button" href="{{ s.url }}" target="_blank" rel="noopener">
+      <img src="https://cdn.simpleicons.org/{{ s.icon }}/000" alt="" width="18" height="18">
+      {{ s.name }}
+    </a>
+    {%- endfor %}
+  </div>
+
+  <p class="listen-more">
+    {%- for s in site.data.streaming.more %}
+    <a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% unless forloop.last %}<span aria-hidden="true"> · </span>{% endunless %}
+    {%- endfor %}
+  </p>
+
+  <p class="listen-world">
+    {%- for s in site.data.streaming.world %}
+    <a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% unless forloop.last %}<span aria-hidden="true"> · </span>{% endunless %}
+    {%- endfor %}
+  </p>
+
+  <p class="listen-note">Buying on <a href="https://darks0ft.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a> is the best way to support the music directly.</p>
+</div>

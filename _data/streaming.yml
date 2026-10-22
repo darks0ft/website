@@ -1,0 +1,46 @@
+# Darksoft artist pages on streaming platforms, shown in the Listen section on
+# /discography/. Use artist pages, not album pages, so links never go stale.
+#   primary: big buttons (icon = Simple Icons slug, drawn in the site green)
+#   more:    second row, text links
+#   world:   more services, shown in smaller text
+# Verified 2026-10-22 against the catalog on each platform, except where noted.
+
+primary:
+  - name: "Spotify"
+    url: "https://open.spotify.com/artist/5pD33SUgX5GQ8NvqZ6IdeE"
+    icon: spotify
+  - name: "Apple Music"
+    # geo. link opens each visitor's own country store
+    url: "https://geo.music.apple.com/artist/darksoft/1438263529"
+    icon: applemusic
+  - name: "Bandcamp"
+    url: "https://darks0ft.bandcamp.com/"
+    icon: bandcamp
+  - name: "YouTube Music"
+    url: "https://music.youtube.com/channel/UCYGODf2pvnV88yuoNnDFWfw"
+    icon: youtubemusic
+
+more:
+  - name: "TIDAL"
+    url: "https://tidal.com/artist/10443771"
+  - name: "Amazon Music"
+    url: "https://music.amazon.com/artists/B07J4JL8HP/darksoft"
+  - name: "Deezer"
+    url: "https://www.deezer.com/artist/52389072"
+  - name: "Qobuz"
+    url: "https://www.qobuz.com/us-en/interpreter/darksoft/4627239"
+  - name: "Pandora"
+    # main profile (7 albums); Everydayness currently sits on a second profile, AR:26000205
+    url: "https://www.pandora.com/artist/darksoft/AR6c9v9bxj9x3kP"
+  - name: "SoundCloud"
+    url: "https://soundcloud.com/darks0ft"
+
+world:
+  - name: "NetEase Cloud Music"
+    url: "https://music.163.com/#/artist?id=32175171"
+  - name: "KKBOX"
+    # found via search; KKBOX blocks automated checks
+    url: "https://www.kkbox.com/sg/en/artist/5QSmoQkLdJF05c0F0kXK208K-index-1.html"
+  - name: "Anghami"
+    # found via search; Anghami blocks automated checks
+    url: "https://play.anghami.com/artist/351501"

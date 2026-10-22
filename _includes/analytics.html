@@ -37,7 +37,8 @@
   Conversion events (mark these as key events in GA4: Admin → Key events):
     newsletter_signup  sent from the signup handler in footer.html
     bandcamp_click     any link to bandcamp.com
-    stream_click       Spotify, Apple Music, YouTube / YouTube Music, Deezer, Pandora, SoundCloud
+    stream_click       Spotify, Apple Music, YouTube / YouTube Music, Deezer, Pandora, SoundCloud,
+                       TIDAL, Amazon Music, Qobuz, NetEase Cloud Music, KKBOX, Anghami
     merch_click        Printful, Spirit Goth, elasticstage
     donate_click       Buy Me a Coffee, Unstream
     video_play         a click-to-play music video thumbnail (sent from video-player-script.html)
@@ -51,7 +52,9 @@
         "open.spotify.com": "Spotify", "spotify.com": "Spotify",
         "music.apple.com": "Apple Music",
         "music.youtube.com": "YouTube Music", "youtube.com": "YouTube", "youtu.be": "YouTube",
-        "deezer.com": "Deezer", "pandora.com": "Pandora", "soundcloud.com": "SoundCloud" } },
+        "deezer.com": "Deezer", "pandora.com": "Pandora", "soundcloud.com": "SoundCloud",
+        "tidal.com": "TIDAL", "music.amazon.com": "Amazon Music", "qobuz.com": "Qobuz",
+        "music.163.com": "NetEase Cloud Music", "kkbox.com": "KKBOX", "anghami.com": "Anghami" } },
     { event: "merch_click", hosts: {
         "printful.me": "Printful", "spiritgoth.com": "Spirit Goth", "elasticstage.com": "elasticstage" } },
     { event: "donate_click", hosts: {
@@ -71,6 +74,7 @@
 
   // Blocks on album and lyrics pages that have no section id
   const BLOCKS = {
+    ".listen-links": "discography_listen",
     ".stream-now-box": "lyrics_stream_links",
     ".lyrics-newsletter": "lyrics_newsletter",
     ".video-embed": "lyrics_video",
