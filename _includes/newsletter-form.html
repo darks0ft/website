@@ -1,0 +1,12 @@
+{%- comment -%}
+  Mailchimp signup form, shared by every signup on the site.
+  Optional parameters:
+    form_class    class for the <form>
+    button_class  class for the submit button (default "button")
+{%- endcomment -%}
+<form action="{{ site.data.newsletter.action | escape }}"
+      method="post" target="_blank"{% if include.form_class %} class="{{ include.form_class }}"{% endif %}>
+  <input type="email" name="EMAIL" placeholder="Enter your email" aria-label="Email address" required>
+  <div hidden><input type="hidden" name="tags" value="{{ site.data.newsletter.tags }}"></div>
+  <button type="submit" class="{{ include.button_class | default: 'button' }}">Subscribe</button>
+</form>

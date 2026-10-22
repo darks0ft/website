@@ -1,0 +1,5 @@
+# Mailchimp signup settings, used by _includes/newsletter-form.html.
+# Every signup form on the site posts here; the footer script submits in the
+# background and sends successful signups to the booklet page (_data/reward.yml).
+action: "https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&id=d5fbadec4b"
+tags: "2757147"

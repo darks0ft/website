@@ -1,0 +1,48 @@
+# Production and recording credits, shown on the homepage (and later /production/).
+#   artist:  the artist or project
+#   release: what was worked on, shown as written (HTML entities and curly quotes are fine)
+#   role:    what Darksoft did on it
+#   note:    optional extra detail, shown after the role
+#   url:     optional link to the release (leave empty if none)
+
+- artist: "Darksoft"
+  release: "All releases"
+  role: "full recording"
+
+- artist: "Darker Pepper"
+  release: "“Tinted”"
+  role: "full album production"
+  note: "released on memorycard, Spirit Goth’s imprint"
+
+- artist: "Darker Pepper"
+  release: "“Synthetic”"
+  role: "full album production"
+  note: "released on memorycard"
+
+- artist: "Eastern Souvenirs"
+  release: "Single"
+  role: "drum performance + recording"
+
+- artist: "State Birds"
+  release: "Album"
+  role: "full production, recording, engineering"
+
+- artist: "Emily Irving"
+  release: "Single"
+  role: "vocal recording"
+
+- artist: "Banadu"
+  release: "All releases"
+  role: "full production, engineering, performing, mixing"
+
+- artist: "Found Space"
+  release: "Single"
+  role: "bass recording, performance, production"
+
+- artist: "Sightings"
+  release: "Album"
+  role: "engineering, performance, recording"
+
+- artist: "Hibou"
+  release: "Album"
+  role: "drum recording"

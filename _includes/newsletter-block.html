@@ -1,0 +1,17 @@
+{%- comment -%}
+  Signup block: heading, intro, booklet offer and the shared form.
+  Parameters:
+    section_id     id for the <section> (optional)
+    section_class  class for the <section> (optional)
+    intro          intro sentence (optional; a general one is used if left out)
+{%- endcomment -%}
+<section{% if include.section_id %} id="{{ include.section_id }}"{% endif %}{% if include.section_class %} class="{{ include.section_class }}"{% endif %}>
+  <div id="mc_embed_signup">
+    <h2>Subscribe</h2>
+    <p class="signup-description">
+      {{ include.intro | default: "Keep up to date on new releases, tour dates, merch, collabs, and more." }}
+    </p>
+    <p class="signup-description signup-bonus"><strong>Bonus:</strong> sign up and instantly download the free {{ site.data.reward.pages }}-page <em>Everydayness</em> booklet.</p>
+    {% include newsletter-form.html %}
+  </div>
+</section>

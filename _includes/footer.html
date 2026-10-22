@@ -77,17 +77,7 @@
     <p class="newsletter-body newsletter-bonus"><strong>Bonus:</strong> sign up and instantly download the free {{ site.data.reward.pages }}-page <em>Everydayness</em> booklet.</p>
 
     <!-- Mailchimp form -->
-    <form action="https://look-up-records.us15.list-manage.com/subscribe/post?u=1819beca84185884371f382d9&amp;id=d5fbadec4b"
-          method="post"
-          target="_blank"
-          class="newsletter-form">
-
-      <input type="email" name="EMAIL" placeholder="Enter your email" required>
-
-      <div hidden><input type="hidden" name="tags" value="2757147"></div>
-
-      <button type="submit" class="newsletter-button">Subscribe</button>
-    </form>
+    {% include newsletter-form.html form_class="newsletter-form" button_class="newsletter-button" %}
 
     <p class="newsletter-small">
       Lists like these *really* help indie musicians like me keep things going.
