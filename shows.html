@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Darksoft Shows — Upcoming Concerts & Tour Dates"
-description: "Upcoming Darksoft shows and tour dates. Darksoft plays live with a full band; follow on Bandsintown and Songkick for new dates."
+description: "Upcoming Darksoft shows and tour dates, plus booking: Darksoft plays as a full live band or a stripped-down solo set. Open to festivals, tour support, and show offers."
 og_image: "/assets/Darksoft%20Live%20Band%201.jpg"
 permalink: /shows/
 body_class: "shows-page"
@@ -22,6 +22,32 @@ body_class: "shows-page"
       </a>
       <script src="https://widget.songkick.com/9755554/widget.js"></script>
     </div>
+  </section>
 
-    <p class="shows-note">For booking, see <a href="/contact/">Contact</a>.</p>
+  {%- comment -%} Pre-filled booking email (subject + body are URL-encoded) {%- endcomment -%}
+  {%- assign booking_link = "mailto:darksoftband@gmail.com?subject=Booking%20inquiry&body=Hi%20Darksoft%2C%0D%0A%0D%0ADate%28s%29%3A%0D%0ACity%20and%20venue%20/%20festival%3A%0D%0AFull%20band%20or%20solo%20set%3A%0D%0AOther%20acts%20on%20the%20bill%3A%0D%0AOffer%20/%20guarantee%3A%0D%0A" -%}
+  <section id="booking">
+    <h2>Booking</h2>
+    <p>Darksoft plays live two ways:</p>
+
+    <div class="booking-options">
+      <figure class="booking-option">
+        <img src="/assets/press-kit/live-band-2.jpg" alt="Darksoft playing live with the full band" loading="lazy">
+        <figcaption>
+          <h3>Full live band</h3>
+          <p>The records brought to the stage with the full lineup.</p>
+        </figcaption>
+      </figure>
+      <figure class="booking-option">
+        <img src="/assets/press-kit/live-solo.jpg" alt="Darksoft playing a solo set" loading="lazy">
+        <figcaption>
+          <h3>Solo set</h3>
+          <p>A stripped-down set: Darksoft solo, with tracks.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <p class="booking-pitch">We're interested in playing festivals and hopping on tour routes. Promoters, bookers, and bands: reach out with a show offer or guarantee.</p>
+    <p><a class="cta-button" href="{{ booking_link }}">Send a booking inquiry →</a></p>
+    <p class="booking-email">Or email <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a></p>
   </section>

@@ -2026,9 +2026,46 @@ body.homepage,
   font-size: 0.8rem;
 }
 
-.shows-note {
+/* Shows page: Booking section (full band / solo set) */
+.booking-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 1.5rem auto 2rem;
+}
+
+.booking-option {
+  margin: 0;
+}
+
+.booking-option img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.booking-option h3 {
+  margin: 1rem 0 0.4rem;
+  font-size: 1.15rem;
+}
+
+.booking-option p {
   color: #ccc;
-  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.booking-pitch {
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.booking-email {
+  font-size: 0.9rem;
+  color: #999;
 }
 
 /* About / Press / Production / Support pages */
@@ -2103,5 +2140,10 @@ body.homepage,
   .press-photos {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+
+  .booking-options {
+    grid-template-columns: 1fr;
+    max-width: 480px;
   }
 }
