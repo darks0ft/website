@@ -102,6 +102,12 @@
 <!-- Blog feed (RSS/Atom) -->
 {% feed_meta %}
 
+<!-- Discovery links for search engines and AI agents (also sent as Link headers, see _headers) -->
+<link rel="describedby" type="text/markdown" href="/llms.txt">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json">
+<link rel="privacy-policy" href="/privacy/">
+
 <!-- Icons: browser tab, search results, phone home screen -->
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icons/favicon-32.png" type="image/png" sizes="32x32">

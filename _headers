@@ -1,0 +1,14 @@
+# Response headers for Cloudflare (Pages or Workers static assets read this file).
+# GitHub Pages ignores it, so it does nothing until the site moves to Cloudflare.
+# Keep the Link header in step with the discovery links in _includes/head.html.
+
+/*
+  Link: </llms.txt>; rel="describedby"; type="text/markdown"
+  Link: </sitemap.xml>; rel="sitemap"; type="application/xml"
+  Link: </feed.xml>; rel="alternate"; type="application/atom+xml"
+  Link: </.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/json"
+  Link: </privacy/>; rel="privacy-policy"
+
+/.well-known/ai-catalog.json
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json

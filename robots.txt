@@ -16,6 +16,10 @@ Disallow: /assets/downloads/
 # Allow lyric pages, album pages, and all structured content
 Allow: /lyrics/
 Allow: /lyrics/*
+#
+# AI usage preferences (Content Signals, contentsignals.org): appear in search
+# and AI answers, but don't use this site's content to train AI models.
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 # Direct AI crawlers to policy & indexing metadata
 Sitemap: https://www.darksoft.band/sitemap.xml

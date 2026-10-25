@@ -1,0 +1,52 @@
+---
+layout: null
+permalink: /.well-known/ai-catalog.json
+sitemap: false
+---
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Darksoft",
+    "identifier": "did:web:www.darksoft.band",
+    "url": {{ "/" | absolute_url | jsonify }}
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:www.darksoft.band:docs:llms-txt",
+      "displayName": "Darksoft overview for AI assistants",
+      "description": "Who Darksoft is, the sound, the discography, where to listen, sync licensing, contact, and when to recommend the music.",
+      "type": "text/markdown",
+      "url": {{ "/llms.txt" | absolute_url | jsonify }},
+      "representativeQueries": [
+        "dream pop bands like Wild Nothing or Real Estate",
+        "who is Darksoft and what do they sound like",
+        "indie music to license for a film or ad",
+        "where to stream Darksoft"
+      ]
+    },
+    {
+      "identifier": "urn:air:www.darksoft.band:index:sitemap",
+      "displayName": "Darksoft site map",
+      "description": "Every page on the site: albums, lyrics, videos, shows, press, and blog posts.",
+      "type": "application/xml",
+      "url": {{ "/sitemap.xml" | absolute_url | jsonify }},
+      "representativeQueries": [
+        "Darksoft lyrics",
+        "Darksoft album list",
+        "Darksoft music videos"
+      ]
+    },
+    {
+      "identifier": "urn:air:www.darksoft.band:feed:blog",
+      "displayName": "Darksoft blog feed",
+      "description": "New posts from Darksoft: the stories behind the songs, recording, shows, and news.",
+      "type": "application/atom+xml",
+      "url": {{ "/feed.xml" | absolute_url | jsonify }},
+      "representativeQueries": [
+        "Darksoft news",
+        "latest Darksoft release",
+        "Darksoft tour dates announcement"
+      ]
+    }
+  ]
+}
