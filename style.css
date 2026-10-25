@@ -2174,6 +2174,45 @@ a.listen-button:hover {
   font-size: 0.9rem;
 }
 
+/* Press kit logos: white logos on a dark tile, black logos on a light tile */
+.press-logos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem auto 2rem;
+  max-width: 900px;
+}
+
+.press-logo {
+  margin: 0;
+}
+
+.press-logo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  padding: 12% 15%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: block;
+}
+
+.press-logo.dark img {
+  background: #111;
+  border: 1px solid #333;
+}
+
+.press-logo.light img {
+  background: #eee;
+}
+
+.press-logo figcaption {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+}
+
 /* Data page intro line */
 .data-intro {
   opacity: 0.7;

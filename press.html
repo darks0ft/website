@@ -14,6 +14,7 @@ body_class: "press-page"
   <section class="page-wrapper" id="press">
     <h1 class="page-title">Press</h1>
     <p>Here are some quotes from music journalists and features on Darksoft. I truly appreciate these folks and the time they've taken getting to know my music and sharing it with their readers.</p>
+    <p>For press and interview requests: <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a></p>
 
     <h3 class="press-group">Reviews</h3>
     {% for item in reviews %}
@@ -50,5 +51,25 @@ body_class: "press-page"
       {% endfor %}
     </div>
 
-    <p>For press and interview requests: <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a></p>
+    <h3 class="press-group">Logos</h3>
+    <p class="press-photos-note">Black and white versions with transparent backgrounds. The wordmark also comes as an SVG that scales to any size.</p>
+    {%- assign logo_dir = "/assets/press-kit/logos/" %}
+    <div class="press-logos">
+      <figure class="press-logo dark">
+        <img src="{{ logo_dir }}darksoft-smiley-white.png" alt="Darksoft smiley logo, white" width="500" height="500" loading="lazy">
+        <figcaption>Smiley, white · <a href="{{ logo_dir }}darksoft-smiley-white.png" download>PNG</a></figcaption>
+      </figure>
+      <figure class="press-logo light">
+        <img src="{{ logo_dir }}darksoft-smiley-black.png" alt="Darksoft smiley logo, black" width="500" height="500" loading="lazy">
+        <figcaption>Smiley, black · <a href="{{ logo_dir }}darksoft-smiley-black.png" download>PNG</a></figcaption>
+      </figure>
+      <figure class="press-logo dark">
+        <img src="{{ logo_dir }}darksoft-wordmark-white.svg" alt="Darksoft wordmark, white" width="2588" height="740" loading="lazy">
+        <figcaption>Wordmark, white · <a href="{{ logo_dir }}darksoft-wordmark-white.png" download>PNG</a> · <a href="{{ logo_dir }}darksoft-wordmark-white.svg" download>SVG</a></figcaption>
+      </figure>
+      <figure class="press-logo light">
+        <img src="{{ logo_dir }}darksoft-wordmark-black.svg" alt="Darksoft wordmark, black" width="2588" height="740" loading="lazy">
+        <figcaption>Wordmark, black · <a href="{{ logo_dir }}darksoft-wordmark-black.png" download>PNG</a> · <a href="{{ logo_dir }}darksoft-wordmark-black.svg" download>SVG</a></figcaption>
+      </figure>
+    </div>
   </section>
