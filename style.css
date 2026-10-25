@@ -9,7 +9,7 @@
    6. Homepage: hero, latest video, album covers
    7. Shared components: merch gallery, press quotes, Songkick, video cards
    8. Music: discography, album pages, lyrics index, lyrics pages
-   9. Pages: Sync, Shows, Press, Production, Support, Data, Welcome
+   9. Pages: Sync, Shows, Press, Production, Support, Data, Welcome, Privacy
   10. Blog: blog home, post cards, post pages, sidebar, tags
 
    Each section lists its base rules first, then its phone (max-width: 768px)
@@ -1808,7 +1808,7 @@ a.listen-button:hover {
 }
 
 /* ============================================================
-   9. PAGES: SYNC, SHOWS, PRESS, PRODUCTION, SUPPORT, DATA, WELCOME
+   9. PAGES: SYNC, SHOWS, PRESS, PRODUCTION, SUPPORT, DATA, WELCOME, PRIVACY
    ============================================================ */
 
 /* --- Sync licensing page (/sync/) --- */
@@ -2178,6 +2178,29 @@ a.listen-button:hover {
 .data-intro {
   opacity: 0.7;
   margin-bottom: 2rem;
+}
+
+/* --- Privacy page (/privacy/) --- */
+.privacy-text {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.privacy-text p + p {
+  line-height: 1.7;
+}
+
+section .privacy-text h2 {
+  font-size: 1.8rem;
+  padding-bottom: 0.8rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.privacy-updated {
+  font-size: 0.85rem;
+  color: #999;
 }
 
 /* 404 page */

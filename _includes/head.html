@@ -32,7 +32,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MusicGroup",
+  "@type": ["MusicGroup", "Organization"],
   "@id": "{{ site.url }}/#darksoft",
   "name": "Darksoft",
   "url": "{{ site.url }}/",
@@ -44,6 +44,11 @@
   "foundingLocation": { "@type": "Place", "name": "Seattle, Washington" },
   "location": { "@type": "Place", "name": "Portland, Maine" },
   "email": "darksoftband@gmail.com",
+  "contactPoint": [
+    { "@type": "ContactPoint", "contactType": "booking", "email": "darksoftband@gmail.com", "url": "{{ '/contact/' | absolute_url }}" },
+    { "@type": "ContactPoint", "contactType": "sync licensing", "email": "darksoftband@gmail.com", "url": "{{ '/sync/' | absolute_url }}" },
+    { "@type": "ContactPoint", "contactType": "press", "email": "darksoftband@gmail.com", "url": "{{ '/press/' | absolute_url }}" }
+  ],
   "album": [
     {%- assign ld_albums = site.data.albums | sort: "release_date" | reverse -%}
     {%- for a in ld_albums %}
