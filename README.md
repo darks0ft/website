@@ -1,8 +1,8 @@
 # Darksoft — Official Website
 
-This repository contains the source code for **https://darksoft.band**, the official website for **Darksoft**, a dream pop / shoegaze / indie rock music project.
+This repository contains the source code for **https://www.darksoft.band**, the official website for **Darksoft**, a dream pop / shoegaze / indie rock music project.
 
-The site serves as the canonical home for Darksoft’s music, lyrics, releases, merch, tour information, press coverage, and long-form artist context. It is designed to be fast, durable, SEO-friendly, and readable by both humans and AI discovery systems.
+The site serves as the canonical home for Darksoft’s music, lyrics, videos, releases, merch, tour information, press coverage, blog, and long-form artist context. It is designed to be fast, durable, SEO-friendly, and readable by both humans and AI discovery systems.
 
 ---
 
@@ -14,12 +14,14 @@ The Darksoft website is:
 - A **discography and lyric archive**
 - A **tour + merch hub**
 - A **press and bio reference** for journalists, bookers, and collaborators
+- A **sync licensing** point of contact for film, TV, and advertising
+- A **blog** for the stories behind the songs, recording, and news
 - A **structured, AI-friendly content source** (without allowing training on lyrics)
 
-It intentionally avoids heavy frameworks, trackers, or opaque CMS platforms in favor of long-term stability and content ownership.
+It intentionally avoids heavy frameworks and opaque CMS platforms in favor of long-term stability and content ownership. The only tracking is privacy-conscious Google Analytics (see `/privacy/`).
 
 Live site:  
-👉 **https://darksoft.band**
+👉 **https://www.darksoft.band**
 
 ---
 
@@ -30,6 +32,7 @@ Live site:
 - Listeners discovering the project via streaming, press, or playlists
 - Journalists, bloggers, and playlist curators
 - Booking agents and collaborators
+- Music supervisors looking for songs to license
 
 **Secondary audiences**
 - Search engines and AI assistants (discovery, navigation, summarization)
@@ -41,16 +44,44 @@ Live site:
 
 ```
 /
-├── index.html            # Homepage (hero, bio, merch, tour, releases)
-├── /lyrics/              # Master lyrics index
-│   └── /<album>/<track>/ # Individual lyric pages (structured)
-├── /merch/               # Official merch landing page
-├── /assets/              # Images, artwork, icons
-├── /_includes/           # Shared layout partials (header, footer, head)
-├── /_data/               # Structured album / track metadata
-├── sitemap.xml           # Search engine sitemap
-├── robots.txt            # Crawler rules
-├── llms.txt              # AI usage & training policy
+├── index.html              # Homepage (hero, latest album, newsletter, latest video, shows, merch, about, press, releases, support)
+├── about.html              # /about/: biography, sound, influences
+├── discography/            # /discography/: every album, plus "Listen" links to streaming services
+│   └── <album>.html        # /discography/<album>/: one page per album (album layout)
+├── lyrics.html             # /lyrics/: master lyrics index
+├── lyrics/<album>/
+│   ├── <song>.html         # /lyrics/<album>/<song>/: one page per song (lyrics layout)
+│   └── index.html          # redirects /lyrics/<album>/ to the album page
+├── videos.html             # /videos/: every music video
+├── shows.html              # /shows/: tour dates (Songkick widget) and booking
+├── merch.html              # /merch/
+├── blog/                   # /blog/: blog home (featured + all posts) and /blog/tags/
+├── press.html              # /press/: reviews, interviews, press kit
+├── production.html         # /production/: home studio, process, credits
+├── sync.html               # /sync/: sync licensing
+├── support.html            # /support/
+├── contact.html            # /contact/
+├── data.html               # /data/: album data charts (Chart.js)
+├── privacy.html            # /privacy/
+├── welcome.html            # /welcome/: newsletter thank-you page with the booklet download
+├── 404.html
+│
+├── _layouts/               # default (page frame), album, lyrics, post (blog), redirect
+├── _includes/              # header, footer, head (SEO + structured data), shared blocks
+│   ├── head/               # per-page extras: structured data, page-specific scripts
+│   └── sidebar/            # blog post sidebar blocks (listen, newsletter, shows, merch, support)
+├── _data/                  # albums, tracks (with lyrics), videos, press, streaming links, social links…
+├── _posts/                 # published blog posts (YYYY-MM-DD-slug.md); created with the first post
+├── _drafts/                # unpublished blog posts (preview with --drafts)
+├── _blog/                  # not published: blog style guide, inbox for raw text, stock header images
+├── assets/                 # images (web/ = optimized copies), icons, press kit, downloads, site.js
+├── style.css               # the whole stylesheet, organized in numbered sections
+│
+├── robots.txt              # crawler rules, named AI crawlers, Content Signals
+├── llms.txt                # summary for AI assistants: when to use the site, discography, usage policy
+├── .well-known/ai-catalog.json  # agent discovery manifest (ARD)
+├── _headers                # response headers (Link headers) for Cloudflare; ignored by GitHub Pages
+├── sitemap.xml / feed.xml  # generated by jekyll-sitemap and jekyll-feed
 └── README.md
 ```
 
@@ -58,7 +89,7 @@ Key principles:
 - **Lyrics are first-class content**, not PDFs or embeds
 - URLs are stable and human-readable
 - Album → track → lyric hierarchy is explicit
-- Metadata is consistent across pages
+- Album, track, video, and link data lives in `_data/` and is reused everywhere, so it's edited once
 
 ---
 
@@ -66,7 +97,7 @@ Key principles:
 
 **Stack**
 - **Jekyll** (static site generator)
-- **GitHub Pages** (hosting)
+- **GitHub Pages** (hosting; a move to Cloudflare is planned)
 - Plain **HTML / CSS / JavaScript**
 - No database, no server runtime
 
@@ -78,11 +109,13 @@ Key principles:
 - Works indefinitely without platform risk
 
 **Notable features**
-- Responsive layout (mobile-first)
+- Responsive layout
 - Custom CSS (no framework bloat)
 - Chart.js for album data visualization
 - Structured lyric pages with metadata
-- Minimal JavaScript for interaction only
+- Click-to-play music videos (the YouTube player loads only on click)
+- Blog written in Markdown (see `_blog/STYLE-GUIDE.md`)
+- One small script (`assets/js/site.js`) for interaction only
 
 ---
 
@@ -90,15 +123,17 @@ Key principles:
 
 This site intentionally supports modern discovery patterns:
 
-- `jekyll-seo-tag` and `jekyll-sitemap`
 - Clean semantic HTML
-- Canonical URLs
+- Canonical URLs, Open Graph, and Twitter tags, all written by `_includes/head.html`
 - Descriptive meta titles and descriptions
+- schema.org structured data: MusicGroup/Organization, MusicAlbum, MusicRecording, VideoObject, BlogPosting, and breadcrumbs
 - Structured lyric navigation
-- Explicit crawler guidance via:
-  - `robots.txt`
-  - `sitemap.xml`
-  - `llms.txt`
+- Explicit crawler and agent guidance via:
+  - `robots.txt` (named AI crawlers, Content Signals)
+  - `sitemap.xml` and `feed.xml`
+  - `llms.txt` (including when agents should use the site)
+  - `.well-known/ai-catalog.json`
+  - discovery `<link>` tags on every page (and Link headers via `_headers` once on Cloudflare)
 
 ### AI Usage Policy
 
@@ -119,7 +154,7 @@ All music, lyrics, artwork, and written content are © Darksoft unless otherwise
 ## 📬 Contact & Links
 
 **Official website**  
-https://darksoft.band
+https://www.darksoft.band
 
 **Email**  
 📧 darksoftband@gmail.com
