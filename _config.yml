@@ -70,4 +70,4 @@ defaults:
       og_type: article
       head_before: blog-post-before.html
       head_extra: blog-post.html
-      sidebar: [listen, newsletter, shows]
+      sidebar: [newsletter, listen, album, merch, support, shows]

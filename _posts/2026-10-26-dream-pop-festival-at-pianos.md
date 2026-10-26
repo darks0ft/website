@@ -7,7 +7,6 @@ image: /assets/blog/dream-pop-festival-at-pianos.jpg
 image_alt: "A Darksoft band member walking down a Lower East Side sidewalk carrying guitar cases before the show"
 image_caption: "Hauling gear to the venue before the show."
 tags: [live]
-sidebar: [shows, newsletter, listen]
 ---
 
 We had an incredible night on the Lower East Side at [Pianos](https://www.pianosnyc.com/) on Friday. Thanks to everyone who came out and packed the room!

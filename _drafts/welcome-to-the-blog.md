@@ -7,7 +7,6 @@ image: /assets/web/promo-hero.jpg
 image_alt: "Darksoft promo graphic"
 tags: [news]
 featured: true
-sidebar: [newsletter, listen, shows]
 ---
 
 > **Placeholder post.** The structure is real, the words are a stand-in. Replace this text before publishing.

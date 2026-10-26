@@ -7,7 +7,6 @@ image: /assets/blog/inside-the-home-studio.jpg
 image_alt: "The Darksoft home studio"
 tags: [recording, gear]
 featured: true
-sidebar: [listen, merch, support]
 ---
 
 > **Placeholder post.** The gear facts come from the [Production](/production/) page. The rest is a stand-in for real writing.

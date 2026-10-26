@@ -6,7 +6,6 @@ date: 2026-10-22 10:00:00 -0400
 image: /assets/web/day-by-day.jpg
 image_alt: "A still from the Day By Day music video"
 tags: [behind the songs, Rationalism]
-sidebar: [listen, newsletter, shows]
 ---
 
 > **Placeholder post.** The song facts are real. The story is a stand-in for the real one.

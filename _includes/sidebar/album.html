@@ -1,0 +1,11 @@
+{%- comment -%} Sidebar: the latest album on Bandcamp (newest release in _data/albums.yml; cover from assets/web/<album_id>-600.webp) {%- endcomment -%}
+{%- assign album = site.data.albums | sort: "release_date" | last -%}
+<div class="sidebar-block sidebar-album">
+  <h2>Latest album</h2>
+  <a class="sidebar-image" href="{{ album.bandcamp }}" target="_blank" rel="noopener">
+    <img src="/assets/web/{{ album.album_id }}-600.webp" alt="{{ album.album_title }} album cover" width="600" height="600" loading="lazy">
+  </a>
+  <p><em>{{ album.album_title }}</em>, {{ album.total_tracks }} songs. Buying it on Bandcamp is the most direct way to back the music.</p>
+  <a class="cta-button" href="{{ album.bandcamp }}" target="_blank" rel="noopener">Buy on Bandcamp</a>
+  <p class="sidebar-more"><a href="/discography/{{ album.album_id }}/">About the album →</a></p>
+</div>

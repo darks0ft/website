@@ -24,24 +24,27 @@ image_alt: "What the photo shows"            # required whenever there is an ima
 image_caption: "Photo: ..."                  # optional; Markdown allowed
 tags: [behind the songs, Rationalism]        # 1–3 tags, from the list below when possible
 featured: true                               # optional. Featured posts lead the blog home (up to 3).
-sidebar: [listen, newsletter, shows]         # optional. Order of the sidebar blocks.
+sidebar: [newsletter, listen, shows]         # optional. Overrides the default sidebar; leave it out on most posts.
 ---
 ```
 
 Defaults (in `_config.yml`): the `post` layout, the URL `/blog/:title/`, `og:type article`,
-and the sidebar `[listen, newsletter, shows]`.
+and the sidebar `[newsletter, listen, album, merch, support, shows]`.
 
 ### Sidebar blocks
 
-Pick the three that fit the post best, in order of importance:
+Every post shows all six blocks in the default order. It runs from the easiest yes to the
+biggest ask, with shows last because most readers are online-only. Only set `sidebar:` when a post has a
+real reason to differ.
 
-| Block | Shows | Good for |
-|---|---|---|
-| `listen` | Spotify, Apple Music, Bandcamp and YouTube Music buttons | song stories, releases |
-| `newsletter` | signup form with the free booklet | every post; first or second on most |
-| `shows` | link to /shows/ and Bandsintown | tour diaries, live posts, announcements |
-| `merch` | link to /merch/ and Bandcamp | vinyl/CD news, studio and gear posts |
-| `support` | link to /support/ | studio, process, personal posts |
+| Block | Shows |
+|---|---|
+| `newsletter` | signup form with the free booklet |
+| `listen` | Spotify, Apple Music, Bandcamp and YouTube Music buttons |
+| `album` | the latest album's cover and a Bandcamp buy button (newest release in `_data/albums.yml`; needs `assets/web/<album_id>-600.webp`) |
+| `merch` | the smiley shirt photo and a link to /merch/ |
+| `support` | Buy Me a Coffee button and a link to /support/ |
+| `shows` | link to /shows/ and Bandsintown |
 
 ### Tags
 
@@ -90,7 +93,7 @@ and album names (`Everydayness`, `Rationalism`, ...).
 4. Break the text into short paragraphs with `##` subheads.
 5. Add links as described under Links. Verify every URL.
 6. Prepare the images as described under Images.
-7. Choose 1–3 tags and the sidebar blocks.
+7. Choose 1–3 tags. Keep the default sidebar unless the post needs a different one.
 8. Save to `_drafts/<slug>.md` and preview it with `--drafts`.
 9. Check the result at phone and desktop widths, the link preview image and the title length.
 10. Publish only after approval: move the file to `_posts/YYYY-MM-DD-<slug>.md` (the date is the publish date), then commit and push.
