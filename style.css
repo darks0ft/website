@@ -2329,6 +2329,12 @@ section .privacy-text h2 {
   color: #ccc;
 }
 
+/* Tag pills between Featured and All posts on the blog home */
+.post-tags.blog-home-tags {
+  margin: 2.5rem auto 0;
+  padding: 0;
+}
+
 .blog-empty {
   margin: 2rem auto;
   color: #ccc;

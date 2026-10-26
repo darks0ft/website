@@ -26,6 +26,13 @@ head_extra: blog.html
     </div>
     {%- endif %}
 
+    {%- assign tags = site.tags | sort %}
+    <ul class="post-tags blog-home-tags" aria-label="Tags">
+      {%- for tag in tags %}
+      <li><a href="/blog/tags/#{{ tag[0] | slugify }}">{{ tag[0] }}</a></li>
+      {%- endfor %}
+    </ul>
+
     <div class="blog-latest">
       <h2 class="blog-section-title">All posts</h2>
       <div class="post-grid">
