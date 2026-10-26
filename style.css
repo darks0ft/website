@@ -1268,6 +1268,7 @@ body.homepage,
 /* Album art */
 .album-art {
   width: 260px;
+  height: auto;
   border-radius: 12px;
   display: block;
   margin: 0 auto 1.5rem;
@@ -1380,6 +1381,53 @@ body.homepage,
   color: #000;
   border-color: #6dc15b;
   opacity: 0.85;
+}
+
+/* Previous / next song links under the lyrics (same green outline as the back button) */
+.song-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2.5rem auto 1rem;
+}
+
+.song-nav a {
+  flex: 0 1 48%;
+  padding: 0.6rem 0.9rem;
+  font-family: Menlo, monospace;
+  font-size: 0.95rem;
+  color: #fff;
+  background: #111;
+  border: 1px solid #6dc15b;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.song-nav a span {
+  display: block;
+  color: #6dc15b;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.song-nav-prev {
+  text-align: left;
+}
+
+.song-nav-next {
+  text-align: right;
+  margin-left: auto;
+}
+
+.song-nav a:hover {
+  background: #6dc15b;
+  color: #000;
+}
+
+.song-nav a:hover span {
+  color: #000;
 }
 
 /* --- Lyrics index page --- */

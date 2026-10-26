@@ -50,7 +50,7 @@
 
       <a href="/lyrics/" class="lyrics-back-button">← Back to Lyrics</a>
 
-    <img src="/assets/{{ album.artwork | escape }}" class="album-art" alt="{{ album.album_title }} album artwork">
+    <img src="/assets/{{ album.artwork | escape }}" class="album-art" alt="{{ album.album_title }} album artwork" width="600" height="600">
 
     <h1 class="track-title">
       {{ track.track_title }} Lyrics
@@ -75,6 +75,27 @@
     <section class="lyrics" aria-label="{{ track.track_title }} lyrics">
       {{ track.lyrics | newline_to_br }}
     </section>
+
+    {%- comment -%} Previous / next song on the same album (only songs that have a lyrics page) {%- endcomment -%}
+    {%- assign album_tracks = site.data.tracks | where: "album_id", album.album_id | sort: "track_number" -%}
+    {%- assign prev_page = nil -%}
+    {%- assign next_page = nil -%}
+    {%- assign found = false -%}
+    {%- for t in album_tracks -%}
+      {%- assign t_page = site.pages | where: "track_id", t.track_id | first -%}
+      {%- if t.track_id == track.track_id -%}
+        {%- assign found = true -%}
+      {%- elsif t_page -%}
+        {%- if found -%}{%- unless next_page -%}{%- assign next_page = t_page -%}{%- assign next_track = t -%}{%- endunless -%}
+        {%- else -%}{%- assign prev_page = t_page -%}{%- assign prev_track = t -%}{%- endif -%}
+      {%- endif -%}
+    {%- endfor %}
+    {%- if prev_page or next_page %}
+    <nav class="song-nav" aria-label="More songs from {{ album.album_title }}">
+      {% if prev_page %}<a href="{{ prev_page.url }}" class="song-nav-prev"><span>← Previous song</span>{{ prev_track.track_title }}</a>{% endif %}
+      {% if next_page %}<a href="{{ next_page.url }}" class="song-nav-next"><span>Next song →</span>{{ next_track.track_title }}</a>{% endif %}
+    </nav>
+    {%- endif %}
 
     <!-- Newsletter: same markup/styles as the homepage signup (#mc_embed_signup) -->
     {% include newsletter-block.html section_class="lyrics-newsletter" intro="Darksoft here — thanks for reading! If you want updates on new albums, upcoming shows, and happenings from the Darksoft multiverse, sign up below." %}
