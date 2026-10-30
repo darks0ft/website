@@ -705,8 +705,10 @@ footer p:last-of-type {
   border-radius: 14px;
   padding: 2rem 2.5rem;
   max-width: 450px;
-   max-height: 85vh;
+  max-height: 85vh;
+  max-height: 90dvh; /* the visible height, which shrinks under in-app browser toolbars (Instagram, etc.) */
   overflow-y: auto;
+  overscroll-behavior: contain; /* scrolling inside the popup never scrolls the page behind */
   width: 90%;
   color: #fff;
   text-align: center;
@@ -766,7 +768,8 @@ footer p:last-of-type {
   filter: brightness(1.2);
 }
 
-.newsletter-small {
+/* Scoped to the popup: it sits inside <footer>, whose "footer p:last-of-type" rule would win otherwise */
+.newsletter-content .newsletter-small {
   margin-top: 1rem;
   font-size: 0.85rem;
   opacity: 0.75;
@@ -787,6 +790,88 @@ footer p:last-of-type {
 
 .newsletter-close:hover {
   opacity: 1;
+}
+
+/* Page behind the open popup stays put */
+html.newsletter-open,
+html.newsletter-open body {
+  overflow: hidden;
+}
+
+/* Long intro on wider screens, short one on phones */
+.newsletter-intro-short {
+  display: none;
+}
+
+/* Phones: everything, form included, fits on the first screen */
+@media (max-width: 600px) {
+  .newsletter-content {
+    padding: 1.25rem 1.25rem 1rem;
+    width: calc(100% - 32px);
+  }
+
+  .newsletter-image {
+    width: 72px;
+    margin-bottom: 0.4rem;
+  }
+
+  .newsletter-title {
+    font-size: 1.6rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .newsletter-intro-long {
+    display: none;
+  }
+
+  .newsletter-intro-short {
+    display: block;
+  }
+
+  .newsletter-content .newsletter-body {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0 0 0.9rem;
+  }
+
+  .newsletter-content .newsletter-bonus {
+    font-size: 0.85rem;
+    margin-top: -0.4rem;
+  }
+
+  .newsletter-content .newsletter-small {
+    margin-top: 0.6rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  /* No gap reserved for the status line until there's a message to show */
+  .newsletter-content .newsletter-status:empty {
+    min-height: 0;
+    margin: 0;
+  }
+}
+
+/* Short phone screens (iPhone SE, Instagram's in-app browser on small phones) */
+@media (max-width: 600px) and (max-height: 620px) {
+  .newsletter-image {
+    width: 44px;
+  }
+
+  .newsletter-title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Very short screens: drop the graphic so the form still shows without scrolling */
+@media (max-width: 600px) and (max-height: 520px) {
+  .newsletter-image {
+    display: none;
+  }
+
+  .newsletter-content .newsletter-title {
+    margin-top: 0.4rem;
+  }
 }
 
 /* Lyric-page newsletter reuses the homepage #mc_embed_signup styles */

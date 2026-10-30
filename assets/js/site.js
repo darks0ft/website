@@ -102,9 +102,14 @@ document.getElementById("year").innerText = new Date().getFullYear();
   let lastFocus = null;
 
   if (!lastShown || (Date.now() - lastShown) > THIRTY_DAYS) {
+    // Fetch the popup graphic now so it's ready when the popup opens (it's lazy-loaded otherwise)
+    const image = modal.querySelector(".newsletter-image");
+    if (image) image.loading = "eager";
+
     setTimeout(() => {
       lastFocus = document.activeElement;
       modal.classList.remove("hidden");
+      document.documentElement.classList.add("newsletter-open"); // stop the page behind from scrolling
       closeBtn.focus({ preventScroll: true }); // keyboard and screen-reader users land in the popup
     }, 5000); // 5 seconds delay
   }
@@ -112,6 +117,7 @@ document.getElementById("year").innerText = new Date().getFullYear();
   function closeModal() {
     if (modal.classList.contains("hidden")) return;
     modal.classList.add("hidden");
+    document.documentElement.classList.remove("newsletter-open");
     localStorage.setItem("newsletter-popup", Date.now());
     if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
   }
