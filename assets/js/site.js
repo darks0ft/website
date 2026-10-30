@@ -25,6 +25,16 @@ document.getElementById("year").innerText = new Date().getFullYear();
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+
+      // Bot trap (hidden b_ field, see newsletter-form.html): Mailchimp doesn't check it on
+      // background signups, so check it here. Bots get a fake thank-you and nothing is sent.
+      const trap = form.querySelector('input[name^="b_"]');
+      if (trap && trap.value) {
+        status.textContent = "Thank you for subscribing!";
+        status.classList.remove("is-error");
+        return;
+      }
+
       const button = form.querySelector('[type="submit"]');
       const label = button ? button.textContent : "";
       if (button) { button.disabled = true; button.textContent = "Sending…"; }

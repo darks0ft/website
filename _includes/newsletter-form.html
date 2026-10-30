@@ -8,5 +8,13 @@
       method="post" target="_blank"{% if include.form_class %} class="{{ include.form_class }}"{% endif %}>
   <input type="email" name="EMAIL" placeholder="Enter your email" aria-label="Email address" required>
   <div hidden><input type="hidden" name="tags" value="{{ site.data.newsletter.tags }}"></div>
+  {%- comment -%}
+    Bot trap from Mailchimp's standard embed: people never see or fill it, bots do.
+    The signup script in site.js drops any submission where it has a value (Mailchimp
+    itself ignores it on background signups). Named b_<u>_<id> from the form action.
+  {%- endcomment -%}
+  {%- assign mc_u = site.data.newsletter.action | split: "u=" | last | split: "&" | first -%}
+  {%- assign mc_id = site.data.newsletter.action | split: "id=" | last | split: "&" | first %}
+  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_{{ mc_u }}_{{ mc_id }}" tabindex="-1" value="" autocomplete="off"></div>
   <button type="submit" class="{{ include.button_class | default: 'button' }}">Subscribe</button>
 </form>
