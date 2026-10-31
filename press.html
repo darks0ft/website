@@ -9,12 +9,18 @@ body_class: "press-page"
 
   {%- assign reviews = site.data.press | where: "type", "quote" -%}
   {%- assign interviews = site.data.press | where: "type", "interview" -%}
+  {%- assign sessions = site.data.press | where: "type", "session" -%}
   {%- assign features = site.data.press | where: "type", "feature" -%}
 
   <section class="page-wrapper" id="press">
     <h1 class="page-title">Press</h1>
     <p>Here are some quotes from music journalists and features on Darksoft. I truly appreciate these folks and the time they've taken getting to know my music and sharing it with their readers.</p>
     <p>For press and interview requests: <a href="mailto:darksoftband@gmail.com">darksoftband@gmail.com</a></p>
+
+    <h3 class="press-group">Features</h3>
+    {% for item in features %}
+      {% include press-quote.html item=item %}
+    {% endfor %}
 
     <h3 class="press-group">Reviews</h3>
     {% for item in reviews %}
@@ -26,8 +32,8 @@ body_class: "press-page"
       {% include press-quote.html item=item %}
     {% endfor %}
 
-    <h3 class="press-group">Features</h3>
-    {% for item in features %}
+    <h3 class="press-group">In-Studio Sessions</h3>
+    {% for item in sessions %}
       {% include press-quote.html item=item %}
     {% endfor %}
   </section>

@@ -1,9 +1,21 @@
 # Press quotes, interviews and features, newest first.
 # The homepage press section is rendered from this file (and /press/ will be).
 #   text:  a quote (in quotation marks) or a headline / feature title, shown as written
-#   type:  quote | interview | feature   (used to group the Press page)
+#   type:  quote | interview | session | feature   (used to group the Press page)
 #   year:  publication year; years marked `# inferred` come from the entry's place in the list
 #   featured: true  shows the entry on the homepage (keep it to three)
+
+- text: "Countdown to the Telepathic Windows Festival 2026 Vol. 1 // An Interview with DARKSOFT"
+  outlet: "WhiteLight//WhiteHeat"
+  url: https://www.whitelight-whiteheat.com/p94onm-vwn/
+  type: interview
+  year: 2026
+
+- text: "Afterglow Echoplex, Episode Twenty-Four [Podcast]"
+  outlet: "Afterglow Echoplex"
+  url: https://afterglowechoplex.buzzsprout.com/2391996/episodes/18949073-afterglow-echoplex-episode-twenty-four
+  type: interview
+  year: 2026
 
 - text: "Darksoft Finds a Way Out of the Everyday"
   outlet: "Jambaloo"
@@ -24,11 +36,41 @@
   type: feature
   year: 2026  # inferred
 
+- text: "Best Shoegaze & Dream Pop 2026 playlist"
+  outlet: "Shoegaze Blog"
+  url: https://shoegazeblog.com/2026/04/21/best-shoegaze-dream-pop-2026-playlist/
+  type: feature
+  year: 2026
+
 - text: "Q&A with Darksoft on Everydayness (2026)"
   outlet: "Radio Free Bucktown"
   url: https://read.rfb.fm/p/q-and-a-with-darksoft
   type: interview
   year: 2026
+
+- text: "“Endless Day” live for Transmissions"
+  outlet: "SPACE 101.1 FM"
+  url: https://www.youtube.com/watch?v=4NWNzUH9OMQ
+  type: session
+  year: 2026
+
+- text: "“Live And Let Live” live for Transmissions"
+  outlet: "SPACE 101.1 FM"
+  url: https://www.youtube.com/watch?v=GcdDZTNWLKk
+  type: session
+  year: 2026
+
+- text: "“Some Things You Just Know” live for Transmissions"
+  outlet: "SPACE 101.1 FM"
+  url: https://www.youtube.com/watch?v=T1KDhchDxno
+  type: session
+  year: 2026
+
+- text: "Producing a Dream Pop Song: “Endless Day” [Video interview]"
+  outlet: "BKF Audio"
+  url: https://www.youtube.com/watch?v=syj_Ddma9LI
+  type: interview
+  year: 2025
 
 - text: "ifitbeyourwill S05E16 • Darksoft [Podcast]"
   outlet: "ifitbeyourwill"
@@ -67,10 +109,40 @@
   year: 2024
   featured: true
 
+- text: "“Then and Now” live on WPTS Radio"
+  outlet: "WPTS Radio, University of Pittsburgh"
+  url: https://www.youtube.com/watch?v=EXK2u03TOVA
+  type: session
+  year: 2024
+
+- text: "“Looking Backward” live on WPTS Radio"
+  outlet: "WPTS Radio, University of Pittsburgh"
+  url: https://www.youtube.com/watch?v=PX1DNb2pLFI
+  type: session
+  year: 2024
+
+- text: "\"Notably mesmerizing, the song encapsulates ethereal melodies\""
+  outlet: "Darkenin Heart"
+  url: https://www.darkeninheart.com/2024/04/endless-day-by-darksoft.html
+  type: quote
+  year: 2024
+
 - text: "Top 10 albums of 2023"
   outlet: "JanglePopHub"
   url: https://janglepophub.home.blog/2023/12/28/janglepophub-oscars-2023-top-30-albums/
   type: feature
+  year: 2023
+
+- text: "Ep 170: Darksoft's New Album, Grayscale [Podcast]"
+  outlet: "Sound Pollution"
+  url: https://www.youtube.com/watch?v=HwvVlmLTVC8
+  type: interview
+  year: 2023
+
+- text: "Ondas Atlánticas, Episodio 117 [Podcast]"
+  outlet: "Ondas Atlánticas"
+  url: https://www.ivoox.com/ondas-atlanticas-episodio-117-audios-mp3_rf_119912444_1.html
+  type: interview
   year: 2023
 
 - text: "\"chiming guitars, dayglo synths and earworm melodies\""
@@ -91,6 +163,18 @@
   url: https://start-track.com/introducing-darksoft-beigeification-3-questions/
   type: quote
   year: 2023  # inferred
+
+- text: "Big Bang Radio Spotlight: DARKSOFT"
+  outlet: "WNIA Big Bang Radio"
+  url: https://www.youtube.com/watch?v=SvKXps2UD_k
+  type: interview
+  year: 2023
+
+- text: "Ep 133: New Interview with Darksoft [Podcast]"
+  outlet: "Sound Pollution"
+  url: https://www.youtube.com/watch?v=smN2oZcd4oM
+  type: interview
+  year: 2023
 
 - text: "“It Is What It Is.” An Interview With Darksoft"
   outlet: "forestpunk"
@@ -140,6 +224,24 @@
   type: quote
   year: 2022  # inferred
 
+- text: "Ep 72: Darksoft [Podcast]"
+  outlet: "Sound Pollution"
+  url: https://www.youtube.com/watch?v=80UBhyKNGfY
+  type: interview
+  year: 2022
+
+- text: "\"a rock sound that consumes with hazy lushness\""
+  outlet: "Obscure Sound"
+  url: https://www.obscuresound.com/2022/01/darksoft-icebreaker/
+  type: quote
+  year: 2022
+
+- text: "Ep 47: Darksoft [Podcast]"
+  outlet: "Sound Pollution"
+  url: https://www.youtube.com/watch?v=_9C6aMhBWJg
+  type: interview
+  year: 2021
+
 - text: "\"infectious melodies progressions and ‘90s rock undertones\""
   outlet: "V13"
   url: https://v13.net/2020/09/darksoft-previews-his-meltdown-album-with-the-foreshadow-music-video-premiere/
@@ -150,6 +252,18 @@
   outlet: "Vanyaland"
   url: https://vanyaland.com/2020/12/01/darksoft-soundtracks-the-ongoing-meltdown-deep-within-us-all/
   type: quote
+  year: 2020
+
+- text: "\"Foreshadow may have a warm, fuzzy surface, but within that lies real steel\""
+  outlet: "AnalogueTrash"
+  url: https://www.analoguetrash.com/blog/darksoft-foreshadow
+  type: quote
+  year: 2020
+
+- text: "Meltdown album premiere"
+  outlet: "Ghettoblaster Magazine"
+  url: https://ghettoblastermagazine.com/features/album-stream/album-premiere-darksoft-meltdown/
+  type: feature
   year: 2020
 
 - text: "\"beautiful melodies, outstanding guitar work, and stunning vocals\""
