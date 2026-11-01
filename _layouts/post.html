@@ -67,3 +67,12 @@ layout: default
 
   <p class="post-back"><a href="/blog/">← All posts</a></p>
 </article>
+
+<script>
+  // Links to other sites in the post open in a new tab (see _blog/STYLE-GUIDE.md)
+  document.querySelectorAll(".post-body a[href^='http']").forEach((a) => {
+    if (a.hostname === location.hostname) return;
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
+</script>
