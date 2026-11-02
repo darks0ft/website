@@ -898,6 +898,70 @@ html.newsletter-open body {
   color: hsl(340, 70%, 75%);
 }
 
+/* --- Newsletter: after signing up, the booklet link replaces the form --- */
+.signup-done > h2,
+.signup-done > p {
+  display: none;
+}
+
+.signup-done .newsletter-status {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.newsletter-status p {
+  margin: 0 0 0.5rem;
+}
+
+.newsletter-status .newsletter-success-title {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* --- Newsletter: signup block inside a blog post --- */
+.signup-cta {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+}
+
+.signup-cta p {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.signup-cta .signup-cta-title {
+  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.signup-cta .sidebar-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.signup-cta .sidebar-form input[type="email"] {
+  flex: 1 1 220px;
+  width: auto;
+  margin-top: 0;
+}
+
+.signup-cta .sidebar-form .cta-button {
+  margin-top: 0;
+}
+
+.signup-cta .newsletter-status:empty {
+  min-height: 0;
+  margin: 0;
+}
+
 /* ============================================================
    6. HOMEPAGE: HERO, LATEST VIDEO, ALBUM COVERS
    ============================================================ */
@@ -2694,6 +2758,11 @@ a.post-card-link:visited {
   text-decoration-color: #6dc15b;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
+}
+
+.post-body a.cta-button:not(.cta-button-outline),
+.post-body a.cta-button:not(.cta-button-outline):visited {
+  color: #000;
 }
 
 .post-body ul,

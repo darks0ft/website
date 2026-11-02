@@ -9,16 +9,51 @@
 document.getElementById("year").innerText = new Date().getFullYear();
 
 // ---------------------------------------------------------------
-// Newsletter forms: submit to Mailchimp in the background (JSONP), then send
-// successful signups to the booklet download page (_data/reward.yml).
+// Newsletter forms: submit to Mailchimp in the background (JSONP), then swap the
+// forms for a link to the booklet page (_data/reward.yml), so visitors stay put.
 // Without JavaScript, forms still post to Mailchimp as before.
 // ---------------------------------------------------------------
 (function() {
   const THANKS_URL = {{ site.data.reward.thanks_url | jsonify }};
   const forms = document.querySelectorAll('form[action*="list-manage.com/subscribe/post"]');
 
+  // Name the part of the page a form sits in, so signups can be compared by placement
+  const placement = (form) => form.closest("#newsletter-modal") ? "newsletter_popup"
+                            : form.closest(".lyrics-newsletter") ? "lyrics_page"
+                            : form.closest(".post-sidebar") ? "blog_sidebar"
+                            : form.closest(".signup-cta") ? "post_inline"
+                            : (form.closest("section[id]") || {}).id || "page";
+
+  // Replace every form on the page with the booklet link. The heading and text around
+  // each form are hidden too (.signup-done in style.css). Returns the submitted form's link.
+  function showBooklet(submitted, alreadySubscribed) {
+    const where = placement(submitted);
+    let submittedLink = null;
+    forms.forEach((form) => {
+      const status = form.nextElementSibling;
+      const title = alreadySubscribed ? "You're already on the list!" : "You're in!";
+      const note = alreadySubscribed ? "Thanks for being a subscriber." : "Thanks for subscribing.";
+      status.classList.remove("is-error");
+      status.innerHTML = '<p class="newsletter-success-title">' + title + "</p><p>" + note + "</p>";
+      const link = document.createElement("a");
+      link.className = "cta-button";
+      link.href = THANKS_URL;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = "Get your free booklet ↗";
+      link.addEventListener("click", () => {
+        if (typeof gtag === "function") gtag("event", "booklet_open", { placement: where });
+      });
+      status.append(link);
+      form.parentElement.classList.add("signup-done");
+      if (form === submitted) submittedLink = link;
+      form.remove();
+    });
+    return submittedLink;
+  }
+
   forms.forEach((form) => {
-    const status = document.createElement("p");
+    const status = document.createElement("div");
     status.className = "newsletter-status";
     status.setAttribute("role", "status");
     form.after(status);
@@ -59,21 +94,15 @@ document.getElementById("year").innerText = new Date().getFullYear();
         // Existing subscribers get the reward too
         if (data && (data.result === "success" || /already subscribed/i.test(msg))) {
           try { localStorage.setItem("newsletter-popup", Date.now()); } catch (err) {}
-          // Record the signup, then redirect (fallback timer in case analytics is blocked)
-          let left = false;
-          const go = () => { if (!left) { left = true; window.location.href = THANKS_URL; } };
-          const where = form.closest("#newsletter-modal") ? "newsletter_popup"
-                      : form.closest(".lyrics-newsletter") ? "lyrics_page"
-                      : form.closest(".post-sidebar") ? "blog_sidebar"
-                      : (form.closest("section[id]") || {}).id || "page";
+          const alreadySubscribed = data.result !== "success";
           if (typeof gtag === "function") {
             gtag("event", "newsletter_signup", {
-              placement: where,
-              already_subscribed: data.result !== "success",
-              event_callback: go
+              placement: placement(form),
+              already_subscribed: alreadySubscribed
             });
           }
-          setTimeout(go, 1000);
+          const link = showBooklet(form, alreadySubscribed);
+          if (link) link.focus({ preventScroll: true });
           return;
         }
         // Mailchimp prefixes some errors with "0 - "; show plain text only

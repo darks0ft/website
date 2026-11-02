@@ -1,0 +1,12 @@
+{%- comment -%}
+  Signup block for the middle or end of a blog post: the booklet offer and the
+  shared form. The wording comes from _data/reward.yml. Add it to a post with
+  {% include signup.html %}.
+  Optional parameter:
+    intro  sentence under the heading (default: the booklet's `pitch`)
+{%- endcomment -%}
+<div class="signup-cta">
+<p class="signup-cta-title">Get the {{ site.data.reward.offer }}</p>
+<p>{{ include.intro | default: site.data.reward.pitch }}</p>
+{% include newsletter-form.html form_class="sidebar-form" button_class="cta-button" %}
+</div>

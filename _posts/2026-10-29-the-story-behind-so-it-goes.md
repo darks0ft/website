@@ -80,9 +80,7 @@ The song was mixed by [Brian Fisher](https://briankfisher.com/work), a mixing an
 
 I'm always producing new music. If you want to hear what's next, subscribe here.
 
-<div class="post-signup">
-{% include newsletter-form.html form_class="sidebar-form" button_class="cta-button" %}
-</div>
+{% include signup.html %}
 
 ## Back in the set
 
@@ -105,9 +103,7 @@ If you landed here because you're curious about the song, thank you for being he
 
 Please consider subscribing to my newsletter. That really helps indie folks like me keep this going.
 
-<div class="post-signup">
-{% include newsletter-form.html form_class="sidebar-form" button_class="cta-button" %}
-</div>
+{% include signup.html %}
 
 You can pick up a copy of *Grayscale* on Bandcamp, or a tape via Spirit Goth.
 

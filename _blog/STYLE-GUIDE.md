@@ -46,6 +46,16 @@ real reason to differ.
 | `support` | Buy Me a Coffee button and a link to /support/ |
 | `shows` | link to /shows/ and Bandsintown |
 
+### Signups inside a post
+
+Add a signup mid-post or at the end with `{% include signup.html %}` on its own line. It shows
+the booklet offer and the form, so don't paste the form in by hand. The wording lives in
+`_data/reward.yml`; update the booklet there and every signup on the site follows. For a
+different sentence under the heading, use `{% include signup.html intro="..." %}`.
+
+After signing up, readers stay on the post, and the form is replaced by a link that opens the
+booklet page in a new tab.
+
 ### Tags
 
 Lowercase for topics, title case for names. Reuse existing tags before making new ones.

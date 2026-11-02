@@ -64,9 +64,7 @@ As with all Darksoft songs, I recorded this in my basement, pretty DIY. I play t
 
 I need to make a music video for this song! When I finally get around to it, subscribers will see it first.
 
-<div class="post-signup">
-{% include newsletter-form.html form_class="sidebar-form" button_class="cta-button" %}
-</div>
+{% include signup.html %}
 
 ![Darksoft in the studio playing a white Stratocaster, wearing headphones, under pink light](/assets/blog/the-story-behind-live-and-let-live-2.jpg){: .post-img-tiny}
 *Me in the studio.*
@@ -90,9 +88,7 @@ If you landed here because you're curious about the song, thank you for being he
 
 Please consider subscribing to my newsletter. That really helps indie folks like me keep this going.
 
-<div class="post-signup">
-{% include newsletter-form.html form_class="sidebar-form" button_class="cta-button" %}
-</div>
+{% include signup.html %}
 
 You can pick up a copy of *Relativism* on Bandcamp, or a tape via Spirit Goth.
 
