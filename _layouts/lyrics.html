@@ -10,7 +10,7 @@
 
   {%- comment -%} SEO values for head.html (it outputs the actual tags) {%- endcomment -%}
   {% capture seo_title %}{% if page.title %}{{ page.title }}{% else %}{{ track.track_title }} Lyrics — Darksoft{% endif %}{% endcapture %}
-  {% capture seo_description %}Official lyrics for “{{ track.track_title }}” by Darksoft, from the album {{ album.album_title }} ({{ album.release_year }}).{% endcapture %}
+  {% capture seo_description %}{% if track.notes %}Lyrics and meaning of{% else %}Official lyrics for{% endif %} “{{ track.track_title }}” by Darksoft, from the album {{ album.album_title }} ({{ album.release_year }}).{% endcapture %}
   {% capture seo_image %}/assets/{{ album.artwork | replace: ' ', '%20' }}{% endcapture %}
   {% assign seo_og_type = "music.song" %}
   {% include head.html %}
@@ -76,6 +76,13 @@
       {{ track.lyrics | newline_to_br }}
     </section>
 
+    {%- comment -%} What the song means (notes in _data/tracks.yml) and its blog post (story in the page's front matter) {%- endcomment -%}
+    {%- if track.notes %}
+    <section class="song-notes">
+      <h2>What “{{ track.track_title }}” means</h2>
+      <p>{{ track.notes }}</p>
+    </section>
+    {%- endif %}
     {%- if page.story %}
     <p class="lyrics-story"><a href="{{ page.story }}">Read the story behind this song →</a></p>
     {%- endif %}

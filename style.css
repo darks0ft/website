@@ -1376,6 +1376,25 @@ body.homepage,
   margin-bottom: 2rem;
 }
 
+/* What the song means, below the lyrics */
+.song-notes {
+  max-width: 640px;
+  margin: 2.5rem auto 0;
+}
+
+.song-notes h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.song-notes p {
+  line-height: 1.6;
+}
+
+.lyrics-story {
+  margin-top: 1.25rem;
+}
+
 /* Lyrics block */
 .lyrics {
   font-size: 1.15rem;
