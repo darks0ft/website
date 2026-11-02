@@ -1,7 +1,7 @@
 ---
 title: "The Story Behind “Live And Let Live”"
 subtitle: "How a song about acceptance ended up in over 20,000 Instagram Reels."
-description: "How a Darksoft song about acceptance ended up in over 20,000 Instagram Reels and nearly 2 million Spotify plays, and what it means to me."
+description: "How a Darksoft song about acceptance ended up in over 20,000 Instagram Reels and nearly 2 million Spotify streams, and what it means to me."
 date: 2026-11-01 10:00:00 -0500
 image: /assets/blog/the-story-behind-live-and-let-live.jpg
 image_alt: "The Relativism album cover: looping pink and green ribbons over a glowing pink and green field on a gold background"
@@ -9,11 +9,15 @@ image_caption: "[*Relativism*](/discography/relativism/) album artwork by Erica 
 tags: [behind the songs, Relativism]
 ---
 
-Something is happening with my song "[Live And Let Live](/lyrics/relativism/live_and_let_live/)." As of November 2026, it's been used in over 20,000 [Instagram Reels](https://www.instagram.com/reels/audio/999822731741752/). It's nearly at 2 million plays on [Spotify](https://open.spotify.com/track/2cTGPhd0rCh0G2LpeooRI1). The song page recently hit 100k views on [YouTube](https://www.youtube.com/watch?v=NIlqJWXOtSU), with creators soundtracking their videos with it there too.
+Something is happening with my song "[Live And Let Live](/lyrics/relativism/live_and_let_live/)." As of November 2026, it's been used in over 20,000 [Instagram Reels](https://www.instagram.com/reels/audio/999822731741752/). It's nearing 2 million streams on [Spotify](https://open.spotify.com/track/2cTGPhd0rCh0G2LpeooRI1). The song recently hit 100,000 views on [YouTube](https://www.youtube.com/watch?v=NIlqJWXOtSU), with creators soundtracking their videos with it there too.
 
 <div class="lyrics-player">
   <iframe src="https://open.spotify.com/embed/track/2cTGPhd0rCh0G2LpeooRI1?theme=0" title="Play Live And Let Live by Darksoft on Spotify" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </div>
+
+## What does "live and let live" mean?
+
+To me, it means accepting that people have different beliefs, tastes and ways of living, and letting them be themselves. That's the idea behind the Darksoft song.
 
 ## How the song came about, and what happened next
 
@@ -37,13 +41,11 @@ First, given some of the comments on the [YouTube video](https://www.youtube.com
 
 To me, it's a message of acceptance. If someone is different from you but they're not hurting anyone, even if you disagree with them, there's no need to be a jerk about it. To each their own.
 
-Without a live and let live attitude, you get divisive outcomes like war, religious conflict, sexism, racism, toxic online culture and heated politics. So much unnecessary division stems from the fact that people are afraid of one another, or afraid of what makes them different.
+A lot of unnecessary division comes from an inability to tolerate people who think or live differently. You can see it everywhere, from toxic online culture and heated politics to much more serious forms of prejudice and conflict.
 
 ## That's just your opinion
 
-It's all subjective. Know your enemy well enough and you might just end up seeing things through their eyes, and realize that from their perspective you're the bad guy. Or take religion: each offers a different path to enlightenment, and I'm not the one to say which is right.
-
-Or take politics. Each side demonizes the other, when often people aren't that dissimilar, and it's just a matter of perspective and how you grew up that shapes your strong opinions.
+Many things are subjective. Know your enemy well enough and you might just end up seeing things through their eyes, and realize that from their perspective you're the bad guy. Or take religion: people can hold completely different beliefs about some of life's biggest questions.
 
 I don't mean to encourage inaction. Some things need justice and standing up for what's right. I just think we've all gotten too quick to hate each other.
 
@@ -54,7 +56,7 @@ It's all relative. As [The Dude](https://en.wikipedia.org/wiki/The_Big_Lebowski)
 
 ## The process behind the song
 
-I hope folks are into it because they like how it sounds! I love the jangly, intertwined, dreamy-sounding guitars, bringing that into a major-mode song with a bit of bittersweet dissonance, a driving drum beat and a chill, layered vocal delivery.
+I hope folks are into it because they like how it sounds! I love the jangly, intertwined, dreamy-sounding guitars in a major-mode song, with a bit of bittersweet dissonance, a driving drum beat and a chill, layered vocal delivery.
 
 It's jangle pop in the dream pop canon, and it's a sound I've been slowly molding over the past few years, taking inspiration from modern dream pop, bedroom pop and alternative 80s/90s rock.
 
@@ -78,11 +80,13 @@ The song was mixed and mastered by [Brian Fisher](https://briankfisher.com/work)
 
 There's something relatable about a simple idea, something you can throw on in the background. I'm attracted to vague aphorisms and clichés in my songwriting. They say nothing, but in context they mean the world.
 
-So, there are some musings on "Live And Let Live." Keep in mind I'm not an economist, social commentator, prophet or wise person. I'm a songwriter, and I write about feelings or philosophies that feel good to me. So, take it with a [grain of salt](/lyrics/everydayness/grain_of_salt/). And, live and let live.
+So, there are some musings on "Live And Let Live." Keep in mind I'm not an economist, social commentator, prophet or wise person. I'm a songwriter, and I write about feelings and philosophies that resonate with me.
+
+So, take it with a [grain of salt](/lyrics/everydayness/grain_of_salt/). And, live and let live.
 
 ## Subscribe and support the project
 
-If you landed here because you're curious about the song, thank you for being here! I hope you check out [my other music](/discography/). I'm always producing new music.
+If you landed here because you're curious about the song, thank you for being here! I hope you check out [my other music](/discography/), maybe starting with "[So It Goes](/lyrics/grayscale/so_it_goes/)" or "[Out Of Sight Out Of Mind](/lyrics/rationalism/out_of_sight_out_of_mind/)," two more songs built around everyday sayings. I'm always producing new music.
 
 Please consider subscribing to my newsletter. That really helps indie folks like me keep this going.
 
