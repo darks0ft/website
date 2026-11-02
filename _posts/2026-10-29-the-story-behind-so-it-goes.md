@@ -8,9 +8,9 @@ image_alt: "Darksoft standing on a hilltop in a dark T-shirt, with hazy green fo
 tags: [behind the songs, Grayscale]
 ---
 
-At our show in Buffalo, NY, this past August, someone got my Kurt Vonnegut reference on "[So It Goes](/lyrics/grayscale/so_it_goes/)." It was [the first time that happened this tour](https://www.instagram.com/p/DcEDMlbHFcF/). Turned out our friends [Elemantra](https://elemantraband.bandcamp.com/) were working on a tune called "Dresden."
+At our show in Buffalo, NY, this past August, someone got my Kurt Vonnegut reference on "[So It Goes](/lyrics/grayscale/so_it_goes/)." It was [the first time that's happened on any tour](https://www.instagram.com/p/DcEDMlbHFcF/). Turned out our friends [Elemantra](https://elemantraband.bandcamp.com/) were working on a tune called "Dresden."
 
-As another person commented, "I know at least 3 people in Buffalo with 'So it goes' tattoos." That's really wild. Why Buffalo?
+As another person [commented on Instagram](https://www.instagram.com/p/DcEDMlbHFcF/), "I know at least 3 people in Buffalo with 'So it goes' tattoos." That's really wild. Why Buffalo?
 
 For this post, I want to share a bit about the meaning and the making of my song "So It Goes."
 
@@ -44,7 +44,7 @@ Around this time I tried to get in a daily walk, as I found it to be a very ther
 
 "So It Goes" is a direct reference to one of my all-time favorite authors, [Kurt Vonnegut](https://en.wikipedia.org/wiki/Kurt_Vonnegut), who used it 106 times in [*Slaughterhouse-Five*](https://en.wikipedia.org/wiki/Slaughterhouse-Five).
 
-My wife and I read Vonnegut together that winter. My wife even painted me this asshole for Christmas!
+My wife and I read Vonnegut together that winter. My wife even painted me this asshole for Christmas! It's based off a Vonnegut doodle.
 
 ![A small painted canvas of a black asterisk-like shape on a white background, hung on a wall in purple light](/assets/blog/the-story-behind-so-it-goes-2.jpg){: .post-img-tiny}
 *Vonnegut fans will recognize it from* [Breakfast of Champions](https://en.wikipedia.org/wiki/Breakfast_of_Champions)*.*
