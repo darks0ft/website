@@ -33,7 +33,7 @@ It also follows my album [*Beigeification*](/discography/beigeification/), which
 ![A gray Darksoft Grayscale cassette resting on rows of cassette cases](/assets/blog/the-story-behind-so-it-goes-6.jpg){: .post-img-small}
 *The* Grayscale *tapes.*
 
-## Out of my control
+## Out of your control
 
 I wrote "So It Goes" in the later months of the pandemic, a time when so much was literally out of our control. It was just the way life was.
 
