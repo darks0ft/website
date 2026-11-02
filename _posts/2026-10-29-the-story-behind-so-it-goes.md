@@ -10,7 +10,7 @@ tags: [behind the songs, Grayscale]
 
 At our show in Buffalo, NY, this past August, someone got my Kurt Vonnegut reference on "[So It Goes](/lyrics/grayscale/so_it_goes/)." It was [the first time that's happened on any tour](https://www.instagram.com/p/DcEDMlbHFcF/). Turned out our friends [Elemantra](https://elemantraband.bandcamp.com/) were working on a tune called "Dresden."
 
-As another person [commented on Instagram](https://www.instagram.com/p/DcEDMlbHFcF/), "I know at least 3 people in Buffalo with 'So it goes' tattoos." That's really wild. Why Buffalo?
+As another person [commented on Instagram](https://www.instagram.com/p/DcEDMlbHFcF/), "I know at least 3 people in Buffalo with 'So it goes' tattoos." That's really wild. Why Buffalo? That might take another post to answer...
 
 For this post, I want to share a bit about the meaning and the making of my song "So It Goes."
 
@@ -87,7 +87,7 @@ We brought this song back into the set on tour recently after seeing it was gett
 
 ## So, what's changed?
 
-The song came out in 2023. What's changed since? Well, I think the beauty of a song with a dumb name and lyric like "So It Goes" is that it can be reinterpreted in many ways. Whatever happens, so be it.
+The song came out in 2023. What's changed since? Well, we may not be in the midst of a global pandemic. But plenty of things in life or the 24-hour news cycle can still cause disillusionment. I think the beauty of a song with a dumb name and lyric like "So It Goes" is that it can be reinterpreted in many ways. Whatever happens, so be it.
 
 I hope it gives peace to those worried about something in the moment, and helps them see the bigger picture, too. Because life goes on. It will always roll on. And, well, there it goes. So it goes.
 
