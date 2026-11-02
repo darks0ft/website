@@ -76,6 +76,10 @@
       {{ track.lyrics | newline_to_br }}
     </section>
 
+    {%- if page.story %}
+    <p class="lyrics-story"><a href="{{ page.story }}">Read the story behind this song →</a></p>
+    {%- endif %}
+
     {%- comment -%} Previous / next song on the same album (only songs that have a lyrics page) {%- endcomment -%}
     {%- assign album_tracks = site.data.tracks | where: "album_id", album.album_id | sort: "track_number" -%}
     {%- assign prev_page = nil -%}

@@ -2701,6 +2701,20 @@ a.post-card-link:visited {
   border-radius: 8px;
 }
 
+/* Smaller in-post images, set per image with {: .post-img-small} */
+.post-body img.post-img-small {
+  max-width: min(440px, 100%);
+}
+
+.post-body img.post-img-tiny {
+  max-width: min(260px, 100%);
+}
+
+.post-body p:has(> img.post-img-small),
+.post-body p:has(> img.post-img-tiny) {
+  text-align: center;
+}
+
 .post-body figure {
   margin-top: 2em;
   text-align: center;
