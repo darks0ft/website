@@ -1,6 +1,6 @@
 ---
 title: "The Story Behind “Out Of Sight Out Of Mind”"
-subtitle: "An ode to what you push under the rug, and how an album afterthought ended up in a perfume commercial."
+subtitle: "An ode to what you sweep under the rug, and how an album afterthought ended up in a perfume commercial."
 description: "What Darksoft's “Out Of Sight Out Of Mind” means, how it was built from stock sayings, and how the last song on Rationalism ended up in a perfume commercial."
 date: 2026-10-15 10:00:00 -0400
 image: /assets/blog/the-story-behind-out-of-sight-out-of-mind.jpg
@@ -19,9 +19,9 @@ For this post, I want to share a bit about the meaning and the making of the son
 
 ## What does "out of sight out of mind" mean?
 
-The phrase "out of sight out of mind" is similar to "ignorance is bliss." We all have things we'd rather not think about, and this song is an ode to what you push under the rug.
+The phrase "out of sight, out of mind" generally means that when something is no longer in front of you, you gradually stop thinking about it. It's similar to "ignorance is bliss," although not quite the same. We all have things we'd rather not think about, and this song is an ode to what we sweep under the rug.
 
-It's not about one thing in particular from my experience. My songs come from me, yes, but they're intended to be general feelings that match these phrases, so listeners can interpret them from their own point of view when they feel this feeling.
+It's not about one thing in particular from my experience. My songs come from me, yes, but they're intended to capture general feelings through these phrases, so listeners can interpret them from their own point of view.
 
 ## A sister album to *Relativism*
 
@@ -49,9 +49,9 @@ Then there's "gone but not forgotten." I'm not referencing death directly. I was
 
 ## What goes under the rug
 
-Sometimes you need to face ugly things in order to improve as a person. Other times, it's simply not helpful to dwell on the past, and what's required is a rewiring of neurons to simply not face it in the light of day.
+Sometimes you need to face ugly things in order to improve as a person. Other times, it's simply not helpful to dwell on the past, and you have to train yourself not to give certain thoughts so much attention.
 
-For example, I used to think my head was too small as a kid! I'd look at pictures and think I looked funny. Sometimes I still think that, but it's not healthy. So I try not to.
+Sometimes it's little things, like an insecurity you carried around as a kid that still pops into your head years later. You know it's not worth dwelling on, but that doesn't always stop it from resurfacing.
 
 We all have tics, thoughts, or impressions, I suppose, that we try to get over and just bury.
 
@@ -64,11 +64,11 @@ So really, we each have our own dumpster for the things we wish not to acknowled
 
 ## An afterthought with a tranquil quality
 
-As with other Darksoft songs, I recorded all the parts for this one myself in my basement: drums played by hand, guitar, bass, synth, percussion (tambourine, shakers), and voice, of course.
+As with other Darksoft songs, I recorded all the parts for this one myself in my basement: live drums, guitar, bass, synth, percussion (tambourine, shakers), and voice, of course.
 
 I'm proud of how this one sounds. It's one of my shorter songs, at just over three minutes, with a sweet chord progression, some offbeat shifts and a nice guitar lead.
 
-Being the last song on the album, it was more of an afterthought compared to the others, which are more upbeat and driven. Upon further listens, I'm starting to understand why people are drawn to it and its tranquil quality. As one listener put it on [YouTube](https://www.youtube.com/watch?v=14teB4C5ZaQ):
+It's the last song on the album, and a quieter one compared to the more upbeat and driven tracks, so I didn't expect it to attract much attention. After listening back to it, I'm starting to understand why people are drawn to its tranquil quality. As one listener put it on [YouTube](https://www.youtube.com/watch?v=14teB4C5ZaQ):
 
 > "This song is so peaceful and beautiful ❤"
 
@@ -80,7 +80,7 @@ I'm always producing new music. If you want to hear what's next, subscribe here.
 
 ## The perfume commercial
 
-The song actually appeared in a perfume commercial! The fragrance house [Tulpa Club](https://tulpaclub.com/film/) used it in *Season 3: A Short Film*. I was really impressed and honored to have this be one of my first sync placements.
+The song actually appeared in a fragrance house short film! [Tulpa Club](https://tulpaclub.com/film/) used it in *Season 3: A Short Film*. I was really impressed and honored to have this be one of my first sync placements.
 
 I think it fits the vibe of the video, in which this guy can't get over a romantic memory.
 
