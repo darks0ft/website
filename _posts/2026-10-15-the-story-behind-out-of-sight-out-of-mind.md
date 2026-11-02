@@ -21,7 +21,7 @@ For this post, I want to share a bit about the meaning and the making of the son
 
 The phrase "out of sight out of mind" is similar to "ignorance is bliss." We all have things we'd rather not think about, and this song is an ode to what you push under the rug.
 
-It's not about one thing in particular from my experience. My songs aren't about me. They come from me, yes, but they're intended to be general feelings that match these phrases, so listeners can interpret them from their own point of view when they feel this feeling.
+It's not about one thing in particular from my experience. My songs come from me, yes, but they're intended to be general feelings that match these phrases, so listeners can interpret them from their own point of view when they feel this feeling.
 
 ## A sister album to *Relativism*
 
@@ -51,11 +51,9 @@ Then there's "gone but not forgotten." I'm not referencing death directly. I was
 
 Sometimes you need to face ugly things in order to improve as a person. Other times, it's simply not helpful to dwell on the past, and what's required is a rewiring of neurons to simply not face it in the light of day.
 
-I used to think my head was too small as a kid! I'd look at pictures and think I looked funny. Sometimes I still think that, but it's not healthy. So I try not to.
+For example, I used to think my head was too small as a kid! I'd look at pictures and think I looked funny. Sometimes I still think that, but it's not healthy. So I try not to.
 
-I also used to imagine myself accidentally popping into other people's bodies, like while they were performing, or driving, or doing something important. But I wouldn't have their memories or faculties, so it'd be really awkward. And I'd imagine the worst possible thing to shout in a crowded audience.
-
-These are tics, I suppose, that I tried to get over and just bury.
+We all have tics, thoughts, or impressions, I suppose, that we try to get over and just bury.
 
 ![A blurred dark silhouette holding up a tambourine against a pale blue background dotted with green lights](/assets/blog/the-story-behind-out-of-sight-out-of-mind-2.jpg){: .post-img-small}
 *Out of sight, mostly.*
@@ -65,6 +63,8 @@ But the human brain can't really delete anything. We don't have an [*Eternal Sun
 So really, we each have our own dumpster for the things we wish not to acknowledge. And we keep them there. Buried. Lost but not forgotten.
 
 ## An afterthought with a tranquil quality
+
+As with other Darksoft songs, I recorded all the parts for this one myself in my basement: drums played by hand, guitar, bass, synth, percussion (tambourine, shakers), and voice, of course.
 
 I'm proud of how this one sounds. It's one of my shorter songs, at just over three minutes, with a sweet chord progression, some offbeat shifts and a nice guitar lead.
 
