@@ -29,6 +29,8 @@ I first noticed the Reels numbers climbing when a fitness trainer friend in Oreg
 
 It's been crazy to watch people decide to soundtrack their posts with the song. Creators, parents with their kids, people graduating, hiking, scuba diving, cooking and more.
 
+Apparently, a lot of vegans are using it too. As someone commented on [this post of romping piglets](https://www.instagram.com/p/DfPxbaKCgUL/), "Your song is always on vegan posts." 😂
+
 So, what is up? Why are people so into living and letting others live? Why hasn't this song puttered out after a couple of years?
 
 ## The message of live and let live
