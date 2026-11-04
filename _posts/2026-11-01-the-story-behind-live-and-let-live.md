@@ -35,7 +35,7 @@ So, what is up? Why are people so into living and letting others live? Why hasn'
 
 ## The message of live and let live
 
-First, given some of the comments on the [YouTube video](https://www.youtube.com/watch?v=NIlqJWXOtSU), I think people resonate with the message of [the song's lyrics](/lyrics/relativism/live_and_let_live/).
+Given some of the comments on the [YouTube video](https://www.youtube.com/watch?v=NIlqJWXOtSU), I think people resonate with the message of [the song's lyrics](/lyrics/relativism/live_and_let_live/).
 
 > "This song brings me a peace and comfort that I need..."
 
