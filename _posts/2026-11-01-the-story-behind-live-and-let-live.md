@@ -47,9 +47,9 @@ A lot of unnecessary division comes from an inability to tolerate people who thi
 
 ## That's just your opinion
 
-Many things are subjective. Know your enemy well enough and you might just end up seeing things through their eyes, and realize that from their perspective you're the bad guy. Or take religion: people can hold completely different beliefs about some of life's biggest questions.
+Many things are subjective. Take religion: people can hold completely different beliefs about some of life's biggest questions.
 
-I don't mean to encourage inaction. Some things need justice and standing up for what's right. I just think we've all gotten too quick to hate each other.
+I don't mean to encourage inaction. Some things need justice and standing up for what's right. I just think we've all gotten too quick to hate each other. And the algorithms accelerate that tension.
 
 It's all relative. As [The Dude](https://en.wikipedia.org/wiki/The_Big_Lebowski) said, "Well, that's just, like, your opinion, man." It's corny, but as they say, people come from all walks of life, and it takes all kinds.
 
@@ -58,11 +58,11 @@ It's all relative. As [The Dude](https://en.wikipedia.org/wiki/The_Big_Lebowski)
 
 ## The process behind the song
 
-I hope folks are into it because they like how it sounds! I love the jangly, intertwined, dreamy-sounding guitars in a major-mode song, with a bit of bittersweet dissonance, a driving drum beat and a chill, layered vocal delivery.
+As with all Darksoft songs, I recorded the parts to "Live And Let Live" in my basement, pretty DIY. I play the drums, bass guitar, guitar and synths, sing, and add percussion. Check out my [short reel](https://www.instagram.com/p/DNwuM5v2L9r/) for proof.
+
+I'm happy with how it came out. I'm a sucker for these jangly, intertwined picky guitars in a major-mode song, with a bit of bittersweet dissonance, a driving drum beat and a chill, layered vocal delivery.
 
 It's jangle pop in the dream pop canon, and it's a sound I've been slowly molding over the past few years, taking inspiration from modern dream pop, bedroom pop and alternative 80s/90s rock.
-
-As with all Darksoft songs, I recorded this in my basement, pretty DIY. I play the drums, bass guitar, guitar and synths, sing, and add percussion. Check out my [short reel](https://www.instagram.com/p/DNwuM5v2L9r/) for proof.
 
 I need to make a music video for this song! When I finally get around to it, subscribers will see it first.
 
@@ -76,9 +76,18 @@ I need to make a music video for this song! When I finally get around to it, sub
 
 The song was mixed and mastered by [Brian Fisher](https://briankfisher.com/work), a great mixing engineer and collaborator who I've worked with on a number of projects now.
 
+## The artwork
+
+The artwork for *Relativism* is by Erica Miller, a great tattoo artist out of Portland, Oregon. She has this cool abstract squiggly line aesthetic that feels symbolic in a way.
+
+We went through a few ideations, and this squiggly pattern stood out to me as a possible symbol or interpretation of the concept of relativism. Take it or leave it. I just like how it looks.
+
+![The Relativism album cover: looping pink and green ribbons over a glowing pink and green field on a gold background](/assets/Darksoft%20Relativism%20Album%20Artwork.jpeg){: .post-img-small}
+*Artwork by Erica Miller.*
+
 ## Saying nothing, meaning the world
 
-There's something relatable about a simple idea, something you can throw on in the background. I'm attracted to vague aphorisms and clichés in my songwriting. They say nothing, but in context they mean the world.
+There's something relatable and universal about a simple idea. Maybe that's why I'm attracted to vague aphorisms and clichés in my songwriting. They say nothing, but in context they mean the world.
 
 So, there are some musings on "Live And Let Live." Keep in mind I'm not an economist, social commentator, prophet or wise person. I'm a songwriter, and I write about feelings and philosophies that resonate with me.
 
@@ -86,7 +95,9 @@ So, take it with a [grain of salt](/lyrics/everydayness/grain_of_salt/). And, li
 
 ## Subscribe and support the project
 
-If you landed here because you're curious about the song, thank you for being here! I hope you check out [my other music](/discography/), maybe starting with "[So It Goes](/lyrics/grayscale/so_it_goes/)" or "[Out Of Sight Out Of Mind](/lyrics/rationalism/out_of_sight_out_of_mind/)," two more songs built around everyday sayings. I'm always producing new music.
+If you landed here because you're curious about the song, thank you for being here!
+
+I hope you check out [my other music](/discography/), maybe starting with the stories behind "[So It Goes](/blog/the-story-behind-so-it-goes/)" or "[Out Of Sight Out Of Mind](/blog/the-story-behind-out-of-sight-out-of-mind/)," two more songs built around everyday sayings. I'm always producing new music.
 
 Please consider subscribing to my newsletter. That really helps indie folks like me keep this going.
 
@@ -102,3 +113,6 @@ You can pick up a copy of *Relativism* on Bandcamp, or a tape via Spirit Goth.
 [Donations](/support/) and [merch](/merch/) help keep Darksoft going too.
 
 Making something? Use the song in your own post with the [Reels audio](https://www.instagram.com/reels/audio/999822731741752/), or see [sync licensing](/sync/) for film, TV and ads.
+
+![The squiggly line symbol from the Relativism artwork, in white](/assets/blog/the-story-behind-live-and-let-live-4.png){: .post-img-tiny}
+*It's all relative.*
