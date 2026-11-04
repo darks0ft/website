@@ -1,7 +1,7 @@
 ---
 title: "The Story Behind “Live And Let Live”"
-subtitle: "How a song about acceptance ended up in over 20,000 Instagram Reels."
-description: "How a Darksoft song about acceptance ended up in over 20,000 Instagram Reels and nearly 2 million Spotify streams, and what it means to me."
+subtitle: "How a song about acceptance ended up in 25,000 Instagram Reels."
+description: "How a Darksoft song about acceptance ended up in 25,000 Instagram Reels and nearly 2 million Spotify streams, and what it means to me."
 date: 2026-11-01 10:00:00 -0500
 image: /assets/blog/the-story-behind-live-and-let-live.jpg
 image_alt: "The Relativism album cover: looping pink and green ribbons over a glowing pink and green field on a gold background"
@@ -9,7 +9,7 @@ image_caption: "[*Relativism*](/discography/relativism/) album artwork by Erica 
 tags: [behind the songs, Relativism]
 ---
 
-Something is happening with my song "[Live And Let Live](/lyrics/relativism/live_and_let_live/)." As of November 2026, it's been used in over 20,000 [Instagram Reels](https://www.instagram.com/reels/audio/999822731741752/). It's nearing 2 million streams on [Spotify](https://open.spotify.com/track/2cTGPhd0rCh0G2LpeooRI1). The song recently hit 100,000 views on [YouTube](https://www.youtube.com/watch?v=NIlqJWXOtSU), with creators soundtracking their videos with it there too.
+Something is happening with my song "[Live And Let Live](/lyrics/relativism/live_and_let_live/)." As of November 2026, it's been used in 25,000 [Instagram Reels](https://www.instagram.com/reels/audio/999822731741752/). It's nearing 2 million streams on [Spotify](https://open.spotify.com/track/2cTGPhd0rCh0G2LpeooRI1). The song recently hit 100,000 views on [YouTube](https://www.youtube.com/watch?v=NIlqJWXOtSU), with creators soundtracking their videos with it there too.
 
 <div class="lyrics-player">
   <iframe src="https://open.spotify.com/embed/track/2cTGPhd0rCh0G2LpeooRI1?theme=0" title="Play Live And Let Live by Darksoft on Spotify" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -27,7 +27,7 @@ I wrote this one because I feel there is too much unnecessary division in the wo
 
 I first noticed the Reels numbers climbing when a fitness trainer friend in Oregon messaged me that they'd seen someone post it. And then more and more people kept sending me these messages!
 
-It's been crazy to watch people decide to soundtrack their posts with the song. Creators, parents with their kids, people graduating, hiking, scuba diving, cooking and more.
+It's been crazy to watch people decide to soundtrack their posts with the song, from all over the world. Creators, parents with their kids, people graduating, hiking, traveling the world, scuba diving, cooking and more.
 
 Apparently, a lot of vegans are using it too. As someone commented on [this post of romping piglets](https://www.instagram.com/p/DfPxbaKCgUL/), "Your song is always on vegan posts." 😂
 
@@ -78,7 +78,7 @@ The song was mixed and mastered by [Brian Fisher](https://briankfisher.com/work)
 
 ## The artwork
 
-The artwork for *Relativism* is by Erica Miller, a great tattoo artist out of Portland, Oregon. She has this cool abstract squiggly line aesthetic that feels symbolic in a way.
+The artwork for *Relativism* is by [Erica Miller](https://www.instagram.com/rickysfreshness/), a great tattoo artist out of Portland, Oregon, who also plays in [Casual Hex](https://casualhex.bandcamp.com/). She has this cool abstract squiggly line aesthetic that feels symbolic in a way.
 
 We went through a few ideations, and this squiggly pattern stood out to me as a possible symbol or interpretation of the concept of relativism. Take it or leave it. I just like how it looks.
 
