@@ -144,6 +144,27 @@ head_extra: "home.html"
   <p><a class="cta-button" href="/discography/">Full discography →</a></p>
 </section>
 
+<!-- MOST PLAYED SONGS (the list is in _data/popular_songs.yml) -->
+<section id="most-played">
+  <h2>Most Played Songs</h2>
+  <ol class="popular-songs">
+    {% for track_id in site.data.popular_songs %}
+    {% assign song = site.data.tracks | where: "track_id", track_id | first %}
+    {% assign song_album = site.data.albums | where: "album_id", song.album_id | first %}
+    <li>
+      <a href="/lyrics/{{ song.album_id }}/{{ song.track_title_slug }}/">
+        <img src="/assets/{{ song_album.artwork }}" alt="" width="56" height="56" loading="lazy">
+        <span class="popular-song-text">
+          <span class="popular-song-title">{{ song.track_title }}</span>
+          <span class="popular-song-meta">Lyrics · {{ song_album.album_title }} ({{ song_album.release_year }})</span>
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+  <p><a class="cta-button" href="/lyrics/">All lyrics →</a></p>
+</section>
+
 <!-- SUPPORT -->
 <section id="support">
   <h2>Support</h2>

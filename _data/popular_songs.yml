@@ -1,0 +1,11 @@
+# Homepage "Most Played Songs" block, in this order. Each entry is a track_id from tracks.yml.
+# Ordered by Spotify play count, taken from Spotify's Popular list on the artist page (November 4, 2026).
+# Spotify only lists ten songs there, so check songs outside that list before adding them.
+- relativism_endless_day               # 2,190,535
+- relativism_somewhere_nowhere         # 2,111,355
+- relativism_live_and_let_live         # 1,776,325
+- rationalism_some_things_you_just_know # 776,395
+- grayscale_less_is_more               # 593,779
+- relativism_then_and_now              # 514,534
+- rationalism_out_of_sight_out_of_mind # 291,389
+- relativism_nothings_gonna_change     # 291,036
