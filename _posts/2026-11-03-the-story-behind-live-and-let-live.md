@@ -31,6 +31,9 @@ It's been crazy to watch people decide to soundtrack their posts with the song, 
 
 Apparently, a lot of vegans are using it too. As someone commented on [this post of romping piglets](https://www.instagram.com/p/DfPxbaKCgUL/), "Your song is always on vegan posts." 😂
 
+[![A grid of eight Instagram Reels using the song: a home studio, a business giveaway, a cyclist on a tree-lined road, a day-in-the-life video, a new café, a group of friends at an event, a solo train trip and a huddle of hands](/assets/blog/the-story-behind-live-and-let-live-5.jpg)](https://www.instagram.com/reels/audio/999822731741752/)
+*A few of the Reels using the song.*
+
 So, what is up? Why are people so into living and letting others live? Why hasn't this song puttered out after a couple of years?
 
 ## The message of live and let live
@@ -53,8 +56,14 @@ I don't mean to encourage inaction. Some things need justice and standing up for
 
 It's all relative. As [The Dude](https://en.wikipedia.org/wiki/The_Big_Lebowski) said, "Well, that's just, like, your opinion, man." It's corny, but as they say, people come from all walks of life, and it takes all kinds.
 
-![A hand-drawn grid of crayon squares in every color, tilted at an angle](/assets/blog/the-story-behind-live-and-let-live-1.jpg){: .post-img-small}
-*A crayon drawing I made for fun.*
+## The artwork
+
+The artwork for *Relativism* is by [Erica Miller](https://www.instagram.com/rickysfreshness/), a great tattoo artist out of Portland, Oregon, who also plays in [Casual Hex](https://casualhex.bandcamp.com/). She has this cool abstract squiggly line aesthetic that feels symbolic in a way.
+
+We went through a few ideations, and this squiggly pattern stood out to me as a possible symbol or interpretation of the concept of relativism. Take it or leave it. I just like how it looks.
+
+![The Relativism album cover: looping pink and green ribbons over a glowing pink and green field on a gold background](/assets/Darksoft%20Relativism%20Album%20Artwork.jpeg){: .post-img-small}
+*Artwork by Erica Miller.*
 
 ## The process behind the song
 
@@ -69,21 +78,12 @@ I need to make a music video for this song! When I finally get around to it, sub
 {% include signup.html %}
 
 ![Darksoft in the studio playing a white Stratocaster, wearing headphones, under pink light](/assets/blog/the-story-behind-live-and-let-live-2.jpg){: .post-img-tiny}
-*Me in the studio.*
+*Me in the home studio.*
 
 ![A maple drum kit with close mics and overheads in front of a wall of acoustic foam](/assets/blog/the-story-behind-live-and-let-live-3.jpg){: .post-img-small}
 *I like to keep the drums all mic'd up, ready to go.*
 
 The song was mixed and mastered by [Brian Fisher](https://briankfisher.com/work), a great mixing engineer and collaborator who I've worked with on a number of projects now.
-
-## The artwork
-
-The artwork for *Relativism* is by [Erica Miller](https://www.instagram.com/rickysfreshness/), a great tattoo artist out of Portland, Oregon, who also plays in [Casual Hex](https://casualhex.bandcamp.com/). She has this cool abstract squiggly line aesthetic that feels symbolic in a way.
-
-We went through a few ideations, and this squiggly pattern stood out to me as a possible symbol or interpretation of the concept of relativism. Take it or leave it. I just like how it looks.
-
-![The Relativism album cover: looping pink and green ribbons over a glowing pink and green field on a gold background](/assets/Darksoft%20Relativism%20Album%20Artwork.jpeg){: .post-img-small}
-*Artwork by Erica Miller.*
 
 ## Saying nothing, meaning the world
 
