@@ -2989,6 +2989,10 @@ a.post-card-link:visited {
   margin-top: 0;
 }
 
+.release-ctas-center {
+  justify-content: center;
+}
+
 .post-body .release-merch img {
   border-radius: 8px;
 }

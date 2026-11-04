@@ -97,7 +97,7 @@ So, take it with a [grain of salt](/lyrics/everydayness/grain_of_salt/). And, li
 
 If you landed here because you're curious about the song, thank you for being here!
 
-I hope you check out [my other music](/discography/), maybe starting with the stories behind "[So It Goes](/blog/the-story-behind-so-it-goes/)" or "[Out Of Sight Out Of Mind](/blog/the-story-behind-out-of-sight-out-of-mind/)," two more songs built around everyday sayings. I'm always producing new music.
+I hope you check out [my other music](/discography/), maybe starting with the stories behind "[So It Goes](/blog/the-story-behind-so-it-goes/)," "[Out Of Sight Out Of Mind](/blog/the-story-behind-out-of-sight-out-of-mind/)" or "[Too Little Too Late](/blog/the-story-behind-too-little-too-late/)", three more songs built around everyday sayings. I'm always producing new music.
 
 Please consider subscribing to my newsletter. That really helps indie folks like me keep this going.
 

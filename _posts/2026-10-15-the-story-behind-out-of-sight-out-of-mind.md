@@ -96,7 +96,7 @@ We only just started playing this one live, so I can't tell you yet how it goes 
 
 ## Subscribe and support the project
 
-If you landed here because you're curious about the song, thank you for being here! You might also like [the story behind "Live And Let Live"](/blog/the-story-behind-live-and-let-live/) from *Relativism*, or [the story behind "So It Goes"](/blog/the-story-behind-so-it-goes/), another song built around an everyday saying.
+If you landed here because you're curious about the song, thank you for being here! You might also like the stories behind "[Live And Let Live](/blog/the-story-behind-live-and-let-live/)," "[So It Goes](/blog/the-story-behind-so-it-goes/)" or "[Too Little Too Late](/blog/the-story-behind-too-little-too-late/)", more songs built around everyday sayings.
 
 Please consider subscribing to my newsletter. That really helps indie folks like me keep this going.
 

@@ -30,7 +30,7 @@ While some actions of life and work are mundane, others carry purpose. Same ol s
 
 ## Waking hours and working hours
 
-The songs on this album cover a sort of absent-minded everydayness that we all experience as we go through life. We wake, we drink something, we eat, we go somewhere, we work, we rest, and then we repeat. "[Rinse And Repeat](/lyrics/everydayness/rinse_and_repeat/)," "[Too Little Too Late](/lyrics/everydayness/too_little_too_late/)," "[Same Ol Same Ol](/lyrics/everydayness/same_ol_same_ol/)" and "[Stop And Go](/lyrics/everydayness/stop_and_go/)" speak to the everyday waking hours very directly.
+The songs on this album cover a sort of absent-minded everydayness that we all experience as we go through life. We wake, we drink something, we eat, we go somewhere, we work, we rest, and then we repeat. "[Rinse And Repeat](/lyrics/everydayness/rinse_and_repeat/)," "[Too Little Too Late](/lyrics/everydayness/too_little_too_late/)," "[Same Ol Same Ol](/lyrics/everydayness/same_ol_same_ol/)" and "[Stop And Go](/lyrics/everydayness/stop_and_go/)" speak to the everyday waking hours very directly. I wrote more about one of them in [the story behind "Too Little Too Late"](/blog/the-story-behind-too-little-too-late/).
 
 Then, others are really a reflection of the "always on" attitude: the work life, the heads down, the gears churning, the clocked-in, and all the side-hustling in the modern world. All this rarely gets a song sung for it, but it is necessary to keep the lights on. "[Irons In The Fire](/lyrics/everydayness/irons_in_the_fire/)," "[Constant Change](/lyrics/everydayness/constant_change/)" and "[Grain of Salt](/lyrics/everydayness/grain_of_salt/)" shed a light on the working hours.
 

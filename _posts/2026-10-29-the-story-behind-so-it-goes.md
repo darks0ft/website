@@ -99,7 +99,7 @@ I hope it gives peace to those worried about something in the moment, and helps 
 
 ## Subscribe and support the project
 
-If you landed here because you're curious about the song, thank you for being here! You might also like [the story behind "Live And Let Live"](/blog/the-story-behind-live-and-let-live/) or "[Out Of Sight Out Of Mind](/lyrics/rationalism/out_of_sight_out_of_mind/)," another song built around an everyday saying.
+If you landed here because you're curious about the song, thank you for being here! You might also like the stories behind "[Live And Let Live](/blog/the-story-behind-live-and-let-live/)," "[Out Of Sight Out Of Mind](/blog/the-story-behind-out-of-sight-out-of-mind/)" or "[Too Little Too Late](/blog/the-story-behind-too-little-too-late/)", more songs built around everyday sayings.
 
 Please consider subscribing to my newsletter. That really helps indie folks like me keep this going.
 
