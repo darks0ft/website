@@ -248,6 +248,66 @@ document.addEventListener("DOMContentLoaded", () => {
 })();
 
 // ---------------------------------------------------------------
+// Homepage latest posts: on phones the cards swipe sideways (style.css), and
+// these dots show which card is in view and jump to a card when tapped.
+// The cards never move on their own. Without JavaScript, swiping still works.
+// ---------------------------------------------------------------
+(function() {
+  const track = document.querySelector("#latest-posts .post-grid");
+  const dots = document.querySelector("#latest-posts .post-dots");
+  if (!track || !dots) return;
+
+  const cards = Array.from(track.children);
+  if (cards.length < 2) return;
+
+  const buttons = cards.map((card, i) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.setAttribute("aria-label", "Show post " + (i + 1) + " of " + cards.length);
+    button.addEventListener("click", () => {
+      const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      track.scrollTo({
+        left: card.offsetLeft - track.offsetLeft,
+        behavior: calm ? "auto" : "smooth"
+      });
+    });
+    dots.appendChild(button);
+    return button;
+  });
+
+  // The current card is the one whose middle is closest to the middle of the row
+  function update() {
+    const middle = track.getBoundingClientRect().left + track.clientWidth / 2;
+    let current = 0;
+    let closest = Infinity;
+    cards.forEach((card, i) => {
+      const box = card.getBoundingClientRect();
+      const distance = Math.abs(box.left + box.width / 2 - middle);
+      if (distance < closest) {
+        closest = distance;
+        current = i;
+      }
+    });
+    buttons.forEach((button, i) => {
+      if (i === current) button.setAttribute("aria-current", "true");
+      else button.removeAttribute("aria-current");
+    });
+  }
+
+  let queued = false;
+  track.addEventListener("scroll", () => {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(() => {
+      queued = false;
+      update();
+    });
+  }, { passive: true });
+
+  update();
+})();
+
+// ---------------------------------------------------------------
 // External links always open in a new tab, so visitors keep darksoft.band
 // open. Templates set target="_blank" themselves; this catches anything
 // else (links added by embedded widgets, or new content that forgets it).

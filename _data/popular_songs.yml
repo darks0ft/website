@@ -1,11 +1,12 @@
-# Homepage "Most Played Songs" block, in this order. Each entry is a track_id from tracks.yml.
-# Ordered by Spotify play count, taken from Spotify's Popular list on the artist page (November 4, 2026).
-# Spotify only lists ten songs there, so check songs outside that list before adding them.
-- relativism_endless_day               # 2,190,535
-- relativism_somewhere_nowhere         # 2,111,355
-- relativism_live_and_let_live         # 1,776,325
-- rationalism_some_things_you_just_know # 776,395
-- grayscale_less_is_more               # 593,779
-- relativism_then_and_now              # 514,534
-- rationalism_out_of_sight_out_of_mind # 291,389
-- relativism_nothings_gonna_change     # 291,036
+# Homepage "Popular Songs" block, in this order. Each entry is a track_id from tracks.yml.
+# Songs with search demand come first, so the links point at the lyrics pages people look for.
+# Search numbers are Search Console impressions and clicks, August 4 to October 31, 2026.
+# Play counts are from Spotify, November 4, 2026. Review both a couple of times a year.
+- relativism_live_and_let_live          # 1,022 impressions, 6 clicks; 1,776,325 plays
+- grayscale_so_it_goes                  # 995 impressions, 3 clicks; 176,068 plays
+- rationalism_out_of_sight_out_of_mind  # 162 impressions, 62 clicks; 291,389 plays
+- everydayness_too_little_too_late      # 20,412 impressions, 12 clicks (mostly searches for other artists); 151,934 plays
+- relativism_endless_day                # 2,190,535 plays
+- relativism_somewhere_nowhere          # 2,111,355 plays
+- rationalism_some_things_you_just_know # 776,395 plays
+- everydayness_spend_your_days          # 89,355 plays (from the latest album)

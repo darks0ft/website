@@ -44,7 +44,7 @@ Live site:
 
 ```
 /
-├── index.html              # Homepage (hero, latest album, newsletter, latest video, shows, merch, about, press, releases, most played songs, support)
+├── index.html              # Homepage (hero, latest album, newsletter, latest video, shows, merch, about, press, releases, popular songs, latest blog posts, support)
 ├── about.html              # /about/: biography, sound, influences
 ├── discography/            # /discography/: every album, plus "Listen" links to streaming services
 │   └── <album>.html        # /discography/<album>/: one page per album (album layout)

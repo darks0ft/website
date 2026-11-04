@@ -1103,7 +1103,7 @@ body.homepage,
   margin-top: 2rem;
 }
 
-/* Homepage: most played songs, linking to their lyrics pages */
+/* Homepage: popular songs, linking to their lyrics pages */
 .popular-songs {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1150,6 +1150,21 @@ body.homepage,
   color: #999;
 }
 
+/* Homepage: latest blog posts. Three across here; one at a time with dots on phones.
+   The ids outweigh the .post-grid and .post-card rules in the Blog section below. */
+#latest-posts .post-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.5rem;
+}
+
+.post-dots {
+  display: none;
+}
+
+.post-dots + p {
+  margin-top: 2rem;
+}
+
 /* Homepage: single latest video, centered */
 #latest-video .video-card {
   max-width: 680px;
@@ -1180,6 +1195,60 @@ body.homepage,
 
   .popular-songs {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Latest posts: swipe sideways, with the next card peeking in */
+  #latest-posts .post-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  #latest-posts .post-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  #latest-posts .post-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
+
+  .post-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.75rem;
+  }
+
+  .post-dots + p {
+    margin-top: 1rem;
+  }
+
+  /* A roomy tap area around a small dot */
+  .post-dots button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .post-dots button::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #555;
+    transition: background 0.2s;
+  }
+
+  .post-dots button[aria-current="true"]::before {
+    background: #6dc15b;
   }
 }
 

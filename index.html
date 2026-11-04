@@ -144,9 +144,9 @@ head_extra: "home.html"
   <p><a class="cta-button" href="/discography/">Full discography →</a></p>
 </section>
 
-<!-- MOST PLAYED SONGS (the list is in _data/popular_songs.yml) -->
-<section id="most-played">
-  <h2>Most Played Songs</h2>
+<!-- POPULAR SONGS (the list is in _data/popular_songs.yml) -->
+<section id="popular-songs">
+  <h2>Popular Songs</h2>
   <ol class="popular-songs">
     {% for track_id in site.data.popular_songs %}
     {% assign song = site.data.tracks | where: "track_id", track_id | first %}
@@ -164,6 +164,20 @@ head_extra: "home.html"
   </ol>
   <p><a class="cta-button" href="/lyrics/">All lyrics →</a></p>
 </section>
+
+<!-- LATEST FROM THE BLOG (the three newest posts; swipeable on phones) -->
+{% if site.posts.size > 0 %}
+<section id="latest-posts">
+  <h2>Latest from the Blog</h2>
+  <div class="post-grid">
+    {%- for post in site.posts limit: 3 %}
+    {% include post-card.html post=post %}
+    {%- endfor %}
+  </div>
+  <div class="post-dots"></div>
+  <p><a class="cta-button" href="/blog/">All posts →</a></p>
+</section>
+{% endif %}
 
 <!-- SUPPORT -->
 <section id="support">
