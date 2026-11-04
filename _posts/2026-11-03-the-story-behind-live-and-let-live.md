@@ -17,7 +17,7 @@ Something is happening with my song "[Live And Let Live](/lyrics/relativism/live
 
 ## What does "live and let live" mean?
 
-To me, it means accepting that people have different beliefs, tastes and ways of living, and letting them be themselves. That's the idea behind the Darksoft song.
+To me, it means accepting that people have different beliefs, tastes and ways of living, and letting them be themselves. That's the idea behind the song.
 
 ## How the song came about, and what happened next
 
@@ -60,7 +60,7 @@ It's all relative. As [The Dude](https://en.wikipedia.org/wiki/The_Big_Lebowski)
 
 The artwork for *Relativism* is by [Erica Miller](https://www.instagram.com/rickysfreshness/), a great tattoo artist out of Portland, Oregon, who also plays in [Casual Hex](https://casualhex.bandcamp.com/). She has this cool abstract squiggly line aesthetic that feels symbolic in a way.
 
-We went through a few ideations, and this squiggly pattern stood out to me as a possible symbol or interpretation of the concept of relativism. Take it or leave it. I just like how it looks.
+We went through a few ideations, and this pattern stood out to me as a possible sigil or interpretation of the concept of relativism. Take it or leave it. I just like how it looks.
 
 ![The Relativism album cover: looping pink and green ribbons over a glowing pink and green field on a gold background](/assets/Darksoft%20Relativism%20Album%20Artwork.jpeg){: .post-img-small}
 *Artwork by Erica Miller.*

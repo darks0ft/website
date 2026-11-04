@@ -6,7 +6,7 @@
     intro  sentence under the heading (default: the booklet's `pitch`)
 {%- endcomment -%}
 <div class="signup-cta">
-<p class="signup-cta-title">Get the {{ site.data.reward.offer }}</p>
+<p class="signup-cta-title"><img src="{{ site.data.reward.cover }}" alt="" width="48" height="48" loading="lazy"><span>Get the {{ site.data.reward.offer }}</span></p>
 <p>{{ include.intro | default: site.data.reward.pitch }}</p>
 {% include newsletter-form.html form_class="sidebar-form" button_class="cta-button" %}
 </div>
