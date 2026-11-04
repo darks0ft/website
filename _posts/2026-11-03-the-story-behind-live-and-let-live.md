@@ -2,7 +2,7 @@
 title: "The Story Behind “Live And Let Live”"
 subtitle: "How a song about acceptance ended up in 25,000 Instagram Reels."
 description: "How a Darksoft song about acceptance ended up in 25,000 Instagram Reels and nearly 2 million Spotify streams, and what it means to me."
-date: 2026-11-01 10:00:00 -0500
+date: 2026-11-03 10:00:00 -0500
 image: /assets/blog/the-story-behind-live-and-let-live.jpg
 image_alt: "The Relativism album cover: looping pink and green ribbons over a glowing pink and green field on a gold background"
 image_caption: "[*Relativism*](/discography/relativism/) album artwork by Erica Miller."
