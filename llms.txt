@@ -56,7 +56,7 @@ Full discography with tracklists, credits, and streaming links: {{ "/discography
 
 ## Sync licensing
 
-Darksoft's music is available for film, TV, advertising, and social media, and licensing can be handled directly with the artist. Placements include Tulpa Club's "Season 3: A Short Film" (2026, a fragrance house short film featuring "Out of Sight Out of Mind"), the indie short film "Doom Squad" (2026, featuring "After All"), and an upcoming Australian TV mini-series. Details: {{ "/sync/" | absolute_url }}
+Darksoft's music is available for film, TV, advertising, and social media, and licensing can be handled directly with the artist. Placements include Tulpa Club's "Season 3: A Short Film" (2026, a fragrance house short film featuring "Out Of Sight Out Of Mind"), the indie short film "Doom Squad" (2026, featuring "After All"), and an upcoming Australian TV mini-series. Details: {{ "/sync/" | absolute_url }}
 
 ## Key pages
 
@@ -65,7 +65,7 @@ Darksoft's music is available for film, TV, advertising, and social media, and l
 - [Press]({{ "/press/" | absolute_url }}): reviews, interviews, features, and a press kit
 - [Videos]({{ "/videos/" | absolute_url }}): every music video, newest first; many are homemade on a VHS camcorder or a vintage digital camera with practical effects
 - [Production]({{ "/production/" | absolute_url }}): the home studio, recording process, gear highlights, and production credits
-- [Shows]({{ "/shows/" | absolute_url }}): upcoming tour dates and live shows
+- [Shows]({{ "/shows/" | absolute_url }}): tour dates, live shows, and booking
 - [Contact]({{ "/contact/" | absolute_url }}): booking, collaborations, and general inquiries
 - [Discography]({{ "/discography/" | absolute_url }}): every album, with a page per album
 - [Lyrics]({{ "/lyrics/" | absolute_url }}): index of lyric pages for every song, at /lyrics/<album>/<song>/

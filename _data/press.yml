@@ -1,5 +1,5 @@
 # Press quotes, interviews and features, newest first.
-# The homepage press section is rendered from this file (and /press/ will be).
+# The homepage press section and the /press/ page are rendered from this file.
 #   text:  a quote (in quotation marks) or a headline / feature title, shown as written
 #   type:  quote | interview | session | feature   (used to group the Press page)
 #   year:  publication year; years marked `# inferred` come from the entry's place in the list

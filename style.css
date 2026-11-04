@@ -1646,11 +1646,6 @@ body.homepage,
   margin-bottom: 1rem;
 }
 
-/* If needed to nudge album art down under header */
-.lyrics-body .album-art {
-  margin-top: calc(120px + 3rem);
-}
-
 /* Back button on lyrics pages */
 .lyrics-back-button {
   display: inline-block;

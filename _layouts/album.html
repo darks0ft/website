@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
   {%- capture seo_title %}{{ album.album_title }} — Darksoft ({{ album.release_year }} Album): Tracklist, Lyrics & Streaming{% endcapture %}
-  {%- capture seo_description %}{{ album.album_title }} is a {{ album.release_year }} album by Darksoft, released on {{ album.label }}. {{ album.blurb | truncatewords: 22 }}{% endcapture %}
+  {%- capture seo_description %}{{ album.album_title }} is a {{ album.release_year }} album by Darksoft, released on {{ album.label }}. {{ album.blurb | truncatewords: 12 }}{% endcapture %}
   {%- capture seo_image %}/assets/{{ album.artwork | replace: ' ', '%20' }}{% endcapture %}
   {%- assign seo_og_type = "music.album" %}
   {% include head.html %}

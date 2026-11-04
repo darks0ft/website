@@ -69,9 +69,9 @@ Live site:
 ├── _layouts/               # default (page frame), album, lyrics, post (blog), redirect
 ├── _includes/              # header, footer, head (SEO + structured data), shared blocks
 │   ├── head/               # per-page extras: structured data, page-specific scripts
-│   └── sidebar/            # blog post sidebar blocks (listen, newsletter, shows, merch, support)
+│   └── sidebar/            # blog post sidebar blocks (newsletter, listen, album, merch, support, shows)
 ├── _data/                  # albums, tracks (with lyrics), videos, press, streaming links, social links…
-├── _posts/                 # published blog posts (YYYY-MM-DD-slug.md); created with the first post
+├── _posts/                 # published blog posts (YYYY-MM-DD-slug.md)
 ├── _drafts/                # unpublished blog posts (preview with --drafts)
 ├── _blog/                  # not published: blog style guide, inbox for raw text, stock header images
 ├── assets/                 # images (web/ = optimized copies), icons, press kit, downloads, site.js
