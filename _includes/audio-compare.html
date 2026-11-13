@@ -1,0 +1,30 @@
+{%- comment -%}
+  Before/after audio player for a blog post: two short clips of the same passage
+  (for example a demo and the final mix). The buttons switch versions at the same
+  point in the clip. Keep clips short (about 20-30 seconds) and in assets/audio/.
+  Without JavaScript, both clips show as plain audio players.
+  Parameters:
+    title    heading above the player
+    a_label  label for the first clip (e.g. "My demo")
+    a_src    path to the first clip
+    b_label  label for the second clip (e.g. "Final mix")
+    b_src    path to the second clip
+    note     optional line under the player
+    id       short name for analytics (e.g. "too_little_too_late")
+{%- endcomment -%}
+<div class="audio-compare" data-compare="{{ include.id | default: 'clip' }}">
+  <p class="audio-compare-title">{{ include.title }}</p>
+  <div class="audio-compare-clips">
+    <figure>
+      <figcaption>{{ include.a_label }}</figcaption>
+      <audio controls controlslist="nodownload" preload="none" src="{{ include.a_src }}" data-label="{{ include.a_label | escape }}"></audio>
+    </figure>
+    <figure>
+      <figcaption>{{ include.b_label }}</figcaption>
+      <audio controls controlslist="nodownload" preload="none" src="{{ include.b_src }}" data-label="{{ include.b_label | escape }}"></audio>
+    </figure>
+  </div>
+  {%- if include.note %}
+  <p class="audio-compare-note">{{ include.note }}</p>
+  {%- endif %}
+</div>

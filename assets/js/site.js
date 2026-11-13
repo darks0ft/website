@@ -308,6 +308,88 @@ document.addEventListener("DOMContentLoaded", () => {
 })();
 
 // ---------------------------------------------------------------
+// Before/after audio players (_includes/audio-compare.html): one play button and
+// a switch between versions that keeps the playback position, so listeners hear
+// the same moment in each. Without JavaScript the plain audio players stay.
+// ---------------------------------------------------------------
+(function () {
+  const fmt = (s) => Math.floor(s / 60) + ":" + String(Math.floor(s % 60)).padStart(2, "0");
+
+  document.querySelectorAll(".audio-compare").forEach((box) => {
+    const clips = [...box.querySelectorAll("audio")];
+    if (clips.length < 2) return;
+    let current = clips[0];
+
+    const ui = document.createElement("div");
+    ui.className = "audio-compare-ui";
+    ui.innerHTML =
+      '<div class="audio-compare-switch" role="group" aria-label="Choose a version"></div>' +
+      '<div class="audio-compare-transport">' +
+      '<button type="button" class="audio-compare-play" aria-label="Play">▶</button>' +
+      '<input type="range" class="audio-compare-seek" min="0" max="100" step="0.1" value="0" aria-label="Position">' +
+      '<span class="audio-compare-time">0:00</span>' +
+      "</div>";
+    const group = ui.querySelector(".audio-compare-switch");
+    const play = ui.querySelector(".audio-compare-play");
+    const seek = ui.querySelector(".audio-compare-seek");
+    const time = ui.querySelector(".audio-compare-time");
+
+    const buttons = clips.map((clip, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.textContent = clip.dataset.label;
+      b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+      b.addEventListener("click", () => choose(clip));
+      group.append(b);
+      clip.preload = "metadata";
+      clip.addEventListener("timeupdate", () => {
+        if (clip !== current || !clip.duration) return;
+        seek.value = (clip.currentTime / clip.duration) * 100;
+        time.textContent = fmt(clip.currentTime);
+      });
+      clip.addEventListener("ended", () => { if (clip === current) setPlaying(false); });
+      return b;
+    });
+
+    function setPlaying(on) {
+      play.textContent = on ? "❚❚" : "▶";
+      play.setAttribute("aria-label", on ? "Pause" : "Play");
+    }
+
+    function choose(clip) {
+      if (clip === current) return;
+      const wasPlaying = !current.paused;
+      const at = current.currentTime;
+      current.pause();
+      current = clip;
+      buttons.forEach((b, i) => b.setAttribute("aria-pressed", clips[i] === clip ? "true" : "false"));
+      try { clip.currentTime = at; } catch (e) {}
+      if (wasPlaying) clip.play();
+    }
+
+    play.addEventListener("click", () => {
+      if (current.paused) {
+        current.play();
+        setPlaying(true);
+        if (typeof gtag === "function") {
+          gtag("event", "audio_compare_play", { clip: box.dataset.compare, version: current.dataset.label });
+        }
+      } else {
+        current.pause();
+        setPlaying(false);
+      }
+    });
+
+    seek.addEventListener("input", () => {
+      if (current.duration) current.currentTime = (seek.value / 100) * current.duration;
+    });
+
+    box.classList.add("is-enhanced");
+    box.querySelector(".audio-compare-clips").after(ui);
+  });
+})();
+
+// ---------------------------------------------------------------
 // External links always open in a new tab, so visitors keep darksoft.band
 // open. Templates set target="_blank" themselves; this catches anything
 // else (links added by embedded widgets, or new content that forgets it).
