@@ -3010,6 +3010,17 @@ a.post-card-link:visited {
   max-width: min(260px, 100%);
 }
 
+/* Short silent looping clips in posts (<video class="post-clip"> inside a <figure>) */
+.post-body video.post-clip {
+  display: block;
+  width: 100%;
+  max-width: min(440px, 100%);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #222;
+}
+
 .post-body p:has(> img.post-img-small),
 .post-body p:has(> img.post-img-tiny) {
   text-align: center;
