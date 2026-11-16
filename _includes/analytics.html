@@ -35,14 +35,16 @@
 
 <!--
   Conversion events (mark these as key events in GA4: Admin → Key events):
-    newsletter_signup  sent from the signup handler in footer.html
+    newsletter_signup  sent from the signup handler in assets/js/site.js
+    email_click        any email (mailto:) link; carries topic (sync, booking, press, contact, other)
+                       and placement, but never the address
     bandcamp_click     any link to bandcamp.com
     stream_click       Spotify, Apple Music, YouTube / YouTube Music, Deezer, Pandora, SoundCloud,
                        TIDAL, Amazon Music, Qobuz, NetEase Cloud Music, KKBOX, Anghami
     merch_click        Printful, Spirit Goth, elasticstage
     donate_click       Buy Me a Coffee, Unstream
-    video_play         a click-to-play music video thumbnail (sent from video-player-script.html)
-  Each click event carries: platform, link_url, and placement (where on the page it was).
+    video_play         a click-to-play music video thumbnail (sent from assets/js/site.js)
+  Each outbound click event carries: platform, link_url, and placement (where on the page it was).
 -->
 <script>
 (function() {
@@ -99,12 +101,30 @@
     return "main_content";
   }
 
+  // What an email link is about: the prefilled subject first (sync and shows pages),
+  // then the page it's on. Plain email links elsewhere count as "other".
+  const EMAIL_PAGES = { "/sync/": "sync", "/shows/": "booking", "/press/": "press", "/contact/": "contact" };
+  function emailTopic(url) {
+    const subject = (url.searchParams.get("subject") || "").toLowerCase();
+    if (subject.includes("sync") || subject.includes("licens")) return "sync";
+    if (subject.includes("booking")) return "booking";
+    if (subject.includes("press") || subject.includes("interview")) return "press";
+    return EMAIL_PAGES[location.pathname] || "other";
+  }
+
   document.addEventListener("click", (e) => {
     const link = e.target.closest("a[href]");
     if (!link) return;
     if (link.hasAttribute("data-video-id")) return; // click-to-play thumbnails send video_play instead
     let url;
     try { url = new URL(link.href, location.href); } catch (err) { return; }
+
+    // Email links: send the topic and placement only, never the address or prefilled text
+    if (url.protocol === "mailto:") {
+      gtag("event", "email_click", { topic: emailTopic(url), placement: placement(link) });
+      return;
+    }
+
     if (url.origin === location.origin) return;
 
     const match = classify(url.hostname);
