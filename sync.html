@@ -99,7 +99,11 @@ body_class: "sync-page"
         <p>I own 100% of the masters and negotiate and sign the deal myself, with no label or intermediary.</p>
         <ul>
           {% for album in sorted_albums %}{% if album.label == "Look Up Records" %}
+          {%- if album.bandcamp %}
           <li><a href="{{ album.bandcamp }}" target="_blank" rel="noopener"><em>{{ album.album_title }}</em></a> ({{ album.release_year }})</li>
+          {%- else %}
+          <li><a href="/discography/{{ album.album_id }}/"><em>{{ album.album_title }}</em></a> ({{ album.release_year }}, unreleased)</li>
+          {%- endif %}
           {% endif %}{% endfor %}
         </ul>
       </div>

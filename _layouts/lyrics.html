@@ -111,6 +111,14 @@
     <!-- Newsletter: same markup/styles as the homepage signup (#mc_embed_signup) -->
     {% include newsletter-block.html section_class="lyrics-newsletter" intro="Darksoft here — thanks for reading! If you want updates on new albums, upcoming shows, and happenings from the Darksoft multiverse, sign up below." %}
 
+    {%- if album.unreleased %}
+    <div class="stream-now-box">
+      <h3>Coming Soon</h3>
+      <p class="stream-subtitle">
+        <strong>{{ track.track_title }}</strong> is from <a href="/discography/{{ album.album_id }}/"><em>{{ album.album_title }}</em></a>, out {{ album.release_date | date: "%B %-d, %Y" }}. Join the newsletter above to hear it first.
+      </p>
+    </div>
+    {%- else %}
     <div class="stream-now-box">
       <h3>Stream Now</h3>
 
@@ -130,6 +138,7 @@
         {% if bc %}<a href="{{ bc }}" target="_blank" rel="noopener">Bandcamp</a>{% endif %}
       </div>
     </div>
+    {%- endif %}
 
     {% if video %}
       <div class="video-embed">

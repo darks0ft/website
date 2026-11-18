@@ -1395,4 +1395,134 @@
     deezer_track: https://www.deezer.com/track/3761632132
     bandcamp_track: https://darks0ft.bandcamp.com/track/no-news-is-good-news
     notes: 
+-
+    track_id: ultraview_stepped_away
+    track_number: 1
+    track_title: Stepped Away
+    album_id: ultraview
+    track_title_slug: stepped_away
+    duration: "3:34"
+    isrc: USY282673722
+    release_date: 2027-01-08
+    year: 2027
+    lyrics: "Had to leave\nTo hit reset\nStepped away\nTo see what's left\n\nStepped away\n(Stepped away)\nTook a break\n(Took a break)\n\nFrom far away\nThings look so small\nPulling back\nYou see it all\n\nStepped away\n(Stepped away)\nFrom the day to day\n(Day to day)\n\nHome again\nBut something's new\nSame old place\nDifferent view\n\nStepped away\nFrom the day to day\nNow it's not the same\nAs it was before\nStepped away"
+    bpm: 181
+    notes: 
+-
+    track_id: ultraview_all_who_wander
+    track_number: 2
+    track_title: All Who Wander
+    album_id: ultraview
+    track_title_slug: all_who_wander
+    duration: "3:59"
+    isrc: USY282673723
+    release_date: 2027-02-12
+    year: 2027
+    lyrics: "All who wander are not lost\nFound a friend in the dark\n\nGood things take their time\nLife's not a straight line\n\nAll who wander lose no sight\nFound your feet in the night\n\nFollow forks in the road\nTake the long way back home\n\nAll who wander\nAll who wander\n\nAll who wander\nAll who wander\nAll who wander\nAll who wander"
+    bpm: 172
+    notes: 
+-
+    track_id: ultraview_out_of_reach
+    track_number: 3
+    track_title: Out Of Reach
+    album_id: ultraview
+    track_title_slug: out_of_reach
+    duration: "3:23"
+    isrc: USY282673724
+    release_date: 2027-02-12
+    year: 2027
+    lyrics: "Too many times\nI couldn't find\nThe words to say\nBefore the moment fades\n\nIt's on the tip of my tongue\nBut always out of reach\nWhat I meant to say\nComes when it's too late\n\nToo many days\nI hit rewind\nRepeat the same\nScene in my mind\n\nIt's on the top of my head\nBut always out of reach\nThings I wish I'd said\nWhen you were listening\n\nAfter the fact\nMy words come back\nWhen no one's there\nWalking down the stairs\n\nIt's on the tip of my tongue\nBut always out of reach\nWhat I should have said\nWhen you were next to me\n\nIt's on the top of my head\nBut always out of reach\nWhat I meant to say\nComes when it's too late\n\nIt's on the tip of my tongue\nBut always out of reach\nWords I should have said\nWhen you were listening"
+    bpm: 129
+    notes: "“Out Of Reach” is about l'esprit de l'escalier, French for “staircase wit.” It's those times you wish you'd said something smarter, more interesting, more romantic, or had the perfect comeback in the moment, but the words only come hours or even days later. You hit rewind and replay the scene in your mind with a better line. In the moment, the words are out of reach. Then, walking down the stairs, you know exactly what to say."
+-
+    track_id: ultraview_take_it_or_leave_it
+    track_number: 4
+    track_title: Take It Or Leave It
+    album_id: ultraview
+    track_title_slug: take_it_or_leave_it
+    duration: "3:48"
+    isrc: USY282673725
+    release_date: 2027-02-12
+    year: 2027
+    lyrics: "Take it or leave it\nIt's all the same in any case\n\nWhat you see is what you get\nLove it or hate it\n\nTake it or leave it\nTake it or leave it\n\nGoing out or staying in\nSuit yourself\nDo what you will\n\nCome what may\nWhatever works\nFor better or worse\n\nTake it or leave it\nTake it or leave it\n\nTake it or leave it\nTake it or leave it"
+    bpm: 161
+    notes: 
+-
+    track_id: ultraview_birds_eye_view
+    track_number: 5
+    track_title: "Bird's-Eye View"
+    album_id: ultraview
+    track_title_slug: birds_eye_view
+    duration: "3:55"
+    isrc: USY282673726
+    release_date: 2027-02-12
+    year: 2027
+    lyrics: 
+    bpm: 176
+    notes: 
+-
+    track_id: ultraview_out_of_the_blue
+    track_number: 6
+    track_title: Out Of The Blue
+    album_id: ultraview
+    track_title_slug: out_of_the_blue
+    duration: "4:05"
+    isrc: USY282673727
+    release_date: 2027-01-29
+    year: 2027
+    lyrics: "Out of the blue\nWithout a sign\nDrop of a hat\nTurn of the tide\n\nOut of the blue\nOut of the blue\n\nJust like that\nCaught off guard\nTwist of fate\nLuck of the draw\n\nOut of the blue\nOut of the blue\n\nWhen you least\nExpect it\nWinds will change\nBefore you know it\n\nOut of the blue\nOut of the blue"
+    bpm: 168
+    notes: 
+-
+    track_id: ultraview_what_you_make_of_it
+    track_number: 7
+    track_title: What You Make Of It
+    album_id: ultraview
+    track_title_slug: what_you_make_of_it
+    duration: "4:48"
+    isrc: USY282673728
+    release_date: 2027-02-12
+    year: 2027
+    lyrics: "Life is what you make of it\nAll in how you look at it\nTake some time and you will see\nYou make your reality\n\nLive it up while you still can\nAll it takes is all you have\nYou get out what you put in\nMake of it what you will\n\nWhat you make of it\nWhat you make of it\n\nMake your mark or just exist\nTake this or leave it\nSee things in a different light\nDo whatever feels right\n\nLife is what you make of it\nWhat you make of it\nLife is what you make of it\nWhat you make of it\nWhat you make of it\nLife is what you make of it"
+    bpm: 142
+    notes: 
+-
+    track_id: ultraview_outside_looking_in
+    track_number: 8
+    track_title: Outside Looking In
+    album_id: ultraview
+    track_title_slug: outside_looking_in
+    duration: "3:43"
+    isrc: USY282673729
+    release_date: 2027-02-12
+    year: 2027
+    lyrics: 
+    bpm: 143
+    notes: 
+-
+    track_id: ultraview_whatever_may_come
+    track_number: 9
+    track_title: Whatever May Come
+    album_id: ultraview
+    track_title_slug: whatever_may_come
+    duration: "4:13"
+    isrc: USY282673730
+    release_date: 2027-02-12
+    year: 2027
+    lyrics: "Let the future in\nKnocking on your door\nMeet it with a grin\nWhatever's in store\n\nFriends they were strangers\nNot that long ago\nThere's no telling\nWhere the road goes\n\nWhatever may come\nWhatever may come\n\nSo you hang around\nLike you don't care\nRoots in the ground\nHead's in the air\n\nPast every exit\nDriving through the night\nThrough the rain or shine\nKnow we'll be alright\n\nWhatever may come\nWhatever may come\n\nRun against the wind\nSee if you take flight\nFall into the sun\nTry a second time\n\nKeep it while it's warm\nFeel it come alive\nHold on to your embers\nWe'll build another fire\n\nWhatever may come\nWhatever may come\nWhatever may come\nWhatever may come"
+    bpm: 158
+    notes: 
+-
+    track_id: ultraview_all_good_things
+    track_number: 10
+    track_title: All Good Things
+    album_id: ultraview
+    track_title_slug: all_good_things
+    duration: "3:54"
+    isrc: USY282673731
+    release_date: 2027-02-12
+    year: 2027
+    lyrics: "All good things come to an end\nNothing lasts forever\n\nAll good things\nAll good things\n\nOur goodbye's just beginning\nWhat will come after the moment's gone?\n\nAll good things will end\nNothing can last forever\n\nLiving on borrowed time\nTomorrow brings another light\n\nAll good things\nAll good things"
+    bpm: 160
+    notes: 
 

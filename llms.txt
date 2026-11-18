@@ -3,9 +3,11 @@ layout: null
 permalink: /llms.txt
 ---
 {%- assign albums = site.data.albums | sort: "release_date" | reverse -%}
+{%- assign released_albums = site.data.albums | where_exp: "a", "a.unreleased != true" -%}
+{%- assign upcoming_albums = site.data.albums | where: "unreleased", true | sort: "release_date" -%}
 # Darksoft
 
-> Darksoft is a dream pop and shoegaze project from Portland, Maine (originally from Seattle), making jangly, reflective indie rock since 2018. Every song is written, played, and recorded on real instruments in a home studio, and the project plays live with a full band. Darksoft has released {{ albums | size }} albums, on Look Up Records and Spirit Goth Records.
+> Darksoft is a dream pop and shoegaze project from Portland, Maine (originally from Seattle), making jangly, reflective indie rock since 2018. Every song is written, played, and recorded on real instruments in a home studio, and the project plays live with a full band. Darksoft has released {{ released_albums | size }} albums, on Look Up Records and Spirit Goth Records.{% for a in upcoming_albums %} The next album, {{ a.album_title }}, comes out {{ a.release_date | date: "%B %-d, %Y" }} on {{ a.label }}.{% endfor %}
 
 Official website: {{ "/" | absolute_url }}. This file summarizes the project for AI assistants and search tools. The usage policy is at the bottom.
 

@@ -1,5 +1,5 @@
-{%- comment -%} Sidebar: the latest album on Bandcamp (newest release in _data/albums.yml; cover from assets/web/<album_id>-600.webp) {%- endcomment -%}
-{%- assign album = site.data.albums | sort: "release_date" | last -%}
+{%- comment -%} Sidebar: the latest album on Bandcamp (newest released album in _data/albums.yml, skipping `unreleased: true`; cover from assets/web/<album_id>-600.webp) {%- endcomment -%}
+{%- assign album = site.data.albums | where_exp: "a", "a.unreleased != true" | sort: "release_date" | last -%}
 <div class="sidebar-block sidebar-album">
   <h2>Latest album</h2>
   <a class="sidebar-image" href="{{ album.bandcamp }}" target="_blank" rel="noopener">

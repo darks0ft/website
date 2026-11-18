@@ -12,7 +12,11 @@
 <html lang="en">
 <head>
   {%- capture seo_title %}{{ album.album_title }} — Darksoft ({{ album.release_year }} Album): Tracklist, Lyrics & Streaming{% endcapture %}
+  {%- if album.unreleased %}
+  {%- capture seo_description %}{{ album.album_title }} is the upcoming Darksoft album, out {{ album.release_date | date: "%B %-d, %Y" }} on {{ album.label }}. See the tracklist, lyrics and credits.{% endcapture %}
+  {%- else %}
   {%- capture seo_description %}{{ album.album_title }} is a {{ album.release_year }} album by Darksoft, released on {{ album.label }}. {{ album.blurb | truncatewords: 12 }}{% endcapture %}
+  {%- endif %}
   {%- capture seo_image %}/assets/{{ album.artwork | replace: ' ', '%20' }}{% endcapture %}
   {%- assign seo_og_type = "music.album" %}
   {% include head.html %}
@@ -31,7 +35,11 @@
     "albumReleaseType": "https://schema.org/AlbumRelease",
     "byArtist": { "@type": "MusicGroup", "name": "Darksoft", "url": {{ "/" | absolute_url | jsonify }} },
     "recordLabel": { "@type": "Organization", "name": {{ album.label | jsonify }} },
-    "sameAs": [{{ album.spotify | split: "?" | first | jsonify }}, {{ album.apple_music | jsonify }}, {{ album.bandcamp | jsonify }}, {{ album.deezer | jsonify }}],
+    {%- capture same_as %}{% if album.spotify %}{{ album.spotify | split: "?" | first | jsonify }},{% endif %}{% if album.apple_music %}{{ album.apple_music | jsonify }},{% endif %}{% if album.bandcamp %}{{ album.bandcamp | jsonify }},{% endif %}{% if album.deezer %}{{ album.deezer | jsonify }},{% endif %}{% endcapture %}
+    {%- assign same_as = same_as | strip | split: "," | join: ", " %}
+    {%- if same_as != "" %}
+    "sameAs": [{{ same_as }}],
+    {%- endif %}
     "track": {
       "@type": "ItemList",
       "numberOfItems": {{ tracks | size }},
@@ -87,12 +95,21 @@
         <p class="album-byline">Album by Darksoft · {{ album.release_year }}</p>
 
         <dl class="album-facts">
-          <div><dt>Released</dt><dd>{{ album.release_date | date: "%B %-d, %Y" }}</dd></div>
+          <div><dt>{% if album.unreleased %}Release date{% else %}Released{% endif %}</dt><dd>{{ album.release_date | date: "%B %-d, %Y" }}</dd></div>
           <div><dt>Label</dt><dd>{{ album.label }}{% if album.catalog %} ({{ album.catalog }}){% endif %}</dd></div>
           <div><dt>Length</dt><dd>{{ album.duration }} · {{ tracks | size }} tracks</dd></div>
         </dl>
 
+        {%- if album.unreleased %}
+        <div class="album-unreleased">
+          <p class="album-unreleased-tag">Unreleased</p>
+          <p><em>{{ album.album_title }}</em> isn't out yet. It comes out {{ album.release_date | date: "%B %-d, %Y" }} on {{ album.label }}, and links to buy and stream it will be here on release day.</p>
+          <a class="album-buy" href="/#newsletter">Hear it first: join the newsletter →</a>
+        </div>
+        {%- else %}
+        {%- if album.bandcamp %}
         <p><a class="album-buy" href="{{ album.bandcamp }}" target="_blank" rel="noopener">Buy on Bandcamp →</a></p>
+        {%- endif %}
 
         <p class="album-stream-label">Stream</p>
         <ul class="album-stream">
@@ -101,6 +118,7 @@
           {% if album.youtube_music %}<li><a href="{{ album.youtube_music }}" target="_blank" rel="noopener">YouTube Music</a></li>{% endif %}
           {% if album.deezer %}<li><a href="{{ album.deezer }}" target="_blank" rel="noopener">Deezer</a></li>{% endif %}
         </ul>
+        {%- endif %}
       </div>
     </div>
 

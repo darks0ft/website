@@ -168,3 +168,24 @@
     - "Mixed and mastered by Brian Fisher"
     - "Vocals by Sandy on “As Above So Below” and Lauren Lakis on “Irons In The Fire”"
     - "Artwork by Jameson Martin"
+
+# Unreleased: `unreleased: true` swaps the buy and stream links for a release-date note on the
+# album and lyric pages, and keeps the album out of the "Latest album" blog sidebar. When it comes out,
+# delete that line and add the Spotify, Apple Music, Bandcamp, YouTube Music and Deezer links.
+- album_id: ultraview
+  album_title: Ultraview
+  release_year: "2027"
+  release_date: 2027-02-12
+  unreleased: true
+  label: Look Up Records
+  catalog: LUR-023
+  artwork: Darksoft Ultraview Album Artwork.jpg
+  artwork_artist: Jameson Martin
+  total_tracks: 10
+  duration: "39:22"
+  blurb: "Darksoft's ninth album, out February 12, 2027 on Look Up Records. Ten songs written, recorded and produced by Darksoft, including two instrumentals, mixed and mastered by Brian Fisher. Ultraview is about what happens when you take a step back and view life from afar. Your perspective shifts. With detachment comes revelation. And when you return, things don't look the same as before."
+  credits:
+    - "Written, recorded and produced by Darksoft"
+    - "Mixed and mastered by Brian Fisher"
+    - "Drums on “Bird's-Eye View” and shakers on “Whatever May Come” by Jacob Tessier"
+    - "Artwork by Jameson Martin"

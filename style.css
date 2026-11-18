@@ -1933,6 +1933,30 @@ body.homepage,
   min-width: 5.5rem;
 }
 
+/* Unreleased album: release-date note in place of the buy and stream links */
+.album-unreleased {
+  margin-top: 1.2rem;
+  padding: 1rem 1.1rem;
+  border: 1px dashed #6dc15b;
+  border-radius: 10px;
+}
+
+.album-unreleased p {
+  margin: 0;
+}
+
+.album-unreleased .album-unreleased-tag {
+  margin-bottom: 0.4rem;
+  color: #6dc15b;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.album-unreleased .album-buy {
+  margin-top: 1rem;
+}
+
 .album-stream-label {
   margin-top: 1.2rem;
   font-size: 0.85rem;
