@@ -5,6 +5,12 @@
 #   year:  publication year; years marked `# inferred` come from the entry's place in the list
 #   featured: true  shows the entry on the homepage (keep it to three)
 
+- text: "Live Concert Review: I Have a Dream Pop Festival NYC 2026 at Piano’s"
+  outlet: "The Joy of Violent Movement"
+  url: https://joyofviolentmovement.com/live-concert-review-i-have-a-dream-pop-festival-nyc-2026-at-pianos/
+  type: feature
+  year: 2026
+
 - text: "Countdown to the Telepathic Windows Festival 2026 Vol. 1 // An Interview with DARKSOFT"
   outlet: "WhiteLight//WhiteHeat"
   url: https://www.whitelight-whiteheat.com/p94onm-vwn/
