@@ -3161,6 +3161,16 @@ a.post-card-link:visited {
   margin-top: 1rem;
 }
 
+/* New album block: pre-save and order buttons stacked, full width */
+.sidebar-album .cta-button {
+  display: block;
+  text-align: center;
+}
+
+.sidebar-album .cta-button + .cta-button {
+  margin-top: 0.6rem;
+}
+
 .sidebar-buttons {
   display: grid;
   gap: 0.6rem;

@@ -1,4 +1,32 @@
-{%- comment -%} Sidebar: the latest album on Bandcamp (newest released album in _data/albums.yml, skipping `unreleased: true`; cover from assets/web/<album_id>-600.webp) {%- endcomment -%}
+{%- comment -%}
+  Sidebar: the album to promote (cover from assets/web/<album_id>-600.webp).
+  While an album in _data/albums.yml has `unreleased: true` and a `presave` or `preorder` link,
+  this shows that album with its pre-save and CD/vinyl order buttons. Otherwise it shows the
+  newest released album on Bandcamp. On release day, deleting `unreleased: true` switches it back.
+{%- endcomment -%}
+{%- comment -%} A loop rather than where_exp: GitHub Pages' Jekyll 3.10 can't use "or" in where_exp {%- endcomment -%}
+{%- assign upcoming = nil -%}
+{%- assign unreleased_albums = site.data.albums | where: "unreleased", true | sort: "release_date" -%}
+{%- for a in unreleased_albums -%}
+  {%- if upcoming == nil -%}{%- if a.presave or a.preorder -%}{%- assign upcoming = a -%}{%- endif -%}{%- endif -%}
+{%- endfor -%}
+{%- if upcoming %}
+{%- assign album = upcoming -%}
+<div class="sidebar-block sidebar-album">
+  <h2>New album</h2>
+  <a class="sidebar-image" href="/discography/{{ album.album_id }}/">
+    <img src="/assets/web/{{ album.album_id }}-600.webp" alt="{{ album.album_title }} album cover" width="600" height="600" loading="lazy">
+  </a>
+  <p><em>{{ album.album_title }}</em>, {{ album.total_tracks }} songs, out {{ album.release_date | date: "%B %-d, %Y" }}.{% if album.preorder %} The CD and vinyl are made to order and available now.{% endif %}</p>
+  {%- if album.presave %}
+  <a class="cta-button" href="{{ album.presave }}" target="_blank" rel="noopener">Pre-save on Spotify</a>
+  {%- endif %}
+  {%- if album.preorder %}
+  <a class="cta-button cta-button-outline" href="{{ album.preorder }}" target="_blank" rel="noopener">Order CD/Vinyl</a>
+  {%- endif %}
+  <p class="sidebar-more"><a href="/discography/{{ album.album_id }}/">About the album →</a></p>
+</div>
+{%- else %}
 {%- assign album = site.data.albums | where_exp: "a", "a.unreleased != true" | sort: "release_date" | last -%}
 <div class="sidebar-block sidebar-album">
   <h2>Latest album</h2>
@@ -9,3 +37,4 @@
   <a class="cta-button" href="{{ album.bandcamp }}" target="_blank" rel="noopener">Buy on Bandcamp</a>
   <p class="sidebar-more"><a href="/discography/{{ album.album_id }}/">About the album →</a></p>
 </div>
+{%- endif %}
