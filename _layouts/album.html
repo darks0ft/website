@@ -103,8 +103,16 @@
         {%- if album.unreleased %}
         <div class="album-unreleased">
           <p class="album-unreleased-tag">Unreleased</p>
-          <p><em>{{ album.album_title }}</em> isn't out yet. It comes out {{ album.release_date | date: "%B %-d, %Y" }} on {{ album.label }}, and links to buy and stream it will be here on release day.</p>
+          <p><em>{{ album.album_title }}</em> isn't out yet. It comes out {{ album.release_date | date: "%B %-d, %Y" }} on {{ album.label }}.{% if album.presave or album.preorder %} Pre-save it on Spotify or order the CD or vinyl now.{% endif %}</p>
+          {%- if album.presave or album.preorder %}
+          <div class="album-unreleased-buttons">
+            {% if album.presave %}<a class="cta-button" href="{{ album.presave }}" target="_blank" rel="noopener">Pre-save on Spotify</a>{% endif %}
+            {% if album.preorder %}<a class="cta-button cta-button-outline" href="{{ album.preorder }}" target="_blank" rel="noopener">Order CD/Vinyl</a>{% endif %}
+          </div>
+          <p class="album-unreleased-more"><a href="/#newsletter">Hear it first: join the newsletter →</a></p>
+          {%- else %}
           <a class="album-buy" href="/#newsletter">Hear it first: join the newsletter →</a>
+          {%- endif %}
         </div>
         {%- else %}
         {%- if album.bandcamp %}

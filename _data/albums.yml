@@ -172,11 +172,14 @@
 # Unreleased: `unreleased: true` swaps the buy and stream links for a release-date note on the
 # album and lyric pages, and keeps the album out of the "Latest album" blog sidebar. When it comes out,
 # delete that line and add the Spotify, Apple Music, Bandcamp, YouTube Music and Deezer links.
+# Before release, `presave` (Spotify pre-save) and `preorder` (CD and vinyl) add buttons to the note.
 - album_id: ultraview
   album_title: Ultraview
   release_year: "2027"
   release_date: 2027-02-12
   unreleased: true
+  presave: https://open.spotify.com/prerelease/5zv5cgrEU5SxtkwMpnHGK6
+  preorder: https://elasticstage.com/darksoft/releases/ultraview-album
   label: Look Up Records
   catalog: LUR-023
   artwork: Darksoft Ultraview Album Artwork.jpg

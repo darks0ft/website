@@ -2008,6 +2008,22 @@ body.homepage,
   margin-top: 1rem;
 }
 
+.album-unreleased-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.album-unreleased-buttons .cta-button {
+  margin-top: 0;
+}
+
+.album-unreleased .album-unreleased-more {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+}
+
 .album-stream-label {
   margin-top: 1.2rem;
   font-size: 0.85rem;
