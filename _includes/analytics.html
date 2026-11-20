@@ -44,6 +44,7 @@
     merch_click        Printful, Spirit Goth, elasticstage
     donate_click       Buy Me a Coffee, Unstream
     video_play         a click-to-play music video thumbnail (sent from assets/js/site.js)
+    popup_click        any link in the popup; carries popup (its key), link_text and link_url (assets/js/site.js)
   Each outbound click event carries: platform, link_url, and placement (where on the page it was).
 -->
 <script>
@@ -96,6 +97,7 @@
     if (el.closest(".site-header")) return "header";
     if (el.closest("footer")) return "footer";
     if (el.closest("#newsletter-modal")) return "newsletter_popup";
+    if (el.closest("#release-modal")) return "release_popup";
     const section = el.closest("section[id]");
     if (section) return section.id;
     return "main_content";

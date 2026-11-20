@@ -35,39 +35,11 @@
 </div>
 <br>
     <p>© <span id="year"></span> Darksoft. All rights reserved.</p>
-<!-- NEWSLETTER POPUP MODAL -->
-<div id="newsletter-modal" class="newsletter-modal hidden">
-
-  <div class="newsletter-overlay"></div>
-
-  <div class="newsletter-content" role="dialog" aria-modal="true" aria-labelledby="newsletter-title">
-    <button type="button" class="newsletter-close" aria-label="Close">✕</button>
-
-    <img src="/assets/web/waving.png" alt="Darksoft waving" class="newsletter-image" width="400" height="709" loading="lazy">
-
-    <h2 class="newsletter-title" id="newsletter-title">Join the Newsletter!</h2>
-
-    <p class="newsletter-body newsletter-intro-long">
-      Darksoft here — thanks for checking out the site!
-      If you want updates on new albums, upcoming shows, and happenings
-      from the Darksoft multiverse, sign up below.
-    </p>
-    <!-- Shorter intro for phones, so the form fits on the first screen -->
-    <p class="newsletter-body newsletter-intro-short">
-      Darksoft here — thanks for checking out the site! If you want updates on new albums, shows, and more, sign up below.
-    </p>
-    <p class="newsletter-body newsletter-bonus"><strong>Bonus:</strong> sign up and instantly download the {{ site.data.reward.offer }}.</p>
-
-    <!-- Mailchimp form -->
-    {% include newsletter-form.html form_class="newsletter-form" button_class="newsletter-button" %}
-
-    <p class="newsletter-small">
-      Lists like these *really* help indie musicians like me keep things going.
-      Thanks for considering it 💚
-    </p>
-  </div>
-
-</div>
+<!-- POPUP: picked in _data/popup.yml, markup in _includes/popups/ -->
+{%- assign popup = site.data.popup.active | default: "none" %}
+{%- if popup != "none" %}
+{% include popups/{{ popup }}.html %}
+{%- endif %}
 
 <script src="/assets/js/site.js?v={{ site.time | date: '%s' }}" defer></script>
 

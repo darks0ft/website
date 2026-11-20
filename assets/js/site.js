@@ -124,18 +124,23 @@ document.getElementById("year").innerText = new Date().getFullYear();
 })();
 
 // ---------------------------------------------------------------
-// Newsletter popup (5 seconds in, at most every 30 days)
+// Popup (5 seconds in, at most every 30 days). Which one shows is set in
+// _data/popup.yml; each popup's data-popup-key remembers when it was last
+// closed, so a new popup (or a new album's key) shows to everyone again.
 // ---------------------------------------------------------------
 (function() {
-  const modal = document.getElementById("newsletter-modal");
-  const closeBtn = document.querySelector(".newsletter-close");
+  const modal = document.querySelector(".newsletter-modal");
+  if (!modal) return; // popup turned off (active: none)
+  const closeBtn = modal.querySelector(".newsletter-close");
+  const key = modal.dataset.popupKey || "newsletter-popup";
 
   // Don't interrupt industry visitors (music supervisors) on the sync page,
   // or readers on lyric pages (they get an inline signup after the lyrics)
   if (document.body.classList.contains("sync-page") || document.body.classList.contains("lyrics-body")) return;
 
-  // Prevent showing again if dismissed or signed up recently
-  const lastShown = localStorage.getItem("newsletter-popup");
+  // Prevent showing again if dismissed (or, for the newsletter popup, signed up) recently
+  let lastShown = null;
+  try { lastShown = localStorage.getItem(key); } catch (err) {}
   const THIRTY_DAYS = 1000 * 60 * 60 * 24 * 30;
 
   let lastFocus = null;
@@ -157,14 +162,22 @@ document.getElementById("year").innerText = new Date().getFullYear();
     if (modal.classList.contains("hidden")) return;
     modal.classList.add("hidden");
     document.documentElement.classList.remove("newsletter-open");
-    localStorage.setItem("newsletter-popup", Date.now());
+    try { localStorage.setItem(key, Date.now()); } catch (err) {}
     if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
   }
 
-  // Close events: the X, a click on the dimmed backdrop, or the Esc key
+  // Close events: the X, a click on the dimmed backdrop, the Esc key, or following
+  // any link in the popup (a button, or the newsletter link on this same page)
   closeBtn.addEventListener("click", closeModal);
   modal.addEventListener("click", (e) => {
     if (e.target === modal || e.target.classList.contains("newsletter-overlay")) closeModal();
+    const link = e.target.closest("a[href]");
+    if (link) {
+      if (typeof gtag === "function") {
+        gtag("event", "popup_click", { popup: key, link_text: link.textContent.trim(), link_url: link.href, placement: "popup" });
+      }
+      closeModal();
+    }
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();

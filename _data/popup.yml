@@ -1,0 +1,20 @@
+# The popup that opens 5 seconds into a visit (never on the sync page or lyric pages).
+# Each popup is a file in _includes/popups/. To switch, change `active` to that file's name:
+#   newsletter  newsletter signup with the booklet offer (_includes/popups/newsletter.html)
+#   release     a new album, with the buttons below (_includes/popups/release.html)
+#   none        no popup
+active: release
+
+# Album popup. For the next album, change these values and set a new `key`.
+# A visitor who closes a popup doesn't see that same popup for 30 days; a new key shows it to everyone again.
+release:
+  key: ultraview
+  title: "New Darksoft album: Ultraview"
+  image: /assets/web/ultraview-600.webp
+  image_alt: "Ultraview album artwork: a shadowed figure inside a rainbow halo"
+  # A button is left out until its url is filled in
+  buttons:
+    - label: "Pre-save on Spotify"
+      url: https://open.spotify.com/prerelease/5zv5cgrEU5SxtkwMpnHGK6
+    - label: "Order CD/Vinyl"
+      url: https://elasticstage.com/darksoft/releases/ultraview-album

@@ -874,6 +874,57 @@ html.newsletter-open body {
   }
 }
 
+/* --- Album release popup (_includes/popups/release.html): same frame as the newsletter popup --- */
+.release-modal .release-title {
+  margin-top: 0.4rem;
+}
+
+.release-modal .release-image {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto 0.4rem;
+  border-radius: 8px;
+}
+
+.release-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 0.6rem;
+}
+
+.release-buttons .cta-button {
+  width: 100%;
+  max-width: 260px;
+  margin-top: 0.6rem;
+}
+
+/* The popup sits inside <footer>, so these beat the footer's link colors */
+.release-buttons .cta-button:not(.cta-button-outline),
+.release-buttons .cta-button:not(.cta-button-outline):visited {
+  color: #000;
+}
+
+.release-modal .release-small a {
+  color: #ccc;
+}
+
+/* Phones: keep the artwork and both buttons on the first screen */
+@media (max-width: 600px) {
+  .release-modal .release-image {
+    width: 100%;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 600px) and (max-height: 620px) {
+  .release-modal .release-image {
+    max-width: 160px;
+  }
+}
+
 /* Lyric-page newsletter reuses the homepage #mc_embed_signup styles */
 .lyrics-newsletter {
   padding: 0;
