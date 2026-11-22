@@ -108,7 +108,7 @@ As one [YouTube](https://www.youtube.com/watch?v=1DEuXKneAOY) listener comments,
 
 If you landed here because you're curious about the song, thank you for being here!
 
-I hope you check out [my other music](/discography/), maybe starting with the stories behind "[Day By Day](/blog/the-story-behind-day-by-day/)," "[Live And Let Live](/blog/the-story-behind-live-and-let-live/)," "[So It Goes](/blog/the-story-behind-so-it-goes/)" or "[Out Of Sight Out Of Mind](/blog/the-story-behind-out-of-sight-out-of-mind/)," four more songs built around everyday sayings. You can also catch us [live](/shows/).
+I hope you check out [my other music](/discography/), maybe starting with the stories behind "[Day By Day](/blog/the-story-behind-day-by-day/)," "[Live And Let Live](/blog/the-story-behind-live-and-let-live/)," "[So It Goes](/blog/the-story-behind-so-it-goes/)" or "[Out Of Sight Out Of Mind](/blog/the-story-behind-out-of-sight-out-of-mind/)," four more songs built around everyday sayings. Or read the story behind "[Endless Day](/blog/the-story-behind-endless-day/)," my most-played song. You can also catch us [live](/shows/).
 
 Please consider subscribing to my newsletter. That really helps indie folks like me keep this going.
 

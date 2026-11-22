@@ -124,7 +124,7 @@ See more of my DIY videos on the [music videos page](/videos/).
 
 If you landed here because you're curious about the song, thank you for being here!
 
-I hope you check out [my other music](/discography/), maybe starting with the stories behind "[Out Of Sight Out Of Mind](/blog/the-story-behind-out-of-sight-out-of-mind/)," also from *Rationalism*, or "[Live And Let Live](/blog/the-story-behind-live-and-let-live/)," "[So It Goes](/blog/the-story-behind-so-it-goes/)" and "[Too Little Too Late](/blog/the-story-behind-too-little-too-late/)." You can also catch us [live](/shows/).
+I hope you check out [my other music](/discography/), maybe starting with the stories behind "[Out Of Sight Out Of Mind](/blog/the-story-behind-out-of-sight-out-of-mind/)," also from *Rationalism*, or "[Live And Let Live](/blog/the-story-behind-live-and-let-live/)," "[Endless Day](/blog/the-story-behind-endless-day/)," "[So It Goes](/blog/the-story-behind-so-it-goes/)" and "[Too Little Too Late](/blog/the-story-behind-too-little-too-late/)." You can also catch us [live](/shows/).
 
 Please consider subscribing to my newsletter. That really helps indie folks like me keep this going.
 
