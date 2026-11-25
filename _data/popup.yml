@@ -3,7 +3,7 @@
 #   newsletter  newsletter signup with the booklet offer (_includes/popups/newsletter.html)
 #   release     a new album, with the buttons below (_includes/popups/release.html)
 #   none        no popup
-active: release
+active: newsletter
 
 # Album popup. For the next album, change these values and set a new `key`.
 # A visitor who closes a popup doesn't see that same popup for 30 days; a new key shows it to everyone again.
