@@ -3,15 +3,17 @@
 #   newsletter  newsletter signup with the booklet offer (_includes/popups/newsletter.html)
 #   release     a new album, with the buttons below (_includes/popups/release.html)
 #   none        no popup
-active: newsletter
+active: release
 
 # Album popup. For the next album, change these values and set a new `key`.
 # A visitor who closes a popup doesn't see that same popup for 30 days; a new key shows it to everyone again.
 release:
-  key: ultraview
+  key: ultraview-blackfriday
   title: "New Darksoft album: Ultraview"
   image: /assets/web/ultraview-600.webp
   image_alt: "Ultraview album artwork: a shadowed figure inside a rainbow halo"
+  # Optional sale line under the artwork. Leave it out (or empty) when there's no sale.
+  promo: "Black Friday weekend: 20% off CD/Vinyl on ElasticStage with code <strong>BLACKFRIDAY</strong>"
   # A button is left out until its url is filled in
   buttons:
     - label: "Pre-save on Spotify"

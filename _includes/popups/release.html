@@ -15,6 +15,10 @@
 
     <img src="{{ release.image }}" alt="{{ release.image_alt | escape }}" class="newsletter-image release-image" width="600" height="600" loading="lazy">
 
+    {%- if release.promo %}
+    <p class="release-promo">{{ release.promo }}</p>
+    {%- endif %}
+
     <div class="release-buttons">
       {%- for button in release.buttons %}{% if button.url %}
       <a class="cta-button{% unless forloop.first %} cta-button-outline{% endunless %}" href="{{ button.url }}" target="_blank" rel="noopener">{{ button.label }}</a>
